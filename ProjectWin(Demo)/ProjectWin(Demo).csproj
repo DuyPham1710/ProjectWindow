@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{887F4AC4-6198-408E-AC81-6CEED6D8E546}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectWin_Demo_</RootNamespace>
+    <AssemblyName>ProjectWin%28Demo%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddProduct.Designer.cs">
+      <DependentUpon>FAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAdmin.Designer.cs">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FComment.Designer.cs">
+      <DependentUpon>FComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDetail.Designer.cs">
+      <DependentUpon>FDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPayment.Designer.cs">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSignUp.Designer.cs">
+      <DependentUpon>FSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funtion\ElipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCart.Designer.cs">
+      <DependentUpon>FCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHome.Designer.cs">
+      <DependentUpon>FHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FMyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMyProduct.Designer.cs">
+      <DependentUpon>FMyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funtion\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Funtion\RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.cs">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCart.Designer.cs">
+      <DependentUpon>UCCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCComment.Designer.cs">
+      <DependentUpon>UCComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHisProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHisProduct.Designer.cs">
+      <DependentUpon>UCHisProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCHistory.Designer.cs">
+      <DependentUpon>UCHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInfo.Designer.cs">
+      <DependentUpon>UCInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMyProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMyProduct.Designer.cs">
+      <DependentUpon>UCMyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCProducts.Designer.cs">
+      <DependentUpon>UCProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funtion\VBButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UCProductSold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCProductSold.Designer.cs">
+      <DependentUpon>UCProductSold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRevenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRevenue.Designer.cs">
+      <DependentUpon>UCRevenue.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FAddProduct.resx">
+      <DependentUpon>FAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCart.resx">
+      <DependentUpon>FCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FComment.resx">
+      <DependentUpon>FComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDetail.resx">
+      <DependentUpon>FDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHome.resx">
+      <DependentUpon>FHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMyProduct.resx">
+      <DependentUpon>FMyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPayment.resx">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSignUp.resx">
+      <DependentUpon>FSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funtion\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resx">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCart.resx">
+      <DependentUpon>UCCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHisProduct.resx">
+      <DependentUpon>UCHisProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCHistory.resx">
+      <DependentUpon>UCHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInfo.resx">
+      <DependentUpon>UCInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMyProduct.resx">
+      <DependentUpon>UCMyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCProducts.resx">
+      <DependentUpon>UCProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRevenue.resx">
+      <DependentUpon>UCRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-picture-image_1048684.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1559144-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-mau-loang-dep-tuyet_092447739.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TrangChu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trangchu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-shopping-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanhMucSanPham.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-messenger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Mono-General-3-Home.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Ecommerce-Product.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Users-Name.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paomedia-Small-N-Flat-Star.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-can-regular.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iphone-15-pro-max-gold-thumbnew-200x200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right-from-bracket-solid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5217272932631_72c73dc409773a73013edce5ca74c052.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconoir-Team-Iconoir-Settings.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ionic-Ionicons-Location-outline.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Momo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Double-J-Design-Ravenna-3d-Credit-Card.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphicloads-100-Flat-Cart-add.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elegantthemes-Beautiful-Flat-One-Color-Magnifying-glass.24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-8-Accept-database.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Finance-Check-Book.32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
