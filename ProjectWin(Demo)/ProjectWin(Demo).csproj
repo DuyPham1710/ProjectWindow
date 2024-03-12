@@ -386,5 +386,23 @@
   <ItemGroup>
     <None Include="Resources\Icons8-Windows-8-Finance-Check-Book.32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tinhTrang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phanLoai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuatXu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongTin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lich.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

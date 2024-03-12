@@ -303,6 +303,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap InfoProduct {
+            get {
+                object obj = ResourceManager.GetObject("InfoProduct", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ionic_Ionicons_Location_outline_48 {
             get {
                 object obj = ResourceManager.GetObject("Ionic-Ionicons-Location-outline.48", resourceCulture);
@@ -316,6 +326,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap iphone_15_pro_max_gold_thumbnew_200x200 {
             get {
                 object obj = ResourceManager.GetObject("iphone-15-pro-max-gold-thumbnew-200x200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lich {
+            get {
+                object obj = ResourceManager.GetObject("Lich", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +373,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap phanLoai {
+            get {
+                object obj = ResourceManager.GetObject("phanLoai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_shopping_mall_supermarket_selection_merchandise_poster_background_material_picture_image_1048684 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-materia" +
@@ -367,6 +397,26 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25 {
             get {
                 object obj = ResourceManager.GetObject("smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thongTin {
+            get {
+                object obj = ResourceManager.GetObject("thongTin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tinhTrang {
+            get {
+                object obj = ResourceManager.GetObject("tinhTrang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -407,6 +457,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xuatXu {
+            get {
+                object obj = ResourceManager.GetObject("xuatXu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
