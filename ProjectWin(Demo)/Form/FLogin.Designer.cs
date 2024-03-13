@@ -43,7 +43,6 @@
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -200,6 +199,7 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.IconLeft = global::ProjectWin_Demo_.Properties.Resources.key_icon;
             this.txtPassword.Location = new System.Drawing.Point(36, 276);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
@@ -225,6 +225,7 @@
             this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtUserName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.IconLeft = global::ProjectWin_Demo_.Properties.Resources.user_icon;
             this.txtUserName.Location = new System.Drawing.Point(38, 201);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserName.Name = "txtUserName";
@@ -256,10 +257,6 @@
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 2;
             this.label6.Text = "LOGIN";
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 30;
             // 
             // btnClose
             // 
@@ -357,7 +354,6 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2RadioButton radiobtnUser;
         private Guna.UI2.WinForms.Guna2RadioButton radiobtnAdmin;

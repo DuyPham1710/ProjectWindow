@@ -333,6 +333,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap key_icon {
+            get {
+                object obj = ResourceManager.GetObject("key-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lich {
             get {
                 object obj = ResourceManager.GetObject("Lich", resourceCulture);
@@ -457,6 +467,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

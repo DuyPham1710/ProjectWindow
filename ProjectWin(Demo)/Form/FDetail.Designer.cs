@@ -38,6 +38,8 @@ namespace ProjectWin_Demo_
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnNext = new CustomButton.VBButton();
+            this.btnPre = new CustomButton.VBButton();
             this.pctProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,21 +68,19 @@ namespace ProjectWin_Demo_
             this.label5 = new System.Windows.Forms.Label();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnNext = new CustomButton.VBButton();
-            this.btnPre = new CustomButton.VBButton();
             this.ucComment1 = new ProjectWin_Demo_.UCComment();
             this.ucComment2 = new ProjectWin_Demo_.UCComment();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.vbButton2 = new CustomButton.VBButton();
             this.vbButton1 = new CustomButton.VBButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnBuy = new CustomButton.VBButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnCart = new CustomButton.VBButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pToolBar.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -218,6 +218,46 @@ namespace ProjectWin_Demo_
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(603, 334);
             this.guna2Panel2.TabIndex = 36;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNext.BorderRadius = 0;
+            this.btnNext.BorderSize = 0;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(576, 140);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(24, 44);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = ">";
+            this.btnNext.TextColor = System.Drawing.Color.White;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPre
+            // 
+            this.btnPre.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPre.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.btnPre.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPre.BorderRadius = 0;
+            this.btnPre.BorderSize = 0;
+            this.btnPre.FlatAppearance.BorderSize = 0;
+            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPre.ForeColor = System.Drawing.Color.White;
+            this.btnPre.Location = new System.Drawing.Point(3, 140);
+            this.btnPre.Name = "btnPre";
+            this.btnPre.Size = new System.Drawing.Size(24, 44);
+            this.btnPre.TabIndex = 0;
+            this.btnPre.Text = "<";
+            this.btnPre.TextColor = System.Drawing.Color.White;
+            this.btnPre.UseVisualStyleBackColor = false;
+            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
             // 
             // pctProduct
             // 
@@ -524,114 +564,6 @@ namespace ProjectWin_Demo_
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 333);
             this.flowLayoutPanel1.TabIndex = 18;
             // 
-            // lblAmount
-            // 
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(673, 248);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(83, 27);
-            this.lblAmount.TabIndex = 31;
-            this.lblAmount.Text = "Số lượng:";
-            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.vbButton2);
-            this.panel3.Controls.Add(this.vbButton1);
-            this.panel3.Controls.Add(this.linkLabel1);
-            this.panel3.Location = new System.Drawing.Point(663, 150);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(301, 51);
-            this.panel3.TabIndex = 30;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(59, 15);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(106, 19);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "ShopDienMay";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(664, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 44);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(673, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 32);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "10.110.000đ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(814, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Đã bán 100";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(701, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 27);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "TP.Hồ Chí Minh";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnNext.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnNext.BorderRadius = 0;
-            this.btnNext.BorderSize = 0;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(576, 140);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(24, 44);
-            this.btnNext.TabIndex = 1;
-            this.btnNext.Text = ">";
-            this.btnNext.TextColor = System.Drawing.Color.White;
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnPre
-            // 
-            this.btnPre.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnPre.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnPre.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPre.BorderRadius = 0;
-            this.btnPre.BorderSize = 0;
-            this.btnPre.FlatAppearance.BorderSize = 0;
-            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPre.ForeColor = System.Drawing.Color.White;
-            this.btnPre.Location = new System.Drawing.Point(3, 140);
-            this.btnPre.Name = "btnPre";
-            this.btnPre.Size = new System.Drawing.Size(24, 44);
-            this.btnPre.TabIndex = 0;
-            this.btnPre.Text = "<";
-            this.btnPre.TextColor = System.Drawing.Color.White;
-            this.btnPre.UseVisualStyleBackColor = false;
-            // 
             // ucComment1
             // 
             this.ucComment1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -651,6 +583,26 @@ namespace ProjectWin_Demo_
             this.ucComment2.Name = "ucComment2";
             this.ucComment2.Size = new System.Drawing.Size(990, 157);
             this.ucComment2.TabIndex = 1;
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(673, 248);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(83, 27);
+            this.lblAmount.TabIndex = 31;
+            this.lblAmount.Text = "Số lượng:";
+            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.vbButton2);
+            this.panel3.Controls.Add(this.vbButton1);
+            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Location = new System.Drawing.Point(663, 150);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(301, 51);
+            this.panel3.TabIndex = 30;
             // 
             // vbButton2
             // 
@@ -690,6 +642,26 @@ namespace ProjectWin_Demo_
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(59, 15);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(106, 19);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "ShopDienMay";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(664, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 44);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
+            // 
             // btnBuy
             // 
             this.btnBuy.BackColor = System.Drawing.Color.LightSalmon;
@@ -708,6 +680,18 @@ namespace ProjectWin_Demo_
             this.btnBuy.Text = "Mua hàng";
             this.btnBuy.TextColor = System.Drawing.Color.Black;
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
+            this.label2.Location = new System.Drawing.Point(673, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 32);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "10.110.000đ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCart
             // 
@@ -729,6 +713,26 @@ namespace ProjectWin_Demo_
             this.btnCart.Text = "        Thêm vào\r\n        giỏ hàng\r\n";
             this.btnCart.TextColor = System.Drawing.Color.Black;
             this.btnCart.UseVisualStyleBackColor = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(814, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Đã bán 100";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(701, 207);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(175, 27);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "TP.Hồ Chí Minh";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FDetail
             // 

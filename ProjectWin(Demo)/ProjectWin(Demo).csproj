@@ -53,73 +53,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FAddProduct.cs">
+    <Compile Include="UC\FAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAddProduct.Designer.cs">
+    <Compile Include="UC\FAddProduct.Designer.cs">
       <DependentUpon>FAddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FAdmin.cs">
+    <Compile Include="Form\FAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAdmin.Designer.cs">
+    <Compile Include="Form\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FComment.cs">
+    <Compile Include="Form\FComment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FComment.Designer.cs">
+    <Compile Include="Form\FComment.Designer.cs">
       <DependentUpon>FComment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FDetail.cs">
+    <Compile Include="Form\FDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDetail.Designer.cs">
+    <Compile Include="Form\FDetail.Designer.cs">
       <DependentUpon>FDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPayment.cs">
+    <Compile Include="Form\FPayment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FPayment.Designer.cs">
+    <Compile Include="Form\FPayment.Designer.cs">
       <DependentUpon>FPayment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSignUp.cs">
+    <Compile Include="Form\FSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSignUp.Designer.cs">
+    <Compile Include="Form\FSignUp.Designer.cs">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FCart.cs">
+    <Compile Include="Form\FCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FCart.Designer.cs">
+    <Compile Include="Form\FCart.Designer.cs">
       <DependentUpon>FCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="FHome.cs">
+    <Compile Include="Form\FHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FHome.Designer.cs">
+    <Compile Include="Form\FHome.Designer.cs">
       <DependentUpon>FHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FInfo.cs">
+    <Compile Include="Form\FInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FInfo.Designer.cs">
+    <Compile Include="Form\FInfo.Designer.cs">
       <DependentUpon>FInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="Form\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
+    <Compile Include="Form\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FMyProduct.cs">
+    <Compile Include="Form\FMyProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FMyProduct.Designer.cs">
+    <Compile Include="Form\FMyProduct.Designer.cs">
       <DependentUpon>FMyProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\RJTextBox.cs">
@@ -128,109 +128,109 @@
     <Compile Include="Funtion\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FUser.cs">
+    <Compile Include="Form\FUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FUser.Designer.cs">
+    <Compile Include="Form\FUser.Designer.cs">
       <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCCart.cs">
+    <Compile Include="UC\UCCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCCart.Designer.cs">
+    <Compile Include="UC\UCCart.Designer.cs">
       <DependentUpon>UCCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCComment.cs">
+    <Compile Include="UC\UCComment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCComment.Designer.cs">
+    <Compile Include="UC\UCComment.Designer.cs">
       <DependentUpon>UCComment.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCHisProduct.cs">
+    <Compile Include="UC\UCHisProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCHisProduct.Designer.cs">
+    <Compile Include="UC\UCHisProduct.Designer.cs">
       <DependentUpon>UCHisProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCHistory.cs">
+    <Compile Include="UC\UCHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCHistory.Designer.cs">
+    <Compile Include="UC\UCHistory.Designer.cs">
       <DependentUpon>UCHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCInfo.cs">
+    <Compile Include="UC\UCInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCInfo.Designer.cs">
+    <Compile Include="UC\UCInfo.Designer.cs">
       <DependentUpon>UCInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCMyProduct.cs">
+    <Compile Include="UC\UCMyProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCMyProduct.Designer.cs">
+    <Compile Include="UC\UCMyProduct.Designer.cs">
       <DependentUpon>UCMyProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCProducts.cs">
+    <Compile Include="UC\UCProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCProducts.Designer.cs">
+    <Compile Include="UC\UCProducts.Designer.cs">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UCProductSold.cs">
+    <Compile Include="UC\UCProductSold.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCProductSold.Designer.cs">
+    <Compile Include="UC\UCProductSold.Designer.cs">
       <DependentUpon>UCProductSold.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCRevenue.cs">
+    <Compile Include="UC\UCRevenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCRevenue.Designer.cs">
+    <Compile Include="UC\UCRevenue.Designer.cs">
       <DependentUpon>UCRevenue.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FAddProduct.resx">
+    <EmbeddedResource Include="UC\FAddProduct.resx">
       <DependentUpon>FAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAdmin.resx">
+    <EmbeddedResource Include="Form\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FCart.resx">
+    <EmbeddedResource Include="Form\FCart.resx">
       <DependentUpon>FCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FComment.resx">
+    <EmbeddedResource Include="Form\FComment.resx">
       <DependentUpon>FComment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FDetail.resx">
+    <EmbeddedResource Include="Form\FDetail.resx">
       <DependentUpon>FDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FHome.resx">
+    <EmbeddedResource Include="Form\FHome.resx">
       <DependentUpon>FHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FInfo.resx">
+    <EmbeddedResource Include="Form\FInfo.resx">
       <DependentUpon>FInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
+    <EmbeddedResource Include="Form\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FMyProduct.resx">
+    <EmbeddedResource Include="Form\FMyProduct.resx">
       <DependentUpon>FMyProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FPayment.resx">
+    <EmbeddedResource Include="Form\FPayment.resx">
       <DependentUpon>FPayment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSignUp.resx">
+    <EmbeddedResource Include="Form\FSignUp.resx">
       <DependentUpon>FSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funtion\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FUser.resx">
+    <EmbeddedResource Include="Form\FUser.resx">
       <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -238,25 +238,25 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCCart.resx">
+    <EmbeddedResource Include="UC\UCCart.resx">
       <DependentUpon>UCCart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCHisProduct.resx">
+    <EmbeddedResource Include="UC\UCHisProduct.resx">
       <DependentUpon>UCHisProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCHistory.resx">
+    <EmbeddedResource Include="UC\UCHistory.resx">
       <DependentUpon>UCHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCInfo.resx">
+    <EmbeddedResource Include="UC\UCInfo.resx">
       <DependentUpon>UCInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCMyProduct.resx">
+    <EmbeddedResource Include="UC\UCMyProduct.resx">
       <DependentUpon>UCMyProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCProducts.resx">
+    <EmbeddedResource Include="UC\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCRevenue.resx">
+    <EmbeddedResource Include="UC\UCRevenue.resx">
       <DependentUpon>UCRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -403,6 +403,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Lich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
