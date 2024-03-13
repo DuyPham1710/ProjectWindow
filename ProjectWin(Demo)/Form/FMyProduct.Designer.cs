@@ -244,7 +244,7 @@
             this.btnTotalProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTotalProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnTotalProduct.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnTotalProduct.Location = new System.Drawing.Point(26, 7);
+            this.btnTotalProduct.Location = new System.Drawing.Point(144, 7);
             this.btnTotalProduct.Name = "btnTotalProduct";
             this.btnTotalProduct.Size = new System.Drawing.Size(269, 53);
             this.btnTotalProduct.TabIndex = 2;
@@ -264,7 +264,7 @@
             this.btnProductSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductSold.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btnProductSold.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnProductSold.Location = new System.Drawing.Point(332, 7);
+            this.btnProductSold.Location = new System.Drawing.Point(419, 7);
             this.btnProductSold.Name = "btnProductSold";
             this.btnProductSold.Size = new System.Drawing.Size(269, 53);
             this.btnProductSold.TabIndex = 1;
@@ -284,7 +284,7 @@
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAddProduct.Location = new System.Drawing.Point(908, 12);
+            this.btnAddProduct.Location = new System.Drawing.Point(896, 12);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(180, 40);
             this.btnAddProduct.TabIndex = 1;

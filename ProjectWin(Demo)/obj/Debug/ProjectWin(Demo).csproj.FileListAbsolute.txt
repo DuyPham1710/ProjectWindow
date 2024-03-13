@@ -228,3 +228,4 @@ C:\Users\User\Desktop\DoAnWin\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj
 C:\Users\User\Desktop\DoAnWin\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CopyComplete
 C:\Users\User\Desktop\DoAnWin\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).exe
 C:\Users\User\Desktop\DoAnWin\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).pdb
+C:\Users\User\Desktop\DoAnWin\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCProductSold.resources

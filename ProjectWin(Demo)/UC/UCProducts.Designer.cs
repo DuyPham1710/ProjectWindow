@@ -145,7 +145,7 @@
             this.pctProduct.Image = global::ProjectWin_Demo_.Properties.Resources.smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25;
             this.pctProduct.Location = new System.Drawing.Point(0, 0);
             this.pctProduct.Name = "pctProduct";
-            this.pctProduct.Size = new System.Drawing.Size(212, 169);
+            this.pctProduct.Size = new System.Drawing.Size(229, 169);
             this.pctProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctProduct.TabIndex = 0;
             this.pctProduct.TabStop = false;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pctProduct);
             this.Name = "UCProducts";
-            this.Size = new System.Drawing.Size(212, 320);
+            this.Size = new System.Drawing.Size(229, 320);
             this.Click += new System.EventHandler(this.UCProducts_Click);
             this.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);

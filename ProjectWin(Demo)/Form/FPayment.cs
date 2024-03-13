@@ -55,5 +55,10 @@ namespace ProjectWin_Demo_
             MessageBox.Show("Đặt hàng thành công", "Thông báo");
             this.Close();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

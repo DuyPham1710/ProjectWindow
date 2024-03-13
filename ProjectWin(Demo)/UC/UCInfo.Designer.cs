@@ -62,7 +62,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.txtCCCD);
-            this.groupBox8.Location = new System.Drawing.Point(460, 437);
+            this.groupBox8.Location = new System.Drawing.Point(535, 437);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(314, 64);
             this.groupBox8.TabIndex = 17;
@@ -94,7 +94,7 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.rjTextBox5);
-            this.groupBox7.Location = new System.Drawing.Point(108, 329);
+            this.groupBox7.Location = new System.Drawing.Point(183, 329);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(314, 64);
             this.groupBox7.TabIndex = 16;
@@ -133,7 +133,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(549, 520);
+            this.btnSave.Location = new System.Drawing.Point(624, 520);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 40);
             this.btnSave.TabIndex = 15;
@@ -147,7 +147,7 @@
             this.groupBox6.Controls.Add(this.radioButton3);
             this.groupBox6.Controls.Add(this.radioButton2);
             this.groupBox6.Controls.Add(this.radioButton1);
-            this.groupBox6.Location = new System.Drawing.Point(108, 437);
+            this.groupBox6.Location = new System.Drawing.Point(183, 437);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(233, 53);
             this.groupBox6.TabIndex = 14;
@@ -190,7 +190,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtAddress);
-            this.groupBox5.Location = new System.Drawing.Point(460, 91);
+            this.groupBox5.Location = new System.Drawing.Point(535, 91);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(314, 64);
             this.groupBox5.TabIndex = 13;
@@ -222,7 +222,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dateTimePicker1);
-            this.groupBox4.Location = new System.Drawing.Point(460, 329);
+            this.groupBox4.Location = new System.Drawing.Point(535, 329);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(314, 64);
             this.groupBox4.TabIndex = 10;
@@ -241,7 +241,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtPhoneNumber);
-            this.groupBox3.Location = new System.Drawing.Point(460, 208);
+            this.groupBox3.Location = new System.Drawing.Point(535, 208);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(314, 64);
             this.groupBox3.TabIndex = 11;
@@ -273,7 +273,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtUserName);
-            this.groupBox2.Location = new System.Drawing.Point(108, 208);
+            this.groupBox2.Location = new System.Drawing.Point(183, 208);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 64);
             this.groupBox2.TabIndex = 12;
@@ -305,7 +305,7 @@
             // pictureBoxUser
             // 
             this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_64__1_;
-            this.pictureBoxUser.Location = new System.Drawing.Point(833, 132);
+            this.pictureBoxUser.Location = new System.Drawing.Point(908, 132);
             this.pictureBoxUser.Name = "pictureBoxUser";
             this.pictureBoxUser.Size = new System.Drawing.Size(170, 170);
             this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,7 +315,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Location = new System.Drawing.Point(108, 91);
+            this.groupBox1.Location = new System.Drawing.Point(183, 91);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(314, 64);
             this.groupBox1.TabIndex = 8;
@@ -359,7 +359,7 @@
             this.Controls.Add(this.pictureBoxUser);
             this.Controls.Add(this.groupBox1);
             this.Name = "UCInfo";
-            this.Size = new System.Drawing.Size(1111, 651);
+            this.Size = new System.Drawing.Size(1200, 651);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);

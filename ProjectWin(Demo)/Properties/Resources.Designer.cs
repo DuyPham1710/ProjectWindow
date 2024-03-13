@@ -93,9 +93,29 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _277404204_1025346704736303_4250379289102117478_n {
+            get {
+                object obj = ResourceManager.GetObject("277404204_1025346704736303_4250379289102117478_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Accept {
+            get {
+                object obj = ResourceManager.GetObject("Accept", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap DanhMucSanPham {
             get {
                 object obj = ResourceManager.GetObject("DanhMucSanPham", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Done {
+            get {
+                object obj = ResourceManager.GetObject("Done", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -397,6 +427,26 @@ namespace ProjectWin_Demo_.Properties {
             get {
                 object obj = ResourceManager.GetObject("pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-materia" +
                         "l-picture-image_1048684", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recv {
+            get {
+                object obj = ResourceManager.GetObject("Recv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shipping {
+            get {
+                object obj = ResourceManager.GetObject("Shipping", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

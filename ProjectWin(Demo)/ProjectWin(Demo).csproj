@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UC\FAddProduct.cs">
+    <Compile Include="Form\FAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UC\FAddProduct.Designer.cs">
+    <Compile Include="Form\FAddProduct.Designer.cs">
       <DependentUpon>FAddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FAdmin.cs">
@@ -194,7 +194,7 @@
     <Compile Include="UC\UCRevenue.Designer.cs">
       <DependentUpon>UCRevenue.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UC\FAddProduct.resx">
+    <EmbeddedResource Include="Form\FAddProduct.resx">
       <DependentUpon>FAddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FAdmin.resx">
@@ -255,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCProductSold.resx">
+      <DependentUpon>UCProductSold.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCRevenue.resx">
       <DependentUpon>UCRevenue.cs</DependentUpon>
@@ -409,6 +412,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\277404204_1025346704736303_4250379289102117478_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shipping.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Done.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -115,7 +115,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 256);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 395);
+            this.panel1.Size = new System.Drawing.Size(1200, 395);
             this.panel1.TabIndex = 9;
             // 
             // dataGridView1
@@ -135,7 +135,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1111, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(1200, 395);
             this.dataGridView1.TabIndex = 0;
             // 
             // cbxMonth
@@ -204,7 +204,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(580, 3);
+            this.chart1.Location = new System.Drawing.Point(661, 3);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -229,7 +229,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "UCRevenue";
-            this.Size = new System.Drawing.Size(1111, 651);
+            this.Size = new System.Drawing.Size(1200, 651);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
