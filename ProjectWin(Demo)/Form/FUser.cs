@@ -115,6 +115,11 @@ namespace ProjectWin_Demo_
             btnMyProduct.FillColor = Color.Thistle;
             btnInfo.FillColor = Color.Thistle;
             btnDonHang.FillColor = Color.Thistle;
+
+            btnHome.CustomBorderColor = Color.Purple;
+            btnMyProduct.CustomBorderColor = Color.Thistle;
+            btnInfo.CustomBorderColor = Color.Thistle;
+            btnDonHang.CustomBorderColor = Color.Thistle;
             openChildForm(new FHome());
             
         }
@@ -130,6 +135,11 @@ namespace ProjectWin_Demo_
             btnMyProduct.FillColor = Color.Thistle;
             btnInfo.FillColor = Color.Plum;
             btnDonHang.FillColor = Color.Thistle;
+
+            btnHome.CustomBorderColor = Color.Thistle;
+            btnMyProduct.CustomBorderColor = Color.Thistle;
+            btnInfo.CustomBorderColor = Color.Purple;
+            btnDonHang.CustomBorderColor = Color.Thistle;
             openChildForm(new FInfo());
         }
 
@@ -139,7 +149,14 @@ namespace ProjectWin_Demo_
             btnMyProduct.FillColor = Color.Plum;
             btnInfo.FillColor = Color.Thistle;
             btnDonHang.FillColor = Color.Thistle;
+
+            btnHome.CustomBorderColor = Color.Thistle;
+            btnMyProduct.CustomBorderColor = Color.Purple;
+            btnInfo.CustomBorderColor = Color.Thistle;
+            btnDonHang.CustomBorderColor = Color.Thistle;
+
             openChildForm(new FMyProduct());
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -190,6 +207,11 @@ namespace ProjectWin_Demo_
             btnMyProduct.FillColor = Color.Thistle;
             btnInfo.FillColor = Color.Thistle;
             btnDonHang.FillColor = Color.Plum;
+
+            btnHome.CustomBorderColor = Color.Thistle;
+            btnMyProduct.CustomBorderColor = Color.Thistle;
+            btnInfo.CustomBorderColor = Color.Thistle;
+            btnDonHang.CustomBorderColor = Color.Purple;
         }
 
         private void avt_Click(object sender, EventArgs e)

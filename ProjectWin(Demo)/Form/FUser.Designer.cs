@@ -34,29 +34,29 @@
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbName = new System.Windows.Forms.Label();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnFind = new CustomButton.VBButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,6 +164,27 @@
             this.btnClose.UseTransparentBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
+            this.pictureBox1.Location = new System.Drawing.Point(1215, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxCart
+            // 
+            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
+            this.pictureBoxCart.Location = new System.Drawing.Point(1158, 6);
+            this.pictureBoxCart.Name = "pictureBoxCart";
+            this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
+            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCart.TabIndex = 2;
+            this.pictureBoxCart.TabStop = false;
+            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -188,6 +209,152 @@
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(84, 686);
             this.panelControl.TabIndex = 3;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Thistle;
+            this.btnLogOut.BorderRadius = 5;
+            this.btnLogOut.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogOut.FillColor = System.Drawing.Color.Thistle;
+            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnLogOut.Image = global::ProjectWin_Demo_.Properties.Resources.logout;
+            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnLogOut.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 592);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLogOut.Size = new System.Drawing.Size(84, 79);
+            this.btnLogOut.TabIndex = 24;
+            this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnLogOut.TextOffset = new System.Drawing.Point(-5, 0);
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.Thistle;
+            this.btnInfo.BorderColor = System.Drawing.Color.Purple;
+            this.btnInfo.BorderRadius = 5;
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInfo.CustomBorderColor = System.Drawing.Color.Thistle;
+            this.btnInfo.CustomBorderThickness = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInfo.FillColor = System.Drawing.Color.Thistle;
+            this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.Black;
+            this.btnInfo.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnInfo.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_24;
+            this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInfo.ImageOffset = new System.Drawing.Point(3, 0);
+            this.btnInfo.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnInfo.Location = new System.Drawing.Point(0, 382);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnInfo.Size = new System.Drawing.Size(84, 79);
+            this.btnInfo.TabIndex = 20;
+            this.btnInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnInfo.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.BackColor = System.Drawing.Color.Thistle;
+            this.btnDonHang.BorderColor = System.Drawing.Color.Purple;
+            this.btnDonHang.BorderRadius = 5;
+            this.btnDonHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDonHang.CustomBorderColor = System.Drawing.Color.Thistle;
+            this.btnDonHang.CustomBorderThickness = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDonHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDonHang.FillColor = System.Drawing.Color.Thistle;
+            this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.btnDonHang.ForeColor = System.Drawing.Color.Black;
+            this.btnDonHang.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnDonHang.Image = global::ProjectWin_Demo_.Properties.Resources.Icons8_Windows_8_Ecommerce_Product_48;
+            this.btnDonHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDonHang.ImageOffset = new System.Drawing.Point(3, 0);
+            this.btnDonHang.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnDonHang.Location = new System.Drawing.Point(0, 303);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnDonHang.Size = new System.Drawing.Size(84, 79);
+            this.btnDonHang.TabIndex = 25;
+            this.btnDonHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnDonHang.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
+            // 
+            // btnMyProduct
+            // 
+            this.btnMyProduct.BackColor = System.Drawing.Color.Thistle;
+            this.btnMyProduct.BorderColor = System.Drawing.Color.Purple;
+            this.btnMyProduct.BorderRadius = 5;
+            this.btnMyProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMyProduct.CustomBorderColor = System.Drawing.Color.Thistle;
+            this.btnMyProduct.CustomBorderThickness = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnMyProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMyProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMyProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMyProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMyProduct.FillColor = System.Drawing.Color.Thistle;
+            this.btnMyProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnMyProduct.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnMyProduct.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_product_50;
+            this.btnMyProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMyProduct.ImageOffset = new System.Drawing.Point(3, 0);
+            this.btnMyProduct.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnMyProduct.Location = new System.Drawing.Point(0, 224);
+            this.btnMyProduct.Name = "btnMyProduct";
+            this.btnMyProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnMyProduct.Size = new System.Drawing.Size(84, 79);
+            this.btnMyProduct.TabIndex = 18;
+            this.btnMyProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnMyProduct.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnMyProduct.Click += new System.EventHandler(this.btnMyProduct_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Thistle;
+            this.btnHome.BorderRadius = 5;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.CustomBorderColor = System.Drawing.Color.Purple;
+            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FillColor = System.Drawing.Color.Plum;
+            this.btnHome.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.Black;
+            this.btnHome.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnHome.Image = global::ProjectWin_Demo_.Properties.Resources.Iconsmind_Outline_Home_2_2_64;
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.ImageOffset = new System.Drawing.Point(3, 0);
+            this.btnHome.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnHome.Location = new System.Drawing.Point(0, 145);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnHome.Size = new System.Drawing.Size(84, 79);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnHome.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel6
             // 
@@ -220,140 +387,6 @@
             this.lbName.Text = "Lamriver";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(-98, 134);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(300, 10);
-            this.guna2Separator1.TabIndex = 0;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 17;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.Tomato;
-            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogOut.FillColor = System.Drawing.Color.Thistle;
-            this.btnLogOut.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Image = global::ProjectWin_Demo_.Properties.Resources.logout;
-            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogOut.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btnLogOut.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 592);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLogOut.Size = new System.Drawing.Size(84, 79);
-            this.btnLogOut.TabIndex = 24;
-            this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLogOut.TextOffset = new System.Drawing.Point(-5, 0);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.Tomato;
-            this.btnInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInfo.FillColor = System.Drawing.Color.Thistle;
-            this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInfo.ForeColor = System.Drawing.Color.Black;
-            this.btnInfo.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_24;
-            this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInfo.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnInfo.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnInfo.Location = new System.Drawing.Point(0, 382);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnInfo.Size = new System.Drawing.Size(84, 79);
-            this.btnInfo.TabIndex = 20;
-            this.btnInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnInfo.TextOffset = new System.Drawing.Point(-5, 0);
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // btnDonHang
-            // 
-            this.btnDonHang.BackColor = System.Drawing.Color.Tomato;
-            this.btnDonHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDonHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDonHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDonHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDonHang.FillColor = System.Drawing.Color.Thistle;
-            this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.btnDonHang.ForeColor = System.Drawing.Color.Black;
-            this.btnDonHang.Image = global::ProjectWin_Demo_.Properties.Resources.Icons8_Windows_8_Ecommerce_Product_48;
-            this.btnDonHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDonHang.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnDonHang.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDonHang.Location = new System.Drawing.Point(0, 303);
-            this.btnDonHang.Name = "btnDonHang";
-            this.btnDonHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDonHang.Size = new System.Drawing.Size(84, 79);
-            this.btnDonHang.TabIndex = 25;
-            this.btnDonHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnDonHang.TextOffset = new System.Drawing.Point(-5, 0);
-            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
-            // 
-            // btnMyProduct
-            // 
-            this.btnMyProduct.BackColor = System.Drawing.Color.Tomato;
-            this.btnMyProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMyProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMyProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMyProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMyProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyProduct.FillColor = System.Drawing.Color.Thistle;
-            this.btnMyProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnMyProduct.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_product_50;
-            this.btnMyProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMyProduct.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnMyProduct.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnMyProduct.Location = new System.Drawing.Point(0, 224);
-            this.btnMyProduct.Name = "btnMyProduct";
-            this.btnMyProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnMyProduct.Size = new System.Drawing.Size(84, 79);
-            this.btnMyProduct.TabIndex = 18;
-            this.btnMyProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnMyProduct.TextOffset = new System.Drawing.Point(-5, 0);
-            this.btnMyProduct.Click += new System.EventHandler(this.btnMyProduct_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Tomato;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FillColor = System.Drawing.Color.Plum;
-            this.btnHome.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnHome.Image = global::ProjectWin_Demo_.Properties.Resources.Iconsmind_Outline_Home_2_2_64;
-            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnHome.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnHome.Location = new System.Drawing.Point(0, 145);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnHome.Size = new System.Drawing.Size(84, 79);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnHome.TextOffset = new System.Drawing.Point(-5, 0);
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Thistle;
@@ -375,6 +408,14 @@
             this.btnMenu.TabIndex = 0;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
+            this.guna2Separator1.Location = new System.Drawing.Point(-98, 134);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(300, 10);
+            this.guna2Separator1.TabIndex = 0;
+            // 
             // avt
             // 
             this.avt.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
@@ -387,6 +428,11 @@
             this.avt.TabIndex = 1;
             this.avt.TabStop = false;
             this.avt.Click += new System.EventHandler(this.avt_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 17;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // btnFind
             // 
@@ -409,27 +455,6 @@
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
-            this.pictureBox1.Location = new System.Drawing.Point(1215, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxCart
-            // 
-            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
-            this.pictureBoxCart.Location = new System.Drawing.Point(1158, 6);
-            this.pictureBoxCart.Name = "pictureBoxCart";
-            this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
-            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCart.TabIndex = 2;
-            this.pictureBoxCart.TabStop = false;
-            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
-            // 
             // FUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -445,11 +470,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FUser";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.ResumeLayout(false);
 
         }

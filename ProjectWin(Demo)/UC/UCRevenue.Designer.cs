@@ -44,11 +44,11 @@
             this.Tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbxMonth = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnOK = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -186,6 +186,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(1027, 482);
             this.dataGridView1.TabIndex = 0;
             // 
+            // a
+            // 
+            this.a.HeaderText = "Column1";
+            this.a.MinimumWidth = 6;
+            this.a.Name = "a";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -212,24 +230,6 @@
             this.chart1.Size = new System.Drawing.Size(51, 63);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
-            // 
-            // a
-            // 
-            this.a.HeaderText = "Column1";
-            this.a.MinimumWidth = 6;
-            this.a.Name = "a";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
             // 
             // cbxMonth
             // 
