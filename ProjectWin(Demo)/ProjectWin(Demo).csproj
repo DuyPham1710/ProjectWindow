@@ -464,5 +464,8 @@
   <ItemGroup>
     <None Include="Resources\apple.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Home-2-2.64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

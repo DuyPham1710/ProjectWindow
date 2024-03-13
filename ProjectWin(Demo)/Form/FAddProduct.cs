@@ -12,6 +12,9 @@ namespace ProjectWin_Demo_
 {
     public partial class FAddProduct : Form
     {
+        private bool isDragging;
+        private Point lastCursor;
+        private Point lastForm;
         public FAddProduct()
         {
             InitializeComponent();
@@ -40,6 +43,60 @@ namespace ProjectWin_Demo_
             {
                 MessageBox.Show("Cập nhật sản phẩm thành công", "Thông báo");
                 this.Close();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void pToolBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point currentCursor = Cursor.Position;
+                this.Location = new Point(lastForm.X + (currentCursor.X - lastCursor.X), lastForm.Y + (currentCursor.Y - lastCursor.Y));
+            }
+        }
+
+        private void pToolBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = this.Location;
+            }
+        }
+
+        private void pToolBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
+        private void vbButton2_Click(object sender, EventArgs e)
+        {
+            while (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                try
+                {
+                    pctProduct.Image = Image.FromFile(openFileDialog1.FileName);
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể chọn ảnh này !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
         }
     }

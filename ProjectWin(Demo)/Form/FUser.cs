@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace ProjectWin_Demo_
 {
@@ -34,17 +35,8 @@ namespace ProjectWin_Demo_
             // Cài đặt Timer cho việc thu nhỏ
             shrinkTimer.Interval = 1;
             shrinkTimer.Tick += ShrinkTimer_Tick;
-
-            // Sự kiện di chuột vào và ra
-            btnHome.MouseHover += (s, e) => { shrinkTimer.Stop(); growTimer.Start(); };
-            btnHome.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
-            btnInfo.MouseHover += (s, e) => { shrinkTimer.Stop(); growTimer.Start(); };
-            btnInfo.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
-            btnLogOut.MouseHover += (s, e) => { shrinkTimer.Stop(); growTimer.Start(); };
-            btnLogOut.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
-            btnMyProduct.MouseHover += (s, e) => { shrinkTimer.Stop(); growTimer.Start(); };
-            btnMyProduct.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
         }
+        
         private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -75,24 +67,23 @@ namespace ProjectWin_Demo_
         {
             if (panelControl.Width < originalWidth * 2.5)
             {
-                panelControl.Width += 4;
+                panelControl.Width += 8;
             }
             else
             {
                 btnHome.Text = "Trang chủ";
                 btnMyProduct.Text = "Sản phẩm\ncủa tôi";
                 btnInfo.Text = "Thông tin\ncá nhân";
+                btnDonHang.Text = "Đơn hàng";
                 btnLogOut.Text = "Đăng xuất";
                 growTimer.Stop();
             }
         }
-
         private void ShrinkTimer_Tick(object sender, EventArgs e)
         {
-            
             if (panelControl.Width > originalWidth)
             {
-                panelControl.Width -= 4;
+                panelControl.Width -= 8;
             }
             else
             {
@@ -101,6 +92,7 @@ namespace ProjectWin_Demo_
             btnHome.Text = "";
             btnMyProduct.Text = "";
             btnInfo.Text = "";
+            btnDonHang.Text = "";
             btnLogOut.Text = "";
         }
         private void openChildForm(Form childForm)
@@ -119,10 +111,12 @@ namespace ProjectWin_Demo_
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            btnHome.BackColor = Color.PowderBlue;
-            btnMyProduct.BackColor = Color.Transparent;
-            btnInfo.BackColor = Color.Transparent;
+            btnHome.FillColor = Color.Plum;
+            btnMyProduct.FillColor = Color.Thistle;
+            btnInfo.FillColor = Color.Thistle;
+            btnDonHang.FillColor = Color.Thistle;
             openChildForm(new FHome());
+            
         }
 
         private void pictureBoxCart_Click(object sender, EventArgs e)
@@ -132,17 +126,19 @@ namespace ProjectWin_Demo_
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            btnHome.BackColor = Color.Transparent;
-            btnMyProduct.BackColor = Color.Transparent;
-            btnInfo.BackColor = Color.PowderBlue;
+            btnHome.FillColor = Color.Thistle;
+            btnMyProduct.FillColor = Color.Thistle;
+            btnInfo.FillColor = Color.Plum;
+            btnDonHang.FillColor = Color.Thistle;
             openChildForm(new FInfo());
         }
 
         private void btnMyProduct_Click(object sender, EventArgs e)
         {
-            btnHome.BackColor = Color.Transparent;
-            btnMyProduct.BackColor = Color.PowderBlue;
-            btnInfo.BackColor = Color.Transparent;
+            btnHome.FillColor = Color.Thistle;
+            btnMyProduct.FillColor = Color.Plum;
+            btnInfo.FillColor = Color.Thistle;
+            btnDonHang.FillColor = Color.Thistle;
             openChildForm(new FMyProduct());
         }
 
@@ -172,6 +168,33 @@ namespace ProjectWin_Demo_
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if (panelControl.Width < 72)
+            {
+                growTimer.Start();
+                shrinkTimer.Stop();
+            }
+            else
+            {
+                growTimer.Stop();
+                shrinkTimer.Start();
+            }
+        }
+
+        private void btnDonHang_Click(object sender, EventArgs e)
+        {
+            btnHome.FillColor = Color.Thistle;
+            btnMyProduct.FillColor = Color.Thistle;
+            btnInfo.FillColor = Color.Thistle;
+            btnDonHang.FillColor = Color.Plum;
+        }
+
+        private void avt_Click(object sender, EventArgs e)
+        {
+            btnInfo_Click(sender, e);
         }
     }
 }
