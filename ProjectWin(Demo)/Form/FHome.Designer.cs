@@ -29,21 +29,6 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.pSort = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.pCatalog = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.ucProducts1 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts2 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts3 = new ProjectWin_Demo_.UCProducts();
@@ -60,6 +45,21 @@
             this.ucProducts14 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts15 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts16 = new ProjectWin_Demo_.UCProducts();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.pSort = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.pCatalog = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.flowLayoutPanel1.SuspendLayout();
             this.pSort.SuspendLayout();
             this.pCatalog.SuspendLayout();
@@ -68,7 +68,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Silver;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.GhostWhite;
             this.flowLayoutPanel1.Controls.Add(this.ucProducts1);
             this.flowLayoutPanel1.Controls.Add(this.ucProducts2);
             this.flowLayoutPanel1.Controls.Add(this.ucProducts3);
@@ -87,9 +87,139 @@
             this.flowLayoutPanel1.Controls.Add(this.ucProducts16);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 46);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1200, 640);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // ucProducts1
+            // 
+            this.ucProducts1.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts1.Location = new System.Drawing.Point(3, 3);
+            this.ucProducts1.Name = "ucProducts1";
+            this.ucProducts1.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts1.TabIndex = 0;
+            // 
+            // ucProducts2
+            // 
+            this.ucProducts2.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts2.Location = new System.Drawing.Point(238, 3);
+            this.ucProducts2.Name = "ucProducts2";
+            this.ucProducts2.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts2.TabIndex = 1;
+            // 
+            // ucProducts3
+            // 
+            this.ucProducts3.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts3.Location = new System.Drawing.Point(473, 3);
+            this.ucProducts3.Name = "ucProducts3";
+            this.ucProducts3.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts3.TabIndex = 2;
+            // 
+            // ucProducts4
+            // 
+            this.ucProducts4.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts4.Location = new System.Drawing.Point(708, 3);
+            this.ucProducts4.Name = "ucProducts4";
+            this.ucProducts4.Size = new System.Drawing.Size(229, 323);
+            this.ucProducts4.TabIndex = 3;
+            // 
+            // ucProducts5
+            // 
+            this.ucProducts5.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts5.Location = new System.Drawing.Point(943, 3);
+            this.ucProducts5.Name = "ucProducts5";
+            this.ucProducts5.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts5.TabIndex = 4;
+            // 
+            // ucProducts6
+            // 
+            this.ucProducts6.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts6.Location = new System.Drawing.Point(3, 332);
+            this.ucProducts6.Name = "ucProducts6";
+            this.ucProducts6.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts6.TabIndex = 5;
+            // 
+            // ucProducts7
+            // 
+            this.ucProducts7.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts7.Location = new System.Drawing.Point(238, 332);
+            this.ucProducts7.Name = "ucProducts7";
+            this.ucProducts7.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts7.TabIndex = 6;
+            // 
+            // ucProducts8
+            // 
+            this.ucProducts8.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts8.Location = new System.Drawing.Point(473, 332);
+            this.ucProducts8.Name = "ucProducts8";
+            this.ucProducts8.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts8.TabIndex = 7;
+            // 
+            // ucProducts9
+            // 
+            this.ucProducts9.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts9.Location = new System.Drawing.Point(708, 332);
+            this.ucProducts9.Name = "ucProducts9";
+            this.ucProducts9.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts9.TabIndex = 8;
+            // 
+            // ucProducts10
+            // 
+            this.ucProducts10.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts10.Location = new System.Drawing.Point(943, 332);
+            this.ucProducts10.Name = "ucProducts10";
+            this.ucProducts10.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts10.TabIndex = 9;
+            // 
+            // ucProducts11
+            // 
+            this.ucProducts11.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts11.Location = new System.Drawing.Point(3, 658);
+            this.ucProducts11.Name = "ucProducts11";
+            this.ucProducts11.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts11.TabIndex = 10;
+            // 
+            // ucProducts12
+            // 
+            this.ucProducts12.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts12.Location = new System.Drawing.Point(238, 658);
+            this.ucProducts12.Name = "ucProducts12";
+            this.ucProducts12.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts12.TabIndex = 11;
+            // 
+            // ucProducts13
+            // 
+            this.ucProducts13.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts13.Location = new System.Drawing.Point(473, 658);
+            this.ucProducts13.Name = "ucProducts13";
+            this.ucProducts13.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts13.TabIndex = 12;
+            // 
+            // ucProducts14
+            // 
+            this.ucProducts14.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts14.Location = new System.Drawing.Point(708, 658);
+            this.ucProducts14.Name = "ucProducts14";
+            this.ucProducts14.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts14.TabIndex = 13;
+            // 
+            // ucProducts15
+            // 
+            this.ucProducts15.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts15.Location = new System.Drawing.Point(943, 658);
+            this.ucProducts15.Name = "ucProducts15";
+            this.ucProducts15.Size = new System.Drawing.Size(229, 320);
+            this.ucProducts15.TabIndex = 14;
+            // 
+            // ucProducts16
+            // 
+            this.ucProducts16.BackColor = System.Drawing.Color.LightGray;
+            this.ucProducts16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ucProducts16.Location = new System.Drawing.Point(3, 984);
+            this.ucProducts16.Name = "ucProducts16";
+            this.ucProducts16.Size = new System.Drawing.Size(229, 0);
+            this.ucProducts16.TabIndex = 15;
             // 
             // guna2Button1
             // 
@@ -288,140 +418,11 @@
             this.guna2Separator4.Size = new System.Drawing.Size(180, 10);
             this.guna2Separator4.TabIndex = 9;
             // 
-            // ucProducts1
-            // 
-            this.ucProducts1.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts1.Location = new System.Drawing.Point(3, 3);
-            this.ucProducts1.Name = "ucProducts1";
-            this.ucProducts1.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts1.TabIndex = 0;
-            // 
-            // ucProducts2
-            // 
-            this.ucProducts2.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts2.Location = new System.Drawing.Point(238, 3);
-            this.ucProducts2.Name = "ucProducts2";
-            this.ucProducts2.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts2.TabIndex = 1;
-            // 
-            // ucProducts3
-            // 
-            this.ucProducts3.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts3.Location = new System.Drawing.Point(473, 3);
-            this.ucProducts3.Name = "ucProducts3";
-            this.ucProducts3.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts3.TabIndex = 2;
-            // 
-            // ucProducts4
-            // 
-            this.ucProducts4.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts4.Location = new System.Drawing.Point(708, 3);
-            this.ucProducts4.Name = "ucProducts4";
-            this.ucProducts4.Size = new System.Drawing.Size(229, 323);
-            this.ucProducts4.TabIndex = 3;
-            // 
-            // ucProducts5
-            // 
-            this.ucProducts5.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts5.Location = new System.Drawing.Point(943, 3);
-            this.ucProducts5.Name = "ucProducts5";
-            this.ucProducts5.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts5.TabIndex = 4;
-            // 
-            // ucProducts6
-            // 
-            this.ucProducts6.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts6.Location = new System.Drawing.Point(3, 332);
-            this.ucProducts6.Name = "ucProducts6";
-            this.ucProducts6.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts6.TabIndex = 5;
-            // 
-            // ucProducts7
-            // 
-            this.ucProducts7.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts7.Location = new System.Drawing.Point(238, 332);
-            this.ucProducts7.Name = "ucProducts7";
-            this.ucProducts7.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts7.TabIndex = 6;
-            // 
-            // ucProducts8
-            // 
-            this.ucProducts8.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts8.Location = new System.Drawing.Point(473, 332);
-            this.ucProducts8.Name = "ucProducts8";
-            this.ucProducts8.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts8.TabIndex = 7;
-            // 
-            // ucProducts9
-            // 
-            this.ucProducts9.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts9.Location = new System.Drawing.Point(708, 332);
-            this.ucProducts9.Name = "ucProducts9";
-            this.ucProducts9.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts9.TabIndex = 8;
-            // 
-            // ucProducts10
-            // 
-            this.ucProducts10.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts10.Location = new System.Drawing.Point(943, 332);
-            this.ucProducts10.Name = "ucProducts10";
-            this.ucProducts10.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts10.TabIndex = 9;
-            // 
-            // ucProducts11
-            // 
-            this.ucProducts11.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts11.Location = new System.Drawing.Point(3, 658);
-            this.ucProducts11.Name = "ucProducts11";
-            this.ucProducts11.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts11.TabIndex = 10;
-            // 
-            // ucProducts12
-            // 
-            this.ucProducts12.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts12.Location = new System.Drawing.Point(238, 658);
-            this.ucProducts12.Name = "ucProducts12";
-            this.ucProducts12.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts12.TabIndex = 11;
-            // 
-            // ucProducts13
-            // 
-            this.ucProducts13.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts13.Location = new System.Drawing.Point(473, 658);
-            this.ucProducts13.Name = "ucProducts13";
-            this.ucProducts13.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts13.TabIndex = 12;
-            // 
-            // ucProducts14
-            // 
-            this.ucProducts14.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts14.Location = new System.Drawing.Point(708, 658);
-            this.ucProducts14.Name = "ucProducts14";
-            this.ucProducts14.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts14.TabIndex = 13;
-            // 
-            // ucProducts15
-            // 
-            this.ucProducts15.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts15.Location = new System.Drawing.Point(943, 658);
-            this.ucProducts15.Name = "ucProducts15";
-            this.ucProducts15.Size = new System.Drawing.Size(229, 320);
-            this.ucProducts15.TabIndex = 14;
-            // 
-            // ucProducts16
-            // 
-            this.ucProducts16.BackColor = System.Drawing.Color.LightGray;
-            this.ucProducts16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ucProducts16.Location = new System.Drawing.Point(3, 984);
-            this.ucProducts16.Name = "ucProducts16";
-            this.ucProducts16.Size = new System.Drawing.Size(229, 0);
-            this.ucProducts16.TabIndex = 15;
-            // 
             // FHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1200, 686);
             this.Controls.Add(this.pCatalog);
             this.Controls.Add(this.pSort);

@@ -30,33 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbName = new System.Windows.Forms.Label();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lbName = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnFind = new CustomButton.VBButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,33 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Indigo;
+            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.BorderThickness = 2;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FillColor = System.Drawing.Color.Lavender;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.guna2TextBox1.Location = new System.Drawing.Point(221, 8);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(587, 40);
+            this.guna2TextBox1.TabIndex = 26;
             // 
             // guna2CircleButton2
             // 
@@ -137,27 +164,6 @@
             this.btnClose.UseTransparentBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
-            this.pictureBox1.Location = new System.Drawing.Point(1215, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxCart
-            // 
-            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
-            this.pictureBoxCart.Location = new System.Drawing.Point(1158, 6);
-            this.pictureBoxCart.Name = "pictureBoxCart";
-            this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
-            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCart.TabIndex = 2;
-            this.pictureBoxCart.TabStop = false;
-            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
-            // 
             // panelChildForm
             // 
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -182,6 +188,50 @@
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(84, 686);
             this.panelControl.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 671);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(84, 15);
+            this.panel6.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Thistle;
+            this.panel3.Controls.Add(this.lbName);
+            this.panel3.Controls.Add(this.btnMenu);
+            this.panel3.Controls.Add(this.guna2Separator1);
+            this.panel3.Controls.Add(this.avt);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(84, 145);
+            this.panel3.TabIndex = 12;
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(87, 73);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(100, 23);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Lamriver";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
+            this.guna2Separator1.Location = new System.Drawing.Point(-98, 134);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(300, 10);
+            this.guna2Separator1.TabIndex = 0;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 17;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // btnLogOut
             // 
@@ -217,7 +267,6 @@
             this.btnInfo.FillColor = System.Drawing.Color.Thistle;
             this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.Color.Black;
-            this.btnInfo.HoverState.FillColor = System.Drawing.Color.Plum;
             this.btnInfo.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_24;
             this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInfo.ImageOffset = new System.Drawing.Point(1, 0);
@@ -242,7 +291,6 @@
             this.btnDonHang.FillColor = System.Drawing.Color.Thistle;
             this.btnDonHang.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.btnDonHang.ForeColor = System.Drawing.Color.Black;
-            this.btnDonHang.HoverState.FillColor = System.Drawing.Color.Plum;
             this.btnDonHang.Image = global::ProjectWin_Demo_.Properties.Resources.Icons8_Windows_8_Ecommerce_Product_48;
             this.btnDonHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDonHang.ImageOffset = new System.Drawing.Point(1, 0);
@@ -267,7 +315,6 @@
             this.btnMyProduct.FillColor = System.Drawing.Color.Thistle;
             this.btnMyProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnMyProduct.HoverState.FillColor = System.Drawing.Color.Plum;
             this.btnMyProduct.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_product_50;
             this.btnMyProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMyProduct.ImageOffset = new System.Drawing.Point(1, 0);
@@ -294,8 +341,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.btnHome.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnHome.HoverState.FillColor = System.Drawing.Color.Plum;
-            this.btnHome.Image = global::ProjectWin_Demo_.Properties.Resources.Custom_Icon_Design_Mono_General_3_Home_48;
+            this.btnHome.Image = global::ProjectWin_Demo_.Properties.Resources.Iconsmind_Outline_Home_2_2_64;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(1, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(32, 32);
@@ -308,33 +354,12 @@
             this.btnHome.TextOffset = new System.Drawing.Point(-5, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 671);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(84, 15);
-            this.panel6.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Thistle;
-            this.panel3.Controls.Add(this.lbName);
-            this.panel3.Controls.Add(this.btnMenu);
-            this.panel3.Controls.Add(this.guna2Separator1);
-            this.panel3.Controls.Add(this.avt);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(84, 145);
-            this.panel3.TabIndex = 12;
-            // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Thistle;
             this.btnMenu.BorderColor = System.Drawing.Color.BlueViolet;
             this.btnMenu.BorderRadius = 10;
-            this.btnMenu.BorderThickness = 2;
+            this.btnMenu.BorderThickness = 1;
             this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -346,17 +371,9 @@
             this.btnMenu.ImageSize = new System.Drawing.Size(25, 25);
             this.btnMenu.Location = new System.Drawing.Point(6, 8);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(44, 40);
+            this.btnMenu.Size = new System.Drawing.Size(53, 40);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // guna2Separator1
-            // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(-98, 134);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(300, 10);
-            this.guna2Separator1.TabIndex = 0;
             // 
             // avt
             // 
@@ -369,48 +386,7 @@
             this.avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avt.TabIndex = 1;
             this.avt.TabStop = false;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 17;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // lbName
-            // 
-            this.lbName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(87, 73);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(100, 23);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Lamriver";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Indigo;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.Lavender;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(221, 8);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(587, 40);
-            this.guna2TextBox1.TabIndex = 26;
+            this.avt.Click += new System.EventHandler(this.avt_Click);
             // 
             // btnFind
             // 
@@ -433,6 +409,27 @@
             this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFind.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
+            this.pictureBox1.Location = new System.Drawing.Point(1215, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxCart
+            // 
+            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
+            this.pictureBoxCart.Location = new System.Drawing.Point(1158, 6);
+            this.pictureBoxCart.Name = "pictureBoxCart";
+            this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
+            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCart.TabIndex = 2;
+            this.pictureBoxCart.TabStop = false;
+            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
+            // 
             // FUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,11 +445,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FUser";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.ResumeLayout(false);
 
         }

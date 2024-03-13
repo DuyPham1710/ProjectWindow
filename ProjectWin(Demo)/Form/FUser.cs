@@ -192,6 +192,9 @@ namespace ProjectWin_Demo_
             btnDonHang.FillColor = Color.Plum;
         }
 
-        
+        private void avt_Click(object sender, EventArgs e)
+        {
+            btnInfo_Click(sender, e);
+        }
     }
 }
