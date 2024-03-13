@@ -13,6 +13,9 @@ namespace ProjectWin_Demo_
 {
     public partial class FUser : Form
     {
+        private bool isDragging;
+        private Point lastCursor;
+        private Point lastForm;
         private Form activeForm = null;
         Timer growTimer = new Timer();
         Timer shrinkTimer = new Timer();
@@ -41,6 +44,32 @@ namespace ProjectWin_Demo_
             btnLogOut.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
             btnMyProduct.MouseHover += (s, e) => { shrinkTimer.Stop(); growTimer.Start(); };
             btnMyProduct.MouseLeave += (s, e) => { growTimer.Stop(); shrinkTimer.Start(); };
+        }
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = this.Location;
+            }
+        }
+
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point currentCursor = Cursor.Position;
+                this.Location = new Point(lastForm.X + (currentCursor.X - lastCursor.X), lastForm.Y + (currentCursor.Y - lastCursor.Y));
+            }
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
         }
         private void GrowTimer_Tick(object sender, EventArgs e)
         {

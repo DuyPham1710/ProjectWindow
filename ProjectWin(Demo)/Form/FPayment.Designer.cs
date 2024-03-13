@@ -40,10 +40,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pcbPayDelivery = new System.Windows.Forms.PictureBox();
+            this.pcbBank = new System.Windows.Forms.PictureBox();
+            this.pcbMomo = new System.Windows.Forms.PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnOrder = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,33 +72,26 @@
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pcbPayDelivery = new System.Windows.Forms.PictureBox();
-            this.pcbBank = new System.Windows.Forms.PictureBox();
-            this.pcbMomo = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
-            this.guna2GroupBox1.SuspendLayout();
-            this.guna2GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbPayDelivery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMomo)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPayMethod
@@ -123,6 +123,9 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1352, 37);
             this.guna2CustomGradientPanel1.TabIndex = 14;
+            this.guna2CustomGradientPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
+            this.guna2CustomGradientPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
+            this.guna2CustomGradientPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_MouseUp);
             // 
             // guna2CircleButton2
             // 
@@ -161,6 +164,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(20, 20);
             this.btnMinimize.TabIndex = 23;
             this.btnMinimize.UseTransparentBackground = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnClose
             // 
@@ -248,6 +252,58 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Tiếp nhận";
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = global::ProjectWin_Demo_.Properties.Resources.Done;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(559, 6);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(52, 61);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 10;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::ProjectWin_Demo_.Properties.Resources.Shipping;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(370, 6);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(52, 61);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 9;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::ProjectWin_Demo_.Properties.Resources.Accept;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(194, 6);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 61);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 8;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.Recv;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(30, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(52, 61);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 7;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Black;
@@ -291,6 +347,46 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(650, 189);
             this.guna2CustomGradientPanel3.TabIndex = 16;
+            // 
+            // pcbPayDelivery
+            // 
+            this.pcbPayDelivery.Image = global::ProjectWin_Demo_.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Cash_64;
+            this.pcbPayDelivery.Location = new System.Drawing.Point(305, 77);
+            this.pcbPayDelivery.Name = "pcbPayDelivery";
+            this.pcbPayDelivery.Size = new System.Drawing.Size(100, 50);
+            this.pcbPayDelivery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbPayDelivery.TabIndex = 12;
+            this.pcbPayDelivery.TabStop = false;
+            this.pcbPayDelivery.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
+            this.pcbPayDelivery.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
+            this.pcbPayDelivery.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
+            // 
+            // pcbBank
+            // 
+            this.pcbBank.Image = global::ProjectWin_Demo_.Properties.Resources.Double_J_Design_Ravenna_3d_Credit_Card_64;
+            this.pcbBank.Location = new System.Drawing.Point(158, 77);
+            this.pcbBank.Name = "pcbBank";
+            this.pcbBank.Size = new System.Drawing.Size(100, 50);
+            this.pcbBank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbBank.TabIndex = 11;
+            this.pcbBank.TabStop = false;
+            this.pcbBank.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
+            this.pcbBank.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
+            this.pcbBank.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
+            // 
+            // pcbMomo
+            // 
+            this.pcbMomo.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pcbMomo.Image = global::ProjectWin_Demo_.Properties.Resources.Momo;
+            this.pcbMomo.Location = new System.Drawing.Point(16, 77);
+            this.pcbMomo.Name = "pcbMomo";
+            this.pcbMomo.Size = new System.Drawing.Size(100, 50);
+            this.pcbMomo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbMomo.TabIndex = 10;
+            this.pcbMomo.TabStop = false;
+            this.pcbMomo.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
+            this.pcbMomo.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
+            this.pcbMomo.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
             // 
             // guna2GroupBox1
             // 
@@ -676,6 +772,17 @@
             this.guna2TextBox5.TabIndex = 28;
             this.guna2TextBox5.TextOffset = new System.Drawing.Point(5, 0);
             // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(16, 57);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(208, 186);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 27;
+            this.guna2PictureBox5.TabStop = false;
+            // 
             // guna2TextBox4
             // 
             this.guna2TextBox4.BackColor = System.Drawing.Color.White;
@@ -737,109 +844,6 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Tên sản phẩm";
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(16, 57);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(208, 186);
-            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox5.TabIndex = 27;
-            this.guna2PictureBox5.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = global::ProjectWin_Demo_.Properties.Resources.Done;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(559, 6);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(52, 61);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 10;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::ProjectWin_Demo_.Properties.Resources.Shipping;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(370, 6);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(52, 61);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 9;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::ProjectWin_Demo_.Properties.Resources.Accept;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(194, 6);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 61);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 8;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.Recv;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(30, 6);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(52, 61);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 7;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // pcbPayDelivery
-            // 
-            this.pcbPayDelivery.Image = global::ProjectWin_Demo_.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Cash_64;
-            this.pcbPayDelivery.Location = new System.Drawing.Point(305, 77);
-            this.pcbPayDelivery.Name = "pcbPayDelivery";
-            this.pcbPayDelivery.Size = new System.Drawing.Size(100, 50);
-            this.pcbPayDelivery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbPayDelivery.TabIndex = 12;
-            this.pcbPayDelivery.TabStop = false;
-            this.pcbPayDelivery.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
-            this.pcbPayDelivery.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
-            this.pcbPayDelivery.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
-            // 
-            // pcbBank
-            // 
-            this.pcbBank.Image = global::ProjectWin_Demo_.Properties.Resources.Double_J_Design_Ravenna_3d_Credit_Card_64;
-            this.pcbBank.Location = new System.Drawing.Point(158, 77);
-            this.pcbBank.Name = "pcbBank";
-            this.pcbBank.Size = new System.Drawing.Size(100, 50);
-            this.pcbBank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbBank.TabIndex = 11;
-            this.pcbBank.TabStop = false;
-            this.pcbBank.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
-            this.pcbBank.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
-            this.pcbBank.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
-            // 
-            // pcbMomo
-            // 
-            this.pcbMomo.BackColor = System.Drawing.Color.LavenderBlush;
-            this.pcbMomo.Image = global::ProjectWin_Demo_.Properties.Resources.Momo;
-            this.pcbMomo.Location = new System.Drawing.Point(16, 77);
-            this.pcbMomo.Name = "pcbMomo";
-            this.pcbMomo.Size = new System.Drawing.Size(100, 50);
-            this.pcbMomo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbMomo.TabIndex = 10;
-            this.pcbMomo.TabStop = false;
-            this.pcbMomo.Click += new System.EventHandler(this.pictureBoxPayMethod_Click);
-            this.pcbMomo.MouseLeave += new System.EventHandler(this.pictureBoxPayMethod_MouseLeave);
-            this.pcbMomo.MouseHover += new System.EventHandler(this.pictureBoxPayMethod_MouseHover);
-            // 
             // FPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -860,21 +864,21 @@
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbPayDelivery)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMomo)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbPayDelivery)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbBank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbMomo)).EndInit();
             this.ResumeLayout(false);
 
         }
