@@ -15,6 +15,10 @@ namespace ProjectWin_Demo_
         public UCProductSold()
         {
             InitializeComponent();
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                control.Margin = new Padding(5); // Đặt giá trị phần đệm là 5 cho các cạnh
+            }
         }
     }
 }

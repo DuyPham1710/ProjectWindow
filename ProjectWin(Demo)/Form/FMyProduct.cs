@@ -15,6 +15,10 @@ namespace ProjectWin_Demo_
         public FMyProduct()
         {
             InitializeComponent();
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                control.Margin = new Padding(5); // Đặt giá trị phần đệm là 5 cho các cạnh
+            }
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -25,6 +29,10 @@ namespace ProjectWin_Demo_
 
         private void btnProductSold_Click(object sender, EventArgs e)
         {
+            btnTotalProduct.CustomBorderColor = Color.White;
+            btnTotalProduct.ForeColor = Color.Black;
+            btnProductSold.CustomBorderColor = Color.MediumSlateBlue;
+            btnProductSold.ForeColor = Color.MediumSlateBlue;
             UCProductSold ucProductSold = new UCProductSold();
             addUserControl(ucProductSold);
         }
@@ -37,6 +45,10 @@ namespace ProjectWin_Demo_
 
         private void btnTotalProduct_Click(object sender, EventArgs e)
         {
+            btnTotalProduct.CustomBorderColor = Color.MediumSlateBlue;
+            btnTotalProduct.ForeColor = Color.MediumSlateBlue;
+            btnProductSold.CustomBorderColor = Color.White;
+            btnProductSold.ForeColor = Color.Black;
         }
     }
 }

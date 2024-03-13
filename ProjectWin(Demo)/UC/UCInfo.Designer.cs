@@ -49,7 +49,10 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox9 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -61,10 +64,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBoxUser = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddAvatar = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -74,7 +74,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -85,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox8
@@ -395,7 +395,9 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.BorderRadius = 20;
+            this.guna2CustomGradientPanel1.BorderThickness = 3;
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
@@ -416,22 +418,53 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(335, 432);
             this.guna2CustomGradientPanel1.TabIndex = 20;
             // 
-            // guna2CustomGradientPanel2
+            // label4
             // 
-            this.guna2CustomGradientPanel2.BorderRadius = 20;
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox8);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox7);
-            this.guna2CustomGradientPanel2.Controls.Add(this.btnSave);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox6);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox5);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox4);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox1);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(434, 28);
-            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(730, 570);
-            this.guna2CustomGradientPanel2.TabIndex = 21;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(60, 369);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 19);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Địa chỉ: UTE";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(60, 332);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 19);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Đã xác thực:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(60, 292);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 19);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Đã tham gia: 10 ngày";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(60, 250);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(237, 19);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Phản hồi chat:   Chưa có thông tin";
             // 
             // guna2PictureBox9
             // 
@@ -577,59 +610,30 @@
             this.btnAddAvatar.Text = "Thêm ảnh đại diện";
             this.btnAddAvatar.Click += new System.EventHandler(this.btnAddAvatar_Click);
             // 
-            // label1
+            // guna2CustomGradientPanel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(60, 250);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 19);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Phản hồi chat:   Chưa có thông tin";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(60, 292);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 19);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Đã tham gia: 10 ngày";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(60, 332);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 19);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Đã xác thực:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(60, 369);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 19);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Địa chỉ: UTE";
+            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel2.BorderRadius = 20;
+            this.guna2CustomGradientPanel2.BorderThickness = 3;
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox8);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox7);
+            this.guna2CustomGradientPanel2.Controls.Add(this.btnSave);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox6);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox5);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox4);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox2);
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox1);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(434, 28);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(730, 570);
+            this.guna2CustomGradientPanel2.TabIndex = 21;
             // 
             // UCInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCInfo";
@@ -645,7 +649,6 @@
             this.groupBox1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            this.guna2CustomGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
@@ -656,6 +659,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -111,6 +111,7 @@
             this.btnEdit.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnEdit.Size = new System.Drawing.Size(32, 32);
             this.btnEdit.TabIndex = 18;
+            this.btnEdit.Click += new System.EventHandler(this.pcbEdit_Click);
             // 
             // btnDelete
             // 
@@ -125,6 +126,7 @@
             this.btnDelete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDelete.Size = new System.Drawing.Size(32, 32);
             this.btnDelete.TabIndex = 17;
+            this.btnDelete.Click += new System.EventHandler(this.pcbDelete_Click);
             // 
             // pictureBox1
             // 

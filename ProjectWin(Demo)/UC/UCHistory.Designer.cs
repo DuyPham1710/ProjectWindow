@@ -28,44 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucHisProduct1 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct2 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct3 = new ProjectWin_Demo_.UCHisProduct();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.ucHisProduct4 = new ProjectWin_Demo_.UCHisProduct();
             this.ucHisProduct5 = new ProjectWin_Demo_.UCHisProduct();
             this.ucHisProduct6 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct7 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct8 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct9 = new ProjectWin_Demo_.UCHisProduct();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.ucHisProduct3 = new ProjectWin_Demo_.UCHisProduct();
+            this.ucHisProduct2 = new ProjectWin_Demo_.UCHisProduct();
+            this.ucHisProduct1 = new ProjectWin_Demo_.UCHisProduct();
+            this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // guna2CustomGradientPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct1);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct2);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct3);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct4);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct5);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct6);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct7);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct8);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct9);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1200, 651);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct4);
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct5);
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct6);
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct3);
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct2);
+            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct1);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1200, 651);
+            this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
-            // ucHisProduct1
+            // ucHisProduct4
             // 
-            this.ucHisProduct1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct1.Location = new System.Drawing.Point(3, 3);
-            this.ucHisProduct1.Name = "ucHisProduct1";
-            this.ucHisProduct1.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct1.TabIndex = 0;
+            this.ucHisProduct4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucHisProduct4.Location = new System.Drawing.Point(801, 273);
+            this.ucHisProduct4.Name = "ucHisProduct4";
+            this.ucHisProduct4.Size = new System.Drawing.Size(392, 262);
+            this.ucHisProduct4.TabIndex = 5;
+            // 
+            // ucHisProduct5
+            // 
+            this.ucHisProduct5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucHisProduct5.Location = new System.Drawing.Point(402, 273);
+            this.ucHisProduct5.Name = "ucHisProduct5";
+            this.ucHisProduct5.Size = new System.Drawing.Size(392, 262);
+            this.ucHisProduct5.TabIndex = 4;
+            // 
+            // ucHisProduct6
+            // 
+            this.ucHisProduct6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucHisProduct6.Location = new System.Drawing.Point(4, 273);
+            this.ucHisProduct6.Name = "ucHisProduct6";
+            this.ucHisProduct6.Size = new System.Drawing.Size(392, 262);
+            this.ucHisProduct6.TabIndex = 3;
+            // 
+            // ucHisProduct3
+            // 
+            this.ucHisProduct3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucHisProduct3.Location = new System.Drawing.Point(800, 3);
+            this.ucHisProduct3.Name = "ucHisProduct3";
+            this.ucHisProduct3.Size = new System.Drawing.Size(392, 262);
+            this.ucHisProduct3.TabIndex = 2;
             // 
             // ucHisProduct2
             // 
@@ -75,85 +92,34 @@
             this.ucHisProduct2.Size = new System.Drawing.Size(392, 262);
             this.ucHisProduct2.TabIndex = 1;
             // 
-            // ucHisProduct3
+            // ucHisProduct1
             // 
-            this.ucHisProduct3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct3.Location = new System.Drawing.Point(799, 3);
-            this.ucHisProduct3.Name = "ucHisProduct3";
-            this.ucHisProduct3.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct3.TabIndex = 2;
-            // 
-            // ucHisProduct4
-            // 
-            this.ucHisProduct4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct4.Location = new System.Drawing.Point(3, 271);
-            this.ucHisProduct4.Name = "ucHisProduct4";
-            this.ucHisProduct4.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct4.TabIndex = 3;
-            // 
-            // ucHisProduct5
-            // 
-            this.ucHisProduct5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct5.Location = new System.Drawing.Point(401, 271);
-            this.ucHisProduct5.Name = "ucHisProduct5";
-            this.ucHisProduct5.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct5.TabIndex = 4;
-            // 
-            // ucHisProduct6
-            // 
-            this.ucHisProduct6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct6.Location = new System.Drawing.Point(799, 271);
-            this.ucHisProduct6.Name = "ucHisProduct6";
-            this.ucHisProduct6.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct6.TabIndex = 5;
-            // 
-            // ucHisProduct7
-            // 
-            this.ucHisProduct7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct7.Location = new System.Drawing.Point(3, 539);
-            this.ucHisProduct7.Name = "ucHisProduct7";
-            this.ucHisProduct7.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct7.TabIndex = 6;
-            // 
-            // ucHisProduct8
-            // 
-            this.ucHisProduct8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct8.Location = new System.Drawing.Point(401, 539);
-            this.ucHisProduct8.Name = "ucHisProduct8";
-            this.ucHisProduct8.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct8.TabIndex = 7;
-            // 
-            // ucHisProduct9
-            // 
-            this.ucHisProduct9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct9.Location = new System.Drawing.Point(799, 539);
-            this.ucHisProduct9.Name = "ucHisProduct9";
-            this.ucHisProduct9.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct9.TabIndex = 8;
+            this.ucHisProduct1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucHisProduct1.Location = new System.Drawing.Point(3, 3);
+            this.ucHisProduct1.Name = "ucHisProduct1";
+            this.ucHisProduct1.Size = new System.Drawing.Size(392, 262);
+            this.ucHisProduct1.TabIndex = 0;
             // 
             // UCHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCHistory";
             this.Size = new System.Drawing.Size(1200, 651);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private UCHisProduct ucHisProduct1;
-        private UCHisProduct ucHisProduct2;
-        private UCHisProduct ucHisProduct3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private UCHisProduct ucHisProduct4;
         private UCHisProduct ucHisProduct5;
         private UCHisProduct ucHisProduct6;
-        private UCHisProduct ucHisProduct7;
-        private UCHisProduct ucHisProduct8;
-        private UCHisProduct ucHisProduct9;
+        private UCHisProduct ucHisProduct3;
+        private UCHisProduct ucHisProduct2;
+        private UCHisProduct ucHisProduct1;
     }
 }

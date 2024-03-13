@@ -261,3 +261,5 @@ D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin(Dem
 D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CopyComplete
 D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).exe
 D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).pdb
+D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCSalesOrder.resources
+D:\lapTrinhWinhdow\Project_Window_13-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCPurchaseOrder.resources

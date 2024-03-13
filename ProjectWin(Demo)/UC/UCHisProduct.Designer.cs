@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -41,6 +42,7 @@
             this.btnComment = new CustomButton.VBButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnPayAgain = new CustomButton.VBButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,7 +129,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(267, 14);
+            this.label6.Location = new System.Drawing.Point(267, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 3;
@@ -137,18 +139,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(196, 14);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Location = new System.Drawing.Point(181, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 16);
+            this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Thành tiền:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "1 sản phẩm";
             // 
@@ -205,6 +209,11 @@
             this.btnPayAgain.UseVisualStyleBackColor = false;
             this.btnPayAgain.Click += new System.EventHandler(this.btnPayAgain_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 17;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // UCHisProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -242,5 +251,6 @@
         private System.Windows.Forms.Panel panel4;
         public CustomButton.VBButton btnComment;
         public CustomButton.VBButton btnPayAgain;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -188,11 +188,23 @@
     <Compile Include="UC\UCProductSold.Designer.cs">
       <DependentUpon>UCProductSold.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCPurchaseOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPurchaseOrder.Designer.cs">
+      <DependentUpon>UCPurchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCRevenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCRevenue.Designer.cs">
       <DependentUpon>UCRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSalesOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSalesOrder.Designer.cs">
+      <DependentUpon>UCSalesOrder.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\FAddProduct.resx">
       <DependentUpon>FAddProduct.cs</DependentUpon>
@@ -259,8 +271,14 @@
     <EmbeddedResource Include="UC\UCProductSold.resx">
       <DependentUpon>UCProductSold.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPurchaseOrder.resx">
+      <DependentUpon>UCPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCRevenue.resx">
       <DependentUpon>UCRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSalesOrder.resx">
+      <DependentUpon>UCSalesOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using ProjectWin_Demo_.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,12 +17,28 @@ namespace ProjectWin_Demo_
         public FInfo()
         {
             InitializeComponent();
+
+            btnHistory.MouseDown += btnHistory_MouseDown;
+            guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
+        }
+        private void btnHistory_MouseDown(object sender, MouseEventArgs e)
+        {
+            Point location = btnHistory.PointToScreen(new Point(0, btnHistory.Height));
+            guna2ContextMenuStrip1.Show(location);
+        }
+
+        private void btnHistory_LostFocus(object sender, EventArgs e)
+        {
+            guna2ContextMenuStrip1.Hide();
         }
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            btnInfo.ForeColor = Color.DarkCyan;
+            btnInfo.ForeColor = Color.MediumSlateBlue;
+            btnInfo.CustomBorderColor = Color.MediumSlateBlue;
             btnHistory.ForeColor = Color.Black;
+            btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.Black;
+            btnRevenue.CustomBorderColor = Color.White;
             UCInfo ucInfo = new UCInfo();
             addUserControl(ucInfo);
         }
@@ -28,17 +46,21 @@ namespace ProjectWin_Demo_
         private void btnHistory_Click(object sender, EventArgs e)
         {
             btnInfo.ForeColor = Color.Black;
-            btnHistory.ForeColor = Color.DarkCyan;
+            btnInfo.CustomBorderColor = Color.White;
+            btnHistory.ForeColor = Color.MediumSlateBlue;
+            btnHistory.CustomBorderColor = Color.MediumSlateBlue;
             btnRevenue.ForeColor = Color.Black;
-            UCHistory ucHistory = new UCHistory();
-            addUserControl(ucHistory);
+            btnRevenue.CustomBorderColor = Color.White;
         }
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
             btnInfo.ForeColor = Color.Black;
+            btnInfo.CustomBorderColor = Color.White;
             btnHistory.ForeColor = Color.Black;
-            btnRevenue.ForeColor = Color.DarkCyan;
+            btnHistory.CustomBorderColor = Color.White;
+            btnRevenue.ForeColor = Color.MediumSlateBlue;
+            btnRevenue.CustomBorderColor = Color.MediumSlateBlue;
             UCRevenue ucRevenue = new UCRevenue();
             addUserControl(ucRevenue);
         }
@@ -54,6 +76,18 @@ namespace ProjectWin_Demo_
         {
             UCInfo ucInfo = new UCInfo();
             addUserControl(ucInfo);
+        }
+
+        private void ItemPurchaseHistoryToolStripMenuItem(object sender, EventArgs e)
+        {
+            UCHistory ucHistory = new UCHistory();
+            addUserControl(ucHistory);
+        }
+
+        private void ItemSalesHistoryToolStripMenuItem(object sender, EventArgs e)
+        {
+            UCHistory ucHistory = new UCHistory();
+            addUserControl(ucHistory);
         }
     }
 }
