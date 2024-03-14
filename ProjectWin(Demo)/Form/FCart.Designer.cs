@@ -28,19 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnBuyNow = new CustomButton.VBButton();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ucCart6 = new ProjectWin_Demo_.UCCart();
-            this.ucCart1 = new ProjectWin_Demo_.UCCart();
-            this.ucCart2 = new ProjectWin_Demo_.UCCart();
-            this.ucCart3 = new ProjectWin_Demo_.UCCart();
-            this.ucCart4 = new ProjectWin_Demo_.UCCart();
-            this.ucCart5 = new ProjectWin_Demo_.UCCart();
-            this.ucCart7 = new ProjectWin_Demo_.UCCart();
-            this.ucCart8 = new ProjectWin_Demo_.UCCart();
-            this.ucCart9 = new ProjectWin_Demo_.UCCart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,27 +39,23 @@
             this.CBSelectAll = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucCart1 = new ProjectWin_Demo_.UCCart();
+            this.ucCart2 = new ProjectWin_Demo_.UCCart();
+            this.ucCart3 = new ProjectWin_Demo_.UCCart();
+            this.ucCart4 = new ProjectWin_Demo_.UCCart();
+            this.ucCart5 = new ProjectWin_Demo_.UCCart();
+            this.ucCart6 = new ProjectWin_Demo_.UCCart();
+            this.ucCart7 = new ProjectWin_Demo_.UCCart();
+            this.ucCart8 = new ProjectWin_Demo_.UCCart();
+            this.ucCart9 = new ProjectWin_Demo_.UCCart();
+            this.ucCart10 = new ProjectWin_Demo_.UCCart();
+            this.ucCart11 = new ProjectWin_Demo_.UCCart();
+            this.ucCart12 = new ProjectWin_Demo_.UCCart();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.ucCart9);
-            this.panel2.Controls.Add(this.ucCart8);
-            this.panel2.Controls.Add(this.ucCart7);
-            this.panel2.Controls.Add(this.ucCart5);
-            this.panel2.Controls.Add(this.ucCart4);
-            this.panel2.Controls.Add(this.ucCart3);
-            this.panel2.Controls.Add(this.ucCart2);
-            this.panel2.Controls.Add(this.ucCart1);
-            this.panel2.Controls.Add(this.ucCart6);
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 599);
-            this.panel2.TabIndex = 1;
             // 
             // btnBuyNow
             // 
@@ -83,7 +69,7 @@
             this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuyNow.ForeColor = System.Drawing.Color.White;
-            this.btnBuyNow.Location = new System.Drawing.Point(959, 0);
+            this.btnBuyNow.Location = new System.Drawing.Point(1283, 0);
             this.btnBuyNow.Name = "btnBuyNow";
             this.btnBuyNow.Size = new System.Drawing.Size(152, 45);
             this.btnBuyNow.TabIndex = 0;
@@ -108,82 +94,10 @@
             this.panel3.Controls.Add(this.lblTotal);
             this.panel3.Controls.Add(this.btnBuyNow);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 641);
+            this.panel3.Location = new System.Drawing.Point(0, 747);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1111, 45);
+            this.panel3.Size = new System.Drawing.Size(1435, 45);
             this.panel3.TabIndex = 5;
-            // 
-            // ucCart6
-            // 
-            this.ucCart6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart6.Location = new System.Drawing.Point(0, 0);
-            this.ucCart6.Name = "ucCart6";
-            this.ucCart6.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart6.TabIndex = 7;
-            // 
-            // ucCart1
-            // 
-            this.ucCart1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart1.Location = new System.Drawing.Point(0, 84);
-            this.ucCart1.Name = "ucCart1";
-            this.ucCart1.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart1.TabIndex = 8;
-            // 
-            // ucCart2
-            // 
-            this.ucCart2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart2.Location = new System.Drawing.Point(0, 168);
-            this.ucCart2.Name = "ucCart2";
-            this.ucCart2.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart2.TabIndex = 9;
-            // 
-            // ucCart3
-            // 
-            this.ucCart3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart3.Location = new System.Drawing.Point(0, 252);
-            this.ucCart3.Name = "ucCart3";
-            this.ucCart3.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart3.TabIndex = 10;
-            // 
-            // ucCart4
-            // 
-            this.ucCart4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart4.Location = new System.Drawing.Point(0, 336);
-            this.ucCart4.Name = "ucCart4";
-            this.ucCart4.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart4.TabIndex = 11;
-            // 
-            // ucCart5
-            // 
-            this.ucCart5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart5.Location = new System.Drawing.Point(0, 420);
-            this.ucCart5.Name = "ucCart5";
-            this.ucCart5.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart5.TabIndex = 12;
-            // 
-            // ucCart7
-            // 
-            this.ucCart7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart7.Location = new System.Drawing.Point(0, 504);
-            this.ucCart7.Name = "ucCart7";
-            this.ucCart7.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart7.TabIndex = 13;
-            // 
-            // ucCart8
-            // 
-            this.ucCart8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart8.Location = new System.Drawing.Point(0, 588);
-            this.ucCart8.Name = "ucCart8";
-            this.ucCart8.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart8.TabIndex = 14;
-            // 
-            // ucCart9
-            // 
-            this.ucCart9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucCart9.Location = new System.Drawing.Point(0, 672);
-            this.ucCart9.Name = "ucCart9";
-            this.ucCart9.Size = new System.Drawing.Size(1090, 84);
-            this.ucCart9.TabIndex = 15;
             // 
             // label1
             // 
@@ -199,7 +113,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label2.Location = new System.Drawing.Point(561, 9);
+            this.label2.Location = new System.Drawing.Point(629, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 20);
             this.label2.TabIndex = 1;
@@ -209,7 +123,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label3.Location = new System.Drawing.Point(697, 9);
+            this.label3.Location = new System.Drawing.Point(851, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 2;
@@ -219,7 +133,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label4.Location = new System.Drawing.Point(818, 9);
+            this.label4.Location = new System.Drawing.Point(1101, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 3;
@@ -248,7 +162,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label6.Location = new System.Drawing.Point(1011, 9);
+            this.label6.Location = new System.Drawing.Point(1342, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 20);
             this.label6.TabIndex = 6;
@@ -266,44 +180,138 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 40);
+            this.panel1.Size = new System.Drawing.Size(1435, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.ucCart1);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart2);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart3);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart4);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart5);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart6);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart7);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart8);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart9);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart10);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart11);
+            this.flowLayoutPanel1.Controls.Add(this.ucCart12);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1435, 707);
+            this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // ucCart1
+            // 
+            this.ucCart1.Location = new System.Drawing.Point(3, 3);
+            this.ucCart1.Name = "ucCart1";
+            this.ucCart1.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart1.TabIndex = 0;
+            // 
+            // ucCart2
+            // 
+            this.ucCart2.Location = new System.Drawing.Point(3, 93);
+            this.ucCart2.Name = "ucCart2";
+            this.ucCart2.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart2.TabIndex = 1;
+            // 
+            // ucCart3
+            // 
+            this.ucCart3.Location = new System.Drawing.Point(3, 183);
+            this.ucCart3.Name = "ucCart3";
+            this.ucCart3.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart3.TabIndex = 2;
+            // 
+            // ucCart4
+            // 
+            this.ucCart4.Location = new System.Drawing.Point(3, 273);
+            this.ucCart4.Name = "ucCart4";
+            this.ucCart4.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart4.TabIndex = 3;
+            // 
+            // ucCart5
+            // 
+            this.ucCart5.Location = new System.Drawing.Point(3, 363);
+            this.ucCart5.Name = "ucCart5";
+            this.ucCart5.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart5.TabIndex = 4;
+            // 
+            // ucCart6
+            // 
+            this.ucCart6.Location = new System.Drawing.Point(3, 453);
+            this.ucCart6.Name = "ucCart6";
+            this.ucCart6.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart6.TabIndex = 5;
+            // 
+            // ucCart7
+            // 
+            this.ucCart7.Location = new System.Drawing.Point(3, 543);
+            this.ucCart7.Name = "ucCart7";
+            this.ucCart7.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart7.TabIndex = 6;
+            // 
+            // ucCart8
+            // 
+            this.ucCart8.Location = new System.Drawing.Point(3, 633);
+            this.ucCart8.Name = "ucCart8";
+            this.ucCart8.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart8.TabIndex = 7;
+            // 
+            // ucCart9
+            // 
+            this.ucCart9.Location = new System.Drawing.Point(3, 723);
+            this.ucCart9.Name = "ucCart9";
+            this.ucCart9.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart9.TabIndex = 8;
+            // 
+            // ucCart10
+            // 
+            this.ucCart10.Location = new System.Drawing.Point(3, 813);
+            this.ucCart10.Name = "ucCart10";
+            this.ucCart10.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart10.TabIndex = 9;
+            // 
+            // ucCart11
+            // 
+            this.ucCart11.Location = new System.Drawing.Point(3, 903);
+            this.ucCart11.Name = "ucCart11";
+            this.ucCart11.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart11.TabIndex = 10;
+            // 
+            // ucCart12
+            // 
+            this.ucCart12.Location = new System.Drawing.Point(3, 993);
+            this.ucCart12.Name = "ucCart12";
+            this.ucCart12.Size = new System.Drawing.Size(1435, 84);
+            this.ucCart12.TabIndex = 11;
             // 
             // FCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1111, 686);
+            this.ClientSize = new System.Drawing.Size(1435, 792);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FCart";
             this.Text = "FCart";
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTotal;
         private CustomButton.VBButton btnBuyNow;
-        private UCCart ucCart9;
-        private UCCart ucCart8;
-        private UCCart ucCart7;
-        private UCCart ucCart5;
-        private UCCart ucCart4;
-        private UCCart ucCart3;
-        private UCCart ucCart2;
-        private UCCart ucCart1;
-        private UCCart ucCart6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -312,5 +320,18 @@
         private System.Windows.Forms.CheckBox CBSelectAll;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private UCCart ucCart1;
+        private UCCart ucCart2;
+        private UCCart ucCart3;
+        private UCCart ucCart4;
+        private UCCart ucCart5;
+        private UCCart ucCart6;
+        private UCCart ucCart7;
+        private UCCart ucCart8;
+        private UCCart ucCart9;
+        private UCCart ucCart10;
+        private UCCart ucCart11;
+        private UCCart ucCart12;
     }
 }

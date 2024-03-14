@@ -49,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 50);
+            this.panel1.Size = new System.Drawing.Size(1435, 50);
             this.panel1.TabIndex = 0;
             // 
             // btnInfo
@@ -156,18 +156,17 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
-            this.panelChildForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 50);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1200, 636);
+            this.panelChildForm.Size = new System.Drawing.Size(1435, 742);
             this.panelChildForm.TabIndex = 1;
             // 
             // FInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 686);
+            this.ClientSize = new System.Drawing.Size(1435, 792);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

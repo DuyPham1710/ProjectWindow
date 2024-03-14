@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(780, 32);
+            this.label1.Location = new System.Drawing.Point(922, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 20);
             this.label1.TabIndex = 13;
@@ -78,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(897, 32);
+            this.label4.Location = new System.Drawing.Point(1087, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 14;
@@ -90,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(604, 32);
+            this.label5.Location = new System.Drawing.Point(684, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 16;
@@ -106,7 +106,7 @@
             this.btnEdit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnEdit.ImageRotate = 0F;
             this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Location = new System.Drawing.Point(1082, 24);
+            this.btnEdit.Location = new System.Drawing.Point(1312, 24);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnEdit.Size = new System.Drawing.Size(32, 32);
@@ -121,7 +121,7 @@
             this.btnDelete.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnDelete.ImageRotate = 0F;
             this.btnDelete.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnDelete.Location = new System.Drawing.Point(1132, 24);
+            this.btnDelete.Location = new System.Drawing.Point(1362, 24);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDelete.Size = new System.Drawing.Size(32, 32);
@@ -154,7 +154,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UCMyProduct";
-            this.Size = new System.Drawing.Size(1200, 90);
+            this.Size = new System.Drawing.Size(1435, 90);
             this.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

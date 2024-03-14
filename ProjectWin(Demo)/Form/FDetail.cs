@@ -22,15 +22,21 @@ namespace ProjectWin_Demo_
             InitializeComponent();
 
         }
-        List<string> imgList = new List<string>() { "1", "2", "3" };
+        List<string> A=new List<string>();
+        List<string> imgList = new List<string>() { "4", "5" };
+        List<string> imgListBefore = new List<string>() { "1", "2" };
         int curr = 0;
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (curr < 2)
+            if (curr < 1)
                 curr++;
             else
                 curr = 0;
-            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + imgList[curr] + ".jpg");
+            if(rdbBefore.Checked==true)
+                A = imgListBefore;
+            else
+                A = imgList;
+            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + A[curr] + ".jpg");
             pctProduct.Image = bitmap;
         }
 
@@ -39,7 +45,11 @@ namespace ProjectWin_Demo_
             if (curr > 0)
                 curr--;
             else
-                curr = 2;
+                curr = 1;
+            if (rdbBefore.Checked == true)
+                A = imgListBefore;
+            else
+                A = imgList;
             Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + imgList[curr] + ".jpg");
             pctProduct.Image = bitmap;
         }

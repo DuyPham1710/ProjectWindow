@@ -31,7 +31,7 @@ namespace ProjectWin_Demo_
         private void pctProduct_MouseLeave(object sender, EventArgs e)
         {
             pctProduct.SizeMode = PictureBoxSizeMode.Zoom;
-            this.BackColor = Color.LightGray;
+            this.BackColor = Color.MintCream;
         }
     }
 }

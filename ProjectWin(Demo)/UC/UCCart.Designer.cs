@@ -40,6 +40,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbBin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +69,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FloralWhite;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label3.Location = new System.Drawing.Point(545, 25);
+            this.label3.Location = new System.Drawing.Point(597, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 20);
             this.label3.TabIndex = 3;
@@ -79,7 +80,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FloralWhite;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.label5.Location = new System.Drawing.Point(821, 25);
+            this.label5.Location = new System.Drawing.Point(1106, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 5;
@@ -89,7 +90,7 @@
             // 
             this.pcbBin.BackColor = System.Drawing.Color.FloralWhite;
             this.pcbBin.Image = global::ProjectWin_Demo_.Properties.Resources.trash_can_regular;
-            this.pcbBin.Location = new System.Drawing.Point(1016, 14);
+            this.pcbBin.Location = new System.Drawing.Point(1349, 24);
             this.pcbBin.Name = "pcbBin";
             this.pcbBin.Size = new System.Drawing.Size(31, 33);
             this.pcbBin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +124,7 @@
             // 
             this.numericUpDown1.BackColor = System.Drawing.Color.FloralWhite;
             this.numericUpDown1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.numericUpDown1.Location = new System.Drawing.Point(675, 25);
+            this.numericUpDown1.Location = new System.Drawing.Point(814, 24);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 8;
@@ -138,30 +139,32 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FloralWhite;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.pcbBin);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1111, 84);
+            this.panel1.Size = new System.Drawing.Size(1435, 84);
             this.panel1.TabIndex = 9;
             // 
             // UCCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.pcbBin);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "UCCart";
-            this.Size = new System.Drawing.Size(1111, 84);
+            this.Size = new System.Drawing.Size(1435, 84);
             ((System.ComponentModel.ISupportInitialize)(this.pcbBin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

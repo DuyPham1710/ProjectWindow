@@ -30,15 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pctProduct = new System.Windows.Forms.PictureBox();
             this.btnNext = new CustomButton.VBButton();
             this.btnPre = new CustomButton.VBButton();
+            this.pctProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.vbButton1 = new CustomButton.VBButton();
-            this.vbButton2 = new CustomButton.VBButton();
-            this.btnUpdateProduct = new CustomButton.VBButton();
-            this.btnAddProduct = new CustomButton.VBButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -53,6 +51,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rjTextBox3 = new ProjectWin_Demo_.Funtion.RJTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,8 +61,9 @@
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnUpdateProduct = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctProduct)).BeginInit();
             this.groupBox8.SuspendLayout();
@@ -76,33 +76,22 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pToolBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pctProduct);
             this.panel2.Controls.Add(this.btnNext);
             this.panel2.Controls.Add(this.btnPre);
+            this.panel2.Controls.Add(this.pctProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(535, 315);
             this.panel2.TabIndex = 12;
-            // 
-            // pctProduct
-            // 
-            this.pctProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pctProduct.Image = global::ProjectWin_Demo_.Properties.Resources._1;
-            this.pctProduct.Location = new System.Drawing.Point(37, 0);
-            this.pctProduct.Name = "pctProduct";
-            this.pctProduct.Size = new System.Drawing.Size(461, 315);
-            this.pctProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctProduct.TabIndex = 2;
-            this.pctProduct.TabStop = false;
             // 
             // btnNext
             // 
@@ -111,15 +100,14 @@
             this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnNext.BorderRadius = 0;
             this.btnNext.BorderSize = 0;
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(498, 0);
+            this.btnNext.Location = new System.Drawing.Point(511, 135);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(37, 315);
-            this.btnNext.TabIndex = 1;
+            this.btnNext.Size = new System.Drawing.Size(24, 44);
+            this.btnNext.TabIndex = 4;
             this.btnNext.Text = ">";
             this.btnNext.TextColor = System.Drawing.Color.White;
             this.btnNext.UseVisualStyleBackColor = false;
@@ -131,18 +119,30 @@
             this.btnPre.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnPre.BorderRadius = 0;
             this.btnPre.BorderSize = 0;
-            this.btnPre.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnPre.FlatAppearance.BorderSize = 0;
             this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPre.ForeColor = System.Drawing.Color.White;
-            this.btnPre.Location = new System.Drawing.Point(0, 0);
+            this.btnPre.Location = new System.Drawing.Point(0, 135);
             this.btnPre.Name = "btnPre";
-            this.btnPre.Size = new System.Drawing.Size(37, 315);
-            this.btnPre.TabIndex = 0;
+            this.btnPre.Size = new System.Drawing.Size(24, 44);
+            this.btnPre.TabIndex = 3;
             this.btnPre.Text = "<";
             this.btnPre.TextColor = System.Drawing.Color.White;
             this.btnPre.UseVisualStyleBackColor = false;
+            // 
+            // pctProduct
+            // 
+            this.pctProduct.BorderRadius = 10;
+            this.pctProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctProduct.Image = global::ProjectWin_Demo_.Properties.Resources.smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25;
+            this.pctProduct.ImageRotate = 0F;
+            this.pctProduct.Location = new System.Drawing.Point(0, 0);
+            this.pctProduct.Name = "pctProduct";
+            this.pctProduct.Size = new System.Drawing.Size(535, 315);
+            this.pctProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctProduct.TabIndex = 5;
+            this.pctProduct.TabStop = false;
             // 
             // groupBox8
             // 
@@ -155,99 +155,63 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Hình ảnh sản phẩm";
             // 
-            // vbButton1
-            // 
-            this.vbButton1.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.vbButton1.BorderRadius = 10;
-            this.vbButton1.BorderSize = 2;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton1.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.vbButton1.Location = new System.Drawing.Point(323, 367);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(171, 40);
-            this.vbButton1.TabIndex = 14;
-            this.vbButton1.Text = "Xóa hình ảnh";
-            this.vbButton1.TextColor = System.Drawing.Color.LightSlateGray;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            // 
-            // vbButton2
-            // 
-            this.vbButton2.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton2.BorderColor = System.Drawing.Color.Green;
-            this.vbButton2.BorderRadius = 10;
-            this.vbButton2.BorderSize = 2;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton2.ForeColor = System.Drawing.Color.Green;
-            this.vbButton2.Location = new System.Drawing.Point(113, 367);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(181, 40);
-            this.vbButton2.TabIndex = 15;
-            this.vbButton2.Text = "Thêm hình ảnh +";
-            this.vbButton2.TextColor = System.Drawing.Color.Green;
-            this.vbButton2.UseVisualStyleBackColor = false;
-            this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
-            // 
-            // btnUpdateProduct
-            // 
-            this.btnUpdateProduct.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpdateProduct.BackgroundColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUpdateProduct.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateProduct.BorderRadius = 10;
-            this.btnUpdateProduct.BorderSize = 2;
-            this.btnUpdateProduct.FlatAppearance.BorderSize = 0;
-            this.btnUpdateProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateProduct.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.btnUpdateProduct.Location = new System.Drawing.Point(194, 604);
-            this.btnUpdateProduct.Name = "btnUpdateProduct";
-            this.btnUpdateProduct.Size = new System.Drawing.Size(201, 40);
-            this.btnUpdateProduct.TabIndex = 18;
-            this.btnUpdateProduct.Text = "Cập nhật";
-            this.btnUpdateProduct.TextColor = System.Drawing.Color.LightSlateGray;
-            this.btnUpdateProduct.UseVisualStyleBackColor = false;
-            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.LightGreen;
-            this.btnAddProduct.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.btnAddProduct.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnAddProduct.BorderRadius = 10;
-            this.btnAddProduct.BorderSize = 2;
-            this.btnAddProduct.FlatAppearance.BorderSize = 0;
-            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.btnAddProduct.Location = new System.Drawing.Point(194, 558);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(201, 40);
-            this.btnAddProduct.TabIndex = 19;
-            this.btnAddProduct.Text = "Thêm sản phẩm";
-            this.btnAddProduct.TextColor = System.Drawing.Color.LightSlateGray;
-            this.btnAddProduct.UseVisualStyleBackColor = false;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2CustomGradientPanel1.BorderRadius = 15;
+            this.guna2CustomGradientPanel1.BorderThickness = 2;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnDelete);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnAdd);
             this.guna2CustomGradientPanel1.Controls.Add(this.groupBox8);
-            this.guna2CustomGradientPanel1.Controls.Add(this.vbButton1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.vbButton2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(14, 60);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(596, 456);
             this.guna2CustomGradientPanel1.TabIndex = 20;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.Crimson;
+            this.btnDelete.FillColor2 = System.Drawing.Color.DeepPink;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(333, 386);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(180, 45);
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Text = "Xóa hình ảnh";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.Green;
+            this.btnAdd.FillColor2 = System.Drawing.Color.LimeGreen;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(100, 386);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(180, 45);
+            this.btnAdd.TabIndex = 23;
+            this.btnAdd.Text = "+  Thêm hình ảnh";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.White;
+            this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.guna2CustomGradientPanel2.BorderRadius = 15;
+            this.guna2CustomGradientPanel2.BorderThickness = 2;
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox10);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox9);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox6);
@@ -282,7 +246,7 @@
             this.guna2DateTimePicker1.BorderThickness = 1;
             this.guna2DateTimePicker1.Checked = true;
             this.guna2DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.SystemColors.Window;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(3, 24);
@@ -466,6 +430,20 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Số lượng";
             // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2NumericUpDown1.BorderRadius = 10;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(3, 24);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(119, 36);
+            this.guna2NumericUpDown1.TabIndex = 0;
+            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
@@ -617,36 +595,60 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2NumericUpDown1.BorderRadius = 10;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(3, 24);
-            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(119, 36);
-            this.guna2NumericUpDown1.TabIndex = 0;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.BorderRadius = 10;
+            this.btnUpdateProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateProduct.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUpdateProduct.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUpdateProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnUpdateProduct.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateProduct.Location = new System.Drawing.Point(215, 617);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(180, 58);
+            this.btnUpdateProduct.TabIndex = 25;
+            this.btnUpdateProduct.Text = "Cập nhật";
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BorderRadius = 10;
+            this.btnAddProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddProduct.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddProduct.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnAddProduct.FillColor2 = System.Drawing.Color.CornflowerBlue;
+            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.Location = new System.Drawing.Point(215, 542);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(180, 58);
+            this.btnAddProduct.TabIndex = 26;
+            this.btnAddProduct.Text = "Thêm sản phẩm";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // FAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1447, 708);
+            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.btnUpdateProduct);
             this.Controls.Add(this.pToolBar);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Controls.Add(this.btnAddProduct);
-            this.Controls.Add(this.btnUpdateProduct);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -663,24 +665,17 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.pToolBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pctProduct;
-        private CustomButton.VBButton btnNext;
-        private CustomButton.VBButton btnPre;
         private System.Windows.Forms.GroupBox groupBox8;
-        private CustomButton.VBButton vbButton1;
-        private CustomButton.VBButton vbButton2;
-        public CustomButton.VBButton btnUpdateProduct;
-        public CustomButton.VBButton btnAddProduct;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -707,5 +702,12 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private CustomButton.VBButton btnPre;
+        private CustomButton.VBButton btnNext;
+        private Guna.UI2.WinForms.Guna2PictureBox pctProduct;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
+        public Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
+        public Guna.UI2.WinForms.Guna2GradientButton btnUpdateProduct;
     }
 }

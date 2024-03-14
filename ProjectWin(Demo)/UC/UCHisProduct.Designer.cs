@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 50);
+            this.panel1.Size = new System.Drawing.Size(355, 50);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(392, 114);
+            this.panel2.Size = new System.Drawing.Size(355, 114);
             this.panel2.TabIndex = 1;
             // 
             // label3
@@ -87,7 +87,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(268, 77);
+            this.label3.Location = new System.Drawing.Point(260, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 164);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 49);
+            this.panel3.Size = new System.Drawing.Size(355, 49);
             this.panel3.TabIndex = 2;
             // 
             // label6
@@ -129,7 +129,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(267, 16);
+            this.label6.Location = new System.Drawing.Point(261, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 3;
@@ -140,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(181, 14);
+            this.label5.Location = new System.Drawing.Point(158, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 1;
@@ -163,14 +163,13 @@
             this.btnComment.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnComment.BorderRadius = 5;
             this.btnComment.BorderSize = 0;
-            this.btnComment.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnComment.FlatAppearance.BorderSize = 0;
             this.btnComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComment.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComment.ForeColor = System.Drawing.Color.White;
-            this.btnComment.Location = new System.Drawing.Point(0, 0);
+            this.btnComment.Location = new System.Drawing.Point(11, 3);
             this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(150, 47);
+            this.btnComment.Size = new System.Drawing.Size(122, 40);
             this.btnComment.TabIndex = 3;
             this.btnComment.Text = "Đánh giá";
             this.btnComment.TextColor = System.Drawing.Color.White;
@@ -185,7 +184,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 213);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(392, 49);
+            this.panel4.Size = new System.Drawing.Size(355, 49);
             this.panel4.TabIndex = 4;
             // 
             // btnPayAgain
@@ -195,14 +194,13 @@
             this.btnPayAgain.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnPayAgain.BorderRadius = 5;
             this.btnPayAgain.BorderSize = 0;
-            this.btnPayAgain.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPayAgain.FlatAppearance.BorderSize = 0;
             this.btnPayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayAgain.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPayAgain.Location = new System.Drawing.Point(240, 0);
+            this.btnPayAgain.Location = new System.Drawing.Point(218, 3);
             this.btnPayAgain.Name = "btnPayAgain";
-            this.btnPayAgain.Size = new System.Drawing.Size(150, 47);
+            this.btnPayAgain.Size = new System.Drawing.Size(122, 40);
             this.btnPayAgain.TabIndex = 4;
             this.btnPayAgain.Text = "Mua lại";
             this.btnPayAgain.TextColor = System.Drawing.Color.White;
@@ -223,7 +221,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UCHisProduct";
-            this.Size = new System.Drawing.Size(392, 262);
+            this.Size = new System.Drawing.Size(355, 262);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

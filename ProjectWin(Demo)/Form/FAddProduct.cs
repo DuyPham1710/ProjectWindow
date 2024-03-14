@@ -82,7 +82,7 @@ namespace ProjectWin_Demo_
             }
         }
 
-        private void vbButton2_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             while (openFileDialog1.ShowDialog() == DialogResult.OK)
             {

@@ -49,6 +49,7 @@
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBoxUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBoxUser = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddAvatar = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.groupBox8.SuspendLayout();
@@ -74,6 +74,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -83,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -398,6 +398,7 @@
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 3;
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBoxUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
@@ -411,12 +412,23 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBoxUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddAvatar);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(35, 46);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(129, 49);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(335, 432);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(380, 432);
             this.guna2CustomGradientPanel1.TabIndex = 20;
+            // 
+            // pictureBoxUser
+            // 
+            this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
+            this.pictureBoxUser.ImageRotate = 0F;
+            this.pictureBoxUser.Location = new System.Drawing.Point(24, 22);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxUser.Size = new System.Drawing.Size(134, 134);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUser.TabIndex = 38;
+            this.pictureBoxUser.TabStop = false;
             // 
             // label4
             // 
@@ -574,19 +586,6 @@
             this.guna2PictureBox1.TabIndex = 25;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxUser.BorderRadius = 55;
-            this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_64__1_;
-            this.pictureBoxUser.ImageRotate = 0F;
-            this.pictureBoxUser.Location = new System.Drawing.Point(24, 17);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(136, 138);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxUser.TabIndex = 19;
-            this.pictureBoxUser.TabStop = false;
-            // 
             // btnAddAvatar
             // 
             this.btnAddAvatar.BackColor = System.Drawing.Color.Transparent;
@@ -624,7 +623,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox3);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox1);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(434, 28);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(568, 31);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(730, 570);
             this.guna2CustomGradientPanel2.TabIndex = 21;
@@ -637,7 +636,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCInfo";
-            this.Size = new System.Drawing.Size(1200, 651);
+            this.Size = new System.Drawing.Size(1435, 792);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -649,6 +648,7 @@
             this.groupBox1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
@@ -658,7 +658,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -679,7 +678,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddAvatar;
-        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxUser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -703,5 +701,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxUser;
     }
 }

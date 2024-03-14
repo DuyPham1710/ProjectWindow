@@ -113,6 +113,26 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4 {
+            get {
+                object obj = ResourceManager.GetObject("4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5 {
+            get {
+                object obj = ResourceManager.GetObject("5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Accept {
             get {
                 object obj = ResourceManager.GetObject("Accept", resourceCulture);
@@ -366,6 +386,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap Icons8_Windows_8_Users_Name_48 {
             get {
                 object obj = ResourceManager.GetObject("Icons8-Windows-8-Users-Name.48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Coins_48 {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Coins.48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

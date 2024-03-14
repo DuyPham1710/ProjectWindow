@@ -34,14 +34,17 @@
             this.btnProcess = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDelivery = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnWaitAccept = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.ucHisProduct5 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct6 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct3 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct2 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct1 = new ProjectWin_Demo_.UCHisProduct();
+            this.ucProcessSales8 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales7 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales6 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales2 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales1 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales5 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales4 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.ucProcessSales3 = new ProjectWin_Demo_.UC.UCProcessSales();
+            this.fPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.fPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 60);
+            this.panel1.Size = new System.Drawing.Size(1445, 60);
             this.panel1.TabIndex = 1;
             // 
             // btnRefund
@@ -158,70 +161,99 @@
             this.btnWaitAccept.Text = "Chờ xác nhận";
             this.btnWaitAccept.Click += new System.EventHandler(this.btnWaitAccept_Click);
             // 
-            // guna2CustomGradientPanel1
+            // ucProcessSales8
             // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct5);
-            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct6);
-            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.ucHisProduct1);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 60);
-            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1200, 591);
-            this.guna2CustomGradientPanel1.TabIndex = 2;
+            this.ucProcessSales8.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales8.Location = new System.Drawing.Point(1086, 323);
+            this.ucProcessSales8.Name = "ucProcessSales8";
+            this.ucProcessSales8.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales8.TabIndex = 9;
             // 
-            // ucHisProduct5
+            // ucProcessSales7
             // 
-            this.ucHisProduct5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct5.Location = new System.Drawing.Point(402, 273);
-            this.ucHisProduct5.Name = "ucHisProduct5";
-            this.ucHisProduct5.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct5.TabIndex = 4;
+            this.ucProcessSales7.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales7.Location = new System.Drawing.Point(725, 323);
+            this.ucProcessSales7.Name = "ucProcessSales7";
+            this.ucProcessSales7.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales7.TabIndex = 8;
             // 
-            // ucHisProduct6
+            // ucProcessSales6
             // 
-            this.ucHisProduct6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct6.Location = new System.Drawing.Point(4, 273);
-            this.ucHisProduct6.Name = "ucHisProduct6";
-            this.ucHisProduct6.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct6.TabIndex = 3;
+            this.ucProcessSales6.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales6.Location = new System.Drawing.Point(364, 323);
+            this.ucProcessSales6.Name = "ucProcessSales6";
+            this.ucProcessSales6.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales6.TabIndex = 7;
             // 
-            // ucHisProduct3
+            // ucProcessSales2
             // 
-            this.ucHisProduct3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct3.Location = new System.Drawing.Point(800, 3);
-            this.ucHisProduct3.Name = "ucHisProduct3";
-            this.ucHisProduct3.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct3.TabIndex = 2;
+            this.ucProcessSales2.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales2.Location = new System.Drawing.Point(3, 323);
+            this.ucProcessSales2.Name = "ucProcessSales2";
+            this.ucProcessSales2.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales2.TabIndex = 6;
             // 
-            // ucHisProduct2
+            // ucProcessSales1
             // 
-            this.ucHisProduct2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct2.Location = new System.Drawing.Point(401, 3);
-            this.ucHisProduct2.Name = "ucHisProduct2";
-            this.ucHisProduct2.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct2.TabIndex = 1;
+            this.ucProcessSales1.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales1.Location = new System.Drawing.Point(1086, 3);
+            this.ucProcessSales1.Name = "ucProcessSales1";
+            this.ucProcessSales1.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales1.TabIndex = 5;
             // 
-            // ucHisProduct1
+            // ucProcessSales5
             // 
-            this.ucHisProduct1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct1.Location = new System.Drawing.Point(3, 3);
-            this.ucHisProduct1.Name = "ucHisProduct1";
-            this.ucHisProduct1.Size = new System.Drawing.Size(392, 262);
-            this.ucHisProduct1.TabIndex = 0;
+            this.ucProcessSales5.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales5.Location = new System.Drawing.Point(725, 3);
+            this.ucProcessSales5.Name = "ucProcessSales5";
+            this.ucProcessSales5.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales5.TabIndex = 4;
+            // 
+            // ucProcessSales4
+            // 
+            this.ucProcessSales4.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales4.Location = new System.Drawing.Point(364, 3);
+            this.ucProcessSales4.Name = "ucProcessSales4";
+            this.ucProcessSales4.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales4.TabIndex = 3;
+            // 
+            // ucProcessSales3
+            // 
+            this.ucProcessSales3.BackColor = System.Drawing.Color.GhostWhite;
+            this.ucProcessSales3.Location = new System.Drawing.Point(3, 3);
+            this.ucProcessSales3.Name = "ucProcessSales3";
+            this.ucProcessSales3.Size = new System.Drawing.Size(355, 314);
+            this.ucProcessSales3.TabIndex = 2;
+            // 
+            // fPanel
+            // 
+            this.fPanel.AutoScroll = true;
+            this.fPanel.BackColor = System.Drawing.Color.Lavender;
+            this.fPanel.Controls.Add(this.ucProcessSales3);
+            this.fPanel.Controls.Add(this.ucProcessSales4);
+            this.fPanel.Controls.Add(this.ucProcessSales5);
+            this.fPanel.Controls.Add(this.ucProcessSales1);
+            this.fPanel.Controls.Add(this.ucProcessSales2);
+            this.fPanel.Controls.Add(this.ucProcessSales6);
+            this.fPanel.Controls.Add(this.ucProcessSales7);
+            this.fPanel.Controls.Add(this.ucProcessSales8);
+            this.fPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fPanel.Location = new System.Drawing.Point(0, 60);
+            this.fPanel.Name = "fPanel";
+            this.fPanel.Size = new System.Drawing.Size(1445, 732);
+            this.fPanel.TabIndex = 2;
             // 
             // UCSalesOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.fPanel);
             this.Controls.Add(this.panel1);
             this.Name = "UCSalesOrder";
-            this.Size = new System.Drawing.Size(1200, 651);
+            this.Size = new System.Drawing.Size(1445, 792);
             this.panel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.fPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -234,11 +266,14 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnProcess;
         private Guna.UI2.WinForms.Guna2GradientButton btnDelivery;
         private Guna.UI2.WinForms.Guna2GradientButton btnWaitAccept;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private UCHisProduct ucHisProduct5;
-        private UCHisProduct ucHisProduct6;
-        private UCHisProduct ucHisProduct3;
-        private UCHisProduct ucHisProduct2;
-        private UCHisProduct ucHisProduct1;
+        private UCProcessSales ucProcessSales8;
+        private UCProcessSales ucProcessSales7;
+        private UCProcessSales ucProcessSales6;
+        private UCProcessSales ucProcessSales2;
+        private UCProcessSales ucProcessSales1;
+        private UCProcessSales ucProcessSales5;
+        private UCProcessSales ucProcessSales4;
+        private UCProcessSales ucProcessSales3;
+        private System.Windows.Forms.FlowLayoutPanel fPanel;
     }
 }

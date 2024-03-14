@@ -33,8 +33,8 @@ namespace ProjectWin_Demo_
             btnTotalProduct.ForeColor = Color.Black;
             btnProductSold.CustomBorderColor = Color.MediumSlateBlue;
             btnProductSold.ForeColor = Color.MediumSlateBlue;
-            UCProductSold ucProductSold = new UCProductSold();
-            addUserControl(ucProductSold);
+            UCHistory uCHistory = new UCHistory();
+            addUserControl(uCHistory);
         }
         private void addUserControl(UserControl userControl)
         {
@@ -50,5 +50,12 @@ namespace ProjectWin_Demo_
             btnProductSold.CustomBorderColor = Color.White;
             btnProductSold.ForeColor = Color.Black;
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

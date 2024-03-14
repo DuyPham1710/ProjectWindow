@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
@@ -25,6 +27,8 @@ namespace ProjectWin_Demo_
         {
             InitializeComponent();
             openChildForm(new FHome());
+            //btnMenu.MouseDown += btnMenu_MouseDown;
+            //btnMenu.LostFocus += btnMenu_LostFocus;
             // Lưu lại kích thước ban đầu của button
             originalWidth = panelControl.Width;
 
@@ -35,6 +39,7 @@ namespace ProjectWin_Demo_
             // Cài đặt Timer cho việc thu nhỏ
             shrinkTimer.Interval = 1;
             shrinkTimer.Tick += ShrinkTimer_Tick;
+            
         }
         
         private void Panel_MouseDown(object sender, MouseEventArgs e)
@@ -166,12 +171,6 @@ namespace ProjectWin_Demo_
                 this.Close();
         }
 
-        private void FUser_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -182,23 +181,16 @@ namespace ProjectWin_Demo_
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void btnMenu_MouseDown(object sender, MouseEventArgs e)
         {
-
+            growTimer.Start();
+            shrinkTimer.Stop();
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void btnMenu_LostFocus(object sender, EventArgs e)
         {
-            if (panelControl.Width < 72)
-            {
-                growTimer.Start();
-                shrinkTimer.Stop();
-            }
-            else
-            {
-                growTimer.Stop();
-                shrinkTimer.Start();
-            }
+            growTimer.Stop();
+            shrinkTimer.Start();
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
@@ -212,11 +204,36 @@ namespace ProjectWin_Demo_
             btnMyProduct.CustomBorderColor = Color.Thistle;
             btnInfo.CustomBorderColor = Color.Thistle;
             btnDonHang.CustomBorderColor = Color.Purple;
+
+            UCProductSold uCProductSold = new UCProductSold();
+            addUserControl(uCProductSold);
+
         }
 
+        private void addUserControl(UserControl userControl)
+        {
+            panelChildForm.Controls.Clear();
+            panelChildForm.Controls.Add(userControl);
+            userControl.BringToFront();
+            userControl.Dock = DockStyle.Fill;
+        }
         private void avt_Click(object sender, EventArgs e)
         {
             btnInfo_Click(sender, e);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if(panelControl.Width<80)
+            {
+                growTimer.Start();
+                shrinkTimer.Stop();
+            }
+            else
+            {
+                growTimer.Stop();
+                shrinkTimer.Start();
+            }
         }
     }
 }

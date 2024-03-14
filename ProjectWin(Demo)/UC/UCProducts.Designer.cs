@@ -31,14 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pctProduct = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -88,6 +88,31 @@
             this.panel1.Click += new System.EventHandler(this.UCProducts_Click);
             this.panel1.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.panel1.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(132, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Đã bán 100";
+            this.label3.Click += new System.EventHandler(this.UCProducts_Click);
+            this.label3.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(31, 284);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(175, 27);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "TP.Hồ Chí Minh";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Click += new System.EventHandler(this.UCProducts_Click);
+            this.label4.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.label4.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // pictureBox6
             // 
@@ -153,36 +178,11 @@
             this.pctProduct.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.pctProduct.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(132, 260);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Đã bán 100";
-            this.label3.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label3.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 284);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 27);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "TP.Hồ Chí Minh";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label4.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label4.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
             // UCProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);

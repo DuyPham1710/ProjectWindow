@@ -50,7 +50,6 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnFind = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
@@ -66,13 +65,12 @@
             this.panel1.Controls.Add(this.guna2CircleButton2);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnFind);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBoxCart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1286, 58);
+            this.panel1.Size = new System.Drawing.Size(1555, 58);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -80,6 +78,7 @@
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.guna2TextBox1.BorderColor = System.Drawing.Color.Indigo;
             this.guna2TextBox1.BorderRadius = 10;
             this.guna2TextBox1.BorderThickness = 2;
@@ -95,15 +94,17 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(221, 8);
+            this.guna2TextBox1.IconRight = global::ProjectWin_Demo_.Properties.Resources.Elegantthemes_Beautiful_Flat_One_Color_Magnifying_glass_24;
+            this.guna2TextBox1.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox1.Location = new System.Drawing.Point(478, 9);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.PlaceholderText = "Tìm kiếm";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(587, 40);
             this.guna2TextBox1.TabIndex = 26;
+            this.guna2TextBox1.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // guna2CircleButton2
             // 
@@ -167,7 +168,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
-            this.pictureBox1.Location = new System.Drawing.Point(1215, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(1393, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,7 +178,7 @@
             // pictureBoxCart
             // 
             this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
-            this.pictureBoxCart.Location = new System.Drawing.Point(1158, 6);
+            this.pictureBoxCart.Location = new System.Drawing.Point(1336, 9);
             this.pictureBoxCart.Name = "pictureBoxCart";
             this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
             this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,9 +190,9 @@
             // 
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelChildForm.Location = new System.Drawing.Point(86, 58);
+            this.panelChildForm.Location = new System.Drawing.Point(115, 58);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1200, 686);
+            this.panelChildForm.Size = new System.Drawing.Size(1440, 792);
             this.panelChildForm.TabIndex = 2;
             // 
             // panelControl
@@ -207,7 +208,7 @@
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl.Location = new System.Drawing.Point(0, 58);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(84, 686);
+            this.panelControl.Size = new System.Drawing.Size(84, 792);
             this.panelControl.TabIndex = 3;
             // 
             // btnLogOut
@@ -228,13 +229,14 @@
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogOut.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnLogOut.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 592);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 698);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnLogOut.Size = new System.Drawing.Size(84, 79);
             this.btnLogOut.TabIndex = 24;
             this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnLogOut.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnInfo
             // 
@@ -359,7 +361,7 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 671);
+            this.panel6.Location = new System.Drawing.Point(0, 777);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(84, 15);
             this.panel6.TabIndex = 15;
@@ -418,12 +420,13 @@
             // 
             // avt
             // 
+            this.avt.FillColor = System.Drawing.Color.Gainsboro;
             this.avt.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
             this.avt.ImageRotate = 0F;
-            this.avt.Location = new System.Drawing.Point(6, 54);
+            this.avt.Location = new System.Drawing.Point(6, 58);
             this.avt.Name = "avt";
             this.avt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.avt.Size = new System.Drawing.Size(53, 62);
+            this.avt.Size = new System.Drawing.Size(62, 62);
             this.avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avt.TabIndex = 1;
             this.avt.TabStop = false;
@@ -434,33 +437,13 @@
             this.guna2Elipse1.BorderRadius = 17;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // btnFind
-            // 
-            this.btnFind.BackColor = System.Drawing.Color.Transparent;
-            this.btnFind.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnFind.BorderColor = System.Drawing.Color.Lavender;
-            this.btnFind.BorderRadius = 15;
-            this.btnFind.BorderSize = 2;
-            this.btnFind.FlatAppearance.BorderSize = 0;
-            this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFind.ForeColor = System.Drawing.Color.Black;
-            this.btnFind.Image = global::ProjectWin_Demo_.Properties.Resources.Elegantthemes_Beautiful_Flat_One_Color_Magnifying_glass_24;
-            this.btnFind.Location = new System.Drawing.Point(814, 6);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(177, 40);
-            this.btnFind.TabIndex = 3;
-            this.btnFind.Text = "    Tìm kiếm";
-            this.btnFind.TextColor = System.Drawing.Color.Black;
-            this.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFind.UseVisualStyleBackColor = false;
-            // 
             // FUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1286, 744);
+            this.ClientSize = new System.Drawing.Size(1555, 850);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
@@ -485,7 +468,6 @@
         private System.Windows.Forms.PictureBox pictureBoxCart;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private CustomButton.VBButton btnFind;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;

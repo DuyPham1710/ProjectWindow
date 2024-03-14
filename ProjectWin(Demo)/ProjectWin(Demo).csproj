@@ -173,6 +173,12 @@
     <Compile Include="UC\UCMyProduct.Designer.cs">
       <DependentUpon>UCMyProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCProcessSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCProcessSales.Designer.cs">
+      <DependentUpon>UCProcessSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMyProduct.resx">
       <DependentUpon>UCMyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCProcessSales.resx">
+      <DependentUpon>UCProcessSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
@@ -466,6 +475,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Iconsmind-Outline-Home-2-2.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Coins.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

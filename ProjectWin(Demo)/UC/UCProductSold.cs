@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectWin_Demo_.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,35 @@ namespace ProjectWin_Demo_
         public UCProductSold()
         {
             InitializeComponent();
-            foreach (Control control in flowLayoutPanel1.Controls)
-            {
-                control.Margin = new Padding(5); // Đặt giá trị phần đệm là 5 cho các cạnh
-            }
+           
+        }
+
+        private void btnPurchaseOrder_Click(object sender, EventArgs e)
+        {
+            btnPurchaseOrder.CustomBorderColor = Color.MediumSlateBlue;
+            btnPurchaseOrder.ForeColor = Color.MediumSlateBlue;
+            btnSaleOrder.CustomBorderColor = Color.White;
+            btnSaleOrder.ForeColor = Color.Black;
+            UCPurchaseOrder uCPurchaseOrder = new UCPurchaseOrder();
+            addUserControl(uCPurchaseOrder);
+        }
+
+        private void btnSaleOrder_Click(object sender, EventArgs e)
+        {
+            btnPurchaseOrder.CustomBorderColor = Color.White;
+            btnPurchaseOrder.ForeColor = Color.Black;
+            btnSaleOrder.CustomBorderColor = Color.MediumSlateBlue;
+            btnSaleOrder.ForeColor = Color.MediumSlateBlue;
+            UCSalesOrder uCSalesOrder = new UCSalesOrder();
+            addUserControl(uCSalesOrder);
+        }
+        private void addUserControl(UserControl userControl)
+        {
+           
+            panel1.Controls.Clear();
+            panel1.Controls.Add(userControl);
+            userControl.BringToFront();
+            userControl.Dock = DockStyle.Fill;
         }
     }
 }

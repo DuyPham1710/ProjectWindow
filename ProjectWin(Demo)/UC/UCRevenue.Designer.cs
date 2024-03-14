@@ -220,14 +220,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1137, 256);
+            this.chart1.Location = new System.Drawing.Point(1125, 131);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(51, 63);
+            this.chart1.Size = new System.Drawing.Size(173, 202);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 
@@ -320,7 +320,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCRevenue";
-            this.Size = new System.Drawing.Size(1200, 636);
+            this.Size = new System.Drawing.Size(1435, 792);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
