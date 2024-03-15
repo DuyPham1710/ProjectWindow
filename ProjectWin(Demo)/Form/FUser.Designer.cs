@@ -70,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1555, 58);
+            this.panel1.Size = new System.Drawing.Size(1565, 58);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
@@ -79,7 +79,7 @@
             // guna2TextBox1
             // 
             this.guna2TextBox1.BackColor = System.Drawing.Color.MediumPurple;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Indigo;
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.GhostWhite;
             this.guna2TextBox1.BorderRadius = 10;
             this.guna2TextBox1.BorderThickness = 2;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -168,7 +168,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.facebook_messenger;
-            this.pictureBox1.Location = new System.Drawing.Point(1393, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(1496, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 42);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +178,7 @@
             // pictureBoxCart
             // 
             this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_shopping_solid;
-            this.pictureBoxCart.Location = new System.Drawing.Point(1336, 9);
+            this.pictureBoxCart.Location = new System.Drawing.Point(1439, 9);
             this.pictureBoxCart.Name = "pictureBoxCart";
             this.pictureBoxCart.Size = new System.Drawing.Size(37, 42);
             this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +192,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelChildForm.Location = new System.Drawing.Point(115, 58);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1440, 792);
+            this.panelChildForm.Size = new System.Drawing.Size(1450, 792);
             this.panelChildForm.TabIndex = 2;
             // 
             // panelControl
@@ -392,7 +392,7 @@
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Thistle;
-            this.btnMenu.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btnMenu.BorderColor = System.Drawing.Color.Transparent;
             this.btnMenu.BorderRadius = 10;
             this.btnMenu.BorderThickness = 1;
             this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -443,7 +443,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1555, 850);
+            this.ClientSize = new System.Drawing.Size(1565, 850);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);

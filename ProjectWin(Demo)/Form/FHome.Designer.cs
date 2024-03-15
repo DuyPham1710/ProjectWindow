@@ -29,21 +29,13 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.pSort = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.pCatalog = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.ContextMenuStripCatalog = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.ContextMenuStripSort = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.điệnTửToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.giaDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.họcTậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tăngDầnGiáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.giảmDầnGiáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ucProducts1 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts2 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts3 = new ProjectWin_Demo_.UCProducts();
@@ -63,9 +55,13 @@
             this.ucProducts17 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts18 = new ProjectWin_Demo_.UCProducts();
             this.ucProducts19 = new ProjectWin_Demo_.UCProducts();
+            this.btnCatalog = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSort = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnbestSeller = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnAllProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pSort.SuspendLayout();
-            this.pCatalog.SuspendLayout();
+            this.ContextMenuStripCatalog.SuspendLayout();
+            this.ContextMenuStripSort.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -95,205 +91,86 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 44);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1430, 748);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1440, 748);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // guna2Button1
+            // ContextMenuStripCatalog
             // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2Button1.Location = new System.Drawing.Point(12, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 38);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Tất cả sản phẩm";
+            this.ContextMenuStripCatalog.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ContextMenuStripCatalog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.điệnTửToolStripMenuItem,
+            this.giaDụngToolStripMenuItem,
+            this.họcTậpToolStripMenuItem});
+            this.ContextMenuStripCatalog.Name = "ContextMenuStripCatalog";
+            this.ContextMenuStripCatalog.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.ContextMenuStripCatalog.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ContextMenuStripCatalog.RenderStyle.ColorTable = null;
+            this.ContextMenuStripCatalog.RenderStyle.RoundedEdges = true;
+            this.ContextMenuStripCatalog.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.ContextMenuStripCatalog.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ContextMenuStripCatalog.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.ContextMenuStripCatalog.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.ContextMenuStripCatalog.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.ContextMenuStripCatalog.Size = new System.Drawing.Size(174, 94);
             // 
-            // guna2Separator1
+            // ContextMenuStripSort
             // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.MediumTurquoise;
-            this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(12, 33);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(180, 10);
-            this.guna2Separator1.TabIndex = 3;
+            this.ContextMenuStripSort.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ContextMenuStripSort.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ContextMenuStripSort.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tăngDầnGiáToolStripMenuItem,
+            this.giảmDầnGiáToolStripMenuItem});
+            this.ContextMenuStripSort.Name = "ContextMenuStripSort";
+            this.ContextMenuStripSort.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.ContextMenuStripSort.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ContextMenuStripSort.RenderStyle.ColorTable = null;
+            this.ContextMenuStripSort.RenderStyle.RoundedEdges = true;
+            this.ContextMenuStripSort.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.ContextMenuStripSort.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ContextMenuStripSort.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.ContextMenuStripSort.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.ContextMenuStripSort.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.ContextMenuStripSort.Size = new System.Drawing.Size(215, 64);
             // 
-            // guna2Separator2
+            // điệnTửToolStripMenuItem
             // 
-            this.guna2Separator2.FillThickness = 2;
-            this.guna2Separator2.Location = new System.Drawing.Point(198, 33);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(180, 10);
-            this.guna2Separator2.TabIndex = 5;
+            this.điệnTửToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.điệnTửToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.điệnTửToolStripMenuItem.Name = "điệnTửToolStripMenuItem";
+            this.điệnTửToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.điệnTửToolStripMenuItem.Text = "Điện tử";
             // 
-            // guna2Button2
+            // giaDụngToolStripMenuItem
             // 
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(198, 2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 38);
-            this.guna2Button2.TabIndex = 4;
-            this.guna2Button2.Text = "Danh mục";
+            this.giaDụngToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.giaDụngToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.giaDụngToolStripMenuItem.Name = "giaDụngToolStripMenuItem";
+            this.giaDụngToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.giaDụngToolStripMenuItem.Text = "Gia dụng";
             // 
-            // guna2Separator3
+            // họcTậpToolStripMenuItem
             // 
-            this.guna2Separator3.FillThickness = 2;
-            this.guna2Separator3.Location = new System.Drawing.Point(384, 33);
-            this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(219, 10);
-            this.guna2Separator3.TabIndex = 7;
+            this.họcTậpToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.họcTậpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.họcTậpToolStripMenuItem.Name = "họcTậpToolStripMenuItem";
+            this.họcTậpToolStripMenuItem.Size = new System.Drawing.Size(173, 30);
+            this.họcTậpToolStripMenuItem.Text = "Học tập";
             // 
-            // guna2Button3
+            // tăngDầnGiáToolStripMenuItem
             // 
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.Location = new System.Drawing.Point(384, 2);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(219, 38);
-            this.guna2Button3.TabIndex = 6;
-            this.guna2Button3.Text = "Sắp xếp sản phẩm";
+            this.tăngDầnGiáToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.tăngDầnGiáToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.tăngDầnGiáToolStripMenuItem.Name = "tăngDầnGiáToolStripMenuItem";
+            this.tăngDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.tăngDầnGiáToolStripMenuItem.Text = "Tăng dần giá";
             // 
-            // guna2Button4
+            // giảmDầnGiáToolStripMenuItem
             // 
-            this.guna2Button4.BorderRadius = 15;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(609, 2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(180, 38);
-            this.guna2Button4.TabIndex = 8;
-            this.guna2Button4.Text = "Bán chạy nhất";
-            // 
-            // pSort
-            // 
-            this.pSort.Controls.Add(this.guna2Button6);
-            this.pSort.Controls.Add(this.guna2Button5);
-            this.pSort.Location = new System.Drawing.Point(384, 43);
-            this.pSort.Name = "pSort";
-            this.pSort.Size = new System.Drawing.Size(219, 81);
-            this.pSort.TabIndex = 10;
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(0, 38);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(219, 43);
-            this.guna2Button6.TabIndex = 10;
-            this.guna2Button6.Text = "Giảm dần giá";
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(219, 38);
-            this.guna2Button5.TabIndex = 9;
-            this.guna2Button5.Text = "Tăng dần giá";
-            // 
-            // pCatalog
-            // 
-            this.pCatalog.Controls.Add(this.guna2Button9);
-            this.pCatalog.Controls.Add(this.guna2Button7);
-            this.pCatalog.Controls.Add(this.guna2Button8);
-            this.pCatalog.Location = new System.Drawing.Point(198, 43);
-            this.pCatalog.Name = "pCatalog";
-            this.pCatalog.Size = new System.Drawing.Size(180, 131);
-            this.pCatalog.TabIndex = 11;
-            // 
-            // guna2Button9
-            // 
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button9.Location = new System.Drawing.Point(0, 81);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(180, 47);
-            this.guna2Button9.TabIndex = 11;
-            this.guna2Button9.Text = "Học tập";
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.Location = new System.Drawing.Point(0, 38);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(180, 43);
-            this.guna2Button7.TabIndex = 10;
-            this.guna2Button7.Text = "Gia dụng";
-            // 
-            // guna2Button8
-            // 
-            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button8.Location = new System.Drawing.Point(0, 0);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(180, 38);
-            this.guna2Button8.TabIndex = 9;
-            this.guna2Button8.Text = "Điện tử";
-            // 
-            // guna2Separator4
-            // 
-            this.guna2Separator4.FillThickness = 2;
-            this.guna2Separator4.Location = new System.Drawing.Point(609, 33);
-            this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(180, 10);
-            this.guna2Separator4.TabIndex = 9;
+            this.giảmDầnGiáToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.giảmDầnGiáToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.giảmDầnGiáToolStripMenuItem.Name = "giảmDầnGiáToolStripMenuItem";
+            this.giảmDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.giảmDầnGiáToolStripMenuItem.Text = "Giảm dần giá";
             // 
             // ucProducts1
             // 
@@ -447,50 +324,109 @@
             this.ucProducts19.Size = new System.Drawing.Size(229, 320);
             this.ucProducts19.TabIndex = 18;
             // 
+            // btnCatalog
+            // 
+            this.btnCatalog.BackColor = System.Drawing.Color.Transparent;
+            this.btnCatalog.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnCatalog.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnCatalog.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCatalog.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCatalog.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCatalog.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCatalog.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCatalog.FillColor = System.Drawing.Color.Transparent;
+            this.btnCatalog.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnCatalog.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnCatalog.ForeColor = System.Drawing.Color.Black;
+            this.btnCatalog.Location = new System.Drawing.Point(198, 2);
+            this.btnCatalog.Name = "btnCatalog";
+            this.btnCatalog.Size = new System.Drawing.Size(180, 38);
+            this.btnCatalog.TabIndex = 14;
+            this.btnCatalog.Text = "Doanh mục";
+            // 
+            // btnSort
+            // 
+            this.btnSort.BackColor = System.Drawing.Color.Transparent;
+            this.btnSort.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnSort.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnSort.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSort.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSort.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSort.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSort.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSort.FillColor = System.Drawing.Color.Transparent;
+            this.btnSort.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSort.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnSort.ForeColor = System.Drawing.Color.Black;
+            this.btnSort.Location = new System.Drawing.Point(384, 2);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(219, 38);
+            this.btnSort.TabIndex = 15;
+            this.btnSort.Text = "Sắp xếp sản phẩm";
+            // 
+            // btnbestSeller
+            // 
+            this.btnbestSeller.BackColor = System.Drawing.Color.Transparent;
+            this.btnbestSeller.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnbestSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnbestSeller.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnbestSeller.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnbestSeller.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbestSeller.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnbestSeller.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnbestSeller.FillColor = System.Drawing.Color.Transparent;
+            this.btnbestSeller.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnbestSeller.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnbestSeller.ForeColor = System.Drawing.Color.Black;
+            this.btnbestSeller.Location = new System.Drawing.Point(609, 2);
+            this.btnbestSeller.Name = "btnbestSeller";
+            this.btnbestSeller.Size = new System.Drawing.Size(180, 38);
+            this.btnbestSeller.TabIndex = 16;
+            this.btnbestSeller.Text = "Bán chạy nhất";
+            // 
+            // btnAllProduct
+            // 
+            this.btnAllProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnAllProduct.CustomBorderColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAllProduct.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnAllProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAllProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAllProduct.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAllProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAllProduct.FillColor = System.Drawing.Color.Transparent;
+            this.btnAllProduct.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnAllProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnAllProduct.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.btnAllProduct.Location = new System.Drawing.Point(12, 2);
+            this.btnAllProduct.Name = "btnAllProduct";
+            this.btnAllProduct.Size = new System.Drawing.Size(180, 38);
+            this.btnAllProduct.TabIndex = 17;
+            this.btnAllProduct.Text = "Tất cả sản phẩm";
+            // 
             // FHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1430, 792);
-            this.Controls.Add(this.pCatalog);
-            this.Controls.Add(this.pSort);
-            this.Controls.Add(this.guna2Separator4);
-            this.Controls.Add(this.guna2Button4);
-            this.Controls.Add(this.guna2Separator3);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Separator2);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.guna2Button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1440, 792);
+            this.Controls.Add(this.btnAllProduct);
+            this.Controls.Add(this.btnbestSeller);
+            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.btnCatalog);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FHome";
             this.Text = "FHome";
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pSort.ResumeLayout(false);
-            this.pCatalog.ResumeLayout(false);
+            this.ContextMenuStripCatalog.ResumeLayout(false);
+            this.ContextMenuStripSort.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Panel pSort;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Panel pCatalog;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
-        private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private UCProducts ucProducts1;
         private UCProducts ucProducts2;
         private UCProducts ucProducts3;
@@ -510,5 +446,16 @@
         private UCProducts ucProducts17;
         private UCProducts ucProducts18;
         private UCProducts ucProducts19;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip ContextMenuStripCatalog;
+        private System.Windows.Forms.ToolStripMenuItem điệnTửToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem giaDụngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem họcTậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tăngDầnGiáToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem giảmDầnGiáToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip ContextMenuStripSort;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCatalog;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSort;
+        private Guna.UI2.WinForms.Guna2GradientButton btnbestSeller;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAllProduct;
     }
 }

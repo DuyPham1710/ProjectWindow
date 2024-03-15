@@ -20,7 +20,7 @@ namespace ProjectWin_Demo_
         public FDetail()
         {
             InitializeComponent();
-
+            lblCost.Text = "<s>" + lblCost.Text  + "</s>";
         }
         List<string> A=new List<string>();
         List<string> imgList = new List<string>() { "4", "5" };

@@ -49,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1435, 50);
+            this.panel1.Size = new System.Drawing.Size(1440, 50);
             this.panel1.TabIndex = 0;
             // 
             // btnInfo
@@ -65,7 +65,7 @@
             this.btnInfo.FillColor2 = System.Drawing.Color.Transparent;
             this.btnInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnInfo.Location = new System.Drawing.Point(5, 4);
+            this.btnInfo.Location = new System.Drawing.Point(14, 4);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(198, 45);
             this.btnInfo.TabIndex = 10;
@@ -85,7 +85,7 @@
             this.btnRevenue.FillColor2 = System.Drawing.Color.Transparent;
             this.btnRevenue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRevenue.ForeColor = System.Drawing.Color.Black;
-            this.btnRevenue.Location = new System.Drawing.Point(406, 4);
+            this.btnRevenue.Location = new System.Drawing.Point(415, 4);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.Size = new System.Drawing.Size(190, 45);
             this.btnRevenue.TabIndex = 11;
@@ -106,7 +106,7 @@
             this.btnHistory.FillColor2 = System.Drawing.Color.Transparent;
             this.btnHistory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnHistory.Location = new System.Drawing.Point(210, 4);
+            this.btnHistory.Location = new System.Drawing.Point(219, 4);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(190, 45);
             this.btnHistory.TabIndex = 9;
@@ -159,14 +159,14 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 50);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1435, 742);
+            this.panelChildForm.Size = new System.Drawing.Size(1440, 742);
             this.panelChildForm.TabIndex = 1;
             // 
             // FInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 792);
+            this.ClientSize = new System.Drawing.Size(1440, 792);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

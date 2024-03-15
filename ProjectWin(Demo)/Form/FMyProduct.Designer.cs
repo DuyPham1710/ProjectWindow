@@ -68,7 +68,7 @@
             this.guna2CustomGradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 134);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1435, 46);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1440, 46);
             this.guna2CustomGradientPanel3.TabIndex = 7;
             // 
             // panel7
@@ -165,7 +165,7 @@
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.MintCream;
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 63);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1435, 71);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1440, 71);
             this.guna2CustomGradientPanel2.TabIndex = 6;
             // 
             // guna2TextBox1
@@ -180,7 +180,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(1167, 12);
+            this.guna2TextBox1.Location = new System.Drawing.Point(1204, 12);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -195,7 +195,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1066, 28);
+            this.label7.Location = new System.Drawing.Point(1103, 28);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 1;
@@ -226,7 +226,7 @@
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.MintCream;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1435, 63);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1440, 63);
             this.guna2CustomGradientPanel1.TabIndex = 5;
             // 
             // btnTotalProduct
@@ -281,7 +281,7 @@
             this.btnAddProduct.FillColor2 = System.Drawing.Color.MediumSlateBlue;
             this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(1167, 3);
+            this.btnAddProduct.Location = new System.Drawing.Point(1206, 3);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(192, 54);
             this.btnAddProduct.TabIndex = 3;
@@ -296,7 +296,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 180);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1435, 612);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1440, 612);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // ucMyProduct1
@@ -313,7 +313,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1435, 792);
+            this.ClientSize = new System.Drawing.Size(1440, 792);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Controls.Add(this.guna2CustomGradientPanel2);

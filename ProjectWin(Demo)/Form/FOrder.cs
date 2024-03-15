@@ -11,12 +11,11 @@ using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
-    public partial class UCProductSold : UserControl
+    public partial class FOrder : Form
     {
-        public UCProductSold()
+        public FOrder()
         {
             InitializeComponent();
-           
         }
 
         private void btnPurchaseOrder_Click(object sender, EventArgs e)
@@ -40,7 +39,7 @@ namespace ProjectWin_Demo_
         }
         private void addUserControl(UserControl userControl)
         {
-           
+
             panel1.Controls.Clear();
             panel1.Controls.Add(userControl);
             userControl.BringToFront();

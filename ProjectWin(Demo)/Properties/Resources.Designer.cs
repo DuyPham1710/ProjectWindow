@@ -253,6 +253,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elt_warranty {
+            get {
+                object obj = ResourceManager.GetObject("elt_warranty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap envelope_solid {
             get {
                 object obj = ResourceManager.GetObject("envelope-solid", resourceCulture);

@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FOrder.Designer.cs">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,12 +194,6 @@
     <Compile Include="Funtion\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\UCProductSold.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCProductSold.Designer.cs">
-      <DependentUpon>UCProductSold.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UCPurchaseOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -239,6 +239,9 @@
     <EmbeddedResource Include="Form\FMyProduct.resx">
       <DependentUpon>FMyProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FOrder.resx">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FPayment.resx">
       <DependentUpon>FPayment.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,9 +279,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCProductSold.resx">
-      <DependentUpon>UCProductSold.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCPurchaseOrder.resx">
       <DependentUpon>UCPurchaseOrder.cs</DependentUpon>
@@ -484,6 +484,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elt_warranty.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

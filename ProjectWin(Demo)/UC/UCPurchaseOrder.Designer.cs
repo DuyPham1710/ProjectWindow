@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1435, 60);
+            this.panel1.Size = new System.Drawing.Size(1450, 60);
             this.panel1.TabIndex = 1;
             // 
             // btnRefund
@@ -164,13 +164,13 @@
             this.flowLayoutPanel1.Controls.Add(this.ucHisProduct1);
             this.flowLayoutPanel1.Controls.Add(this.ucHisProduct2);
             this.flowLayoutPanel1.Controls.Add(this.ucHisProduct3);
+            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct6);
             this.flowLayoutPanel1.Controls.Add(this.ucHisProduct4);
             this.flowLayoutPanel1.Controls.Add(this.ucHisProduct5);
-            this.flowLayoutPanel1.Controls.Add(this.ucHisProduct6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1435, 732);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1450, 682);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // ucHisProduct1
@@ -178,23 +178,23 @@
             this.ucHisProduct1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucHisProduct1.Location = new System.Drawing.Point(3, 3);
             this.ucHisProduct1.Name = "ucHisProduct1";
-            this.ucHisProduct1.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct1.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct1.TabIndex = 0;
             // 
             // ucHisProduct2
             // 
             this.ucHisProduct2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct2.Location = new System.Drawing.Point(409, 3);
+            this.ucHisProduct2.Location = new System.Drawing.Point(364, 3);
             this.ucHisProduct2.Name = "ucHisProduct2";
-            this.ucHisProduct2.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct2.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct2.TabIndex = 1;
             // 
             // ucHisProduct3
             // 
             this.ucHisProduct3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct3.Location = new System.Drawing.Point(815, 3);
+            this.ucHisProduct3.Location = new System.Drawing.Point(725, 3);
             this.ucHisProduct3.Name = "ucHisProduct3";
-            this.ucHisProduct3.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct3.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct3.TabIndex = 2;
             // 
             // ucHisProduct4
@@ -202,23 +202,23 @@
             this.ucHisProduct4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucHisProduct4.Location = new System.Drawing.Point(3, 271);
             this.ucHisProduct4.Name = "ucHisProduct4";
-            this.ucHisProduct4.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct4.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct4.TabIndex = 3;
             // 
             // ucHisProduct5
             // 
             this.ucHisProduct5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct5.Location = new System.Drawing.Point(409, 271);
+            this.ucHisProduct5.Location = new System.Drawing.Point(364, 271);
             this.ucHisProduct5.Name = "ucHisProduct5";
-            this.ucHisProduct5.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct5.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct5.TabIndex = 4;
             // 
             // ucHisProduct6
             // 
             this.ucHisProduct6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct6.Location = new System.Drawing.Point(815, 271);
+            this.ucHisProduct6.Location = new System.Drawing.Point(1086, 3);
             this.ucHisProduct6.Name = "ucHisProduct6";
-            this.ucHisProduct6.Size = new System.Drawing.Size(400, 262);
+            this.ucHisProduct6.Size = new System.Drawing.Size(355, 262);
             this.ucHisProduct6.TabIndex = 5;
             // 
             // UCPurchaseOrder
@@ -229,7 +229,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "UCPurchaseOrder";
-            this.Size = new System.Drawing.Size(1435, 792);
+            this.Size = new System.Drawing.Size(1450, 742);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -248,8 +248,8 @@
         private UCHisProduct ucHisProduct1;
         private UCHisProduct ucHisProduct2;
         private UCHisProduct ucHisProduct3;
+        private UCHisProduct ucHisProduct6;
         private UCHisProduct ucHisProduct4;
         private UCHisProduct ucHisProduct5;
-        private UCHisProduct ucHisProduct6;
     }
 }

@@ -15,36 +15,32 @@ namespace ProjectWin_Demo_
     {
         public FHome()
         {
-
             InitializeComponent();
-            pCatalog.Hide();
-            pSort.Hide();
-            guna2Button2.MouseDown += btnCatalog_MouseDown;
-            guna2Button2.LostFocus += btnCatalog_LostFocus;
-            guna2Button3.MouseDown += btnSort_MouseDown;
-            guna2Button3.LostFocus += btnSort_LostFocus;
-        }
-        private void btnCatalog_MouseDown(object sender, MouseEventArgs e)
-        {
-            pCatalog.Show();
+            btnCatalog.MouseDown += btnCatalog_MouseDown;
+            ContextMenuStripCatalog.LostFocus += btnCatalog_LostFocus;
+            btnSort.MouseDown += btnSort_MouseDown;
+            ContextMenuStripSort.LostFocus += btnSort_LostFocus;
         }
 
-        private void btnCatalog_LostFocus(object sender, EventArgs e)
-        {
-            pCatalog.Hide();
-        }
         private void btnSort_MouseDown(object sender, MouseEventArgs e)
         {
-            pSort.Show();
+            Point location = btnSort.PointToScreen(new Point(0, btnSort.Height));
+            ContextMenuStripSort.Show(location);
         }
 
         private void btnSort_LostFocus(object sender, EventArgs e)
         {
-            pSort.Hide();
+            ContextMenuStripSort.Hide();
+        }
+        private void btnCatalog_MouseDown(object sender, MouseEventArgs e)
+        {
+            Point location = btnCatalog.PointToScreen(new Point(0, btnCatalog.Height));
+            ContextMenuStripCatalog.Show(location);
         }
 
-
-
-
+        private void btnCatalog_LostFocus(object sender, EventArgs e)
+        {
+            ContextMenuStripCatalog.Hide();
+        }
     }
 }

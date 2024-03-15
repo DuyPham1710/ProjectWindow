@@ -1,13 +1,13 @@
 ﻿namespace ProjectWin_Demo_
 {
-    partial class UCProductSold
+    partial class FOrder
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -45,8 +45,8 @@
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1435, 57);
-            this.guna2CustomGradientPanel1.TabIndex = 0;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1450, 57);
+            this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // btnPurchaseOrder
             // 
@@ -94,8 +94,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1435, 735);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(1450, 735);
+            this.panel1.TabIndex = 2;
             // 
             // ucPurchaseOrder1
             // 
@@ -103,18 +103,20 @@
             this.ucPurchaseOrder1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPurchaseOrder1.Location = new System.Drawing.Point(0, 0);
             this.ucPurchaseOrder1.Name = "ucPurchaseOrder1";
-            this.ucPurchaseOrder1.Size = new System.Drawing.Size(1435, 735);
+            this.ucPurchaseOrder1.Size = new System.Drawing.Size(1450, 735);
             this.ucPurchaseOrder1.TabIndex = 0;
             // 
-            // UCProductSold
+            // FOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
+            this.ClientSize = new System.Drawing.Size(1450, 792);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Name = "UCProductSold";
-            this.Size = new System.Drawing.Size(1435, 792);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FOrder";
+            this.Text = "FOrder";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

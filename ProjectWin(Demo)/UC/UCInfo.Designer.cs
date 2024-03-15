@@ -413,7 +413,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddAvatar);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(129, 49);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(113, 71);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(380, 432);
             this.guna2CustomGradientPanel1.TabIndex = 20;
@@ -636,7 +636,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCInfo";
-            this.Size = new System.Drawing.Size(1435, 792);
+            this.Size = new System.Drawing.Size(1440, 742);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);

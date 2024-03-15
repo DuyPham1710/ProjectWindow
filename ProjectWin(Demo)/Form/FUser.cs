@@ -205,18 +205,11 @@ namespace ProjectWin_Demo_
             btnInfo.CustomBorderColor = Color.Thistle;
             btnDonHang.CustomBorderColor = Color.Purple;
 
-            UCProductSold uCProductSold = new UCProductSold();
-            addUserControl(uCProductSold);
+            openChildForm(new FOrder());
 
         }
 
-        private void addUserControl(UserControl userControl)
-        {
-            panelChildForm.Controls.Clear();
-            panelChildForm.Controls.Add(userControl);
-            userControl.BringToFront();
-            userControl.Dock = DockStyle.Fill;
-        }
+    
         private void avt_Click(object sender, EventArgs e)
         {
             btnInfo_Click(sender, e);
