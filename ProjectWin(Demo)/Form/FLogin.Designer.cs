@@ -37,8 +37,6 @@
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.radiobtnUser = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.radiobtnAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.rdoAdmin = new System.Windows.Forms.RadioButton();
+            this.rdoUser = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +98,10 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.rdoUser);
+            this.guna2ShadowPanel1.Controls.Add(this.rdoAdmin);
             this.guna2ShadowPanel1.Controls.Add(this.lblSignUp);
             this.guna2ShadowPanel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2ShadowPanel1.Controls.Add(this.radiobtnUser);
-            this.guna2ShadowPanel1.Controls.Add(this.radiobtnAdmin);
             this.guna2ShadowPanel1.Controls.Add(this.label9);
             this.guna2ShadowPanel1.Controls.Add(this.txtPassword);
             this.guna2ShadowPanel1.Controls.Add(this.txtUserName);
@@ -147,44 +147,6 @@
             this.guna2GradientButton1.TabIndex = 14;
             this.guna2GradientButton1.Text = "LOG IN";
             this.guna2GradientButton1.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // radiobtnUser
-            // 
-            this.radiobtnUser.AutoSize = true;
-            this.radiobtnUser.Checked = true;
-            this.radiobtnUser.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radiobtnUser.CheckedState.BorderThickness = 0;
-            this.radiobtnUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radiobtnUser.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radiobtnUser.CheckedState.InnerOffset = -4;
-            this.radiobtnUser.Location = new System.Drawing.Point(228, 157);
-            this.radiobtnUser.Name = "radiobtnUser";
-            this.radiobtnUser.Size = new System.Drawing.Size(57, 20);
-            this.radiobtnUser.TabIndex = 4;
-            this.radiobtnUser.TabStop = true;
-            this.radiobtnUser.Text = "User";
-            this.radiobtnUser.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radiobtnUser.UncheckedState.BorderThickness = 2;
-            this.radiobtnUser.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radiobtnUser.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // radiobtnAdmin
-            // 
-            this.radiobtnAdmin.AutoSize = true;
-            this.radiobtnAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radiobtnAdmin.CheckedState.BorderThickness = 0;
-            this.radiobtnAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radiobtnAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radiobtnAdmin.CheckedState.InnerOffset = -4;
-            this.radiobtnAdmin.Location = new System.Drawing.Point(112, 157);
-            this.radiobtnAdmin.Name = "radiobtnAdmin";
-            this.radiobtnAdmin.Size = new System.Drawing.Size(66, 20);
-            this.radiobtnAdmin.TabIndex = 3;
-            this.radiobtnAdmin.Text = "Admin";
-            this.radiobtnAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radiobtnAdmin.UncheckedState.BorderThickness = 2;
-            this.radiobtnAdmin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radiobtnAdmin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // txtPassword
             // 
@@ -317,6 +279,28 @@
             this.guna2CircleButton2.TabIndex = 18;
             this.guna2CircleButton2.UseTransparentBackground = true;
             // 
+            // rdoAdmin
+            // 
+            this.rdoAdmin.AutoSize = true;
+            this.rdoAdmin.Location = new System.Drawing.Point(112, 156);
+            this.rdoAdmin.Name = "rdoAdmin";
+            this.rdoAdmin.Size = new System.Drawing.Size(66, 20);
+            this.rdoAdmin.TabIndex = 16;
+            this.rdoAdmin.Text = "Admin";
+            this.rdoAdmin.UseVisualStyleBackColor = true;
+            // 
+            // rdoUser
+            // 
+            this.rdoUser.AutoSize = true;
+            this.rdoUser.Checked = true;
+            this.rdoUser.Location = new System.Drawing.Point(228, 156);
+            this.rdoUser.Name = "rdoUser";
+            this.rdoUser.Size = new System.Drawing.Size(57, 20);
+            this.rdoUser.TabIndex = 17;
+            this.rdoUser.TabStop = true;
+            this.rdoUser.Text = "User";
+            this.rdoUser.UseVisualStyleBackColor = true;
+            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,13 +339,13 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2RadioButton radiobtnUser;
-        private Guna.UI2.WinForms.Guna2RadioButton radiobtnAdmin;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.Label lblSignUp;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
+        private System.Windows.Forms.RadioButton rdoUser;
+        private System.Windows.Forms.RadioButton rdoAdmin;
     }
 }
 

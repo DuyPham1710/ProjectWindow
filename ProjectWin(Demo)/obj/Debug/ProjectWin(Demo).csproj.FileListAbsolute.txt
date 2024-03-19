@@ -356,7 +356,6 @@ D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Dem
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCInfo.resources
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCMyProduct.resources
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCProducts.resources
-D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCProductSold.resources
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCPurchaseOrder.resources
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCRevenue.resources
 D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCSalesOrder.resources
@@ -401,3 +400,4 @@ C:\Users\Duy\Desktop\Project_Window_14-3\ProjectWin(Demo)\bin\Debug\ProjectWin(D
 C:\Users\Duy\Desktop\Project_Window_14-3\ProjectWin(Demo)\bin\Debug\ProjectWin(Demo).pdb
 C:\Users\Duy\Desktop\Project_Window_14-3\ProjectWin(Demo)\bin\Debug\Guna.UI2.dll
 C:\Users\Duy\Desktop\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CopyComplete
+D:\lapTrinhWinhdow\Project_Window_14-3\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FOrder.resources

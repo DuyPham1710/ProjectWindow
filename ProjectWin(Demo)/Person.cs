@@ -9,11 +9,12 @@ namespace ProjectWin_Demo_
 {
     internal class Person
     {
-        private string iD, name, email, phoneNumber, cccd, gender, address, userName, password;
+        private int iD;
+        private string fullName, email, phoneNumber, cccd, gender, address, userName, password, position, avt;
         private DateTime dateOfBirth;
 
-        public string ID { get => iD; set => iD = value; }
-        public string Name { get => name; set => name = value; }
+        public int ID { get => iD; set => iD = value; }
+        public string FullName { get => fullName; set => fullName = value; }
         public string Email { get => email; set => email = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public string Cccd { get => cccd; set => cccd = value; }
@@ -21,12 +22,14 @@ namespace ProjectWin_Demo_
         public string Address { get => address; set => address = value; }
         public string UserName { get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }
+        public string Position { get => position; set => position = value; }
+        public string Avt { get => avt; set => avt = value; }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
 
-        public Person(string iDValue, string nameValue, string emailValue, string phoneNumberValue, string cccdValue, string genderValue, string addr, string username, string pass, DateTime bornYear)
+        public Person(int iDValue, string nameValue, string emailValue, string phoneNumberValue, string cccdValue, string genderValue, string addr, string username, string pass, string pos, DateTime bornYear, string avtValue)
         {
             ID = iDValue;
-            Name = nameValue;
+            FullName = nameValue;
             Email = emailValue;
             PhoneNumber = phoneNumberValue;
             Cccd = cccdValue;
@@ -34,7 +37,9 @@ namespace ProjectWin_Demo_
             Address = addr;
             UserName = username;
             Password = pass;
+            Position = pos;
             DateOfBirth = bornYear;
+            Avt = avt;
         }
 
 
