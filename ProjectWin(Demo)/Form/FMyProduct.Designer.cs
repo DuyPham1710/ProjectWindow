@@ -46,12 +46,10 @@
             this.btnTotalProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnProductSold = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucMyProduct1 = new ProjectWin_Demo_.UCMyProduct();
+            this.fPanelHienThi = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel3
@@ -288,24 +286,15 @@
             this.btnAddProduct.Text = "+  Thêm sản phẩm";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // flowLayoutPanel1
+            // fPanelHienThi
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.flowLayoutPanel1.Controls.Add(this.ucMyProduct1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 180);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1440, 612);
-            this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // ucMyProduct1
-            // 
-            this.ucMyProduct1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ucMyProduct1.Location = new System.Drawing.Point(3, 3);
-            this.ucMyProduct1.Name = "ucMyProduct1";
-            this.ucMyProduct1.Size = new System.Drawing.Size(1435, 90);
-            this.ucMyProduct1.TabIndex = 0;
+            this.fPanelHienThi.AutoScroll = true;
+            this.fPanelHienThi.BackColor = System.Drawing.Color.GhostWhite;
+            this.fPanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fPanelHienThi.Location = new System.Drawing.Point(0, 180);
+            this.fPanelHienThi.Name = "fPanelHienThi";
+            this.fPanelHienThi.Size = new System.Drawing.Size(1440, 612);
+            this.fPanelHienThi.TabIndex = 4;
             // 
             // FMyProduct
             // 
@@ -314,25 +303,25 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1440, 792);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.fPanelHienThi);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FMyProduct";
             this.Text = "FMyProduct";
+            this.Load += new System.EventHandler(this.FMyProduct_Load);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fPanelHienThi;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label label1;
@@ -351,6 +340,5 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton btnProductSold;
         private Guna.UI2.WinForms.Guna2GradientButton btnTotalProduct;
-        private UCMyProduct ucMyProduct1;
     }
 }

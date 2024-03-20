@@ -13,10 +13,12 @@ namespace ProjectWin_Demo_
 {
     public partial class FLogin : Form
     {
+        private int id;
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+
         public FLogin()
         {
             InitializeComponent();
@@ -25,18 +27,19 @@ namespace ProjectWin_Demo_
         private void btnLogin_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string query = string.Format("SELECT Position FROM Account WHERE UserName = '{0}' and Pass = '{1}'", txtUserName.Text, txtPassword.Text);
+            string query = string.Format("SELECT ID, Position FROM Account WHERE UserName = '{0}' and Pass = '{1}'", txtUserName.Text, txtPassword.Text);
             SqlCommand cmd = new SqlCommand(query, conn);
             try
             {
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    string pos = reader.GetString(0);
+                    id = reader.GetInt32(0);
+                    string pos = reader.GetString(1);
                     if (rdoUser.Checked && pos == rdoUser.Text)
                     {
                         this.Hide();
-                        Form form = new FUser();
+                        Form form = new FUser(id);
                         form.ShowDialog();
                         this.Show();
                     }

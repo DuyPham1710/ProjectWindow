@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.rdoUser = new System.Windows.Forms.RadioButton();
+            this.rdoAdmin = new System.Windows.Forms.RadioButton();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,8 +46,6 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.rdoAdmin = new System.Windows.Forms.RadioButton();
-            this.rdoUser = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +116,28 @@
             this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(404, 509);
             this.guna2ShadowPanel1.TabIndex = 1;
+            // 
+            // rdoUser
+            // 
+            this.rdoUser.AutoSize = true;
+            this.rdoUser.Checked = true;
+            this.rdoUser.Location = new System.Drawing.Point(228, 156);
+            this.rdoUser.Name = "rdoUser";
+            this.rdoUser.Size = new System.Drawing.Size(57, 20);
+            this.rdoUser.TabIndex = 17;
+            this.rdoUser.TabStop = true;
+            this.rdoUser.Text = "User";
+            this.rdoUser.UseVisualStyleBackColor = true;
+            // 
+            // rdoAdmin
+            // 
+            this.rdoAdmin.AutoSize = true;
+            this.rdoAdmin.Location = new System.Drawing.Point(112, 156);
+            this.rdoAdmin.Name = "rdoAdmin";
+            this.rdoAdmin.Size = new System.Drawing.Size(66, 20);
+            this.rdoAdmin.TabIndex = 16;
+            this.rdoAdmin.Text = "Admin";
+            this.rdoAdmin.UseVisualStyleBackColor = true;
             // 
             // lblSignUp
             // 
@@ -279,28 +301,6 @@
             this.guna2CircleButton2.TabIndex = 18;
             this.guna2CircleButton2.UseTransparentBackground = true;
             // 
-            // rdoAdmin
-            // 
-            this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(112, 156);
-            this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Size = new System.Drawing.Size(66, 20);
-            this.rdoAdmin.TabIndex = 16;
-            this.rdoAdmin.Text = "Admin";
-            this.rdoAdmin.UseVisualStyleBackColor = true;
-            // 
-            // rdoUser
-            // 
-            this.rdoUser.AutoSize = true;
-            this.rdoUser.Checked = true;
-            this.rdoUser.Location = new System.Drawing.Point(228, 156);
-            this.rdoUser.Name = "rdoUser";
-            this.rdoUser.Size = new System.Drawing.Size(57, 20);
-            this.rdoUser.TabIndex = 17;
-            this.rdoUser.TabStop = true;
-            this.rdoUser.Text = "User";
-            this.rdoUser.UseVisualStyleBackColor = true;
-            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -336,9 +336,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.Label lblSignUp;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
@@ -346,6 +344,8 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
         private System.Windows.Forms.RadioButton rdoUser;
         private System.Windows.Forms.RadioButton rdoAdmin;
+        public Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        public Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }
 

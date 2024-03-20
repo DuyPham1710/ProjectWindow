@@ -39,7 +39,7 @@ namespace ProjectWin_Demo_
                 SqlCommand cmd = new SqlCommand(idStr, conn);
                 int id = (int)cmd.ExecuteScalar() + 1;
 
-                Person person = new Person(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text,  gender, txtAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, "");
+                Person person = new Person(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text,  gender, txtAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
 
                 string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Avarta, Addr) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
                 person.ID, person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Avt, person.Address);

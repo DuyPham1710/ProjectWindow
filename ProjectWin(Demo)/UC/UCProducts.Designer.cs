@@ -30,17 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblDiaChiShop = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblGiaSP = new System.Windows.Forms.Label();
+            this.lblTenSP = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pctProduct = new System.Windows.Forms.PictureBox();
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,19 +49,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Khaki;
             this.guna2CustomGradientPanel1.BorderThickness = 4;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label4);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblDiaChiShop);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblGiaSP);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblTenSP);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pctProduct);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pctSanPham);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Snow;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.OldLace;
@@ -75,19 +75,19 @@
             this.guna2CustomGradientPanel1.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.guna2CustomGradientPanel1.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
-            // label4
+            // lblDiaChiShop
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 289);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 27);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "TP.Hồ Chí Minh";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label4.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label4.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            this.lblDiaChiShop.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiaChiShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaChiShop.Location = new System.Drawing.Point(31, 289);
+            this.lblDiaChiShop.Name = "lblDiaChiShop";
+            this.lblDiaChiShop.Size = new System.Drawing.Size(175, 27);
+            this.lblDiaChiShop.TabIndex = 11;
+            this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
+            this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblDiaChiShop.Click += new System.EventHandler(this.UCProducts_Click);
+            this.lblDiaChiShop.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.lblDiaChiShop.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // panel1
             // 
@@ -155,33 +155,33 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // lblGiaSP
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(8, 221);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 32);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "10.110.000đ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label2.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label2.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            this.lblGiaSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblGiaSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaSP.ForeColor = System.Drawing.Color.Crimson;
+            this.lblGiaSP.Location = new System.Drawing.Point(8, 221);
+            this.lblGiaSP.Name = "lblGiaSP";
+            this.lblGiaSP.Size = new System.Drawing.Size(156, 32);
+            this.lblGiaSP.TabIndex = 8;
+            this.lblGiaSP.Text = "10.110.000đ";
+            this.lblGiaSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGiaSP.Click += new System.EventHandler(this.UCProducts_Click);
+            this.lblGiaSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.lblGiaSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
-            // label1
+            // lblTenSP
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 44);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
-            this.label1.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label1.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label1.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Location = new System.Drawing.Point(9, 177);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(203, 44);
+            this.lblTenSP.TabIndex = 7;
+            this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
+            this.lblTenSP.Click += new System.EventHandler(this.UCProducts_Click);
+            this.lblTenSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.lblTenSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // label3
             // 
@@ -196,19 +196,19 @@
             this.label3.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
-            // pctProduct
+            // pctSanPham
             // 
-            this.pctProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pctProduct.Image = global::ProjectWin_Demo_.Properties.Resources.smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25;
-            this.pctProduct.Location = new System.Drawing.Point(0, 0);
-            this.pctProduct.Name = "pctProduct";
-            this.pctProduct.Size = new System.Drawing.Size(229, 169);
-            this.pctProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctProduct.TabIndex = 6;
-            this.pctProduct.TabStop = false;
-            this.pctProduct.Click += new System.EventHandler(this.UCProducts_Click);
-            this.pctProduct.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.pctProduct.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            this.pctSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25;
+            this.pctSanPham.Location = new System.Drawing.Point(0, 0);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(229, 169);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctSanPham.TabIndex = 6;
+            this.pctSanPham.TabStop = false;
+            this.pctSanPham.Click += new System.EventHandler(this.UCProducts_Click);
+            this.pctSanPham.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.pctSanPham.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // guna2Elipse1
             // 
@@ -223,6 +223,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCProducts";
             this.Size = new System.Drawing.Size(229, 320);
+            this.Load += new System.EventHandler(this.UCProducts_Load);
             this.Click += new System.EventHandler(this.UCProducts_Click);
             this.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
@@ -234,7 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,17 +243,17 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDiaChiShop;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGiaSP;
+        private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pctProduct;
+        private System.Windows.Forms.PictureBox pctSanPham;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

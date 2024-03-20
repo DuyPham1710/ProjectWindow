@@ -25,8 +25,8 @@ namespace ProjectWin_Demo_
 
         private void btnPayAgain_Click(object sender, EventArgs e)
         {
-            FDetail fDetail = new FDetail();
-            fDetail.ShowDialog();
+            //FDetail fDetail = new FDetail();
+            //fDetail.ShowDialog();
         }
     }
 }

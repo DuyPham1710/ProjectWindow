@@ -10,7 +10,8 @@ namespace ProjectWin_Demo_
     internal class Person
     {
         private int iD;
-        private string fullName, email, phoneNumber, cccd, gender, address, userName, password, position, avt;
+        private string fullName, email, phoneNumber, cccd, gender, address, userName, password, position;
+        private byte[] avt;
         private DateTime dateOfBirth;
 
         public int ID { get => iD; set => iD = value; }
@@ -23,10 +24,10 @@ namespace ProjectWin_Demo_
         public string UserName { get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }
         public string Position { get => position; set => position = value; }
-        public string Avt { get => avt; set => avt = value; }
+        public byte[] Avt { get => avt; set => avt = value; }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
 
-        public Person(int iDValue, string nameValue, string emailValue, string phoneNumberValue, string cccdValue, string genderValue, string addr, string username, string pass, string pos, DateTime bornYear, string avtValue)
+        public Person(int iDValue, string nameValue, string emailValue, string phoneNumberValue, string cccdValue, string genderValue, string addr, string username, string pass, string pos, DateTime bornYear, byte[] avtValue)
         {
             ID = iDValue;
             FullName = nameValue;

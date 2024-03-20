@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectWin_Demo_
 {
-    internal class Product
+    public class Product
     {
-        private string maSP, tenSP, danhMuc, giaBanDau, giaHienTai, soLuong, xuatXu, baoHanh, tinhTrang, moTaTinhTrang, motaSP, anhBanDau, anhHienTai; 
+        private int iDChuSP;
+        private string maSP, tenSP, danhMuc, giaBanDau, giaHienTai, soLuong, xuatXu, baoHanh, tinhTrang, moTaTinhTrang, motaSP; 
         private DateTime ngayMuaSP;
+        private byte[] anhBanDau, anhHienTai;
 
+        public int IDChuSP { get => iDChuSP; set => iDChuSP = value; }
         public string MaSP { get => maSP; set => maSP = value; }
         public string TenSP { get => tenSP; set => tenSP = value; }
         public string DanhMuc { get => danhMuc; set => danhMuc = value; }
@@ -22,15 +26,20 @@ namespace ProjectWin_Demo_
         public string TinhTrang { get => tinhTrang; set => tinhTrang = value; }
         public string MoTaTinhTrang { get => moTaTinhTrang; set => moTaTinhTrang = value; }
         public string MotaSP { get => motaSP; set => motaSP = value; }
-        public string AnhBanDau { get => anhBanDau; set => anhBanDau = value; }
-        public string AnhHienTai { get => anhHienTai; set => anhHienTai = value; }
         public DateTime NgayMuaSP { get => ngayMuaSP; set => ngayMuaSP = value; }
+        public byte[] AnhBanDau { get => anhBanDau; set => anhBanDau = value; }
+        public byte[] AnhHienTai { get => anhHienTai; set => anhHienTai = value; }
 
-        public Product(string MaSP, string TenSP, string DanhMuc, string GiaBanDau, string GiaHienTai, 
-            string SoLuong, string XuatXu, string BaoHanh, string TinhTrang, string MoTaTinhTrang, string MotaSP, string AnhBanDau, 
-            string AnhHienTai, DateTime NgayMuaSP)
+        public Product()
+        {
+            
+        }
+        public Product(string MaSP, int IDChuSP, string TenSP, string DanhMuc, string GiaBanDau, string GiaHienTai, DateTime NgayMuaSP,
+            string SoLuong, string XuatXu, string BaoHanh, string TinhTrang, string MoTaTinhTrang, string MotaSP, byte[] AnhBanDau, 
+            byte[] AnhHienTai)
         {
             this.MaSP = MaSP;
+            this.IDChuSP = IDChuSP;
             this.TenSP = TenSP;
             this.DanhMuc = DanhMuc;
             this.GiaBanDau = GiaBanDau;

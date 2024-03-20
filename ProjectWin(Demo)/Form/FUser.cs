@@ -23,10 +23,11 @@ namespace ProjectWin_Demo_
         Timer growTimer = new Timer();
         Timer shrinkTimer = new Timer();
         int originalWidth;
-        public FUser()
+        int id;
+        public FUser(int id)
         {
             InitializeComponent();
-            openChildForm(new FHome());
+            openChildForm(new FHome(id));
             //btnMenu.MouseDown += btnMenu_MouseDown;
             //btnMenu.LostFocus += btnMenu_LostFocus;
             // Lưu lại kích thước ban đầu của button
@@ -39,7 +40,7 @@ namespace ProjectWin_Demo_
             // Cài đặt Timer cho việc thu nhỏ
             shrinkTimer.Interval = 1;
             shrinkTimer.Tick += ShrinkTimer_Tick;
-            
+            this.id = id;
         }
         
         private void Panel_MouseDown(object sender, MouseEventArgs e)
@@ -125,7 +126,7 @@ namespace ProjectWin_Demo_
             btnMyProduct.CustomBorderColor = Color.Thistle;
             btnInfo.CustomBorderColor = Color.Thistle;
             btnDonHang.CustomBorderColor = Color.Thistle;
-            openChildForm(new FHome());
+            openChildForm(new FHome(id));
             
         }
 
@@ -160,7 +161,7 @@ namespace ProjectWin_Demo_
             btnInfo.CustomBorderColor = Color.Thistle;
             btnDonHang.CustomBorderColor = Color.Thistle;
 
-            openChildForm(new FMyProduct());
+            openChildForm(new FMyProduct(id));
 
         }
 

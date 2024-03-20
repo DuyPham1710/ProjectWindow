@@ -12,26 +12,36 @@ namespace ProjectWin_Demo_
 {
     public partial class UCProducts : UserControl
     {
-        public UCProducts()
+        Product sp = new Product();
+        public UCProducts(Product sp)
         {
             InitializeComponent();
+            this.sp = sp;
         }
         private void UCProducts_Click(object sender, EventArgs e)
         {
-            FDetail fDetail = new FDetail();
+            FDetail fDetail = new FDetail(sp);
             fDetail.ShowDialog();
         }
 
         private void pctProduct_MouseHover(object sender, EventArgs e)
         {
-            pctProduct.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
             this.BackColor = Color.MistyRose;
         }
 
         private void pctProduct_MouseLeave(object sender, EventArgs e)
         {
-            pctProduct.SizeMode = PictureBoxSizeMode.Zoom;
+            pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
             this.BackColor = Color.MintCream;
+        }
+
+        private void UCProducts_Load(object sender, EventArgs e)
+        {
+            lblTenSP.Text = sp.TenSP;
+            lblGiaSP.Text = sp.GiaHienTai + " đ";
+            lblDiaChiShop.Text = sp.XuatXu;
+            
         }
     }
 }

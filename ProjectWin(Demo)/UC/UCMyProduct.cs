@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,20 @@ namespace ProjectWin_Demo_
 {
     public partial class UCMyProduct : UserControl
     {
-        public UCMyProduct()
+        Product sp;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        public UCMyProduct(Product sp)
         {
             InitializeComponent();
+            this.sp = sp;
+        }
+        private void UCMyProduct_Load(object sender, EventArgs e)
+        {
+            lblTenSP.Text = sp.TenSP;
+            lblMaSP.Text = sp.MaSP;
+            lblSoLuong.Text = sp.SoLuong;
+            lblGia.Text = sp.GiaHienTai;
+            lblDanhMuc.Text = sp.DanhMuc;
         }
 
         private void pcbDelete_MouseHover(object sender, EventArgs e)
@@ -43,10 +55,13 @@ namespace ProjectWin_Demo_
 
         private void pcbEdit_Click(object sender, EventArgs e)
         {
-            FAddProduct fedit = new FAddProduct();
+            FAddProduct fedit = new FAddProduct(sp.IDChuSP, sp.MaSP, "Sua");
             fedit.btnAddProduct.Hide();
             fedit.btnUpdateProduct.Show();
             fedit.ShowDialog();
+            //UCMyProduct_Load(sender, e);
         }
+
+       
     }
 }

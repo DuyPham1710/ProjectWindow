@@ -12,32 +12,51 @@ using System.Xml.Linq;
 
 namespace ProjectWin_Demo_
 {
+    
     public partial class FDetail : Form
     {
+        Product sp;
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        public FDetail()
-        {
-            InitializeComponent();
-            lblCost.Text = "<s>" + lblCost.Text  + "</s>";
-        }
-        List<string> A=new List<string>();
+        List<string> A = new List<string>();
         List<string> imgList = new List<string>() { "4", "5" };
         List<string> imgListBefore = new List<string>() { "1", "2" };
         int curr = 0;
+        public FDetail(Product sp)
+        {
+            InitializeComponent();
+            this.sp = sp;
+        }
+      
+        private void FDetail_Load(object sender, EventArgs e)
+        {
+            lblTenSP.Text = sp.TenSP;
+            lblGiaBanDau.Text = "<s>" + sp.GiaBanDau + "đ</s>";
+            lblGiaHienTai.Text = sp.GiaHienTai + "đ";
+            lblSPConLai.Text = "Còn lại: " + sp.SoLuong;
+            lblXuatXu.Text = "Xuất xứ: " + sp.XuatXu;
+            lblDanhMuc.Text = "Phân loại: " + sp.DanhMuc;
+            lblTinhTrang.Text = "Trình trạng: " + sp.TinhTrang;
+            lblBaoHanh.Text = "Bảo hành: " + sp.BaoHanh;
+            rtbMoTaSP.Text = sp.MotaSP;
+            rtbMoTaTinhTrang.Text = sp.MoTaTinhTrang;
+            txtNgayMuaSP.Text = sp.NgayMuaSP.Day.ToString();
+            txtThangMuaSP.Text = sp.NgayMuaSP.Month.ToString();
+            txtNamMuaSP.Text = sp.NgayMuaSP.Year.ToString();
+        }
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (curr < 1)
                 curr++;
             else
                 curr = 0;
-            if(rdbBefore.Checked==true)
+            if(rdbAnhBanDau.Checked==true)
                 A = imgListBefore;
             else
                 A = imgList;
             Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + A[curr] + ".jpg");
-            pctProduct.Image = bitmap;
+            pctSanPham.Image = bitmap;
         }
 
         private void btnPre_Click(object sender, EventArgs e)
@@ -46,12 +65,12 @@ namespace ProjectWin_Demo_
                 curr--;
             else
                 curr = 1;
-            if (rdbBefore.Checked == true)
+            if (rdbAnhBanDau.Checked == true)
                 A = imgListBefore;
             else
                 A = imgList;
             Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + imgList[curr] + ".jpg");
-            pctProduct.Image = bitmap;
+            pctSanPham.Image = bitmap;
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
@@ -65,10 +84,7 @@ namespace ProjectWin_Demo_
             MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
         }
 
-        private void FDetail_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnClose_Click(object sender, EventArgs e)
         {
