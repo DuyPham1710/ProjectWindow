@@ -141,6 +141,7 @@
       <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\UCCart.cs">

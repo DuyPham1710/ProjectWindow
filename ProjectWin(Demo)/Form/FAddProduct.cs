@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FAddProduct()
         {
             InitializeComponent();
@@ -28,6 +30,10 @@ namespace ProjectWin_Demo_
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            Product product = new Product(txtMaSP.Texts, txtTenSP.Texts, cbBoxDanhMuc.Text, txtGiaBanDau.Texts, txtGiaHienTai.Texts, cbBoxSoLuong.ToString(), txtXuatXu.Texts, txtGiaBanDau.Texts, txtTinhTrang.Texts, txtMoTaTinhTrang.Text, txtMoTaSP.Text, "", "", DtpNgayMua.Value);
+            string sqlStr = string.Format("INSERT INTO SanPham(MSP, IDChuSP, TenSP, DanhMuc, GiaTienLucMoiMua, GiaTienBayGio, NgayMuaSP, SoLuong, XuatXu, BaoHanh, TinhTrang, MotaSP, AnhLucMoiMua, AnhBayGio) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}')",
+                product.MaSP, product);
+
             DialogResult result = MessageBox.Show("Bạn có muốn thêm sản phẩm này không", "Thông báo", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -98,6 +104,11 @@ namespace ProjectWin_Demo_
                 }
 
             }
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
