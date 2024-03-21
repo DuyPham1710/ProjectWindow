@@ -46,42 +46,40 @@ namespace ProjectWin_Demo_
             txtNamMuaSP.Text = sp.NgayMuaSP.Year.ToString();
             string[] strings = sp.AnhBanDau.Split(',');
             AnhCu.AddRange(strings);
-            strings = sp.AnhHienTai.Split(',');
-            AnhMoi.AddRange(strings);
+            string[] strings1 = sp.AnhHienTai.Split(',');
+            AnhMoi.AddRange(strings1);
+            A = AnhCu;
+            if(A.Count > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                pctSanPham.Image = bitmap;
+            }
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (rdbAnhBanDau.Checked == true)
-                A = AnhCu;
-            else
-                A = AnhMoi;
-            if (curr < A.Count()-1)
-                curr++;
-            else
-                curr = 0;
-            
-            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
-            pctSanPham.Image = bitmap;
+            if(A.Count() > 0)
+            {
+                if (curr < A.Count()-1)
+                    curr++;
+                else
+                    curr = 0;
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                pctSanPham.Image = bitmap;
+            }
         }
 
         private void btnPre_Click(object sender, EventArgs e)
         {
-            if (rdbAnhBanDau.Checked == true)
+            if(A.Count() > 0)
             {
-                A = AnhCu;
+                if (curr > 0)
+                    curr--;
+                else
+                    curr = A.Count()-1;
+
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                pctSanPham.Image = bitmap;
             }
-            else
-            {
-                A = AnhMoi;
-            }
-                
-            if (curr > 0)
-                curr--;
-            else
-                curr = 1;
-            
-            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
-            pctSanPham.Image = bitmap;
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
@@ -131,6 +129,28 @@ namespace ProjectWin_Demo_
             if (e.Button == MouseButtons.Left)
             {
                 isDragging = false;
+            }
+        }
+
+        private void rdbAnhBanDau_CheckedChanged(object sender, EventArgs e)
+        {
+            A = AnhCu;
+            curr = 0;
+            if (A.Count() > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                pctSanPham.Image = bitmap;
+            }
+        }
+
+        private void rdbHienTai_CheckedChanged(object sender, EventArgs e)
+        {
+            A = AnhMoi;
+            curr = 0;
+            if (A.Count() > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                pctSanPham.Image = bitmap;
             }
         }
     }

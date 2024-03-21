@@ -38,6 +38,7 @@ namespace ProjectWin_Demo_
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSPConLai = new System.Windows.Forms.Label();
             this.lblGiaBanDau = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.rdbHienTai = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbAnhBanDau = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -93,7 +94,6 @@ namespace ProjectWin_Demo_
             this.btnCart = new CustomButton.VBButton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDiaChiShop = new System.Windows.Forms.Label();
-            this.lblSPConLai = new System.Windows.Forms.Label();
             this.pToolBar.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -225,6 +225,17 @@ namespace ProjectWin_Demo_
             this.guna2Panel4.Size = new System.Drawing.Size(1100, 711);
             this.guna2Panel4.TabIndex = 23;
             // 
+            // lblSPConLai
+            // 
+            this.lblSPConLai.AutoSize = true;
+            this.lblSPConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSPConLai.Location = new System.Drawing.Point(922, 262);
+            this.lblSPConLai.Name = "lblSPConLai";
+            this.lblSPConLai.Size = new System.Drawing.Size(85, 20);
+            this.lblSPConLai.TabIndex = 41;
+            this.lblSPConLai.Text = "Còn lại: 2 ";
+            this.lblSPConLai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblGiaBanDau
             // 
             this.lblGiaBanDau.BackColor = System.Drawing.Color.Transparent;
@@ -253,6 +264,7 @@ namespace ProjectWin_Demo_
             this.rdbHienTai.UncheckedState.BorderThickness = 2;
             this.rdbHienTai.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdbHienTai.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbHienTai.CheckedChanged += new System.EventHandler(this.rdbHienTai_CheckedChanged);
             // 
             // rdbAnhBanDau
             // 
@@ -273,6 +285,7 @@ namespace ProjectWin_Demo_
             this.rdbAnhBanDau.UncheckedState.BorderThickness = 2;
             this.rdbAnhBanDau.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdbAnhBanDau.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbAnhBanDau.CheckedChanged += new System.EventHandler(this.rdbAnhBanDau_CheckedChanged);
             // 
             // guna2Panel2
             // 
@@ -923,17 +936,6 @@ namespace ProjectWin_Demo_
             this.lblDiaChiShop.TabIndex = 27;
             this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
             this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSPConLai
-            // 
-            this.lblSPConLai.AutoSize = true;
-            this.lblSPConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSPConLai.Location = new System.Drawing.Point(922, 262);
-            this.lblSPConLai.Name = "lblSPConLai";
-            this.lblSPConLai.Size = new System.Drawing.Size(85, 20);
-            this.lblSPConLai.TabIndex = 41;
-            this.lblSPConLai.Text = "Còn lại: 2 ";
-            this.lblSPConLai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FDetail
             // 
