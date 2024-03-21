@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace ProjectWin_Demo_
         private string ma;
         private int id;
         private string thaoTac;
+        List <string> AnhMoi = new List<string> ();
+        List <string> AnhCu = new List<string> ();
         public FAddProduct(int id, string ma, string thaoTac)
         {
             InitializeComponent();
@@ -40,6 +43,7 @@ namespace ProjectWin_Demo_
 
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     txtMaSP.Texts = "SP0" + ((int)cmd.ExecuteScalar() + 1).ToString();
+                    ma = txtMaSP.Texts;
                 }
                 else
                 {
@@ -49,7 +53,7 @@ namespace ProjectWin_Demo_
                     if (reader.Read())
                     {
                         Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (byte[])reader["AnhLucMoiMua"], (byte[])reader["AnhBayGio"]);
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (List<string>)reader["AnhLucMoiMua"], (List<string>)reader["AnhBayGio"]);
                         txtMaSP.Texts = sp.MaSP;
                         cbBoxSoLuong.Value = Int32.Parse(sp.SoLuong);
                         txtTenSP.Texts = sp.TenSP;
@@ -196,7 +200,44 @@ namespace ProjectWin_Demo_
 
                 try
                 {
+                    string imagePath = openFileDialog1.FileName;
                     pctProduct.Image = Image.FromFile(openFileDialog1.FileName);
+                    string destinationFolderPath = Application.StartupPath + "\\AnhSanPham\\" + txtMaSP.Texts;
+                    if (!Directory.Exists(destinationFolderPath))
+                    {
+                        try
+                        {
+                            Directory.CreateDirectory(destinationFolderPath);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Lỗi: {ex.Message}");
+                        }
+                    }
+                    if (File.Exists(imagePath))
+                    {
+                        try
+                        {
+                            File.Copy(imagePath, Path.Combine(destinationFolderPath, Path.GetFileName(imagePath)));
+                            
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Lỗi: {ex.Message}");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Tập tin ảnh không tồn tại.");
+                    }
+                    if (rdoAnhBanDau.Checked)
+                    {
+                        AnhCu.Add(Path.GetFileName(imagePath));
+                    }
+                    else
+                    {
+                        AnhMoi.Add(Path.GetFileName(imagePath));
+                    }
                     break;
                 }
                 catch (Exception ex)

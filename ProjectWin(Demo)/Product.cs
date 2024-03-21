@@ -12,7 +12,7 @@ namespace ProjectWin_Demo_
         private int iDChuSP;
         private string maSP, tenSP, danhMuc, giaBanDau, giaHienTai, soLuong, xuatXu, baoHanh, tinhTrang, moTaTinhTrang, motaSP; 
         private DateTime ngayMuaSP;
-        private byte[] anhBanDau, anhHienTai;
+        private List<string> anhBanDau, anhHienTai;
 
         public int IDChuSP { get => iDChuSP; set => iDChuSP = value; }
         public string MaSP { get => maSP; set => maSP = value; }
@@ -27,16 +27,16 @@ namespace ProjectWin_Demo_
         public string MoTaTinhTrang { get => moTaTinhTrang; set => moTaTinhTrang = value; }
         public string MotaSP { get => motaSP; set => motaSP = value; }
         public DateTime NgayMuaSP { get => ngayMuaSP; set => ngayMuaSP = value; }
-        public byte[] AnhBanDau { get => anhBanDau; set => anhBanDau = value; }
-        public byte[] AnhHienTai { get => anhHienTai; set => anhHienTai = value; }
+        public List<string> AnhBanDau { get => anhBanDau; set => anhBanDau = value; }
+        public List<string> AnhHienTai { get => anhHienTai; set => anhHienTai = value; }
 
         public Product()
         {
             
         }
         public Product(string MaSP, int IDChuSP, string TenSP, string DanhMuc, string GiaBanDau, string GiaHienTai, DateTime NgayMuaSP,
-            string SoLuong, string XuatXu, string BaoHanh, string TinhTrang, string MoTaTinhTrang, string MotaSP, byte[] AnhBanDau, 
-            byte[] AnhHienTai)
+            string SoLuong, string XuatXu, string BaoHanh, string TinhTrang, string MoTaTinhTrang, string MotaSP, List<string> AnhBanDau, 
+            List<string> AnhHienTai)
         {
             this.MaSP = MaSP;
             this.IDChuSP = IDChuSP;
