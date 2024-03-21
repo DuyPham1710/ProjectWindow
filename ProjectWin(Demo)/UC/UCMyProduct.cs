@@ -48,9 +48,27 @@ namespace ProjectWin_Demo_
             if (result == DialogResult.Yes)
             {
                 // thực hiện xóa 
-                MessageBox.Show("Xóa thành công", "Thông báo");
-            }
-          
+                
+                string SQL = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sp.MaSP);
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Xóa Sản phẩm thành công", "Thông báo");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa sản phẩm này", "Thông báo");
+
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }        
         }
 
         private void pcbEdit_Click(object sender, EventArgs e)
@@ -59,9 +77,6 @@ namespace ProjectWin_Demo_
             fedit.btnAddProduct.Hide();
             fedit.btnUpdateProduct.Show();
             fedit.ShowDialog();
-            //UCMyProduct_Load(sender, e);
         }
-
-       
     }
 }

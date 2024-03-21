@@ -36,7 +36,7 @@ namespace ProjectWin_Demo_
                 while (reader.Read())
                 {
                     Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (List<string>)reader["AnhLucMoiMua"], (List<string>)reader["AnhBayGio"]);
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
 
                     fPanelHienThi.Controls.Add(new UCMyProduct(sp));
                 }
@@ -82,6 +82,9 @@ namespace ProjectWin_Demo_
 
         }
 
-       
+        private void btnTuyChinh_Click(object sender, EventArgs e)
+        {
+            //UCMyProduct ucSP = new UCMyProduct();
+        }
     }
 }

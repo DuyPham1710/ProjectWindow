@@ -20,8 +20,8 @@ namespace ProjectWin_Demo_
         private Point lastCursor;
         private Point lastForm;
         List<string> A = new List<string>();
-        List<string> imgList = new List<string>() { "4", "5" };
-        List<string> imgListBefore = new List<string>() { "1", "2" };
+        List<string> AnhMoi = new List<string>();
+        List<string> AnhCu = new List<string>();
         int curr = 0;
         public FDetail(Product sp)
         {
@@ -44,32 +44,43 @@ namespace ProjectWin_Demo_
             txtNgayMuaSP.Text = sp.NgayMuaSP.Day.ToString();
             txtThangMuaSP.Text = sp.NgayMuaSP.Month.ToString();
             txtNamMuaSP.Text = sp.NgayMuaSP.Year.ToString();
+            string[] strings = sp.AnhBanDau.Split(',');
+            AnhCu.AddRange(strings);
+            strings = sp.AnhHienTai.Split(',');
+            AnhMoi.AddRange(strings);
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (curr < 1)
+            if (rdbAnhBanDau.Checked == true)
+                A = AnhCu;
+            else
+                A = AnhMoi;
+            if (curr < A.Count()-1)
                 curr++;
             else
                 curr = 0;
-            if(rdbAnhBanDau.Checked==true)
-                A = imgListBefore;
-            else
-                A = imgList;
-            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + A[curr] + ".jpg");
+            
+            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
             pctSanPham.Image = bitmap;
         }
 
         private void btnPre_Click(object sender, EventArgs e)
         {
+            if (rdbAnhBanDau.Checked == true)
+            {
+                A = AnhCu;
+            }
+            else
+            {
+                A = AnhMoi;
+            }
+                
             if (curr > 0)
                 curr--;
             else
                 curr = 1;
-            if (rdbAnhBanDau.Checked == true)
-                A = imgListBefore;
-            else
-                A = imgList;
-            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\Resources\\" + imgList[curr] + ".jpg");
+            
+            Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
             pctSanPham.Image = bitmap;
         }
 

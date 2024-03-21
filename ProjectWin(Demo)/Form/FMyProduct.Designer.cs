@@ -33,7 +33,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +46,8 @@
             this.btnProductSold = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fPanelHienThi = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnTuyChinh = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -100,16 +101,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 35);
             this.panel4.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1312, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Tùy chọn";
             // 
             // label5
             // 
@@ -214,6 +205,7 @@
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnTuyChinh);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnTotalProduct);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnProductSold);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddProduct);
@@ -296,6 +288,35 @@
             this.fPanelHienThi.Size = new System.Drawing.Size(1440, 612);
             this.fPanelHienThi.TabIndex = 4;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1312, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Tùy chọn";
+            // 
+            // btnTuyChinh
+            // 
+            this.btnTuyChinh.BorderRadius = 10;
+            this.btnTuyChinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTuyChinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTuyChinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTuyChinh.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTuyChinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTuyChinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnTuyChinh.FillColor2 = System.Drawing.Color.MediumSlateBlue;
+            this.btnTuyChinh.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnTuyChinh.ForeColor = System.Drawing.Color.White;
+            this.btnTuyChinh.Location = new System.Drawing.Point(975, 3);
+            this.btnTuyChinh.Name = "btnTuyChinh";
+            this.btnTuyChinh.Size = new System.Drawing.Size(192, 54);
+            this.btnTuyChinh.TabIndex = 10;
+            this.btnTuyChinh.Text = "Tùy chỉnh";
+            this.btnTuyChinh.Click += new System.EventHandler(this.btnTuyChinh_Click);
+            // 
             // FMyProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,7 +342,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel fPanelHienThi;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private System.Windows.Forms.Label label1;
@@ -333,12 +353,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton btnProductSold;
         private Guna.UI2.WinForms.Guna2GradientButton btnTotalProduct;
+        public System.Windows.Forms.FlowLayoutPanel fPanelHienThi;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2GradientButton btnTuyChinh;
     }
 }
