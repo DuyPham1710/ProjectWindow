@@ -22,9 +22,9 @@ namespace ProjectWin_Demo_
         private string ma;
         private int id;
         private string thaoTac;
-        List <string> AnhMoi = new List<string> ();
-        List <string> AnhCu = new List<string> ();
         List<string> A = new List<string>();
+        List<string> AnhCu = new List<string>();
+        List<string> AnhMoi = new List<string>();
         int curr = 0;
         public FAddProduct(int id, string ma, string thaoTac)
         {
@@ -69,16 +69,18 @@ namespace ProjectWin_Demo_
                         rtbMoTaSP.Text = sp.MotaSP;
                         txtTinhTrang.Texts = sp.TinhTrang;
                         rtbMoTaTinhTrang.Text = sp.MoTaTinhTrang;
-                        string[] strings = sp.AnhBanDau.Split(',');
-                        AnhCu.AddRange(strings);
-                        string[] strings1 = sp.AnhHienTai.Split(',');
-                        AnhMoi.AddRange(strings1);
-                        A = AnhCu;
-                        if (A.Count > 0)
+                        if(sp.AnhBanDau != "")
+                            AnhMoi.AddRange(sp.AnhBanDau.Split(','));
+                        if(sp.AnhHienTai != "")
+                            AnhCu.AddRange(sp.AnhHienTai.Split(','));
+                        if (AnhMoi.Count!=0)
                         {
+                            A = AnhMoi;
                             Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
                             pctProduct.Image = bitmap;
                         }
+                        else
+                            pctProduct.Image = null;
                     }
                     
                 }
@@ -95,9 +97,9 @@ namespace ProjectWin_Demo_
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(A.Count() > 0)
+            if(A.Count != 0)
             {
-                if (curr < A.Count() - 1)
+                if (curr < A.Count - 1)
                     curr++;
                 else
                     curr = 0;
@@ -108,12 +110,12 @@ namespace ProjectWin_Demo_
 
         private void btnPre_Click(object sender, EventArgs e)
         {
-            if (A.Count() > 0)
+            if (A.Count != 0)
             {
                 if (curr > 0)
                     curr--;
                 else
-                    curr = A.Count();
+                    curr = A.Count-1;
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + txtMaSP.Texts + "\\" + A[curr]);
                 pctProduct.Image = bitmap;
             }
@@ -135,9 +137,7 @@ namespace ProjectWin_Demo_
 
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     Product product = new Product(txtMaSP.Texts, id, txtTenSP.Texts, cbBoxDanhMuc.Text, txtGiaBanDau.Texts, txtGiaHienTai.Texts,
-                        DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhCu), string.Join(",", AnhMoi));
-                    MessageBox.Show(string.Join(",", AnhCu));
-                    MessageBox.Show(string.Join(",", AnhMoi));
+                        DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhMoi), string.Join(",", AnhCu));
                     sqlStr = string.Format("INSERT INTO SanPham(MSP, IDChuSP, TenSP, DanhMuc, GiaTienLucMoiMua, GiaTienBayGio, NgayMuaSP, SoLuong, XuatXu, BaoHanh, TinhTrang, MotaTinhTrang, MotaSP, AnhLucMoiMua, AnhBayGio) VALUES ('{0}', '{1}', N'{2}', N'{3}', '{4}', '{5}', '{6}', '{7}', N'{8}', N'{9}', N'{10}', N'{11}', N'{12}', N'{13}', N'{14}')",
                         product.MaSP, product.IDChuSP, product.TenSP, product.DanhMuc, product.GiaBanDau, product.GiaHienTai, product.NgayMuaSP.ToString(), product.SoLuong, product.XuatXu, product.BaoHanh, product.TinhTrang, product.MoTaTinhTrang, product.MotaSP, product.AnhBanDau, product.AnhHienTai);
 
@@ -172,7 +172,7 @@ namespace ProjectWin_Demo_
 
                     conn.Open();
                     Product product = new Product(txtMaSP.Texts, id, txtTenSP.Texts, cbBoxDanhMuc.Text, txtGiaBanDau.Texts, txtGiaHienTai.Texts,
-                   DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhCu), string.Join(",", AnhMoi));
+                   DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhMoi), string.Join(",", AnhCu));
 
                     string sqlStr = string.Format("UPDATE SanPham SET TenSP = N'{0}', DanhMuc = N'{1}', GiaTienLucMoiMua = '{2}', GiaTienBayGio = '{3}', NgayMuaSP = '{4}', SoLuong = '{5}', XuatXu = N'{6}', BaoHanh = N'{7}', TinhTrang = N'{8}', MotaTinhTrang = N'{9}', MotaSP = N'{10}', AnhLucMoiMua = N'{11}', AnhBayGio = N'{12}' WHERE MSP = '{13}'",
                         product.TenSP, product.DanhMuc, product.GiaBanDau, product.GiaHienTai, product.NgayMuaSP.ToString(), product.SoLuong, product.XuatXu, product.BaoHanh, product.TinhTrang, product.MoTaTinhTrang, product.MotaSP, product.AnhBanDau, product.AnhHienTai, product.MaSP); 
@@ -258,13 +258,15 @@ namespace ProjectWin_Demo_
                         try
                         {
                             File.Copy(imagePath, Path.Combine(destinationFolderPath, Path.GetFileName(imagePath)));
-                            if (rdoAnhBanDau.Checked == true)
-                            {
-                                AnhCu.Add(Path.GetFileName(imagePath));
-                            }
-                            else
+                            if (rdoAnhBanDau.Checked)
                             {
                                 AnhMoi.Add(Path.GetFileName(imagePath));
+                                A = AnhMoi;
+                            }
+                            if(rdoAnhHienTai.Checked)
+                            {
+                                AnhCu.Add(Path.GetFileName(imagePath));
+                                A = AnhCu;
                             }
                         }
                         catch (Exception ex)
@@ -294,24 +296,28 @@ namespace ProjectWin_Demo_
 
         private void rdoAnhBanDau_CheckedChanged(object sender, EventArgs e)
         {
-            A = AnhCu;
+            A = AnhMoi;
             curr = 0;
-            if (A.Count() > 0)
+            if (A.Count > 0)
             {
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + txtMaSP.Texts + "\\" + A[curr]);
                 pctProduct.Image = bitmap;
             }
+            else
+                pctProduct.Image = null;
         }
 
         private void rdoAnhHienTai_CheckedChanged(object sender, EventArgs e)
         {
-            A = AnhMoi;
+            A = AnhCu;
             curr = 0;
-            if (A.Count() > 0)
+            if (A.Count > 0)
             {
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + txtMaSP.Texts + "\\" + A[curr]);
                 pctProduct.Image = bitmap;
             }
+            else
+                pctProduct.Image = null;
         }
     }
 }

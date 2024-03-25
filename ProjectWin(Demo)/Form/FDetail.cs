@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -19,9 +20,9 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        List<string> A = new List<string>();
-        List<string> AnhMoi = new List<string>();
-        List<string> AnhCu = new List<string>();
+        string[] A = { };
+        string[] AnhCu = { };
+        string[] AnhMoi = { };
         int curr = 0;
         public FDetail(Product sp)
         {
@@ -44,22 +45,24 @@ namespace ProjectWin_Demo_
             txtNgayMuaSP.Text = sp.NgayMuaSP.Day.ToString();
             txtThangMuaSP.Text = sp.NgayMuaSP.Month.ToString();
             txtNamMuaSP.Text = sp.NgayMuaSP.Year.ToString();
-            string[] strings = sp.AnhBanDau.Split(',');
-            AnhCu.AddRange(strings);
-            string[] strings1 = sp.AnhHienTai.Split(',');
-            AnhMoi.AddRange(strings1);
-            A = AnhCu;
-            if(A.Count > 0)
+            if(sp.AnhBanDau!="")
+                AnhMoi = sp.AnhBanDau.Split(',');
+            if(sp.AnhHienTai!="")
+                AnhCu = sp.AnhHienTai.Split(',');
+            A = AnhMoi;
+            if(A.Length > 0)
             {
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
                 pctSanPham.Image = bitmap;
             }
+            else
+                pctSanPham.Image = null;
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(A.Count() > 0)
+            if(A.Length > 0)
             {
-                if (curr < A.Count()-1)
+                if (curr < A.Length-1)
                     curr++;
                 else
                     curr = 0;
@@ -70,12 +73,12 @@ namespace ProjectWin_Demo_
 
         private void btnPre_Click(object sender, EventArgs e)
         {
-            if(A.Count() > 0)
+            if(A.Length > 0)
             {
                 if (curr > 0)
                     curr--;
                 else
-                    curr = A.Count()-1;
+                    curr = A.Length -1;
 
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
                 pctSanPham.Image = bitmap;
@@ -131,27 +134,30 @@ namespace ProjectWin_Demo_
                 isDragging = false;
             }
         }
-
         private void rdbAnhBanDau_CheckedChanged(object sender, EventArgs e)
         {
-            A = AnhCu;
+            A = AnhMoi;
             curr = 0;
-            if (A.Count() > 0)
+            if (AnhMoi.Length > 0)
             {
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
                 pctSanPham.Image = bitmap;
             }
+            else
+                pctSanPham.Image = null;
         }
 
         private void rdbHienTai_CheckedChanged(object sender, EventArgs e)
         {
-            A = AnhMoi;
+            A = AnhCu;
             curr = 0;
-            if (A.Count() > 0)
+            if (AnhCu.Length > 0)
             {
                 Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
                 pctSanPham.Image = bitmap;
             }
+            else
+                pctSanPham.Image = null;
         }
     }
 }
