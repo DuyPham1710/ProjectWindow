@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +26,12 @@ namespace ProjectWin_Demo_
         Timer shrinkTimer = new Timer();
         int originalWidth;
         int id;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FUser(int id)
         {
             InitializeComponent();
             openChildForm(new FHome(id));
-            //btnMenu.MouseDown += btnMenu_MouseDown;
-            //btnMenu.LostFocus += btnMenu_LostFocus;
+            
             // Lưu lại kích thước ban đầu của button
             originalWidth = panelControl.Width;
 
@@ -146,7 +148,7 @@ namespace ProjectWin_Demo_
             btnMyProduct.CustomBorderColor = Color.Thistle;
             btnInfo.CustomBorderColor = Color.Purple;
             btnDonHang.CustomBorderColor = Color.Thistle;
-            openChildForm(new FInfo());
+            openChildForm(new FInfo(id));
         }
 
         private void btnMyProduct_Click(object sender, EventArgs e)
@@ -228,6 +230,38 @@ namespace ProjectWin_Demo_
                 growTimer.Stop();
                 shrinkTimer.Start();
             }
+        }
+
+        private void FUser_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show(id.ToString());
+                conn.Open();
+                string sqlStr = string.Format("SELECT Avarta FROM Person WHERE ID = {0}", id);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Lấy dữ liệu ảnh từ cột ImageData
+                        MessageBox.Show(((byte[])reader["Avarta"]).ToString());
+                        byte[] imageData = (byte[])reader["Avarta"];
+                        MessageBox.Show(imageData.ToString());
+                        // Chuyển đổi dữ liệu ảnh từ byte[] sang Image
+                        Image image;
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            image = Image.FromStream(ms);
+                        }
+
+                        // Sử dụng ảnh trong ứng dụng của bạn, ví dụ: hiển thị trong PictureBox
+                         pcbAvt.Image = image;
+                    }
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
         }
     }
 }

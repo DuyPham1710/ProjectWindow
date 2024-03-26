@@ -47,6 +47,10 @@ namespace ProjectWin_Demo_
 
             }
             catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btnSort_MouseDown(object sender, MouseEventArgs e)

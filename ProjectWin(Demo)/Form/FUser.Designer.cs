@@ -48,14 +48,14 @@
             this.lbName = new System.Windows.Forms.Label();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.avt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -372,7 +372,7 @@
             this.panel3.Controls.Add(this.lbName);
             this.panel3.Controls.Add(this.btnMenu);
             this.panel3.Controls.Add(this.guna2Separator1);
-            this.panel3.Controls.Add(this.avt);
+            this.panel3.Controls.Add(this.pcbAvt);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -418,19 +418,18 @@
             this.guna2Separator1.Size = new System.Drawing.Size(300, 10);
             this.guna2Separator1.TabIndex = 0;
             // 
-            // avt
+            // pcbAvt
             // 
-            this.avt.FillColor = System.Drawing.Color.Gainsboro;
-            this.avt.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
-            this.avt.ImageRotate = 0F;
-            this.avt.Location = new System.Drawing.Point(6, 58);
-            this.avt.Name = "avt";
-            this.avt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.avt.Size = new System.Drawing.Size(62, 62);
-            this.avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avt.TabIndex = 1;
-            this.avt.TabStop = false;
-            this.avt.Click += new System.EventHandler(this.avt_Click);
+            this.pcbAvt.FillColor = System.Drawing.Color.Gainsboro;
+            this.pcbAvt.ImageRotate = 0F;
+            this.pcbAvt.Location = new System.Drawing.Point(6, 58);
+            this.pcbAvt.Name = "pcbAvt";
+            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pcbAvt.Size = new System.Drawing.Size(62, 62);
+            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbAvt.TabIndex = 1;
+            this.pcbAvt.TabStop = false;
+            this.pcbAvt.Click += new System.EventHandler(this.avt_Click);
             // 
             // guna2Elipse1
             // 
@@ -452,12 +451,13 @@
             this.Name = "FUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FUser";
+            this.Load += new System.EventHandler(this.FUser_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.avt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,7 +477,7 @@
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnInfo;
         private Guna.UI2.WinForms.Guna2Button btnMyProduct;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox avt;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pcbAvt;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;

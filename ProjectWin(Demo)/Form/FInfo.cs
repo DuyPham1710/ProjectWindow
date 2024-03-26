@@ -14,12 +14,14 @@ namespace ProjectWin_Demo_
 {
     public partial class FInfo : Form
     {
-        public FInfo()
+        int id;
+        public FInfo(int id)
         {
             InitializeComponent();
 
             btnHistory.MouseDown += btnHistory_MouseDown;
             guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
+            this.id = id;
         }
         private void btnHistory_MouseDown(object sender, MouseEventArgs e)
         {
@@ -39,7 +41,7 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.Black;
             btnRevenue.CustomBorderColor = Color.White;
-            UCInfo ucInfo = new UCInfo();
+            UCInfo ucInfo = new UCInfo(id);
             addUserControl(ucInfo);
         }
 
@@ -74,7 +76,7 @@ namespace ProjectWin_Demo_
 
         private void FInfo_Load(object sender, EventArgs e)
         {
-            UCInfo ucInfo = new UCInfo();
+            UCInfo ucInfo = new UCInfo(id);
             addUserControl(ucInfo);
         }
 

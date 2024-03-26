@@ -40,9 +40,22 @@ namespace ProjectWin_Demo_
             Password = pass;
             Position = pos;
             DateOfBirth = bornYear;
-            Avt = avt;
+            Avt = avtValue;
         }
 
-
+        public Person(int iDValue, string nameValue, string emailValue, string phoneNumberValue, string cccdValue, string genderValue, string addr, string username, string pass, DateTime bornYear, byte[] avtValue)
+        {
+            ID = iDValue;
+            FullName = nameValue;
+            Email = emailValue;
+            PhoneNumber = phoneNumberValue;
+            Cccd = cccdValue;
+            Gender = genderValue;
+            Address = addr;
+            UserName = username;
+            Password = pass;
+            DateOfBirth = bornYear;
+            Avt = avtValue;
+        }
     }
 }

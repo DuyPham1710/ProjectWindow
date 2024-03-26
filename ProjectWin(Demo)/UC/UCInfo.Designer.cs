@@ -32,15 +32,13 @@
             this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSave = new CustomButton.VBButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoLGBT = new System.Windows.Forms.RadioButton();
+            this.rdoNu = new System.Windows.Forms.RadioButton();
+            this.rdoNam = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -65,6 +63,10 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnAddAvatar = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbAddress = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnSave = new CustomButton.VBButton();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -85,13 +87,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Transparent;
             this.groupBox8.Controls.Add(this.txtCCCD);
-            this.groupBox8.Location = new System.Drawing.Point(399, 386);
+            this.groupBox8.Location = new System.Drawing.Point(399, 290);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(314, 64);
             this.groupBox8.TabIndex = 17;
@@ -157,77 +160,57 @@
             this.txtEmail.TabIndex = 22;
             this.txtEmail.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSave.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 14;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(310, 487);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(162, 49);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Lưu thay đổi";
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.radioButton3);
-            this.groupBox6.Controls.Add(this.radioButton2);
-            this.groupBox6.Controls.Add(this.radioButton1);
-            this.groupBox6.Location = new System.Drawing.Point(47, 387);
+            this.groupBox6.Controls.Add(this.rdoLGBT);
+            this.groupBox6.Controls.Add(this.rdoNu);
+            this.groupBox6.Controls.Add(this.rdoNam);
+            this.groupBox6.Location = new System.Drawing.Point(47, 362);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(233, 53);
             this.groupBox6.TabIndex = 14;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Gender";
             // 
-            // radioButton3
+            // rdoLGBT
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(165, 22);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(58, 20);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Khác";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoLGBT.AutoSize = true;
+            this.rdoLGBT.Location = new System.Drawing.Point(165, 22);
+            this.rdoLGBT.Name = "rdoLGBT";
+            this.rdoLGBT.Size = new System.Drawing.Size(58, 20);
+            this.rdoLGBT.TabIndex = 2;
+            this.rdoLGBT.TabStop = true;
+            this.rdoLGBT.Text = "Khác";
+            this.rdoLGBT.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoNu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(91, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoNu.AutoSize = true;
+            this.rdoNu.Location = new System.Drawing.Point(91, 22);
+            this.rdoNu.Name = "rdoNu";
+            this.rdoNu.Size = new System.Drawing.Size(45, 20);
+            this.rdoNu.TabIndex = 1;
+            this.rdoNu.TabStop = true;
+            this.rdoNu.Text = "Nữ";
+            this.rdoNu.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoNam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoNam.AutoSize = true;
+            this.rdoNam.Checked = true;
+            this.rdoNam.Location = new System.Drawing.Point(7, 22);
+            this.rdoNam.Name = "rdoNam";
+            this.rdoNam.Size = new System.Drawing.Size(57, 20);
+            this.rdoNam.TabIndex = 0;
+            this.rdoNam.TabStop = true;
+            this.rdoNam.Text = "Nam";
+            this.rdoNam.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.txtAddress);
+            this.groupBox5.Controls.Add(this.cbAddress);
             this.groupBox5.Location = new System.Drawing.Point(399, 40);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(314, 64);
@@ -235,60 +218,36 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Address";
             // 
-            // txtAddress
-            // 
-            this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.BorderRadius = 30;
-            this.txtAddress.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtAddress.DefaultText = "UTE";
-            this.txtAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtAddress.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(7, 22);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
-            this.txtAddress.PlaceholderText = "";
-            this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(297, 32);
-            this.txtAddress.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtAddress.TabIndex = 20;
-            this.txtAddress.TextOffset = new System.Drawing.Point(5, 0);
-            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.guna2DateTimePicker1);
-            this.groupBox4.Location = new System.Drawing.Point(399, 278);
+            this.groupBox4.Controls.Add(this.dtpNgaySinh);
+            this.groupBox4.Location = new System.Drawing.Point(399, 212);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(314, 64);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Date of Birth";
             // 
-            // guna2DateTimePicker1
+            // dtpNgaySinh
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(7, 21);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(297, 33);
-            this.guna2DateTimePicker1.TabIndex = 0;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 3, 13, 17, 28, 1, 831);
+            this.dtpNgaySinh.Checked = true;
+            this.dtpNgaySinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(7, 21);
+            this.dtpNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(297, 33);
+            this.dtpNgaySinh.TabIndex = 0;
+            this.dtpNgaySinh.Value = new System.DateTime(2024, 3, 13, 17, 28, 1, 831);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.txtPhoneNumber);
-            this.groupBox3.Location = new System.Drawing.Point(399, 157);
+            this.groupBox3.Location = new System.Drawing.Point(399, 121);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(314, 64);
             this.groupBox3.TabIndex = 11;
@@ -323,12 +282,12 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.txtUserName);
-            this.groupBox2.Location = new System.Drawing.Point(47, 157);
+            this.groupBox2.Location = new System.Drawing.Point(47, 121);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(314, 64);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Duy Pham";
+            this.groupBox2.Text = "UserName";
             // 
             // txtUserName
             // 
@@ -614,6 +573,7 @@
             this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel2.BorderRadius = 20;
             this.guna2CustomGradientPanel2.BorderThickness = 3;
+            this.guna2CustomGradientPanel2.Controls.Add(this.groupBox9);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox8);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox7);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnSave);
@@ -628,6 +588,152 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(730, 570);
             this.guna2CustomGradientPanel2.TabIndex = 21;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox9.Controls.Add(this.txtPass);
+            this.groupBox9.Location = new System.Drawing.Point(47, 200);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(314, 64);
+            this.groupBox9.TabIndex = 22;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Pass Word";
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.Color.White;
+            this.txtPass.BorderRadius = 30;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtPass.DefaultText = "1";
+            this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtPass.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPass.Location = new System.Drawing.Point(7, 25);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PlaceholderText = "";
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(297, 32);
+            this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtPass.TabIndex = 21;
+            this.txtPass.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // cbAddress
+            // 
+            this.cbAddress.AccessibleName = "";
+            this.cbAddress.AutoCompleteCustomSource.AddRange(new string[] {
+            "a"});
+            this.cbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.cbAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbAddress.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.cbAddress.BorderThickness = 0;
+            this.cbAddress.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.cbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbAddress.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbAddress.DropDownHeight = 150;
+            this.cbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAddress.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbAddress.IntegralHeight = false;
+            this.cbAddress.ItemHeight = 30;
+            this.cbAddress.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bạc Liêu",
+            "Bắc Kạn",
+            "Bắc Giang",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Dương",
+            "Bình Định",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ ",
+            "Cao Bằng",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hồ Chí Minh",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cbAddress.Location = new System.Drawing.Point(3, 18);
+            this.cbAddress.Name = "cbAddress";
+            this.cbAddress.Size = new System.Drawing.Size(308, 36);
+            this.cbAddress.StartIndex = 0;
+            this.cbAddress.TabIndex = 4;
+            this.cbAddress.UseWaitCursor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSave.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSave.BorderRadius = 14;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(310, 487);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(162, 49);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Lưu thay đổi";
+            this.btnSave.TextColor = System.Drawing.Color.White;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // UCInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -637,6 +743,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCInfo";
             this.Size = new System.Drawing.Size(1440, 742);
+            this.Load += new System.EventHandler(this.UCInfo_Load);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -659,48 +766,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private CustomButton.VBButton btnSave;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAddAvatar;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtCCCD;
-        private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
-        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxUser;
+        public System.Windows.Forms.GroupBox groupBox8;
+        public System.Windows.Forms.GroupBox groupBox7;
+        public CustomButton.VBButton btnSave;
+        public System.Windows.Forms.GroupBox groupBox6;
+        public System.Windows.Forms.RadioButton rdoLGBT;
+        public System.Windows.Forms.RadioButton rdoNu;
+        public System.Windows.Forms.RadioButton rdoNam;
+        public System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public Guna.UI2.WinForms.Guna2GradientButton btnAddAvatar;
+        public System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        public Guna.UI2.WinForms.Guna2TextBox txtCCCD;
+        public Guna.UI2.WinForms.Guna2TextBox txtName;
+        public Guna.UI2.WinForms.Guna2TextBox txtEmail;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaySinh;
+        public Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
+        public Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox8;
+        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox9;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxUser;
+        public System.Windows.Forms.GroupBox groupBox9;
+        public Guna.UI2.WinForms.Guna2TextBox txtPass;
+        public Guna.UI2.WinForms.Guna2ComboBox cbAddress;
     }
 }
