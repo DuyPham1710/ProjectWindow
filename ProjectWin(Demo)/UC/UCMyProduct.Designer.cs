@@ -166,13 +166,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblMaSP;
-        private System.Windows.Forms.Label lblTenSP;
-        private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.Label lblGia;
-        private System.Windows.Forms.Label lblDanhMuc;
-        private Guna.UI2.WinForms.Guna2ImageButton btnDelete;
-        private Guna.UI2.WinForms.Guna2ImageButton btnEdit;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label lblMaSP;
+        public System.Windows.Forms.Label lblTenSP;
+        public System.Windows.Forms.Label lblSoLuong;
+        public System.Windows.Forms.Label lblGia;
+        public System.Windows.Forms.Label lblDanhMuc;
+        public Guna.UI2.WinForms.Guna2ImageButton btnDelete;
+        public Guna.UI2.WinForms.Guna2ImageButton btnEdit;
     }
 }

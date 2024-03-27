@@ -30,6 +30,7 @@ namespace ProjectWin_Demo_
 
         private void FHome_Load(object sender, EventArgs e)
         {
+            fPanelSanPham.Controls.Clear();
             try
             {
                 conn.Open();
@@ -43,6 +44,7 @@ namespace ProjectWin_Demo_
                     SanPham.Add(sp);
                     UCProducts ucSP = new UCProducts(sp);
                     fPanelSanPham.Controls.Add(ucSP);
+
                 }
 
             }
@@ -74,6 +76,42 @@ namespace ProjectWin_Demo_
             ContextMenuStripCatalog.Hide();
         }
 
-       
+        private void txtTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtTimKiem.Text == "")
+            {
+                FHome_Load(sender, e);
+            }
+            else
+            {
+                SearchAndDisplay(txtTimKiem.Text);
+            }
+        }
+        private void SearchAndDisplay(string searchText)
+        {
+            try
+            {
+                conn.Open();
+
+                string sqlQuery = "SELECT * FROM SanPham WHERE TenSP LIKE @searchText";
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                fPanelSanPham.Controls.Clear();
+
+                while (reader.Read())
+                {
+                    Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    SanPham.Add(sp);
+                    UCProducts ucSP = new UCProducts(sp);
+                    fPanelSanPham.Controls.Add(ucSP);
+                }
+            }
+            catch (Exception ex) { }
+            finally { conn.Close(); }
+
+        }
     }
 }

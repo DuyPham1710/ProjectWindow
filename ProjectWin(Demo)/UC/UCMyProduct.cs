@@ -44,39 +44,39 @@ namespace ProjectWin_Demo_
         private void pcbDelete_Click(object sender, EventArgs e)
         {
         
-            DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa sản phẩm này", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                // thực hiện xóa 
+            //DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa sản phẩm này", "Xác nhận xóa", MessageBoxButtons.YesNo);
+            //if (result == DialogResult.Yes)
+            //{
+            //    // thực hiện xóa 
                 
-                string SQL = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sp.MaSP);
-                try
-                {
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(SQL, conn);
-                    if (cmd.ExecuteNonQuery() > 0)
-                    {
-                        MessageBox.Show("Xóa Sản phẩm thành công", "Thông báo");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Không thể xóa sản phẩm này", "Thông báo");
+            //    string SQL = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sp.MaSP);
+            //    try
+            //    {
+            //        conn.Open();
+            //        SqlCommand cmd = new SqlCommand(SQL, conn);
+            //        if (cmd.ExecuteNonQuery() > 0)
+            //        {
+            //            MessageBox.Show("Xóa Sản phẩm thành công", "Thông báo");
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Không thể xóa sản phẩm này", "Thông báo");
 
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }        
+            //    }
+            //    finally
+            //    {
+            //        conn.Close();
+            //    }
+            //}        
         }
 
         private void pcbEdit_Click(object sender, EventArgs e)
         {
-            FAddProduct fedit = new FAddProduct(sp.IDChuSP, sp.MaSP, "Sua");
-            fedit.btnAddProduct.Hide();
-            fedit.btnUpdateProduct.Show();
-            fedit.ShowDialog();
+            //FAddProduct fedit = new FAddProduct(sp.IDChuSP, sp.MaSP, "Sua");
+            //fedit.btnAddProduct.Hide();
+            //fedit.btnUpdateProduct.Show();
+            //fedit.ShowDialog();
         }
     }
 }

@@ -29,16 +29,26 @@ namespace ProjectWin_Demo_
         {
             if (MessageBox.Show("Bạn có muốn lưu", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                MemoryStream pic = new MemoryStream();
                 try
                 {
+                    pictureBoxUser.Image.Save(pic, pictureBoxUser.Image.RawFormat);
+                    duLieuAnh = pic.ToArray();
                     conn.Open();
                     gender = rdoNam.Checked ? "Nam" : rdoNu.Checked ? "Nữ" : "Khác";
                     Person person = new Person(id, txtName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text
                    , gender, cbAddress.Text, txtUserName.Text, txtPass.Text, dtpNgaySinh.Value, duLieuAnh);
-                    MessageBox.Show(duLieuAnh.Length.ToString());
-                    string sqlStr = string.Format("UPDATE Person SET FullName = N'{0}', Phone = '{1}', CCCD = '{2}', Gender = N'{3}', Bith = '{4}', Email = '{5}', Avarta = '{6}', Addr = N'{7}' WHERE ID = {8}",
-                        person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Avt, person.Address, person.ID);
+                    string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@name", person.FullName);
+                    cmd.Parameters.AddWithValue("@phone", person.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@cccd", person.Cccd);
+                    cmd.Parameters.AddWithValue("@gender", person.Gender);
+                    cmd.Parameters.AddWithValue("@birth", person.DateOfBirth);
+                    cmd.Parameters.AddWithValue("@email", person.Email);
+                    cmd.Parameters.AddWithValue("@avatar", person.Avt);
+                    cmd.Parameters.AddWithValue("@address", person.Address);
+                    cmd.Parameters.AddWithValue("@id", person.ID);
                     if (cmd.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Lưu thông tin thành công", "Thông báo");
@@ -52,23 +62,18 @@ namespace ProjectWin_Demo_
                 {
                     conn.Close();
                 }
-                
             }
         }
 
         private void btnAddAvatar_Click(object sender, EventArgs e)
         {
-            while (openFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Select Image(.jpg;.png;*.gif)|*.jpg;*.png;*.gif";
+            while (opf.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    pictureBoxUser.Image = Image.FromFile(openFileDialog1.FileName);
-                    string imagePath = openFileDialog1.FileName;
-                    using (FileStream fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
-                    {
-                        duLieuAnh = new byte[fs.Length];
-                        fs.Read(duLieuAnh, 0, (int)fs.Length);
-                    }
+                    pictureBoxUser.Image = Image.FromFile(opf.FileName);
                     break;
                 }
                 catch (Exception ex)
@@ -80,7 +85,49 @@ namespace ProjectWin_Demo_
 
         private void UCInfo_Load(object sender, EventArgs e)
         {
+            try
+            {
+                string query = "SELECT *FROM Person,Account WHERE Person.ID = Account.ID and Account.ID = " + id.ToString();
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    byte[] imageBytes = (byte[])reader["Avarta"];
+                    MemoryStream ms = new MemoryStream(imageBytes);
+                    pictureBoxUser.Image = Image.FromStream(ms);
+                    txtName.Text = (string)reader["FullName"];
+                    txtPhoneNumber.Text = (string)reader["Phone"];
+                    txtEmail.Text = (string)reader["Email"];
+                    txtCCCD.Text = (string)reader["CCCD"];
+                    txtUserName.Text = (string)reader["UserName"];
+                    txtPass.Text = (string)reader["Pass"];
+                    cbAddress.SelectedItem = (string)reader["Addr"];
+                    dtpNgaySinh.Value = (DateTime)reader["Bith"];
+                    string gioiTinh = (string)reader["Gender"];
+                    if(gioiTinh == "Nam")
+                    {
+                        rdoNam.Checked = true;
+                    }
+                    else if(gioiTinh == "Nữ")
+                    {
+                        rdoNu.Checked = true;
+                    }
+                    else
+                    {
+                        rdoLGBT.Checked = true; 
+                    }
 
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

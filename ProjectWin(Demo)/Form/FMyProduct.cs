@@ -11,18 +11,22 @@ using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
+    
     public partial class FMyProduct : Form
     {
         private int id;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        Product sp ;
         public FMyProduct(int id)
         {
             InitializeComponent();
+
             foreach (Control control in fPanelHienThi.Controls)
             {
                 control.Margin = new Padding(5); // Đặt giá trị phần đệm là 5 cho các cạnh
             }
             this.id = id;
+            
         }
         private void FMyProduct_Load(object sender, EventArgs e)
         {
@@ -35,10 +39,13 @@ namespace ProjectWin_Demo_
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                    sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
                         (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    UCMyProduct uCMyProduct = new UCMyProduct(sp);
+                    uCMyProduct.btnDelete.Click += pcbDelete_Click;
+                    uCMyProduct.btnEdit.Click += pcbEdit_Click;
+                    fPanelHienThi.Controls.Add(uCMyProduct);
 
-                    fPanelHienThi.Controls.Add(new UCMyProduct(sp));
                 }
             }
             catch { }
@@ -75,6 +82,7 @@ namespace ProjectWin_Demo_
             btnTotalProduct.ForeColor = Color.MediumSlateBlue;
             btnProductSold.CustomBorderColor = Color.White;
             btnProductSold.ForeColor = Color.Black;
+            FMyProduct_Load(sender, e );
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -85,6 +93,46 @@ namespace ProjectWin_Demo_
         private void btnTuyChinh_Click(object sender, EventArgs e)
         {
             //UCMyProduct ucSP = new UCMyProduct();
+        }
+
+        private void pcbDelete_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa sản phẩm này", "Xác nhận xóa", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                // thực hiện xóa 
+
+                string SQL = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sp.MaSP);
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(SQL, conn);
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Xóa Sản phẩm thành công", "Thông báo");
+                        FMyProduct_Load(sender, e);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể xóa sản phẩm này", "Thông báo");
+
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        private void pcbEdit_Click(object sender, EventArgs e)
+        {
+            FAddProduct fedit = new FAddProduct(sp.IDChuSP, sp.MaSP, "Sua");
+            fedit.btnAddProduct.Hide();
+            fedit.btnUpdateProduct.Show();
+            fedit.ShowDialog();
+            FMyProduct_Load(sender, e);
         }
     }
 }

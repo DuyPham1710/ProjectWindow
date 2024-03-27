@@ -26,6 +26,7 @@ namespace ProjectWin_Demo_
         Timer shrinkTimer = new Timer();
         int originalWidth;
         int id;
+        string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=TraoDoiHang;Integrated Security=True;Encrypt=True";
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FUser(int id)
         {
@@ -232,36 +233,39 @@ namespace ProjectWin_Demo_
             }
         }
 
+        private void FUser_Load(object sender, EventArgs e,byte v)
+        {
+            
+        }
+
         private void FUser_Load(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show(id.ToString());
+                string query = "SELECT  * FROM Person WHERE id = " + id.ToString();
                 conn.Open();
-                string sqlStr = string.Format("SELECT Avarta FROM Person WHERE ID = {0}", id);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    if (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // Lấy dữ liệu ảnh từ cột ImageData
-                        MessageBox.Show(((byte[])reader["Avarta"]).ToString());
-                        byte[] imageData = (byte[])reader["Avarta"];
-                        MessageBox.Show(imageData.ToString());
-                        // Chuyển đổi dữ liệu ảnh từ byte[] sang Image
-                        Image image;
-                        using (MemoryStream ms = new MemoryStream(imageData))
+                        while (reader.Read())
                         {
-                            image = Image.FromStream(ms);
+                            byte[] imageBytes = (byte[])reader["Avarta"];
+                            MemoryStream ms = new MemoryStream(imageBytes);
+                            pcbAvt.Image = Image.FromStream(ms);
                         }
-
-                        // Sử dụng ảnh trong ứng dụng của bạn, ví dụ: hiển thị trong PictureBox
-                         pcbAvt.Image = image;
                     }
                 }
             }
-            catch { }
-            finally { conn.Close(); }
+            catch
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
         }
     }
 }

@@ -41,18 +41,17 @@ namespace ProjectWin_Demo_
 
                 Person person = new Person(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text,  gender, cbAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
 
-                string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Avarta, Addr) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
-                person.ID, person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Avt, person.Address);
-                
-                cmd = new SqlCommand(sqlStr, conn);
+                string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Addr) VALUES ({0}, N'{1}', '{2}', '{3}', N'{4}', '{5}', '{6}', N'{7}')",
+                person.ID, person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Address);
 
-                sqlStr = string.Format("INSERT INTO Account(ID, UserName, Pass, Position) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                    person.ID, person.UserName, person.Password, person.Position);
-                
                 SqlCommand cmd1 = new SqlCommand(sqlStr, conn);
 
+                sqlStr = string.Format("INSERT INTO Account(ID, UserName, Pass, Position) VALUES ({0}, '{1}', '{2}', '{3}')",
+                    person.ID, person.UserName, person.Password, person.Position);
+                
+                SqlCommand cmd2 = new SqlCommand(sqlStr, conn);
 
-                if (cmd.ExecuteNonQuery() > 0 && cmd1.ExecuteNonQuery() > 0)
+                if (cmd1.ExecuteNonQuery() > 0 && cmd2.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Đăng kí tài khoản thành công", "Thông báo");
                 }

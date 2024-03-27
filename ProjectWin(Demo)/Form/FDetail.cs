@@ -38,7 +38,7 @@ namespace ProjectWin_Demo_
             lblSPConLai.Text = "Còn lại: " + sp.SoLuong;
             lblXuatXu.Text = "Xuất xứ: " + sp.XuatXu;
             lblDanhMuc.Text = "Phân loại: " + sp.DanhMuc;
-            lblTinhTrang.Text = "Trình trạng: " + sp.TinhTrang;
+            lblTinhTrang.Text = "Tình trạng: " + sp.TinhTrang;
             lblBaoHanh.Text = "Bảo hành: " + sp.BaoHanh;
             rtbMoTaSP.Text = sp.MotaSP;
             rtbMoTaTinhTrang.Text = sp.MoTaTinhTrang;

@@ -40,6 +40,7 @@
             this.btnSort = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnbestSeller = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAllProduct = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.ContextMenuStripCatalog.SuspendLayout();
             this.ContextMenuStripSort.SuspendLayout();
             this.SuspendLayout();
@@ -49,10 +50,10 @@
             this.fPanelSanPham.AutoScroll = true;
             this.fPanelSanPham.BackColor = System.Drawing.Color.Lavender;
             this.fPanelSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.fPanelSanPham.Location = new System.Drawing.Point(0, 44);
+            this.fPanelSanPham.Location = new System.Drawing.Point(0, 110);
             this.fPanelSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.fPanelSanPham.Name = "fPanelSanPham";
-            this.fPanelSanPham.Size = new System.Drawing.Size(1440, 748);
+            this.fPanelSanPham.Size = new System.Drawing.Size(1440, 682);
             this.fPanelSanPham.TabIndex = 1;
             // 
             // ContextMenuStripCatalog
@@ -147,7 +148,7 @@
             this.btnCatalog.FillColor2 = System.Drawing.Color.Transparent;
             this.btnCatalog.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnCatalog.ForeColor = System.Drawing.Color.Black;
-            this.btnCatalog.Location = new System.Drawing.Point(198, 2);
+            this.btnCatalog.Location = new System.Drawing.Point(198, 65);
             this.btnCatalog.Name = "btnCatalog";
             this.btnCatalog.Size = new System.Drawing.Size(180, 38);
             this.btnCatalog.TabIndex = 14;
@@ -167,7 +168,7 @@
             this.btnSort.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnSort.ForeColor = System.Drawing.Color.Black;
-            this.btnSort.Location = new System.Drawing.Point(384, 2);
+            this.btnSort.Location = new System.Drawing.Point(384, 65);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(219, 38);
             this.btnSort.TabIndex = 15;
@@ -187,7 +188,7 @@
             this.btnbestSeller.FillColor2 = System.Drawing.Color.Transparent;
             this.btnbestSeller.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnbestSeller.ForeColor = System.Drawing.Color.Black;
-            this.btnbestSeller.Location = new System.Drawing.Point(609, 2);
+            this.btnbestSeller.Location = new System.Drawing.Point(609, 65);
             this.btnbestSeller.Name = "btnbestSeller";
             this.btnbestSeller.Size = new System.Drawing.Size(180, 38);
             this.btnbestSeller.TabIndex = 16;
@@ -207,11 +208,42 @@
             this.btnAllProduct.FillColor2 = System.Drawing.Color.Transparent;
             this.btnAllProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAllProduct.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAllProduct.Location = new System.Drawing.Point(12, 2);
+            this.btnAllProduct.Location = new System.Drawing.Point(12, 65);
             this.btnAllProduct.Name = "btnAllProduct";
             this.btnAllProduct.Size = new System.Drawing.Size(180, 38);
             this.btnAllProduct.TabIndex = 17;
             this.btnAllProduct.Text = "Tất cả sản phẩm";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.BorderColor = System.Drawing.Color.GhostWhite;
+            this.txtTimKiem.BorderRadius = 10;
+            this.txtTimKiem.BorderThickness = 2;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FillColor = System.Drawing.Color.Lavender;
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtTimKiem.IconRight = global::ProjectWin_Demo_.Properties.Resources.Elegantthemes_Beautiful_Flat_One_Color_Magnifying_glass_24;
+            this.txtTimKiem.IconRightOffset = new System.Drawing.Point(10, 0);
+            this.txtTimKiem.Location = new System.Drawing.Point(409, 13);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Tìm kiếm";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(587, 40);
+            this.txtTimKiem.TabIndex = 27;
+            this.txtTimKiem.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
             // 
             // FHome
             // 
@@ -219,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1440, 792);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnAllProduct);
             this.Controls.Add(this.btnbestSeller);
             this.Controls.Add(this.btnSort);
@@ -247,5 +280,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnSort;
         private Guna.UI2.WinForms.Guna2GradientButton btnbestSeller;
         private Guna.UI2.WinForms.Guna2GradientButton btnAllProduct;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
     }
 }
