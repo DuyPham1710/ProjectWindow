@@ -64,7 +64,7 @@ namespace ProjectWin_Demo_
                         FInfo_Load(sender, e);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

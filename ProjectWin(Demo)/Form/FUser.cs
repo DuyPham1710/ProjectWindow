@@ -209,7 +209,7 @@ namespace ProjectWin_Demo_
             btnInfo.CustomBorderColor = Color.Thistle;
             btnDonHang.CustomBorderColor = Color.Purple;
 
-            openChildForm(new FOrder());
+            openChildForm(new FOrder(id));
 
         }
 

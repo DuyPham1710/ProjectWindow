@@ -35,13 +35,7 @@
             this.btnDelivery = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnWaitAccept = new Guna.UI2.WinForms.Guna2GradientButton();
             this.fPanelSanPham = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucHisProduct5 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct4 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct6 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct3 = new ProjectWin_Demo_.UCHisProduct();
-            this.ucHisProduct2 = new ProjectWin_Demo_.UCHisProduct();
             this.panel1.SuspendLayout();
-            this.fPanelSanPham.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -160,56 +154,11 @@
             // 
             // fPanelSanPham
             // 
-            this.fPanelSanPham.Controls.Add(this.ucHisProduct2);
-            this.fPanelSanPham.Controls.Add(this.ucHisProduct3);
-            this.fPanelSanPham.Controls.Add(this.ucHisProduct6);
-            this.fPanelSanPham.Controls.Add(this.ucHisProduct4);
-            this.fPanelSanPham.Controls.Add(this.ucHisProduct5);
             this.fPanelSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fPanelSanPham.Location = new System.Drawing.Point(0, 60);
             this.fPanelSanPham.Name = "fPanelSanPham";
             this.fPanelSanPham.Size = new System.Drawing.Size(1450, 682);
             this.fPanelSanPham.TabIndex = 2;
-            // 
-            // ucHisProduct5
-            // 
-            this.ucHisProduct5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct5.Location = new System.Drawing.Point(3, 271);
-            this.ucHisProduct5.Name = "ucHisProduct5";
-            this.ucHisProduct5.Size = new System.Drawing.Size(355, 262);
-            this.ucHisProduct5.TabIndex = 4;
-            // 
-            // ucHisProduct4
-            // 
-            this.ucHisProduct4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct4.Location = new System.Drawing.Point(1086, 3);
-            this.ucHisProduct4.Name = "ucHisProduct4";
-            this.ucHisProduct4.Size = new System.Drawing.Size(355, 262);
-            this.ucHisProduct4.TabIndex = 3;
-            // 
-            // ucHisProduct6
-            // 
-            this.ucHisProduct6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct6.Location = new System.Drawing.Point(725, 3);
-            this.ucHisProduct6.Name = "ucHisProduct6";
-            this.ucHisProduct6.Size = new System.Drawing.Size(355, 262);
-            this.ucHisProduct6.TabIndex = 5;
-            // 
-            // ucHisProduct3
-            // 
-            this.ucHisProduct3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct3.Location = new System.Drawing.Point(364, 3);
-            this.ucHisProduct3.Name = "ucHisProduct3";
-            this.ucHisProduct3.Size = new System.Drawing.Size(355, 262);
-            this.ucHisProduct3.TabIndex = 2;
-            // 
-            // ucHisProduct2
-            // 
-            this.ucHisProduct2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucHisProduct2.Location = new System.Drawing.Point(3, 3);
-            this.ucHisProduct2.Name = "ucHisProduct2";
-            this.ucHisProduct2.Size = new System.Drawing.Size(355, 262);
-            this.ucHisProduct2.TabIndex = 1;
             // 
             // UCPurchaseOrder
             // 
@@ -220,8 +169,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "UCPurchaseOrder";
             this.Size = new System.Drawing.Size(1450, 742);
+            this.Load += new System.EventHandler(this.UCPurchaseOrder_Load);
             this.panel1.ResumeLayout(false);
-            this.fPanelSanPham.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -235,10 +184,5 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnDelivery;
         private Guna.UI2.WinForms.Guna2GradientButton btnWaitAccept;
         private System.Windows.Forms.FlowLayoutPanel fPanelSanPham;
-        private UCHisProduct ucHisProduct2;
-        private UCHisProduct ucHisProduct3;
-        private UCHisProduct ucHisProduct6;
-        private UCHisProduct ucHisProduct4;
-        private UCHisProduct ucHisProduct5;
     }
 }

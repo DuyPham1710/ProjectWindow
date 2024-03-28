@@ -13,9 +13,11 @@ namespace ProjectWin_Demo_
 {
     public partial class FOrder : Form
     {
-        public FOrder()
+        private int id;
+        public FOrder(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void btnPurchaseOrder_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace ProjectWin_Demo_
             btnPurchaseOrder.ForeColor = Color.MediumSlateBlue;
             btnSaleOrder.CustomBorderColor = Color.White;
             btnSaleOrder.ForeColor = Color.Black;
-            UCPurchaseOrder uCPurchaseOrder = new UCPurchaseOrder();
+            UCPurchaseOrder uCPurchaseOrder = new UCPurchaseOrder(id);
             addUserControl(uCPurchaseOrder);
         }
 
@@ -34,12 +36,11 @@ namespace ProjectWin_Demo_
             btnPurchaseOrder.ForeColor = Color.Black;
             btnSaleOrder.CustomBorderColor = Color.MediumSlateBlue;
             btnSaleOrder.ForeColor = Color.MediumSlateBlue;
-            UCSalesOrder uCSalesOrder = new UCSalesOrder();
+            UCSalesOrder uCSalesOrder = new UCSalesOrder(id);
             addUserControl(uCSalesOrder);
         }
         private void addUserControl(UserControl userControl)
         {
-
             panel1.Controls.Clear();
             panel1.Controls.Add(userControl);
             userControl.BringToFront();

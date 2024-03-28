@@ -32,7 +32,7 @@
             this.btnPurchaseOrder = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSaleOrder = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ucPurchaseOrder1 = new ProjectWin_Demo_.UC.UCPurchaseOrder();
+            this.ucPurchaseOrder1 = new ProjectWin_Demo_.UC.UCPurchaseOrder(id);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
