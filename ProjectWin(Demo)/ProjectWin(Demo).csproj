@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FDiaChiNhanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDiaChiNhanHang.Designer.cs">
+      <DependentUpon>FDiaChiNhanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     <Compile Include="UC\UCSalesOrder.Designer.cs">
       <DependentUpon>UCSalesOrder.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\FDiaChiNhanHang.resx">
+      <DependentUpon>FDiaChiNhanHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FAddProduct.resx">
       <DependentUpon>FAddProduct.cs</DependentUpon>
     </EmbeddedResource>

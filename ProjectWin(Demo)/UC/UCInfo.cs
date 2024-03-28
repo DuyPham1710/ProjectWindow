@@ -15,9 +15,9 @@ namespace ProjectWin_Demo_
 {
     public partial class UCInfo : UserControl
     {
-        string gender = "";
+      //  string gender = "";
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        byte[] duLieuAnh;
+    //    byte[] duLieuAnh;
         int id;
         public UCInfo(int id)
         {
@@ -27,42 +27,42 @@ namespace ProjectWin_Demo_
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn lưu", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                MemoryStream pic = new MemoryStream();
-                try
-                {
-                    pictureBoxUser.Image.Save(pic, pictureBoxUser.Image.RawFormat);
-                    duLieuAnh = pic.ToArray();
-                    conn.Open();
-                    gender = rdoNam.Checked ? "Nam" : rdoNu.Checked ? "Nữ" : "Khác";
-                    Person person = new Person(id, txtName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text
-                   , gender, cbAddress.Text, txtUserName.Text, txtPass.Text, dtpNgaySinh.Value, duLieuAnh);
-                    string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    cmd.Parameters.AddWithValue("@name", person.FullName);
-                    cmd.Parameters.AddWithValue("@phone", person.PhoneNumber);
-                    cmd.Parameters.AddWithValue("@cccd", person.Cccd);
-                    cmd.Parameters.AddWithValue("@gender", person.Gender);
-                    cmd.Parameters.AddWithValue("@birth", person.DateOfBirth);
-                    cmd.Parameters.AddWithValue("@email", person.Email);
-                    cmd.Parameters.AddWithValue("@avatar", person.Avt);
-                    cmd.Parameters.AddWithValue("@address", person.Address);
-                    cmd.Parameters.AddWithValue("@id", person.ID);
-                    if (cmd.ExecuteNonQuery() > 0)
-                    {
-                        MessageBox.Show("Lưu thông tin thành công", "Thông báo");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
+            //if (MessageBox.Show("Bạn có muốn lưu", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //{
+            //    MemoryStream pic = new MemoryStream();
+            //    try
+            //    {
+            //        pictureBoxUser.Image.Save(pic, pictureBoxUser.Image.RawFormat);
+            //        duLieuAnh = pic.ToArray();
+            //        conn.Open();
+            //        gender = rdoNam.Checked ? "Nam" : rdoNu.Checked ? "Nữ" : "Khác";
+            //        Person person = new Person(id, txtName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text
+            //       , gender, cbAddress.Text, txtUserName.Text, txtPass.Text, dtpNgaySinh.Value, duLieuAnh);
+            //        string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
+            //        SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            //        cmd.Parameters.AddWithValue("@name", person.FullName);
+            //        cmd.Parameters.AddWithValue("@phone", person.PhoneNumber);
+            //        cmd.Parameters.AddWithValue("@cccd", person.Cccd);
+            //        cmd.Parameters.AddWithValue("@gender", person.Gender);
+            //        cmd.Parameters.AddWithValue("@birth", person.DateOfBirth);
+            //        cmd.Parameters.AddWithValue("@email", person.Email);
+            //        cmd.Parameters.AddWithValue("@avatar", person.Avt);
+            //        cmd.Parameters.AddWithValue("@address", person.Address);
+            //        cmd.Parameters.AddWithValue("@id", person.ID);
+            //        if (cmd.ExecuteNonQuery() > 0)
+            //        {
+            //            MessageBox.Show("Lưu thông tin thành công", "Thông báo");
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //    finally
+            //    {
+            //        conn.Close();
+            //    }
+            //}
         }
 
         private void btnAddAvatar_Click(object sender, EventArgs e)
@@ -93,9 +93,13 @@ namespace ProjectWin_Demo_
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    byte[] imageBytes = (byte[])reader["Avarta"];
-                    MemoryStream ms = new MemoryStream(imageBytes);
-                    pictureBoxUser.Image = Image.FromStream(ms);
+                    if (reader["Avarta"] != DBNull.Value)
+                    {
+                        byte[] imageBytes = (byte[])reader["Avarta"];
+                        MemoryStream ms = new MemoryStream(imageBytes);
+                        pictureBoxUser.Image = Image.FromStream(ms);
+
+                    }
                     txtName.Text = (string)reader["FullName"];
                     txtPhoneNumber.Text = (string)reader["Phone"];
                     txtEmail.Text = (string)reader["Email"];
@@ -120,9 +124,9 @@ namespace ProjectWin_Demo_
 
                 }
             }
-            catch
+            catch (Exception ex)  
             {
-
+                MessageBox.Show("Không load được", "Thông báo");
             }
             finally
             {

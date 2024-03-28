@@ -42,7 +42,7 @@ namespace ProjectWin_Demo_
                     Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"], 
                         (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
                     SanPham.Add(sp);
-                    UCProducts ucSP = new UCProducts(sp);
+                    UCProducts ucSP = new UCProducts(sp, id);
                     fPanelSanPham.Controls.Add(ucSP);
 
                 }
@@ -105,7 +105,7 @@ namespace ProjectWin_Demo_
                     Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
                         (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
                     SanPham.Add(sp);
-                    UCProducts ucSP = new UCProducts(sp);
+                    UCProducts ucSP = new UCProducts(sp, id);
                     fPanelSanPham.Controls.Add(ucSP);
                 }
             }

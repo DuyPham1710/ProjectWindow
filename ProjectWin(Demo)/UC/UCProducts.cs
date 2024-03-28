@@ -13,14 +13,16 @@ namespace ProjectWin_Demo_
     public partial class UCProducts : UserControl
     {
         Product sp = new Product();
-        public UCProducts(Product sp)
+        int id;
+        public UCProducts(Product sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
+            this.id = id;
         }
         private void UCProducts_Click(object sender, EventArgs e)
         {
-            FDetail fDetail = new FDetail(sp);
+            FDetail fDetail = new FDetail(sp, id);
             fDetail.ShowDialog();
         }
 

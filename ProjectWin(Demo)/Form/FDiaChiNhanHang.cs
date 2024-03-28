@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
-    public partial class FCart : Form
+    public partial class FDiaChiNhanHang : Form
     {
-        public FCart()
+        public FDiaChiNhanHang()
         {
             InitializeComponent();
         }
 
-        private void btnBuyNow_Click(object sender, EventArgs e)
+        private void btnTroLai_Click(object sender, EventArgs e)
         {
-            //FPayment fPayment = new FPayment();
-            //fPayment.ShowDialog();
+            this.Close();
         }
     }
 }

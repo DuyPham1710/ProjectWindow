@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,10 +16,43 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        public FPayment()
+        Product sp;
+        int id;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        public FPayment(Product sp, Decimal soLuongSP, int id)
         {
             InitializeComponent();
+            this.sp = sp;
+            nudSoLuong.Value = soLuongSP;
+            this.id = id;
         }
+
+        private void FPayment_Load(object sender, EventArgs e)
+        {
+            txtTenSP.Text = sp.TenSP;
+            txtPhanLoai.Text = sp.DanhMuc;
+            txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
+            DateTime date = DateTime.Now; 
+            txtNgay.Text = date.Day.ToString();
+            txtThang.Text = date.Month.ToString();
+            txtNam.Text = date.Year.ToString();
+            try
+            {
+                conn.Open();
+                string query = "select * from Person where ID = " + id;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtHoTen.Text = (string)reader["FullName"];
+                    txtSoDT.Text = (string)reader["Phone"];
+                    txtDiaChi.Text = (string)reader["Addr"];
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
+        }
+
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
@@ -55,8 +89,22 @@ namespace ProjectWin_Demo_
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đặt hàng thành công", "Thông báo");
-            this.Close();
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai) VALUES ('{0}', '{1}', N'{2}')",
+                        id, sp.MaSP, "Chờ xác nhận");
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Đặt hàng thành công", "Thông báo");
+                    this.Close();
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -94,6 +142,12 @@ namespace ProjectWin_Demo_
             {
                 isDragging = false;
             }
+        }
+
+        private void btnThayDoiDC_Click(object sender, EventArgs e)
+        {
+            FDiaChiNhanHang fDCNH = new FDiaChiNhanHang();
+            fDCNH.ShowDialog();
         }
     }
 }

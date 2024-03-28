@@ -774,6 +774,11 @@ namespace ProjectWin_Demo_
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(114, 27);
             this.nudSoLuong.TabIndex = 32;
+            this.nudSoLuong.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblAmount
             // 

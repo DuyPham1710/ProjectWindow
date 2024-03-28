@@ -4,24 +4,75 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace ProjectWin_Demo_
 {
     public partial class FInfo : Form
     {
         int id;
+        UCInfo ucInfo;
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        byte[] duLieuAnh;
+        string gender = "";
         public FInfo(int id)
         {
             InitializeComponent();
 
             btnHistory.MouseDown += btnHistory_MouseDown;
             guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
+            ucInfo = new UCInfo(id);
+            ucInfo.btnSave.Click += btnSave_Click;
             this.id = id;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn lưu", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MemoryStream pic = new MemoryStream();
+                try
+                {
+                    ucInfo.pictureBoxUser.Image.Save(pic, ucInfo.pictureBoxUser.Image.RawFormat);
+                    duLieuAnh = pic.ToArray();
+                    conn.Open();
+                    gender = ucInfo.rdoNam.Checked ? "Nam" : ucInfo.rdoNu.Checked ? "Nữ" : "Khác";
+                    Person person = new Person(id, ucInfo.txtName.Text, ucInfo.txtEmail.Text, ucInfo.txtPhoneNumber.Text, ucInfo.txtCCCD.Text
+                   , gender, ucInfo.cbAddress.Text, ucInfo.txtUserName.Text, ucInfo.txtPass.Text, ucInfo.dtpNgaySinh.Value, duLieuAnh);
+                    string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@name", person.FullName);
+                    cmd.Parameters.AddWithValue("@phone", person.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@cccd", person.Cccd);
+                    cmd.Parameters.AddWithValue("@gender", person.Gender);
+                    cmd.Parameters.AddWithValue("@birth", person.DateOfBirth);
+                    cmd.Parameters.AddWithValue("@email", person.Email);
+                    cmd.Parameters.AddWithValue("@avatar", person.Avt);
+                    cmd.Parameters.AddWithValue("@address", person.Address);
+                    cmd.Parameters.AddWithValue("@id", person.ID);
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Lưu thông tin thành công", "Thông báo");
+                        FInfo_Load(sender, e);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
         }
         private void btnHistory_MouseDown(object sender, MouseEventArgs e)
         {
@@ -41,7 +92,7 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.Black;
             btnRevenue.CustomBorderColor = Color.White;
-            UCInfo ucInfo = new UCInfo(id);
+            //ucInfo = new UCInfo(id);
             addUserControl(ucInfo);
         }
 
@@ -76,7 +127,7 @@ namespace ProjectWin_Demo_
 
         private void FInfo_Load(object sender, EventArgs e)
         {
-            UCInfo ucInfo = new UCInfo(id);
+           // ucInfo = new UCInfo(id);
             addUserControl(ucInfo);
         }
 

@@ -24,10 +24,12 @@ namespace ProjectWin_Demo_
         string[] AnhCu = { };
         string[] AnhMoi = { };
         int curr = 0;
-        public FDetail(Product sp)
+        int id;
+        public FDetail(Product sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
+            this.id = id;
         }
       
         private void FDetail_Load(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace ProjectWin_Demo_
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            FPayment fPayment = new FPayment();
+            FPayment fPayment = new FPayment(sp, nudSoLuong.Value, id);
             fPayment.ShowDialog();
         }
 
