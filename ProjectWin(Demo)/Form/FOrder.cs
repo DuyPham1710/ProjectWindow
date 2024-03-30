@@ -46,5 +46,10 @@ namespace ProjectWin_Demo_
             userControl.BringToFront();
             userControl.Dock = DockStyle.Fill;
         }
+
+        private void FOrder_Load(object sender, EventArgs e)
+        {
+            btnPurchaseOrder_Click(sender, e);
+        }
     }
 }

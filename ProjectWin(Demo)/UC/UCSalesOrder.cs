@@ -16,10 +16,36 @@ namespace ProjectWin_Demo_.UC
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private int id;
         List<Product> sanPham = new List<Product>();
+        string trangThai;
         public UCSalesOrder(int id)
         {
             InitializeComponent();
             this.id = id;
+        }
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            UCProcessSales sp = sender as UCProcessSales;
+            try
+            {
+                string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sp.lblMaSP.Text);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Xác nhận thành công", "Thông báo");
+                    UCSalesOrder_Load(sender, e);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Xác nhận thất bại", "Thông báo");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
         private List<Product> ThucThi(string trangThai)
         {
@@ -56,13 +82,15 @@ namespace ProjectWin_Demo_.UC
             btnRefund.CustomBorderColor = Color.White;
             fPanel.Controls.Clear();
             sanPham = ThucThi("Chờ xác nhận");
+            trangThai = "Đang xử lý";
             foreach (Product item in sanPham)
             {
                 UCProcessSales ucSP = new UCProcessSales(item, id);
+                ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanel.Controls.Add(ucSP);
             }
-        }
 
+        }
         private void btnProcess_Click(object sender, EventArgs e)
         {
             btnWaitAccept.CustomBorderColor = Color.White;
@@ -72,9 +100,11 @@ namespace ProjectWin_Demo_.UC
             btnRefund.CustomBorderColor = Color.White;
             fPanel.Controls.Clear();
             sanPham = ThucThi("Đang xử lý");
+            trangThai = "Đang giao";
             foreach (Product item in sanPham)
             {
                 UCProcessSales ucSP = new UCProcessSales(item, id);
+                ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanel.Controls.Add(ucSP);
             }
         }
@@ -87,9 +117,11 @@ namespace ProjectWin_Demo_.UC
             btnDelivered.CustomBorderColor = Color.White;
             btnRefund.CustomBorderColor = Color.White;
             sanPham = ThucThi("Đang giao");
+            trangThai = "Đã giao";
             foreach (Product item in sanPham)
             {
                 UCProcessSales ucSP = new UCProcessSales(item, id);
+                ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanel.Controls.Add(ucSP);
             }
         }
@@ -102,9 +134,11 @@ namespace ProjectWin_Demo_.UC
             btnDelivered.CustomBorderColor = Color.Gold;
             btnRefund.CustomBorderColor = Color.White;
             sanPham = ThucThi("Đã giao");
+            trangThai = "Hoàn tiền/Hủy đơn";
             foreach (Product item in sanPham)
             {
                 UCProcessSales ucSP = new UCProcessSales(item, id);
+                ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanel.Controls.Add(ucSP);
             }
         }
@@ -117,10 +151,12 @@ namespace ProjectWin_Demo_.UC
             btnDelivery.CustomBorderColor = Color.White;
             btnDelivered.CustomBorderColor = Color.White;
             btnRefund.CustomBorderColor = Color.Gold;
-            sanPham = ThucThi("Đã giao");
+            sanPham = ThucThi("Hoàn tiền/Hủy đơn");
+            trangThai = "Hoàn tiền/Hủy đơn";
             foreach (Product item in sanPham)
             {
                 UCProducts ucSP = new UCProducts(item, id);
+             //   ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanel.Controls.Add(ucSP);
             }
         }

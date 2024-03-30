@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnXacNhan = new CustomButton.VBButton();
-            this.btnCancel = new CustomButton.VBButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,17 +36,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblGia = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.pcbAnhSP = new System.Windows.Forms.PictureBox();
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbAnhNguoiMua = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblNguoiMua = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnXacNhan = new CustomButton.VBButton();
+            this.btnHuyDon = new CustomButton.VBButton();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAnhSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAnhNguoiMua)).BeginInit();
             this.panel5.SuspendLayout();
@@ -58,52 +58,12 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.btnXacNhan);
-            this.panel4.Controls.Add(this.btnCancel);
+            this.panel4.Controls.Add(this.btnHuyDon);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 213);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(355, 49);
             this.panel4.TabIndex = 8;
-            // 
-            // btnXacNhan
-            // 
-            this.btnXacNhan.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnXacNhan.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXacNhan.BorderRadius = 5;
-            this.btnXacNhan.BorderSize = 0;
-            this.btnXacNhan.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnXacNhan.FlatAppearance.BorderSize = 0;
-            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(203, 0);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(150, 47);
-            this.btnXacNhan.TabIndex = 4;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.TextColor = System.Drawing.Color.White;
-            this.btnXacNhan.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancel.BorderRadius = 5;
-            this.btnCancel.BorderSize = 0;
-            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(0, 0);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 47);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Hủy đơn";
-            this.btnCancel.TextColor = System.Drawing.Color.White;
-            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -154,7 +114,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblGia);
             this.panel2.Controls.Add(this.lblTenSP);
-            this.panel2.Controls.Add(this.pcbAnhSP);
+            this.panel2.Controls.Add(this.pctSanPham);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 50);
             this.panel2.Name = "panel2";
@@ -182,15 +142,15 @@
             this.lblTenSP.TabIndex = 1;
             this.lblTenSP.Text = "Điện thoại Apple iPhone 15 Pro Max 256GB";
             // 
-            // pcbAnhSP
+            // pctSanPham
             // 
-            this.pcbAnhSP.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
-            this.pcbAnhSP.Location = new System.Drawing.Point(3, 5);
-            this.pcbAnhSP.Name = "pcbAnhSP";
-            this.pcbAnhSP.Size = new System.Drawing.Size(100, 100);
-            this.pcbAnhSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbAnhSP.TabIndex = 0;
-            this.pcbAnhSP.TabStop = false;
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
+            this.pctSanPham.Location = new System.Drawing.Point(3, 5);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(100, 100);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctSanPham.TabIndex = 0;
+            this.pctSanPham.TabStop = false;
             // 
             // panel1
             // 
@@ -256,6 +216,47 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Mã đơn hàng";
             // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXacNhan.BorderRadius = 5;
+            this.btnXacNhan.BorderSize = 0;
+            this.btnXacNhan.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.White;
+            this.btnXacNhan.Location = new System.Drawing.Point(203, 0);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(150, 47);
+            this.btnXacNhan.TabIndex = 4;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.TextColor = System.Drawing.Color.White;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // btnHuyDon
+            // 
+            this.btnHuyDon.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHuyDon.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btnHuyDon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuyDon.BorderRadius = 5;
+            this.btnHuyDon.BorderSize = 0;
+            this.btnHuyDon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnHuyDon.FlatAppearance.BorderSize = 0;
+            this.btnHuyDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyDon.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyDon.ForeColor = System.Drawing.Color.White;
+            this.btnHuyDon.Location = new System.Drawing.Point(0, 0);
+            this.btnHuyDon.Name = "btnHuyDon";
+            this.btnHuyDon.Size = new System.Drawing.Size(150, 47);
+            this.btnHuyDon.TabIndex = 3;
+            this.btnHuyDon.Text = "Hủy đơn";
+            this.btnHuyDon.TextColor = System.Drawing.Color.White;
+            this.btnHuyDon.UseVisualStyleBackColor = false;
+            // 
             // UCProcessSales
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -268,12 +269,13 @@
             this.Name = "UCProcessSales";
             this.Size = new System.Drawing.Size(355, 314);
             this.Load += new System.EventHandler(this.UCProcessSales_Load);
+            this.Click += new System.EventHandler(this.UCProcessSales_Click);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAnhSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAnhNguoiMua)).EndInit();
@@ -284,23 +286,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
         public CustomButton.VBButton btnXacNhan;
-        public CustomButton.VBButton btnCancel;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblTongTien;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblSoLuong;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblGia;
-        private System.Windows.Forms.Label lblTenSP;
-        private System.Windows.Forms.PictureBox pcbAnhSP;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox pcbAnhNguoiMua;
-        private System.Windows.Forms.Label lblNguoiMua;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblMaSP;
-        private System.Windows.Forms.Label label7;
+        public CustomButton.VBButton btnHuyDon;
+        public System.Windows.Forms.Label lblMaSP;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Label lblTongTien;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblSoLuong;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label lblGia;
+        public System.Windows.Forms.Label lblTenSP;
+        public System.Windows.Forms.PictureBox pctSanPham;
+        public System.Windows.Forms.Panel panel1;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pcbAnhNguoiMua;
+        public System.Windows.Forms.Label lblNguoiMua;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Label label7;
     }
 }

@@ -66,8 +66,8 @@ namespace ProjectWin_Demo_
             btnTotalProduct.ForeColor = Color.Black;
             btnProductSold.CustomBorderColor = Color.MediumSlateBlue;
             btnProductSold.ForeColor = Color.MediumSlateBlue;
-            UCHistory uCHistory = new UCHistory();
-            addUserControl(uCHistory);
+            //UCHistory uCHistory = new UCHistory();
+            //addUserControl(uCHistory);
         }
         private void addUserControl(UserControl userControl)
         {

@@ -15,6 +15,7 @@ namespace ProjectWin_Demo_
     {
         Product sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        string[] AnhCu = { };
         public UCMyProduct(Product sp)
         {
             InitializeComponent();
@@ -27,17 +28,26 @@ namespace ProjectWin_Demo_
             lblSoLuong.Text = sp.SoLuong;
             lblGia.Text = sp.GiaHienTai;
             lblDanhMuc.Text = sp.DanhMuc;
+            if (sp.AnhHienTai != "")
+                AnhCu = sp.AnhHienTai.Split(',');
+            if (AnhCu.Length > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
+                pctSanPham.Image = bitmap;
+            }
+            else
+                pctSanPham.Image = null;
         }
 
         private void pcbDelete_MouseHover(object sender, EventArgs e)
         {
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
             this.BackColor = Color.MediumPurple;
         }
 
         private void pcbDelete_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
             this.BackColor = Color.WhiteSmoke;
         }
 

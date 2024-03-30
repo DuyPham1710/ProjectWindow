@@ -113,5 +113,80 @@ namespace ProjectWin_Demo_
             finally { conn.Close(); }
 
         }
+
+        private void điệnTửToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Điện tử");
+        }
+
+        private void giaDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Gia dụng");
+        }
+
+        private void họcTậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Học tập");
+        }
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Thời trang");
+        }
+        private void LocTheoDanhMucSP(string danhMuc)
+        {
+            fPanelSanPham.Controls.Clear();
+            try
+            {
+                conn.Open();
+                string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
+                SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Product sp = new Product((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    SanPham.Add(sp);
+                    UCProducts ucSP = new UCProducts(sp, id);
+                    fPanelSanPham.Controls.Add(ucSP);
+
+                }
+
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void btnAllProduct_Click(object sender, EventArgs e)
+        {
+            FHome_Load(sender, e);
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Thể thao & Du lịch");
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Giày dép");
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Sắc đẹp");
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Sức khỏe");
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            LocTheoDanhMucSP("Sách");
+        }
     }
 }

@@ -303,6 +303,7 @@
             // 
             // FLogin
             // 
+            this.AcceptButton = this.guna2GradientButton1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjectWin_Demo_.Properties.Resources.pngtree_shopping_mall_supermarket_selection_merchandise_poster_background_material_picture_image_1048684;

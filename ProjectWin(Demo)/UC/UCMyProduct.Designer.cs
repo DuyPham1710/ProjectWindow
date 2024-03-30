@@ -35,8 +35,8 @@
             this.lblDanhMuc = new System.Windows.Forms.Label();
             this.btnEdit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMaSP
@@ -128,17 +128,17 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Click += new System.EventHandler(this.pcbDelete_Click);
             // 
-            // pictureBox1
+            // pctSanPham
             // 
-            this.pictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
+            this.pctSanPham.Location = new System.Drawing.Point(16, 3);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(84, 84);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctSanPham.TabIndex = 0;
+            this.pctSanPham.TabStop = false;
+            this.pctSanPham.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
+            this.pctSanPham.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             // 
             // UCMyProduct
             // 
@@ -152,13 +152,13 @@
             this.Controls.Add(this.lblSoLuong);
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblMaSP);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctSanPham);
             this.Name = "UCMyProduct";
             this.Size = new System.Drawing.Size(1435, 90);
             this.Load += new System.EventHandler(this.UCMyProduct_Load);
             this.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +166,7 @@
 
         #endregion
 
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pctSanPham;
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblSoLuong;

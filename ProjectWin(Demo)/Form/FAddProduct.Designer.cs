@@ -516,7 +516,13 @@
             this.cbBoxDanhMuc.Items.AddRange(new object[] {
             "Điện tử",
             "Gia dụng",
-            "Học tập"});
+            "Học tập",
+            "Thời trang",
+            "Thể thao & Du lịch",
+            "Giày dép",
+            "Sắc đẹp",
+            "Sức khỏe",
+            "Sách"});
             this.cbBoxDanhMuc.Location = new System.Drawing.Point(3, 24);
             this.cbBoxDanhMuc.Name = "cbBoxDanhMuc";
             this.cbBoxDanhMuc.Size = new System.Drawing.Size(295, 36);

@@ -43,13 +43,13 @@
             this.rdoOther = new System.Windows.Forms.RadioButton();
             this.rdoWoman = new System.Windows.Forms.RadioButton();
             this.rdoMan = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl0 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtVerifyPassWord = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,19 +57,19 @@
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.cbAddress = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbl7 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -202,13 +202,13 @@
             this.groupBox1.Controls.Add(this.rdoOther);
             this.groupBox1.Controls.Add(this.rdoWoman);
             this.groupBox1.Controls.Add(this.rdoMan);
-            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.lbl8);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.lbl9);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbl0);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lbl1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(33, 38);
@@ -318,16 +318,16 @@
             this.rdoMan.Text = "Nam";
             this.rdoMan.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // lbl8
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(7, 322);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(118, 15);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Tên không chính xác";
+            this.lbl8.AutoSize = true;
+            this.lbl8.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl8.ForeColor = System.Drawing.Color.Red;
+            this.lbl8.Location = new System.Drawing.Point(7, 322);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(118, 15);
+            this.lbl8.TabIndex = 12;
+            this.lbl8.Text = "Tên không chính xác";
             // 
             // label16
             // 
@@ -340,16 +340,16 @@
             this.label16.TabIndex = 11;
             this.label16.Text = "CCCD";
             // 
-            // label12
+            // lbl9
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(8, 239);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(176, 15);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Vui lòng chọn giới tính phù hợp";
+            this.lbl9.AutoSize = true;
+            this.lbl9.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl9.ForeColor = System.Drawing.Color.Red;
+            this.lbl9.Location = new System.Drawing.Point(8, 239);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(176, 15);
+            this.lbl9.TabIndex = 9;
+            this.lbl9.Text = "Vui lòng chọn giới tính phù hợp";
             // 
             // label11
             // 
@@ -362,16 +362,16 @@
             this.label11.TabIndex = 8;
             this.label11.Text = "Gender";
             // 
-            // label3
+            // lbl0
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(7, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Chưa đủ tuổi đăng kí";
+            this.lbl0.AutoSize = true;
+            this.lbl0.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0.ForeColor = System.Drawing.Color.Red;
+            this.lbl0.Location = new System.Drawing.Point(7, 159);
+            this.lbl0.Name = "lbl0";
+            this.lbl0.Size = new System.Drawing.Size(118, 15);
+            this.lbl0.TabIndex = 5;
+            this.lbl0.Text = "Chưa đủ tuổi đăng kí";
             // 
             // label4
             // 
@@ -384,16 +384,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Date of Birth";
             // 
-            // label2
+            // lbl1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(7, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên không chính xác";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.Red;
+            this.lbl1.Location = new System.Drawing.Point(7, 83);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(118, 15);
+            this.lbl1.TabIndex = 2;
+            this.lbl1.Text = "Tên không chính xác";
             // 
             // label1
             // 
@@ -414,15 +414,15 @@
             this.groupBox2.Controls.Add(this.txtPhoneNumber);
             this.groupBox2.Controls.Add(this.txtEmail);
             this.groupBox2.Controls.Add(this.txtUserName);
-            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.lbl4);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.lbl6);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.lbl5);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lbl3);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.lbl2);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(380, 35);
@@ -557,16 +557,16 @@
             this.txtUserName.TabIndex = 17;
             this.txtUserName.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // label17
+            // lbl4
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(9, 238);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(167, 15);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Số điện thoại không chính xác";
+            this.lbl4.AutoSize = true;
+            this.lbl4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.ForeColor = System.Drawing.Color.Red;
+            this.lbl4.Location = new System.Drawing.Point(9, 238);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(167, 15);
+            this.lbl4.TabIndex = 14;
+            this.lbl4.Text = "Số điện thoại không chính xác";
             // 
             // label18
             // 
@@ -579,16 +579,16 @@
             this.label18.TabIndex = 13;
             this.label18.Text = "Phone";
             // 
-            // label13
+            // lbl6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(9, 399);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(157, 15);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Mật khẩu không trùng khớp";
+            this.lbl6.AutoSize = true;
+            this.lbl6.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.ForeColor = System.Drawing.Color.Red;
+            this.lbl6.Location = new System.Drawing.Point(9, 399);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(157, 15);
+            this.lbl6.TabIndex = 11;
+            this.lbl6.Text = "Mật khẩu không trùng khớp";
             // 
             // label14
             // 
@@ -601,16 +601,16 @@
             this.label14.TabIndex = 10;
             this.label14.Text = "Verify PassWord";
             // 
-            // label9
+            // lbl5
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(9, 322);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Mật khẩu phải có ít nhất 8 kí tự";
+            this.lbl5.AutoSize = true;
+            this.lbl5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.ForeColor = System.Drawing.Color.Red;
+            this.lbl5.Location = new System.Drawing.Point(9, 322);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(172, 15);
+            this.lbl5.TabIndex = 8;
+            this.lbl5.Text = "Mật khẩu phải có ít nhất 8 kí tự";
             // 
             // label10
             // 
@@ -623,16 +623,16 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "PassWord";
             // 
-            // label5
+            // lbl3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(9, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Email không chính xác";
+            this.lbl3.AutoSize = true;
+            this.lbl3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.ForeColor = System.Drawing.Color.Red;
+            this.lbl3.Location = new System.Drawing.Point(9, 159);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(125, 15);
+            this.lbl3.TabIndex = 5;
+            this.lbl3.Text = "Email không chính xác";
             // 
             // label6
             // 
@@ -645,16 +645,16 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Email";
             // 
-            // label7
+            // lbl2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(9, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 15);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Tên không chính xác";
+            this.lbl2.AutoSize = true;
+            this.lbl2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.ForeColor = System.Drawing.Color.Red;
+            this.lbl2.Location = new System.Drawing.Point(9, 83);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(118, 15);
+            this.lbl2.TabIndex = 2;
+            this.lbl2.Text = "Tên không chính xác";
             // 
             // label8
             // 
@@ -671,7 +671,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FloralWhite;
             this.groupBox3.Controls.Add(this.cbAddress);
-            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.lbl7);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(33, 409);
             this.groupBox3.Name = "groupBox3";
@@ -679,17 +679,6 @@
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Address";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(7, 72);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 15);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Vui lòng nhập địa chỉ";
             // 
             // cbAddress
             // 
@@ -781,6 +770,17 @@
             this.cbAddress.TabIndex = 3;
             this.cbAddress.UseWaitCursor = true;
             // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl7.ForeColor = System.Drawing.Color.Red;
+            this.lbl7.Location = new System.Drawing.Point(7, 72);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(119, 15);
+            this.lbl7.TabIndex = 2;
+            this.lbl7.Text = "Vui lòng nhập địa chỉ";
+            // 
             // FSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -808,17 +808,17 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lbl6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -837,13 +837,13 @@
         private System.Windows.Forms.RadioButton rdoOther;
         private System.Windows.Forms.RadioButton rdoWoman;
         private System.Windows.Forms.RadioButton rdoMan;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbl8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl0;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbAddress;
     }

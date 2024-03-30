@@ -37,6 +37,7 @@
             this.rdoNu = new System.Windows.Forms.RadioButton();
             this.rdoNam = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbAddress = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -65,7 +66,6 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbAddress = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSave = new CustomButton.VBButton();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -217,6 +217,97 @@
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Address";
+            // 
+            // cbAddress
+            // 
+            this.cbAddress.AccessibleName = "";
+            this.cbAddress.AutoCompleteCustomSource.AddRange(new string[] {
+            "a"});
+            this.cbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.cbAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbAddress.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.cbAddress.BorderThickness = 0;
+            this.cbAddress.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.cbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbAddress.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbAddress.DropDownHeight = 150;
+            this.cbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAddress.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbAddress.IntegralHeight = false;
+            this.cbAddress.ItemHeight = 30;
+            this.cbAddress.Items.AddRange(new object[] {
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bạc Liêu",
+            "Bắc Kạn",
+            "Bắc Giang",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Dương",
+            "Bình Định",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cần Thơ ",
+            "Cao Bằng",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hồ Chí Minh",
+            "Hưng Yên",
+            "Khánh Hòa",
+            "Kiên Giang",
+            "Kon Tum",
+            "Lai Châu",
+            "Lâm Đồng",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Long An",
+            "Nam Định",
+            "Nghệ An",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ngãi",
+            "Quảng Ninh",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thừa Thiên Huế",
+            "Tiền Giang",
+            "Trà Vinh",
+            "Tuyên Quang",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.cbAddress.Location = new System.Drawing.Point(3, 18);
+            this.cbAddress.Name = "cbAddress";
+            this.cbAddress.Size = new System.Drawing.Size(308, 36);
+            this.cbAddress.StartIndex = 0;
+            this.cbAddress.TabIndex = 4;
+            this.cbAddress.UseWaitCursor = true;
             // 
             // groupBox4
             // 
@@ -379,7 +470,6 @@
             // 
             // pictureBoxUser
             // 
-            this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
             this.pictureBoxUser.ImageRotate = 0F;
             this.pictureBoxUser.Location = new System.Drawing.Point(24, 22);
             this.pictureBoxUser.Name = "pictureBoxUser";
@@ -622,97 +712,6 @@
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 21;
             this.txtPass.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // cbAddress
-            // 
-            this.cbAddress.AccessibleName = "";
-            this.cbAddress.AutoCompleteCustomSource.AddRange(new string[] {
-            "a"});
-            this.cbAddress.BackColor = System.Drawing.Color.Transparent;
-            this.cbAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cbAddress.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cbAddress.BorderThickness = 0;
-            this.cbAddress.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.cbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbAddress.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbAddress.DropDownHeight = 150;
-            this.cbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAddress.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbAddress.IntegralHeight = false;
-            this.cbAddress.ItemHeight = 30;
-            this.cbAddress.Items.AddRange(new object[] {
-            "An Giang",
-            "Bà Rịa - Vũng Tàu",
-            "Bạc Liêu",
-            "Bắc Kạn",
-            "Bắc Giang",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Dương",
-            "Bình Định",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cần Thơ ",
-            "Cao Bằng",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hồ Chí Minh",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
-            this.cbAddress.Location = new System.Drawing.Point(3, 18);
-            this.cbAddress.Name = "cbAddress";
-            this.cbAddress.Size = new System.Drawing.Size(308, 36);
-            this.cbAddress.StartIndex = 0;
-            this.cbAddress.TabIndex = 4;
-            this.cbAddress.UseWaitCursor = true;
             // 
             // btnSave
             // 

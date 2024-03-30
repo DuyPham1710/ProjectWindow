@@ -18,6 +18,7 @@ namespace ProjectWin_Demo_
         private Point lastForm;
         Product sp;
         int id;
+        string[] AnhCu = { };
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FPayment(Product sp, Decimal soLuongSP, int id)
         {
@@ -36,6 +37,15 @@ namespace ProjectWin_Demo_
             txtNgay.Text = date.Day.ToString();
             txtThang.Text = date.Month.ToString();
             txtNam.Text = date.Year.ToString();
+            if (sp.AnhHienTai != "")
+                AnhCu = sp.AnhHienTai.Split(',');
+            if (AnhCu.Length > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
+                pctSanPham.Image = bitmap;
+            }
+            else
+                pctSanPham.Image = null;
             try
             {
                 conn.Open();
@@ -48,9 +58,11 @@ namespace ProjectWin_Demo_
                     txtSoDT.Text = (string)reader["Phone"];
                     txtDiaChi.Text = (string)reader["Addr"];
                 }
+
             }
             catch { }
             finally { conn.Close(); }
+
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)

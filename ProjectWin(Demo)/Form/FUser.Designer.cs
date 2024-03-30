@@ -354,7 +354,7 @@
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(100, 23);
             this.lbName.TabIndex = 0;
-            this.lbName.Text = "Lamriver";
+            this.lbName.Text = "Lam";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnMenu

@@ -22,6 +22,16 @@ namespace ProjectWin_Demo_
         public FSignUp()
         {
             InitializeComponent();
+            lbl0.Hide();
+            lbl1.Hide();
+            lbl2.Hide();
+            lbl3.Hide();
+            lbl4.Hide();
+            lbl5.Hide();
+            lbl6.Hide();
+            lbl7.Hide();
+            lbl8.Hide();
+            lbl9.Hide();
         }
         private void btnSignUp_Click(object sender, EventArgs e)
         {

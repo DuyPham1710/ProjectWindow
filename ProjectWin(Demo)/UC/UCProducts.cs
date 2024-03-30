@@ -14,6 +14,8 @@ namespace ProjectWin_Demo_
     {
         Product sp = new Product();
         int id;
+        internal object btnXacNhan;
+        string[] AnhCu = { };
         public UCProducts(Product sp, int id)
         {
             InitializeComponent();
@@ -43,7 +45,15 @@ namespace ProjectWin_Demo_
             lblTenSP.Text = sp.TenSP;
             lblGiaSP.Text = sp.GiaHienTai + " đ";
             lblDiaChiShop.Text = sp.XuatXu;
-            
+            if (sp.AnhHienTai != "")
+                AnhCu = sp.AnhHienTai.Split(',');
+            if (AnhCu.Length > 0)
+            {
+                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
+                pctSanPham.Image = bitmap;
+            }
+            else
+                pctSanPham.Image = null;
         }
     }
 }
