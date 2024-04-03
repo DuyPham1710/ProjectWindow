@@ -53,23 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Form\FDiaChiNhanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FDiaChiNhanHang.Designer.cs">
       <DependentUpon>FDiaChiNhanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FOrder.cs">
+    <Compile Include="Form\FDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FOrder.Designer.cs">
-      <DependentUpon>FOrder.cs</DependentUpon>
+    <Compile Include="Form\FDonHang.Designer.cs">
+      <DependentUpon>FDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FAddProduct.cs">
+    <Compile Include="Form\FTuyChinhSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FAddProduct.Designer.cs">
-      <DependentUpon>FAddProduct.cs</DependentUpon>
+    <Compile Include="Form\FTuyChinhSP.Designer.cs">
+      <DependentUpon>FTuyChinhSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FAdmin.cs">
       <SubType>Form</SubType>
@@ -77,62 +78,62 @@
     <Compile Include="Form\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FComment.cs">
+    <Compile Include="Form\FDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FComment.Designer.cs">
-      <DependentUpon>FComment.cs</DependentUpon>
+    <Compile Include="Form\FDanhGia.Designer.cs">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FDetail.cs">
+    <Compile Include="Form\FChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FDetail.Designer.cs">
-      <DependentUpon>FDetail.cs</DependentUpon>
+    <Compile Include="Form\FChiTiet.Designer.cs">
+      <DependentUpon>FChiTiet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FPayment.cs">
+    <Compile Include="Form\FThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FPayment.Designer.cs">
-      <DependentUpon>FPayment.cs</DependentUpon>
+    <Compile Include="Form\FThanhToan.Designer.cs">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FSignUp.cs">
+    <Compile Include="Form\FDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FSignUp.Designer.cs">
-      <DependentUpon>FSignUp.cs</DependentUpon>
+    <Compile Include="Form\FDangKy.Designer.cs">
+      <DependentUpon>FDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form\FCart.cs">
+    <Compile Include="Form\FGioHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FCart.Designer.cs">
-      <DependentUpon>FCart.cs</DependentUpon>
+    <Compile Include="Form\FGioHang.Designer.cs">
+      <DependentUpon>FGioHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FHome.cs">
+    <Compile Include="Form\FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FHome.Designer.cs">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <Compile Include="Form\FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FInfo.cs">
+    <Compile Include="Form\FThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FInfo.Designer.cs">
-      <DependentUpon>FInfo.cs</DependentUpon>
+    <Compile Include="Form\FThongTin.Designer.cs">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FLogin.cs">
+    <Compile Include="Form\FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FLogin.Designer.cs">
-      <DependentUpon>FLogin.cs</DependentUpon>
+    <Compile Include="Form\FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FMyProduct.cs">
+    <Compile Include="Form\FSPCuaToi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FMyProduct.Designer.cs">
-      <DependentUpon>FMyProduct.cs</DependentUpon>
+    <Compile Include="Form\FSPCuaToi.Designer.cs">
+      <DependentUpon>FSPCuaToi.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\RJTextBox.cs">
       <SubType>UserControl</SubType>
@@ -140,164 +141,165 @@
     <Compile Include="Funtion\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FUser.cs">
+    <Compile Include="Form\FNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FUser.Designer.cs">
-      <DependentUpon>FUser.cs</DependentUpon>
+    <Compile Include="Form\FNguoiDung.Designer.cs">
+      <DependentUpon>FNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="SanPhamDao.cs" />
+    <Compile Include="Nguoi.cs" />
+    <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC\UCCart.cs">
+    <Compile Include="UC\UCGioHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCCart.Designer.cs">
-      <DependentUpon>UCCart.cs</DependentUpon>
+    <Compile Include="UC\UCGioHang.Designer.cs">
+      <DependentUpon>UCGioHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCComment.cs">
+    <Compile Include="UC\UCBinhLuan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCComment.Designer.cs">
-      <DependentUpon>UCComment.cs</DependentUpon>
+    <Compile Include="UC\UCBinhLuan.Designer.cs">
+      <DependentUpon>UCBinhLuan.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCHisProduct.cs">
+    <Compile Include="UC\UCSPDaMua.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCHisProduct.Designer.cs">
-      <DependentUpon>UCHisProduct.cs</DependentUpon>
+    <Compile Include="UC\UCSPDaMua.Designer.cs">
+      <DependentUpon>UCSPDaMua.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCHistory.cs">
+    <Compile Include="UC\UCLichSu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCHistory.Designer.cs">
-      <DependentUpon>UCHistory.cs</DependentUpon>
+    <Compile Include="UC\UCLichSu.Designer.cs">
+      <DependentUpon>UCLichSu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCInfo.cs">
+    <Compile Include="UC\UCThongTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCInfo.Designer.cs">
-      <DependentUpon>UCInfo.cs</DependentUpon>
+    <Compile Include="UC\UCThongTin.Designer.cs">
+      <DependentUpon>UCThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCMyProduct.cs">
+    <Compile Include="UC\UCSPCuaToi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCMyProduct.Designer.cs">
-      <DependentUpon>UCMyProduct.cs</DependentUpon>
+    <Compile Include="UC\UCSPCuaToi.Designer.cs">
+      <DependentUpon>UCSPCuaToi.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCProcessSales.cs">
+    <Compile Include="UC\UCQuyTrinhDonHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCProcessSales.Designer.cs">
-      <DependentUpon>UCProcessSales.cs</DependentUpon>
+    <Compile Include="UC\UCQuyTrinhDonHang.Designer.cs">
+      <DependentUpon>UCQuyTrinhDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCProducts.cs">
+    <Compile Include="UC\UCSanPham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCProducts.Designer.cs">
-      <DependentUpon>UCProducts.cs</DependentUpon>
+    <Compile Include="UC\UCSanPham.Designer.cs">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\UCPurchaseOrder.cs">
+    <Compile Include="UC\UCDonMua.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCPurchaseOrder.Designer.cs">
-      <DependentUpon>UCPurchaseOrder.cs</DependentUpon>
+    <Compile Include="UC\UCDonMua.Designer.cs">
+      <DependentUpon>UCDonMua.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCRevenue.cs">
+    <Compile Include="UC\UCDoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCRevenue.Designer.cs">
-      <DependentUpon>UCRevenue.cs</DependentUpon>
+    <Compile Include="UC\UCDoanhThu.Designer.cs">
+      <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCSalesOrder.cs">
+    <Compile Include="UC\UCDonBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCSalesOrder.Designer.cs">
-      <DependentUpon>UCSalesOrder.cs</DependentUpon>
+    <Compile Include="UC\UCDonBan.Designer.cs">
+      <DependentUpon>UCDonBan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\FDiaChiNhanHang.resx">
       <DependentUpon>FDiaChiNhanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FAddProduct.resx">
-      <DependentUpon>FAddProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FTuyChinhSP.resx">
+      <DependentUpon>FTuyChinhSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FCart.resx">
-      <DependentUpon>FCart.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FGioHang.resx">
+      <DependentUpon>FGioHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FComment.resx">
-      <DependentUpon>FComment.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FDanhGia.resx">
+      <DependentUpon>FDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FDetail.resx">
-      <DependentUpon>FDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FChiTiet.resx">
+      <DependentUpon>FChiTiet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FHome.resx">
-      <DependentUpon>FHome.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FTrangChu.resx">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FInfo.resx">
-      <DependentUpon>FInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FThongTin.resx">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FLogin.resx">
-      <DependentUpon>FLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FMyProduct.resx">
-      <DependentUpon>FMyProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FSPCuaToi.resx">
+      <DependentUpon>FSPCuaToi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FOrder.resx">
-      <DependentUpon>FOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FDonHang.resx">
+      <DependentUpon>FDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FPayment.resx">
-      <DependentUpon>FPayment.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FThanhToan.resx">
+      <DependentUpon>FThanhToan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FSignUp.resx">
-      <DependentUpon>FSignUp.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FDangKy.resx">
+      <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funtion\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FUser.resx">
-      <DependentUpon>FUser.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FNguoiDung.resx">
+      <DependentUpon>FNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCCart.resx">
-      <DependentUpon>UCCart.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCGioHang.resx">
+      <DependentUpon>UCGioHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCHisProduct.resx">
-      <DependentUpon>UCHisProduct.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCSPDaMua.resx">
+      <DependentUpon>UCSPDaMua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCHistory.resx">
-      <DependentUpon>UCHistory.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCLichSu.resx">
+      <DependentUpon>UCLichSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCInfo.resx">
-      <DependentUpon>UCInfo.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCThongTin.resx">
+      <DependentUpon>UCThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCMyProduct.resx">
-      <DependentUpon>UCMyProduct.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCSPCuaToi.resx">
+      <DependentUpon>UCSPCuaToi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCProcessSales.resx">
-      <DependentUpon>UCProcessSales.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCQuyTrinhDonHang.resx">
+      <DependentUpon>UCQuyTrinhDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCProducts.resx">
-      <DependentUpon>UCProducts.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCSanPham.resx">
+      <DependentUpon>UCSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCPurchaseOrder.resx">
-      <DependentUpon>UCPurchaseOrder.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCDonMua.resx">
+      <DependentUpon>UCDonMua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCRevenue.resx">
-      <DependentUpon>UCRevenue.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCDoanhThu.resx">
+      <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCSalesOrder.resx">
-      <DependentUpon>UCSalesOrder.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCDonBan.resx">
+      <DependentUpon>UCDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
