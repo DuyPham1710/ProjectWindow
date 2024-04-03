@@ -16,6 +16,8 @@ namespace ProjectWin_Demo_
         Product sp;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string[] AnhCu = { };
+        public event EventHandler BtnClick_edit;
+        public event EventHandler BtnClick_delete;
         public UCMyProduct(Product sp)
         {
             InitializeComponent();
@@ -53,12 +55,12 @@ namespace ProjectWin_Demo_
 
         private void pcbDelete_Click(object sender, EventArgs e)
         {
-        
+            BtnClick_delete?.Invoke(this, e);
             //DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa sản phẩm này", "Xác nhận xóa", MessageBoxButtons.YesNo);
             //if (result == DialogResult.Yes)
             //{
             //    // thực hiện xóa 
-                
+
             //    string SQL = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sp.MaSP);
             //    try
             //    {
@@ -83,6 +85,7 @@ namespace ProjectWin_Demo_
 
         private void pcbEdit_Click(object sender, EventArgs e)
         {
+            BtnClick_edit?.Invoke(this, e);
             //FAddProduct fedit = new FAddProduct(sp.IDChuSP, sp.MaSP, "Sua");
             //fedit.btnAddProduct.Hide();
             //fedit.btnUpdateProduct.Show();
