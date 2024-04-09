@@ -1,6 +1,6 @@
 ﻿namespace ProjectWin_Demo_
 {
-    partial class UCLichSu
+    partial class UCLichSuDaBan
     {
         /// <summary> 
         /// Required designer variable.
@@ -39,17 +39,16 @@
             this.fPanel.Location = new System.Drawing.Point(0, 0);
             this.fPanel.Name = "fPanel";
             this.fPanel.Size = new System.Drawing.Size(1450, 742);
-            this.fPanel.TabIndex = 0;
+            this.fPanel.TabIndex = 1;
             // 
-            // UCHistory
+            // UCLichSuDaBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
             this.Controls.Add(this.fPanel);
-            this.Name = "UCHistory";
+            this.Name = "UCLichSuDaBan";
             this.Size = new System.Drawing.Size(1450, 742);
-            this.Load += new System.EventHandler(this.UCHistory_Load);
+            this.Load += new System.EventHandler(this.UCLichSuDaBan_Load);
             this.ResumeLayout(false);
 
         }

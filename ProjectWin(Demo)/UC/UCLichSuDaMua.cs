@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
-    public partial class UCLichSu : UserControl
+    public partial class UCLichSuDaMua : UserControl
     {
         private int id;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         List<SanPham> sanPham = new List<SanPham>();
-        public UCLichSu(int id)
+        public UCLichSuDaMua(int id)
         {
             InitializeComponent();
             this.id = id;

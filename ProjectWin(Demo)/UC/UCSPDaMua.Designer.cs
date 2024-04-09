@@ -34,7 +34,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblGia = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,11 +42,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnMuaLai = new CustomButton.VBButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,16 +105,6 @@
             this.lblTenSP.Size = new System.Drawing.Size(251, 61);
             this.lblTenSP.TabIndex = 1;
             this.lblTenSP.Text = "Điện thoại Apple iPhone 15 Pro Max 256GB";
-            // 
-            // pctSanPham
-            // 
-            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
-            this.pctSanPham.Location = new System.Drawing.Point(3, 5);
-            this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(100, 100);
-            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctSanPham.TabIndex = 0;
-            this.pctSanPham.TabStop = false;
             // 
             // panel3
             // 
@@ -217,24 +207,34 @@
             this.guna2Elipse1.BorderRadius = 17;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // UCHisProduct
+            // pctSanPham
+            // 
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
+            this.pctSanPham.Location = new System.Drawing.Point(3, 5);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(100, 100);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctSanPham.TabIndex = 0;
+            this.pctSanPham.TabStop = false;
+            // 
+            // UCSPDaMua
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "UCHisProduct";
+            this.Name = "UCSPDaMua";
             this.Size = new System.Drawing.Size(357, 264);
             this.Load += new System.EventHandler(this.UCHisProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.ResumeLayout(false);
 
         }

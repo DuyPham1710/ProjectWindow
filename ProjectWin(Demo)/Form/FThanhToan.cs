@@ -33,6 +33,7 @@ namespace ProjectWin_Demo_
             txtTenSP.Text = sp.TenSP;
             txtPhanLoai.Text = sp.DanhMuc;
             txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
+            lblTongTien.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
             DateTime date = DateTime.Now; 
             txtNgay.Text = date.Day.ToString();
             txtThang.Text = date.Month.ToString();

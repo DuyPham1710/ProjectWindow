@@ -57,7 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnDatHang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtNam = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblMoney = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
             this.txtThang = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtNgay = new Guna.UI2.WinForms.Guna2TextBox();
@@ -409,7 +409,7 @@
             this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.btnDatHang);
             this.guna2GroupBox1.Controls.Add(this.txtNam);
-            this.guna2GroupBox1.Controls.Add(this.lblMoney);
+            this.guna2GroupBox1.Controls.Add(this.lblTongTien);
             this.guna2GroupBox1.Controls.Add(this.txtThang);
             this.guna2GroupBox1.Controls.Add(this.lblTotal);
             this.guna2GroupBox1.Controls.Add(this.txtNgay);
@@ -498,15 +498,15 @@
             this.txtNam.TabIndex = 34;
             this.txtNam.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // lblMoney
+            // lblTongTien
             // 
-            this.lblMoney.AutoSize = true;
-            this.lblMoney.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(304, 471);
-            this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(176, 25);
-            this.lblMoney.TabIndex = 19;
-            this.lblMoney.Text = "32 460 000 VND";
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.Location = new System.Drawing.Point(304, 471);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(176, 25);
+            this.lblTongTien.TabIndex = 19;
+            this.lblTongTien.Text = "32 460 000 VND";
             // 
             // txtThang
             // 
@@ -896,7 +896,7 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1352, 705);
             this.guna2Panel2.TabIndex = 19;
             // 
-            // FPayment
+            // FThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -911,7 +911,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "FPayment";
+            this.Name = "FThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FPayment";
             this.Load += new System.EventHandler(this.FPayment_Load);
@@ -974,7 +974,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label lblTotal;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private System.Windows.Forms.Label label2;

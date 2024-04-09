@@ -15,38 +15,39 @@ namespace ProjectWin_Demo_.UC
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private int id;
-
+        SanPhamDao sanPhamDao = new SanPhamDao();
+        List<SanPham> sanPham = new List<SanPham>();
         public UCDonMua(int id)
         {
             InitializeComponent();
             this.id = id;
         }
 
-        private List<SanPham> ThucThi(string trangThai)
-        {
-            List<SanPham> products = new List<SanPham>();  
-            try
-            {
-                conn.Open();
-                string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE DaMua.ID = {0} and DaMua.TrangThai = N'{1}'",id,trangThai);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    products.Add(sp);
-                }
+        //private List<SanPham> ThucThi(string trangThai)
+        //{
+        //    List<SanPham> products = new List<SanPham>();  
+        //    try
+        //    {
+        //        conn.Open();
+        //        string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE DaMua.ID = {0} and DaMua.TrangThai = N'{1}'",id,trangThai);
+        //        SqlCommand cmd = new SqlCommand(query, conn);
+        //        SqlDataReader reader = cmd.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+        //                (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+        //            products.Add(sp);
+        //        }
 
-            }
-            catch (Exception ex) { }
-            finally
-            {
-                conn.Close();
+        //    }
+        //    catch (Exception ex) { }
+        //    finally
+        //    {
+        //        conn.Close();
                 
-            }
-            return products;
-        }
+        //    }
+        //    return products;
+        //}
 
         private void UCPurchaseOrder_Load(object sender, EventArgs e)
         {
@@ -61,8 +62,8 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            List<SanPham> products = ThucThi("Chờ xác nhận");
-            foreach (SanPham item in products)
+            sanPham = sanPhamDao.DSDonMua(id, "Chờ xác nhận");
+            foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
@@ -77,8 +78,8 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            List<SanPham> products = ThucThi("Đang xử lý");
-            foreach (SanPham item in products)
+            sanPham = sanPhamDao.DSDonMua(id, "Đang xử lý");
+            foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
@@ -93,8 +94,8 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            List<SanPham> products = ThucThi("Đang giao");
-            foreach (SanPham item in products)
+            sanPham = sanPhamDao.DSDonMua(id, "Đang giao");
+            foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
@@ -109,10 +110,10 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.Gold;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            List<SanPham> products = ThucThi("Đã giao");
-            foreach (SanPham item in products)
+            sanPham = sanPhamDao.DSDonMua(id, "Đã giao");
+            foreach (SanPham item in sanPham)
             {
-                UCSanPham ucSP = new UCSanPham(item, id);
+                UCSPDaMua ucSP = new UCSPDaMua(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
@@ -125,8 +126,8 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            List<SanPham> products = ThucThi("Hoàn tiền/Hủy đơn");
-            foreach (SanPham item in products)
+            sanPham = sanPhamDao.DSDonMua(id, "Hoàn tiền/Hủy đơn");
+            foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
                 fPanelDonhang.Controls.Add(ucSP);

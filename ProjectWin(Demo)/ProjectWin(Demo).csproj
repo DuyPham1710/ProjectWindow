@@ -152,6 +152,18 @@
     <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\UCLichSuDaBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCLichSuDaBan.Designer.cs">
+      <DependentUpon>UCLichSuDaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSPDaBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSPDaBan.Designer.cs">
+      <DependentUpon>UCSPDaBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCGioHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,11 +182,11 @@
     <Compile Include="UC\UCSPDaMua.Designer.cs">
       <DependentUpon>UCSPDaMua.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCLichSu.cs">
+    <Compile Include="UC\UCLichSuDaMua.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCLichSu.Designer.cs">
-      <DependentUpon>UCLichSu.cs</DependentUpon>
+    <Compile Include="UC\UCLichSuDaMua.Designer.cs">
+      <DependentUpon>UCLichSuDaMua.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCThongTin.cs">
       <SubType>UserControl</SubType>
@@ -274,11 +286,17 @@
     <EmbeddedResource Include="UC\UCGioHang.resx">
       <DependentUpon>UCGioHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCLichSuDaBan.resx">
+      <DependentUpon>UCLichSuDaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSPDaBan.resx">
+      <DependentUpon>UCSPDaBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSPDaMua.resx">
       <DependentUpon>UCSPDaMua.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCLichSu.resx">
-      <DependentUpon>UCLichSu.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCLichSuDaMua.resx">
+      <DependentUpon>UCLichSuDaMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCThongTin.resx">
       <DependentUpon>UCThongTin.cs</DependentUpon>

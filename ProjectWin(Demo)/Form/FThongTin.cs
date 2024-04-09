@@ -133,13 +133,13 @@ namespace ProjectWin_Demo_
 
         private void ItemPurchaseHistoryToolStripMenuItem(object sender, EventArgs e)
         {
-            UCLichSu ucHistory = new UCLichSu(id);
+            UCLichSuDaMua ucHistory = new UCLichSuDaMua(id);
             addUserControl(ucHistory);
         }
 
         private void ItemSalesHistoryToolStripMenuItem(object sender, EventArgs e)
         {
-            UCLichSu ucHistory = new UCLichSu(id);
+            UCLichSuDaBan ucHistory = new UCLichSuDaBan(id);
             addUserControl(ucHistory);
         }
     }

@@ -154,6 +154,7 @@
             // 
             // fPanelDonhang
             // 
+            this.fPanelDonhang.AutoScroll = true;
             this.fPanelDonhang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fPanelDonhang.Location = new System.Drawing.Point(0, 60);
             this.fPanelDonhang.Name = "fPanelDonhang";

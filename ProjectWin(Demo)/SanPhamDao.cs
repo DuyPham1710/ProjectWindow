@@ -25,5 +25,20 @@ namespace ProjectWin_Demo_
             string sqlStr = string.Format("DELETE FROM SanPham WHERE MSP = '{0}'", sanPham.MaSP);
             DBConnection.thucThi(sqlStr);
         }
+        public List<SanPham> DSDonMua(int id, string trangThai)
+        {
+            string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE DaMua.ID = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
+            return DBConnection.LoadDSDonhang(query);
+        }
+        public List<SanPham> DSDonBan(int id, string trangThai)
+        {
+            string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
+            return DBConnection.LoadDSDonhang(query);
+        }
+        public void XacNhanDonhang(SanPham sanPham, string trangThai)
+        {
+            string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sanPham.MaSP);
+            DBConnection.thucThi(query);
+        }
     }
 }

@@ -585,7 +585,6 @@ D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDangKy.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FNguoiDung.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCGioHang.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDaMua.resources
-D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCLichSu.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCThongTin.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPCuaToi.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCQuyTrinhDonHang.resources
@@ -593,3 +592,6 @@ D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSanPham.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCDonMua.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCDoanhThu.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCDonBan.resources
+D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDaBan.resources
+D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCLichSuDaBan.resources
+D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCLichSuDaMua.resources
