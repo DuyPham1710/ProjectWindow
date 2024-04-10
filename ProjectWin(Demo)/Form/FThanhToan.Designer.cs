@@ -469,7 +469,7 @@
             this.btnDatHang.Size = new System.Drawing.Size(159, 45);
             this.btnDatHang.TabIndex = 35;
             this.btnDatHang.Text = "Đặt hàng";
-            this.btnDatHang.Click += new System.EventHandler(this.btnOrder_Click);
+            this.btnDatHang.Click += new System.EventHandler(this.btnDatHang_Click);
             // 
             // txtNam
             // 
@@ -914,7 +914,7 @@
             this.Name = "FThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FPayment";
-            this.Load += new System.EventHandler(this.FPayment_Load);
+            this.Load += new System.EventHandler(this.FThanhToan_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();

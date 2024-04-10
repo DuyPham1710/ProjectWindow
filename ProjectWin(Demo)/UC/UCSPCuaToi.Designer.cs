@@ -43,7 +43,7 @@
             // 
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaSP.Location = new System.Drawing.Point(108, 59);
+            this.lblMaSP.Location = new System.Drawing.Point(142, 91);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(67, 16);
             this.lblMaSP.TabIndex = 2;
@@ -54,7 +54,7 @@
             // lblTenSP
             // 
             this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(110, 12);
+            this.lblTenSP.Location = new System.Drawing.Point(141, 30);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(379, 44);
             this.lblTenSP.TabIndex = 3;
@@ -131,16 +131,16 @@
             // pctSanPham
             // 
             this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
-            this.pctSanPham.Location = new System.Drawing.Point(16, 3);
+            this.pctSanPham.Location = new System.Drawing.Point(24, 16);
             this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(84, 84);
+            this.pctSanPham.Size = new System.Drawing.Size(100, 100);
             this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctSanPham.TabIndex = 0;
             this.pctSanPham.TabStop = false;
             this.pctSanPham.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.pctSanPham.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             // 
-            // UCMyProduct
+            // UCSPCuaToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,8 +153,8 @@
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.pctSanPham);
-            this.Name = "UCMyProduct";
-            this.Size = new System.Drawing.Size(1435, 90);
+            this.Name = "UCSPCuaToi";
+            this.Size = new System.Drawing.Size(1430, 126);
             this.Load += new System.EventHandler(this.UCMyProduct_Load);
             this.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);

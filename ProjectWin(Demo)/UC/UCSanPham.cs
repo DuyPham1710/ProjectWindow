@@ -28,8 +28,8 @@ namespace ProjectWin_Demo_
         }
         private void UCProducts_Click(object sender, EventArgs e)
         {
-            FChiTiet fDetail = new FChiTiet(sp, id);
-            fDetail.ShowDialog();
+            FChiTiet fChiTiet = new FChiTiet(sp, id);
+            fChiTiet.ShowDialog();
         }
 
         private void pctProduct_MouseHover(object sender, EventArgs e)
@@ -58,6 +58,11 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
+        }
+
+        private void btnQuanTam_Click(object sender, EventArgs e)
+        {
+            btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
         }
     }
 }

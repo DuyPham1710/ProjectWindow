@@ -35,9 +35,20 @@
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemPurchaseHistory = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemSalesHistory = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelTieuDe = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTenNguoiMua = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.guna2ContextMenuStrip1.SuspendLayout();
+            this.panelTieuDe.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,28 +164,135 @@
             this.ItemSalesHistory.Text = "       Lịch sử bán hàng";
             this.ItemSalesHistory.Click += new System.EventHandler(this.ItemSalesHistoryToolStripMenuItem);
             // 
+            // panelTieuDe
+            // 
+            this.panelTieuDe.BackColor = System.Drawing.Color.Transparent;
+            this.panelTieuDe.Controls.Add(this.panel7);
+            this.panelTieuDe.Controls.Add(this.panel6);
+            this.panelTieuDe.Controls.Add(this.panel5);
+            this.panelTieuDe.Controls.Add(this.panel4);
+            this.panelTieuDe.Controls.Add(this.lblTenNguoiMua);
+            this.panelTieuDe.Controls.Add(this.label5);
+            this.panelTieuDe.Controls.Add(this.label4);
+            this.panelTieuDe.Controls.Add(this.label3);
+            this.panelTieuDe.Controls.Add(this.label2);
+            this.panelTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTieuDe.Location = new System.Drawing.Point(0, 50);
+            this.panelTieuDe.Name = "panelTieuDe";
+            this.panelTieuDe.Size = new System.Drawing.Size(1440, 46);
+            this.panelTieuDe.TabIndex = 8;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(1225, 6);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 35);
+            this.panel7.TabIndex = 13;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(1060, 6);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 35);
+            this.panel6.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(810, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 35);
+            this.panel5.TabIndex = 15;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(629, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 35);
+            this.panel4.TabIndex = 12;
+            // 
+            // lblTenNguoiMua
+            // 
+            this.lblTenNguoiMua.AutoSize = true;
+            this.lblTenNguoiMua.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNguoiMua.Location = new System.Drawing.Point(1312, 13);
+            this.lblTenNguoiMua.Name = "lblTenNguoiMua";
+            this.lblTenNguoiMua.Size = new System.Drawing.Size(90, 20);
+            this.lblTenNguoiMua.TabIndex = 11;
+            this.lblTenNguoiMua.Text = "Người mua";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1118, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 20);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Giá";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(898, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Số lượng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(688, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Phân loại";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Tên sản phẩm";
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(0, 50);
+            this.panelChildForm.Location = new System.Drawing.Point(0, 96);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1440, 742);
-            this.panelChildForm.TabIndex = 1;
+            this.panelChildForm.Size = new System.Drawing.Size(1440, 696);
+            this.panelChildForm.TabIndex = 9;
             // 
-            // FInfo
+            // FThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 792);
             this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panelTieuDe);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FInfo";
+            this.Name = "FThongTin";
             this.Text = "FInfo";
             this.Load += new System.EventHandler(this.FInfo_Load);
             this.panel1.ResumeLayout(false);
             this.guna2ContextMenuStrip1.ResumeLayout(false);
+            this.panelTieuDe.ResumeLayout(false);
+            this.panelTieuDe.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,12 +300,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelChildForm;
         private Guna.UI2.WinForms.Guna2GradientButton btnInfo;
         private Guna.UI2.WinForms.Guna2GradientButton btnHistory;
         private Guna.UI2.WinForms.Guna2GradientButton btnRevenue;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ItemPurchaseHistory;
         private System.Windows.Forms.ToolStripMenuItem ItemSalesHistory;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelTieuDe;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblTenNguoiMua;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }

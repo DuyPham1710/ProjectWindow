@@ -1,18 +1,185 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjectWin_Demo_
 {
     internal class DBConnection
     {
-        static SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        private int id;
+        public DBConnection(int id)
+        {
+            this.id = id;
+        }
+        public MemoryStream LoadAvt(string query)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(query, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    byte[] imageBytes = (byte[])reader["Avarta"];
+                    MemoryStream ms = new MemoryStream(imageBytes);
+                    return ms;
+                    //pcbAvt.Image = Image.FromStream(ms);
+                }
+            }
+            catch (Exception ex)
+            {
 
-        public static List<SanPham> LoadDSDonhang(string query)
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+
+        }
+        public List<T> LoadSanPham<T>(string query)
+        {
+            List<T> SanPham = new List<T>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    //SanPham.Add(sp);
+                    if (typeof(T) == typeof(UCSanPham))
+                    {
+                        UCSanPham ucSP = new UCSanPham(sp, id);
+                        SanPham.Add((T)(object)ucSP);
+                    }     
+                    else if (typeof(T) == typeof(UCSPCuaToi))
+                    {
+                        UCSPCuaToi ucSP = new UCSPCuaToi(sp);
+                        SanPham.Add((T)(object)ucSP);
+                    }
+                    else if (typeof(T) == typeof(UCSPDaBan))
+                    {
+                        UCSPDaBan ucSP = new UCSPDaBan(sp, id);
+                        SanPham.Add((T)(object)ucSP);
+                    }
+                    else if (typeof(T) == typeof(UCGioHang))
+                    {
+                        int soLuong = (int)reader["SLGioHang"];
+                        UCGioHang ucSP = new UCGioHang(sp, id, soLuong);
+                        SanPham.Add((T)(object)ucSP);
+                    }
+                }
+                
+
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+            }
+            return SanPham;
+        }
+        //public List<UCSPCuaToi> LoadSanPhamCuaToi(string query)
+        //{
+        //    List<UCSPCuaToi> SanPham = new List<UCSPCuaToi>();
+        //    try
+        //    {
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand(query, conn);
+        //        SqlDataReader reader = cmd.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+        //                (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+        //            //SanPham.Add(sp);
+        //            UCSPCuaToi ucSP = new UCSPCuaToi(sp);
+        //            SanPham.Add(ucSP);
+        //            //fPanelSanPham.Controls.Add(ucSP);
+
+        //        }
+        //        return SanPham;
+
+        //    }
+        //    catch (Exception ex) { }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //    return null;
+        //}
+        public List<T> timKiemSP<T>(string sqlQuery, string searchText)
+        {
+            List<T> SanPham = new List<T>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+                cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    //SanPham.Add(sp);
+
+                    if (typeof(T) == typeof(UCSanPham))
+                    {
+                        UCSanPham ucSP = new UCSanPham(sp, id);
+                        SanPham.Add((T)(object)ucSP);
+                    }
+                    else if (typeof(T) == typeof(UCSPCuaToi))
+                    {
+                        UCSPCuaToi ucSP = new UCSPCuaToi(sp);
+                        SanPham.Add((T)(object)ucSP);
+                    }
+                    //UCSanPham ucSP = new UCSanPham(sp, id);
+                    //SanPham.Add(ucSP);
+                }
+                
+            }
+            catch (Exception ex) { }
+            finally { conn.Close(); }
+            return SanPham;
+        }
+        //public List<UCSanPham> LocTheoDanhMucSP(string sqlQuery)
+        //{
+        //    List<UCSanPham> SanPham = new List<UCSanPham>();
+        //    try
+        //    {
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+        //        SqlDataReader reader = cmd.ExecuteReader();
+        //        while (reader.Read())
+        //        {
+        //            SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+        //                (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+        //            //SanPham.Add(sp);
+        //            UCSanPham ucSP = new UCSanPham(sp, id);
+        //            SanPham.Add(ucSP);
+        //        }
+        //        return SanPham;
+
+        //    }
+        //    catch (Exception ex) { }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //    return null;
+        //}
+        public List<SanPham> LoadDSDonhang(string query)
         {
             List<SanPham> sanPham = new List<SanPham>();
             try
@@ -26,7 +193,6 @@ namespace ProjectWin_Demo_
                         (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
                     sanPham.Add(sp);
                 }
-
             }
             catch (Exception ex) { }
             finally
@@ -37,7 +203,7 @@ namespace ProjectWin_Demo_
             return sanPham;
         }
 
-        public static void thucThi(string SQL)
+        public void thucThi(string SQL)
         {
             try
             {
@@ -58,5 +224,25 @@ namespace ProjectWin_Demo_
                 conn.Close();
             }
         }
+        public int demDB(string sql)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                int count = (int)cmd.ExecuteScalar();
+                return count;
+            }
+            catch
+            {
+                return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+       
     }
 }

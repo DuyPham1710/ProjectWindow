@@ -32,6 +32,7 @@ namespace ProjectWin_Demo_
             guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
             ucInfo = new UCThongTin(id);
             ucInfo.btnSave.Click += btnSave_Click;
+            panelTieuDe.Hide();
             this.id = id;
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -86,6 +87,7 @@ namespace ProjectWin_Demo_
         }
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            panelTieuDe.Hide();
             btnInfo.ForeColor = Color.MediumSlateBlue;
             btnInfo.CustomBorderColor = Color.MediumSlateBlue;
             btnHistory.ForeColor = Color.Black;
@@ -98,6 +100,7 @@ namespace ProjectWin_Demo_
 
         private void btnHistory_Click(object sender, EventArgs e)
         {
+            panelTieuDe.Hide();
             btnInfo.ForeColor = Color.Black;
             btnInfo.CustomBorderColor = Color.White;
             btnHistory.ForeColor = Color.MediumSlateBlue;
@@ -108,6 +111,7 @@ namespace ProjectWin_Demo_
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
+            panelTieuDe.Hide();
             btnInfo.ForeColor = Color.Black;
             btnInfo.CustomBorderColor = Color.White;
             btnHistory.ForeColor = Color.Black;
@@ -133,12 +137,14 @@ namespace ProjectWin_Demo_
 
         private void ItemPurchaseHistoryToolStripMenuItem(object sender, EventArgs e)
         {
+            panelTieuDe.Hide();
             UCLichSuDaMua ucHistory = new UCLichSuDaMua(id);
             addUserControl(ucHistory);
         }
 
         private void ItemSalesHistoryToolStripMenuItem(object sender, EventArgs e)
         {
+            panelTieuDe.Show();
             UCLichSuDaBan ucHistory = new UCLichSuDaBan(id);
             addUserControl(ucHistory);
         }

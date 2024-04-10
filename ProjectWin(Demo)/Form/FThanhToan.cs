@@ -20,21 +20,22 @@ namespace ProjectWin_Demo_
         int id;
         string[] AnhCu = { };
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        SanPhamDao SPDao;
         public FThanhToan(SanPham sp, Decimal soLuongSP, int id)
         {
             InitializeComponent();
             this.sp = sp;
             nudSoLuong.Value = soLuongSP;
             this.id = id;
+            SPDao = new SanPhamDao(id);
         }
-
-        private void FPayment_Load(object sender, EventArgs e)
+        private void FThanhToan_Load(object sender, EventArgs e)
         {
             txtTenSP.Text = sp.TenSP;
             txtPhanLoai.Text = sp.DanhMuc;
             txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
             lblTongTien.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
-            DateTime date = DateTime.Now; 
+            DateTime date = DateTime.Now;
             txtNgay.Text = date.Day.ToString();
             txtThang.Text = date.Month.ToString();
             txtNam.Text = date.Year.ToString();
@@ -63,7 +64,6 @@ namespace ProjectWin_Demo_
             }
             catch { }
             finally { conn.Close(); }
-
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)
@@ -100,24 +100,26 @@ namespace ProjectWin_Demo_
             }
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void btnDatHang_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conn.Open();
-                string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai) VALUES ('{0}', '{1}', N'{2}')",
-                        id, sp.MaSP, "Chờ xác nhận");
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Đặt hàng thành công", "Thông báo");
-                    this.Close();
-                }
-            }
-            catch { }
-            finally { conn.Close(); }
-            
+            SPDao.Update(sp, nudSoLuong.Value);
+            this.Close();
+            //try
+            //{
+            //    conn.Open();
+            //    string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai) VALUES ('{0}', '{1}', N'{2}')",
+            //            id, sp.MaSP, "Chờ xác nhận");
+            //    string query = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - nudSoLuong.Value).ToString(), sp.MaSP);
+            //    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+
+            //    if (cmd.ExecuteNonQuery() > 0)
+            //    {
+            //        MessageBox.Show("Đặt hàng thành công", "Thông báo");
+            //        this.Close();
+            //    }
+            //}
+            //catch (Exception ex){ }
+            //finally { conn.Close(); }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -162,5 +164,7 @@ namespace ProjectWin_Demo_
             FDiaChiNhanHang fDCNH = new FDiaChiNhanHang();
             fDCNH.ShowDialog();
         }
+
+      
     }
 }

@@ -15,9 +15,9 @@ namespace ProjectWin_Demo_
 {
     public partial class FTrangChu : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        List<SanPham> SanPham = new List<SanPham>();
+        List<SanPham> SanPh = new List<SanPham>();
         private int id;
+        SanPhamDao SPDao;
         public FTrangChu(int id)
         {
             InitializeComponent();
@@ -26,32 +26,15 @@ namespace ProjectWin_Demo_
             btnSort.MouseDown += btnSort_MouseDown;
             ContextMenuStripSort.LostFocus += btnSort_LostFocus;
             this.id = id;
+            SPDao = new SanPhamDao(id);
         }
-
-        private void FHome_Load(object sender, EventArgs e)
+        private void FTrangChu_Load(object sender, EventArgs e)
         {
             fPanelSanPham.Controls.Clear();
-            try
+            List<UCSanPham> sanPham = SPDao.LoadSanPham<UCSanPham>("<>");
+            foreach (UCSanPham sp in sanPham)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0}", id);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"], 
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    SanPham.Add(sp);
-                    UCSanPham ucSP = new UCSanPham(sp, id);
-                    fPanelSanPham.Controls.Add(ucSP);
-
-                }
-
-            }
-            catch (Exception ex) { }
-            finally
-            {
-                conn.Close();
+                fPanelSanPham.Controls.Add(sp);
             }
         }
 
@@ -80,7 +63,7 @@ namespace ProjectWin_Demo_
         {
             if (txtTimKiem.Text == "")
             {
-                FHome_Load(sender, e);
+                FTrangChu_Load(sender, e);
             }
             else
             {
@@ -89,29 +72,12 @@ namespace ProjectWin_Demo_
         }
         private void SearchAndDisplay(string searchText)
         {
-            try
+            fPanelSanPham.Controls.Clear();
+            List<UCSanPham> sanPham = SPDao.timKiem<UCSanPham>(searchText, "<>");
+            foreach (UCSanPham sp in sanPham)
             {
-                conn.Open();
-
-                string sqlQuery = "SELECT * FROM SanPham WHERE TenSP LIKE @searchText";
-                SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-                cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                fPanelSanPham.Controls.Clear();
-
-                while (reader.Read())
-                {
-                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    SanPham.Add(sp);
-                    UCSanPham ucSP = new UCSanPham(sp, id);
-                    fPanelSanPham.Controls.Add(ucSP);
-                }
+                fPanelSanPham.Controls.Add(sp);
             }
-            catch (Exception ex) { }
-            finally { conn.Close(); }
-
         }
 
         private void điệnTửToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,33 +101,16 @@ namespace ProjectWin_Demo_
         private void LocTheoDanhMucSP(string danhMuc)
         {
             fPanelSanPham.Controls.Clear();
-            try
+            List<UCSanPham> sanPham = SPDao.LocTheoDanhMuc<UCSanPham>(danhMuc);
+            foreach (UCSanPham sp in sanPham)
             {
-                conn.Open();
-                string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    SanPham.Add(sp);
-                    UCSanPham ucSP = new UCSanPham(sp, id);
-                    fPanelSanPham.Controls.Add(ucSP);
-
-                }
-
-            }
-            catch (Exception ex) { }
-            finally
-            {
-                conn.Close();
+                fPanelSanPham.Controls.Add(sp);
             }
         }
 
         private void btnAllProduct_Click(object sender, EventArgs e)
         {
-            FHome_Load(sender, e);
+            FTrangChu_Load(sender, e);
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
@@ -188,5 +137,7 @@ namespace ProjectWin_Demo_
         {
             LocTheoDanhMucSP("Sách");
         }
+
+      
     }
 }

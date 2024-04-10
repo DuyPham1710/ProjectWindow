@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arrow-right-from-bracket-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow-right-from-bracket-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="find" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +136,8 @@
   <data name="thongTin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thongTin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Double-J-Design-Ravenna-3d-Credit-Card.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Double-J-Design-Ravenna-3d-Credit-Card.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DanhMucSanPham" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DanhMucSanPham.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +148,8 @@
   <data name="facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Iconsmind-Outline-Coins.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconsmind-Outline-Coins.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-user-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-user-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,17 +157,23 @@
   <data name="Trangchu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trangchu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Recv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Recv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Elegantthemes-Beautiful-Flat-One-Color-Magnifying-glass.24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Elegantthemes-Beautiful-Flat-One-Color-Magnifying-glass.24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-user-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-user-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lich" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lich.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Paomedia-Small-N-Flat-Star.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paomedia-Small-N-Flat-Star.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconoir-Team-Iconoir-Settings.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconoir-Team-Iconoir-Settings.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +184,8 @@
   <data name="trash-can-regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash-can-regular.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow-right-from-bracket-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow-right-from-bracket-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Iconsmind-Outline-Coins.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconsmind-Outline-Coins.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,9 +199,6 @@
   <data name="z5217272932631_72c73dc409773a73013edce5ca74c052" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z5217272932631_72c73dc409773a73013edce5ca74c052.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Custom-Icon-Design-Pretty-Office-11-Cash.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Custom-Icon-Design-Pretty-Office-11-Cash.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Done" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Done.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -201,9 +207,6 @@
   </data>
   <data name="Iconsmind-Outline-Home-2-2.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconsmind-Outline-Home-2-2.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-plus-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-plus-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="facebook-messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook-messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,17 +220,14 @@
   <data name="cart-shopping-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cart-shopping-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Custom-Icon-Design-Pretty-Office-11-Cash.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Pretty-Office-11-Cash.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iphone-15-pro-max-gold-thumbnew-200x200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iphone-15-pro-max-gold-thumbnew-200x200.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xuatXu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xuatXu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-picture-image_1048684" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-picture-image_1048684.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Graphicloads-100-Flat-Cart-add.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Graphicloads-100-Flat-Cart-add.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,11 +244,11 @@
   <data name="icons8-password-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-password-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-plus-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-plus-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-user-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-user-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Double-J-Design-Ravenna-3d-Credit-Card.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Double-J-Design-Ravenna-3d-Credit-Card.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tinhTrang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tinhTrang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,11 +283,14 @@
   <data name="icons8-product-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-product-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apple.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="elt_warranty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\elt_warranty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Iconoir-Team-Iconoir-Settings.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconoir-Team-Iconoir-Settings.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Recv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-picture-image_1048684" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-picture-image_1048684.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,7 +298,7 @@
   <data name="TrangChu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrangChu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="elt_warranty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\elt_warranty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icons8-Ios7-Gaming-Hearts.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons8-Ios7-Gaming-Hearts.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

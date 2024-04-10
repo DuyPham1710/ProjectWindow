@@ -17,11 +17,12 @@ namespace ProjectWin_Demo_.UC
         private int id;
         List<SanPham> sanPham = new List<SanPham>();
         string trangThai;
-        SanPhamDao sanPhamDao = new SanPhamDao();
+        SanPhamDao sanPhamDao;
         public UCDonBan(int id)
         {
             InitializeComponent();
             this.id = id;
+            sanPhamDao = new SanPhamDao(id);
             pTieuDe.Hide();
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan(id, "Chờ xác nhận");
+            sanPham = sanPhamDao.DSDonBan("Chờ xác nhận");
             trangThai = "Đang xử lý";
             foreach (SanPham item in sanPham)
             {
@@ -111,7 +112,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan(id, "Đang xử lý");
+            sanPham = sanPhamDao.DSDonBan("Đang xử lý");
             trangThai = "Đang giao";
             foreach (SanPham item in sanPham)
             {
@@ -130,7 +131,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan(id, "Đang giao");
+            sanPham = sanPhamDao.DSDonBan("Đang giao");
             trangThai = "Đã giao";
             foreach (SanPham item in sanPham)
             {
@@ -149,7 +150,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.Gold;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan(id, "Đã giao");
+            sanPham = sanPhamDao.DSDonBan("Đã giao");
             trangThai = "Hoàn tiền/Hủy đơn";
             foreach (SanPham item in sanPham)
             {
@@ -166,7 +167,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan(id, "Hoàn tiền/Hủy đơn");
+            sanPham = sanPhamDao.DSDonBan("Hoàn tiền/Hủy đơn");
             trangThai = "Hoàn tiền/Hủy đơn";
             foreach (SanPham item in sanPham)
             {

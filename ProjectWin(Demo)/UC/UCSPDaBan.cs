@@ -28,7 +28,7 @@ namespace ProjectWin_Demo_
         {
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
-            lblSoLuongSP.Text = "1 sản phẩm";
+            lblSoLuongSP.Text = "1";
             lblPhanLoai.Text = sp.DanhMuc;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');

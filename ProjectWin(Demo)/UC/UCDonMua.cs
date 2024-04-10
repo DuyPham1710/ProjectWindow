@@ -15,12 +15,13 @@ namespace ProjectWin_Demo_.UC
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private int id;
-        SanPhamDao sanPhamDao = new SanPhamDao();
+        SanPhamDao sanPhamDao;
         List<SanPham> sanPham = new List<SanPham>();
         public UCDonMua(int id)
         {
             InitializeComponent();
             this.id = id;
+            sanPhamDao = new SanPhamDao(id);
         }
 
         //private List<SanPham> ThucThi(string trangThai)
@@ -62,7 +63,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua(id, "Chờ xác nhận");
+            sanPham = sanPhamDao.DSDonMua("Chờ xác nhận");
             foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
@@ -78,7 +79,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua(id, "Đang xử lý");
+            sanPham = sanPhamDao.DSDonMua("Đang xử lý");
             foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
@@ -94,7 +95,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua(id, "Đang giao");
+            sanPham = sanPhamDao.DSDonMua("Đang giao");
             foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);
@@ -110,7 +111,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.Gold;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua(id, "Đã giao");
+            sanPham = sanPhamDao.DSDonMua("Đã giao");
             foreach (SanPham item in sanPham)
             {
                 UCSPDaMua ucSP = new UCSPDaMua(item, id);
@@ -126,7 +127,7 @@ namespace ProjectWin_Demo_.UC
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua(id, "Hoàn tiền/Hủy đơn");
+            sanPham = sanPhamDao.DSDonMua("Hoàn tiền/Hủy đơn");
             foreach (SanPham item in sanPham)
             {
                 UCSanPham ucSP = new UCSanPham(item, id);

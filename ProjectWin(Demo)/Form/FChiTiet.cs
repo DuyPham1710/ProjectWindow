@@ -25,11 +25,13 @@ namespace ProjectWin_Demo_
         string[] AnhMoi = { };
         int curr = 0;
         int id;
+        SanPhamDao SPDao;
         public FChiTiet(SanPham sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
             this.id = id;
+            SPDao = new SanPhamDao(id);
         }
       
         private void FDetail_Load(object sender, EventArgs e)
@@ -91,14 +93,15 @@ namespace ProjectWin_Demo_
         {
             FThanhToan fPayment = new FThanhToan(sp, nudSoLuong.Value, id);
             fPayment.ShowDialog();
+            FDetail_Load(sender, e);
+            //SPDao.Update(sp, nudSoLuong.Value);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
+            SPDao.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
+            //MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
         }
-
-       
 
         private void btnClose_Click(object sender, EventArgs e)
         {

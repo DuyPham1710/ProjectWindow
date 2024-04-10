@@ -28,7 +28,7 @@ namespace ProjectWin_Demo_
             sanPham = ThucThi();
             foreach (SanPham item in sanPham)
             {
-                UCSPDaMua ucSP = new UCSPDaMua(item, id);
+                UCSPDaBan ucSP = new UCSPDaBan(item, id);
                 fPanel.Controls.Add(ucSP);
             }
         }

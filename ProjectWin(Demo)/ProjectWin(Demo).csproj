@@ -147,11 +147,18 @@
     <Compile Include="Form\FNguoiDung.Designer.cs">
       <DependentUpon>FNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="NguoiDAO.cs" />
     <Compile Include="SanPhamDao.cs" />
     <Compile Include="Nguoi.cs" />
     <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCSanPhamMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSanPhamMua.Designer.cs">
+      <DependentUpon>UCSanPhamMua.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCLichSuDaBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -282,6 +289,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSanPhamMua.resx">
+      <DependentUpon>UCSanPhamMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCGioHang.resx">
       <DependentUpon>UCGioHang.cs</DependentUpon>
@@ -517,6 +527,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\elt_warranty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Gaming-Hearts.48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

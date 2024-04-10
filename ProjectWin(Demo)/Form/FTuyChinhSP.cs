@@ -26,7 +26,7 @@ namespace ProjectWin_Demo_
         List<string> AnhCu = new List<string>();
         List<string> AnhMoi = new List<string>();
         int curr = 0;
-        SanPhamDao nguoiDao = new SanPhamDao();
+        SanPhamDao SPDao;
         public FTuyChinhSP(int id, string ma, string thaoTac)
         {
             InitializeComponent();
@@ -34,6 +34,7 @@ namespace ProjectWin_Demo_
             this.ma = ma;
             this.id = id;
             this.thaoTac = thaoTac;
+            SPDao = new SanPhamDao(id);
         }
         private void FAddProduct_Load(object sender, EventArgs e)
         {
@@ -133,7 +134,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham product = new SanPham(txtMaSP.Texts, id, txtTenSP.Texts, cbBoxDanhMuc.Text, txtGiaBanDau.Texts, txtGiaHienTai.Texts,
                     DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhMoi), string.Join(",", AnhCu));
-                nguoiDao.Add(product);
+                SPDao.Add(product);
                 this.Close();             
             }
             
@@ -146,7 +147,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham product = new SanPham(txtMaSP.Texts, id, txtTenSP.Texts, cbBoxDanhMuc.Text, txtGiaBanDau.Texts, txtGiaHienTai.Texts,
                 DtpNgayMua.Value, cbBoxSoLuong.Value.ToString(), txtXuatXu.Texts, cbBoxBaoHanh.Text, txtTinhTrang.Texts, rtbMoTaTinhTrang.Text, rtbMoTaSP.Text, string.Join(",", AnhMoi), string.Join(",", AnhCu));
-                nguoiDao.Update(product);
+                SPDao.Update(product);
                 this.Close();
             }
         }

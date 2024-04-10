@@ -32,7 +32,7 @@ namespace ProjectWin_Demo_
             btnDonMua.ForeColor = Color.MediumSlateBlue;
             btnDonBan.CustomBorderColor = Color.White;
             btnDonBan.ForeColor = Color.Black;
-           UCDonMua ucDonMua = new UCDonMua(id);
+            UCDonMua ucDonMua = new UCDonMua(id);
             addUserControl(ucDonMua);
         }
 

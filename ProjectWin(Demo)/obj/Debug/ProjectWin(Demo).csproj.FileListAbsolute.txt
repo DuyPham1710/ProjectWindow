@@ -595,3 +595,4 @@ D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCDonBan.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDaBan.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCLichSuDaBan.resources
 D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCLichSuDaMua.resources
+D:\project_win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSanPhamMua.resources

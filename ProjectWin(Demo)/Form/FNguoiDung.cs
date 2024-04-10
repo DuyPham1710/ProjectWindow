@@ -26,7 +26,7 @@ namespace ProjectWin_Demo_
         Timer shrinkTimer = new Timer();
         int originalWidth;
         int id;
-        string connectionString = @"Data Source=(localdb)\mssqllocaldb;Initial Catalog=TraoDoiHang;Integrated Security=True;Encrypt=True";
+
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FNguoiDung(int id)
         {
@@ -135,7 +135,7 @@ namespace ProjectWin_Demo_
 
         private void pictureBoxCart_Click(object sender, EventArgs e)
         {
-            openChildForm(new FGioHang());
+            openChildForm(new FGioHang(id));
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
@@ -210,7 +210,6 @@ namespace ProjectWin_Demo_
             btnDonHang.CustomBorderColor = Color.Purple;
 
             openChildForm(new FDonHang(id));
-
         }
 
     
@@ -233,13 +232,11 @@ namespace ProjectWin_Demo_
             }
         }
 
-        private void FUser_Load(object sender, EventArgs e,byte v)
-        {
-            
-        }
-
         private void FUser_Load(object sender, EventArgs e)
         {
+            //NguoiDAO nguoiDAO = new NguoiDAO(id);
+            //MemoryStream ms = nguoiDAO.LoadAvt();
+            //pcbAvt.Image = Image.FromStream(ms);
             try
             {
                 string query = "SELECT  * FROM Person WHERE id = " + id.ToString();
@@ -265,7 +262,7 @@ namespace ProjectWin_Demo_
             {
                 conn.Close();
             }
-            
+
         }
     }
 }

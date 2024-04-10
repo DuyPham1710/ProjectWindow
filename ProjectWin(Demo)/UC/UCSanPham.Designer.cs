@@ -32,16 +32,17 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.lblDiaChiShop = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblGiaSP = new System.Windows.Forms.Label();
+            this.lblTenSP = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnQuanTam = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblGiaSP = new System.Windows.Forms.Label();
-            this.lblTenSP = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pctSanPham = new System.Windows.Forms.PictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Khaki;
             this.guna2CustomGradientPanel1.BorderThickness = 4;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnQuanTam);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblDiaChiShop);
             this.guna2CustomGradientPanel1.Controls.Add(this.panel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblGiaSP);
@@ -104,6 +106,71 @@
             this.panel1.Click += new System.EventHandler(this.UCProducts_Click);
             this.panel1.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.panel1.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // lblGiaSP
+            // 
+            this.lblGiaSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblGiaSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaSP.ForeColor = System.Drawing.Color.Crimson;
+            this.lblGiaSP.Location = new System.Drawing.Point(8, 221);
+            this.lblGiaSP.Name = "lblGiaSP";
+            this.lblGiaSP.Size = new System.Drawing.Size(156, 32);
+            this.lblGiaSP.TabIndex = 8;
+            this.lblGiaSP.Text = "10.110.000đ";
+            this.lblGiaSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGiaSP.Click += new System.EventHandler(this.UCProducts_Click);
+            this.lblGiaSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.lblGiaSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // lblTenSP
+            // 
+            this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
+            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Location = new System.Drawing.Point(9, 177);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(203, 44);
+            this.lblTenSP.TabIndex = 7;
+            this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
+            this.lblTenSP.Click += new System.EventHandler(this.UCProducts_Click);
+            this.lblTenSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.lblTenSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(132, 265);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Đã bán 100";
+            this.label3.Click += new System.EventHandler(this.UCProducts_Click);
+            this.label3.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
+            this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 14;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnQuanTam
+            // 
+            this.btnQuanTam.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuanTam.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnQuanTam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanTam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanTam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuanTam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuanTam.FillColor = System.Drawing.Color.Transparent;
+            this.btnQuanTam.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            this.btnQuanTam.ForeColor = System.Drawing.Color.White;
+            this.btnQuanTam.Image = global::ProjectWin_Demo_.Properties.Resources.Icons8_Ios7_Gaming_Hearts_48;
+            this.btnQuanTam.Location = new System.Drawing.Point(182, 3);
+            this.btnQuanTam.Name = "btnQuanTam";
+            this.btnQuanTam.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnQuanTam.Size = new System.Drawing.Size(36, 36);
+            this.btnQuanTam.TabIndex = 12;
+            this.btnQuanTam.Click += new System.EventHandler(this.btnQuanTam_Click);
             // 
             // pictureBox6
             // 
@@ -155,47 +222,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // lblGiaSP
-            // 
-            this.lblGiaSP.BackColor = System.Drawing.Color.Transparent;
-            this.lblGiaSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaSP.ForeColor = System.Drawing.Color.Crimson;
-            this.lblGiaSP.Location = new System.Drawing.Point(8, 221);
-            this.lblGiaSP.Name = "lblGiaSP";
-            this.lblGiaSP.Size = new System.Drawing.Size(156, 32);
-            this.lblGiaSP.TabIndex = 8;
-            this.lblGiaSP.Text = "10.110.000đ";
-            this.lblGiaSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGiaSP.Click += new System.EventHandler(this.UCProducts_Click);
-            this.lblGiaSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.lblGiaSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
-            // lblTenSP
-            // 
-            this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
-            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(9, 177);
-            this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(203, 44);
-            this.lblTenSP.TabIndex = 7;
-            this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
-            this.lblTenSP.Click += new System.EventHandler(this.UCProducts_Click);
-            this.lblTenSP.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.lblTenSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(132, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Đã bán 100";
-            this.label3.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label3.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
             // pctSanPham
             // 
             this.pctSanPham.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,18 +236,13 @@
             this.pctSanPham.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.pctSanPham.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 14;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // UCProducts
+            // UCSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Name = "UCProducts";
+            this.Name = "UCSanPham";
             this.Size = new System.Drawing.Size(229, 320);
             this.Load += new System.EventHandler(this.UCProducts_Load);
             this.Click += new System.EventHandler(this.UCProducts_Click);
@@ -255,5 +276,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pctSanPham;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnQuanTam;
     }
 }
