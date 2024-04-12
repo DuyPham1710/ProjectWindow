@@ -53,13 +53,37 @@ namespace ProjectWin_Demo_
             string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
             return dBConnection.LoadSanPham<T>(sqlQuery);
         }
-
+        public List<UCBinhLuan> LoadDanhGia()
+        {
+            string query = string.Format("Select ID, FullName, Avarta, BinhLuan, SoSao from Person, DanhGia, SanPham Where Person.ID = DanhGia.IDNguoiMua and DanhGia.MSP = SanPham.MSP and IDNguoiMua = {0}", id);
+            return dBConnection.LoadDanhGiaSP(query);
+        }
         public void Add(SanPham sanPham)
         {
             string sqlStr = string.Format("INSERT INTO SanPham(MSP, IDChuSP, TenSP, DanhMuc, GiaTienLucMoiMua, GiaTienBayGio, NgayMuaSP, SoLuong, XuatXu, BaoHanh, TinhTrang, MotaTinhTrang, MotaSP, AnhLucMoiMua, AnhBayGio) VALUES ('{0}', '{1}', N'{2}', N'{3}', '{4}', '{5}', '{6}', '{7}', N'{8}', N'{9}', N'{10}', N'{11}', N'{12}', N'{13}', N'{14}')",
                         sanPham.MaSP, sanPham.IDChuSP, sanPham.TenSP, sanPham.DanhMuc, sanPham.GiaBanDau, sanPham.GiaHienTai, sanPham.NgayMuaSP.ToString(), sanPham.SoLuong, sanPham.XuatXu, sanPham.BaoHanh, sanPham.TinhTrang, sanPham.MoTaTinhTrang, sanPham.MotaSP, sanPham.AnhBanDau, sanPham.AnhHienTai);
             dBConnection.thucThi(sqlStr);
         }
+        public void DanhGia(SanPham sp, string binhLuan, int soSao)
+        {
+            string query = string.Format("INSERT INTO DanhGia(IDNguoiMua, MSP, BinhLuan, SoSao) VALUES ({0}, '{1}', N'{2}', {3})", id, sp.MaSP, binhLuan, soSao);
+            dBConnection.thucThi(query);
+
+        }
+        public List<SanPham> SapXepTheoGia(string sapXep)
+        {
+            string sqlStr = "";
+            if (sapXep == "Tang dan")
+            {
+                sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} Order By GiaTienBayGio ASC", id);
+            }
+            else if (sapXep == "Giam dan")
+            {
+                sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} Order By GiaTienBayGio DESC", id);
+            }
+            return dBConnection.LoadDSDonhang(sqlStr);
+        }
+
         public void ThemGioHang(SanPham sanPham, int soLuong)
         {
             string sqlStr = string.Format("SELECT SoLuong FROM GioHang WHERE MSP = '{0}' and IDNguoiMua = {1}", sanPham.MaSP, id);

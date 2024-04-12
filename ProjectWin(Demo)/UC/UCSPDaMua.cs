@@ -26,7 +26,7 @@ namespace ProjectWin_Demo_
 
         private void btnComment_Click(object sender, EventArgs e)
         {
-            FDanhGia fComment = new FDanhGia();
+            FDanhGia fComment = new FDanhGia(id, sp);
             fComment.ShowDialog();
         }
 

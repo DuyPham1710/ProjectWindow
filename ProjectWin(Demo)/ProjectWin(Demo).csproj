@@ -293,6 +293,9 @@
     <EmbeddedResource Include="UCSanPhamMua.resx">
       <DependentUpon>UCSanPhamMua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCBinhLuan.resx">
+      <DependentUpon>UCBinhLuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCGioHang.resx">
       <DependentUpon>UCGioHang.cs</DependentUpon>
     </EmbeddedResource>

@@ -185,7 +185,7 @@
             this.ContextMenuStripSort.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ContextMenuStripSort.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.ContextMenuStripSort.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.ContextMenuStripSort.Size = new System.Drawing.Size(215, 64);
+            this.ContextMenuStripSort.Size = new System.Drawing.Size(215, 92);
             // 
             // tăngDầnGiáToolStripMenuItem
             // 
@@ -194,6 +194,7 @@
             this.tăngDầnGiáToolStripMenuItem.Name = "tăngDầnGiáToolStripMenuItem";
             this.tăngDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.tăngDầnGiáToolStripMenuItem.Text = "Tăng dần giá";
+            this.tăngDầnGiáToolStripMenuItem.Click += new System.EventHandler(this.tăngDầnGiáToolStripMenuItem_Click);
             // 
             // giảmDầnGiáToolStripMenuItem
             // 
@@ -202,6 +203,7 @@
             this.giảmDầnGiáToolStripMenuItem.Name = "giảmDầnGiáToolStripMenuItem";
             this.giảmDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.giảmDầnGiáToolStripMenuItem.Text = "Giảm dần giá";
+            this.giảmDầnGiáToolStripMenuItem.Click += new System.EventHandler(this.giảmDầnGiáToolStripMenuItem_Click);
             // 
             // btnCatalog
             // 

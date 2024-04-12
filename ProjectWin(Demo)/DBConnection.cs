@@ -44,6 +44,27 @@ namespace ProjectWin_Demo_
             return null;
 
         }
+        public List<UCBinhLuan> LoadDanhGiaSP(string query)
+        {
+             List<UCBinhLuan> binhLuan = new List<UCBinhLuan>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                { 
+                    UCBinhLuan ucBinhLuan = new UCBinhLuan((int)reader["ID"], (string)reader["Fullname"], (Byte[])reader["Avarta"], (string)reader["BinhLuan"], (int)reader["SoSao"]);
+                    binhLuan.Add(ucBinhLuan);
+                }
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+            }
+            return binhLuan;
+        }
         public List<T> LoadSanPham<T>(string query)
         {
             List<T> SanPham = new List<T>();
@@ -230,7 +251,6 @@ namespace ProjectWin_Demo_
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
-
                 int count = (int)cmd.ExecuteScalar();
                 return count;
             }

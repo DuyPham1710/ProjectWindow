@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Star = new Guna.UI2.WinForms.Guna2RatingStar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtBinhLuan = new System.Windows.Forms.RichTextBox();
             this.btnComment = new CustomButton.VBButton();
-            this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -46,7 +46,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.guna2RatingStar1);
+            this.groupBox1.Controls.Add(this.Star);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(35, 69);
             this.groupBox1.Name = "groupBox1";
@@ -55,9 +55,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đánh giá";
             // 
+            // Star
+            // 
+            this.Star.Location = new System.Drawing.Point(6, 29);
+            this.Star.Name = "Star";
+            this.Star.RatingColor = System.Drawing.Color.Yellow;
+            this.Star.Size = new System.Drawing.Size(312, 52);
+            this.Star.TabIndex = 0;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.txtBinhLuan);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(35, 199);
             this.groupBox2.Name = "groupBox2";
@@ -66,15 +74,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bình luận";
             // 
-            // richTextBox1
+            // txtBinhLuan
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 26);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(573, 132);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtBinhLuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBinhLuan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBinhLuan.Location = new System.Drawing.Point(3, 26);
+            this.txtBinhLuan.Name = "txtBinhLuan";
+            this.txtBinhLuan.Size = new System.Drawing.Size(573, 132);
+            this.txtBinhLuan.TabIndex = 0;
+            this.txtBinhLuan.Text = "";
             // 
             // btnComment
             // 
@@ -95,14 +103,6 @@
             this.btnComment.TextColor = System.Drawing.Color.DarkOrange;
             this.btnComment.UseVisualStyleBackColor = false;
             this.btnComment.Click += new System.EventHandler(this.btnComment_Click);
-            // 
-            // guna2RatingStar1
-            // 
-            this.guna2RatingStar1.Location = new System.Drawing.Point(6, 29);
-            this.guna2RatingStar1.Name = "guna2RatingStar1";
-            this.guna2RatingStar1.RatingColor = System.Drawing.Color.Yellow;
-            this.guna2RatingStar1.Size = new System.Drawing.Size(312, 52);
-            this.guna2RatingStar1.TabIndex = 0;
             // 
             // pToolBar
             // 
@@ -184,7 +184,7 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // FComment
+            // FDanhGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +195,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FComment";
+            this.Name = "FDanhGia";
             this.Text = "FComment";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -208,9 +208,9 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtBinhLuan;
         private CustomButton.VBButton btnComment;
-        private Guna.UI2.WinForms.Guna2RatingStar guna2RatingStar1;
+        private Guna.UI2.WinForms.Guna2RatingStar Star;
         private Guna.UI2.WinForms.Guna2Panel pToolBar;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;

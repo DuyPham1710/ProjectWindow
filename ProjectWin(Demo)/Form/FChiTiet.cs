@@ -61,6 +61,12 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
+            fPanelDanhGiaSP.Controls.Clear();
+            List<UCBinhLuan> binhLuan = SPDao.LoadDanhGia();
+            foreach(UCBinhLuan txt in binhLuan)
+            {
+                fPanelDanhGiaSP.Controls.Add(txt);
+            }
         }
         private void btnNext_Click(object sender, EventArgs e)
         {

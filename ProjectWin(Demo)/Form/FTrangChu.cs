@@ -138,6 +138,26 @@ namespace ProjectWin_Demo_
             LocTheoDanhMucSP("Sách");
         }
 
-      
+        private void tăngDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fPanelSanPham.Controls.Clear();
+            List<SanPham> sanPham = SPDao.SapXepTheoGia("Tang dan");
+            foreach (SanPham sp in sanPham)
+            {
+                UCSanPham uCSanPham = new UCSanPham(sp, id);
+                fPanelSanPham.Controls.Add(uCSanPham);
+            }
+        }
+
+        private void giảmDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fPanelSanPham.Controls.Clear();
+            List<SanPham> sanPham = SPDao.SapXepTheoGia("Giam dan");
+            foreach (SanPham sp in sanPham)
+            {
+                UCSanPham uCSanPham = new UCSanPham(sp, id);
+                fPanelSanPham.Controls.Add(uCSanPham);
+            }
+        }
     }
 }

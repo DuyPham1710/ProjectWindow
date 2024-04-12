@@ -31,16 +31,16 @@
             this.btnBuyNow = new CustomButton.VBButton();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.CBSelectAll = new System.Windows.Forms.CheckBox();
+            this.cbChonTatCa = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fPanelGioHang = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1435, 45);
             this.panel3.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(893, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 19);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Tổng số tiền:";
             // 
             // label1
             // 
@@ -138,14 +148,15 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Phân loại";
             // 
-            // CBSelectAll
+            // cbChonTatCa
             // 
-            this.CBSelectAll.AutoSize = true;
-            this.CBSelectAll.Location = new System.Drawing.Point(12, 9);
-            this.CBSelectAll.Name = "CBSelectAll";
-            this.CBSelectAll.Size = new System.Drawing.Size(18, 17);
-            this.CBSelectAll.TabIndex = 5;
-            this.CBSelectAll.UseVisualStyleBackColor = true;
+            this.cbChonTatCa.AutoSize = true;
+            this.cbChonTatCa.Location = new System.Drawing.Point(15, 9);
+            this.cbChonTatCa.Name = "cbChonTatCa";
+            this.cbChonTatCa.Size = new System.Drawing.Size(18, 17);
+            this.cbChonTatCa.TabIndex = 5;
+            this.cbChonTatCa.UseVisualStyleBackColor = true;
+            this.cbChonTatCa.CheckedChanged += new System.EventHandler(this.cbChonTatCa_CheckedChanged);
             // 
             // label6
             // 
@@ -160,7 +171,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.CBSelectAll);
+            this.panel1.Controls.Add(this.cbChonTatCa);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -179,16 +190,6 @@
             this.fPanelGioHang.Name = "fPanelGioHang";
             this.fPanelGioHang.Size = new System.Drawing.Size(1435, 707);
             this.fPanelGioHang.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(893, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 19);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Tổng số tiền:";
             // 
             // FGioHang
             // 
@@ -220,7 +221,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox CBSelectAll;
+        private System.Windows.Forms.CheckBox cbChonTatCa;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel fPanelGioHang;

@@ -14,6 +14,7 @@ namespace ProjectWin_Demo_
     {
         private int id;
         SanPhamDao SPDao;
+        List<UCGioHang> gioHang = new List<UCGioHang>();
         public FGioHang(int id)
         {
             InitializeComponent();
@@ -31,7 +32,8 @@ namespace ProjectWin_Demo_
         {
             fPanelGioHang.Controls.Clear();
             List<UCGioHang> sanPham = SPDao.LoadGioHang<UCGioHang>();
-            foreach(UCGioHang sp in sanPham)
+            gioHang = sanPham;
+            foreach (UCGioHang sp in sanPham)
             {
                 sp.BtnClick_ChiTiet += UCGioHang_Click;
                 sp.BtnClick_Xoa += pcbBin_Click;
@@ -69,6 +71,31 @@ namespace ProjectWin_Demo_
             else
             {
                 lblTongTien.Text = (int.Parse(lblTongTien.Text) - int.Parse(sanPham.lblTongTien.Text)).ToString();
+            }
+            
+        }
+
+        private void cbChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbChonTatCa.Checked)
+            {
+                foreach(UCGioHang gh in gioHang)
+                {
+                    gh.cbChonSP.Checked = true;
+                    
+                    lblTongTien.Text = (int.Parse(lblTongTien.Text) + int.Parse(gh.lblTongTien.Text)).ToString();
+                    
+                }
+                
+            }
+            else
+            {
+                foreach (UCGioHang gh in gioHang)
+                {
+                    gh.cbChonSP.Checked = false;
+
+                }
+                lblTongTien.Text = "0";
             }
         }
     }

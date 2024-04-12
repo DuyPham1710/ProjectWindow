@@ -16,6 +16,7 @@ namespace ProjectWin_Demo_
         int id;
         internal object btnXacNhan;
         string[] AnhCu = { };
+        private bool chon = false;
         public UCSanPham(SanPham sp, int id)
         {
             InitializeComponent();
@@ -47,7 +48,9 @@ namespace ProjectWin_Demo_
         private void UCProducts_Load(object sender, EventArgs e)
         {
             lblTenSP.Text = sp.TenSP;
-            lblGiaSP.Text = sp.GiaHienTai + " đ";
+            lblGiaSP.Text = sp.GiaHienTai + "đ";
+            lblGiaBanDau.Text = sp.GiaBanDau + "đ";
+            lblGiaBanDau.Font = new Font(lblGiaBanDau.Font, FontStyle.Strikeout);
             lblDiaChiShop.Text = sp.XuatXu;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
@@ -62,7 +65,17 @@ namespace ProjectWin_Demo_
 
         private void btnQuanTam_Click(object sender, EventArgs e)
         {
-            btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
+            if (chon == false)
+            {
+                btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
+                chon = true;
+            }
+            else
+            {
+                btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
+                chon = false;
+            }
+           
         }
     }
 }

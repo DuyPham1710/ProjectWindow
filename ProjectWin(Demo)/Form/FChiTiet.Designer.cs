@@ -49,9 +49,9 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucComment1 = new ProjectWin_Demo_.UCBinhLuan();
-            this.ucComment2 = new ProjectWin_Demo_.UCBinhLuan();
+            this.fPanelDanhGiaSP = new System.Windows.Forms.FlowLayoutPanel();
+            //this.ucComment1 = new ProjectWin_Demo_.UCBinhLuan();
+            //this.ucComment2 = new ProjectWin_Demo_.UCBinhLuan();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.rtbMoTaTinhTrang = new System.Windows.Forms.RichTextBox();
             this.txtNamMuaSP = new Guna.UI2.WinForms.Guna2TextBox();
@@ -101,7 +101,7 @@ namespace ProjectWin_Demo_
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.fPanelDanhGiaSP.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -381,7 +381,7 @@ namespace ProjectWin_Demo_
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel1.Controls.Add(this.fPanelDanhGiaSP);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel2);
             this.guna2Panel1.Controls.Add(this.txtNamMuaSP);
             this.guna2Panel1.Controls.Add(this.txtThangMuaSP);
@@ -414,35 +414,35 @@ namespace ProjectWin_Demo_
             this.guna2Panel1.Size = new System.Drawing.Size(1010, 973);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // fPanelDanhGiaSP
             // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.ucComment1);
-            this.flowLayoutPanel1.Controls.Add(this.ucComment2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 619);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1006, 332);
-            this.flowLayoutPanel1.TabIndex = 18;
+            this.fPanelDanhGiaSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.fPanelDanhGiaSP.Controls.Add(this.ucComment1);
+            //this.fPanelDanhGiaSP.Controls.Add(this.ucComment2);
+            this.fPanelDanhGiaSP.Location = new System.Drawing.Point(3, 619);
+            this.fPanelDanhGiaSP.Name = "fPanelDanhGiaSP";
+            this.fPanelDanhGiaSP.Size = new System.Drawing.Size(1006, 332);
+            this.fPanelDanhGiaSP.TabIndex = 18;
             // 
             // ucComment1
             // 
-            this.ucComment1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucComment1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucComment1.Location = new System.Drawing.Point(3, 4);
-            this.ucComment1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucComment1.Name = "ucComment1";
-            this.ucComment1.Size = new System.Drawing.Size(990, 157);
-            this.ucComment1.TabIndex = 0;
-            // 
-            // ucComment2
-            // 
-            this.ucComment2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucComment2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucComment2.Location = new System.Drawing.Point(3, 169);
-            this.ucComment2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucComment2.Name = "ucComment2";
-            this.ucComment2.Size = new System.Drawing.Size(990, 157);
-            this.ucComment2.TabIndex = 1;
+            //this.ucComment1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.ucComment1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.ucComment1.Location = new System.Drawing.Point(3, 4);
+            //this.ucComment1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.ucComment1.Name = "ucComment1";
+            //this.ucComment1.Size = new System.Drawing.Size(990, 157);
+            //this.ucComment1.TabIndex = 0;
+            //// 
+            //// ucComment2
+            //// 
+            //this.ucComment2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            //this.ucComment2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.ucComment2.Location = new System.Drawing.Point(3, 169);
+            //this.ucComment2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.ucComment2.Name = "ucComment2";
+            //this.ucComment2.Size = new System.Drawing.Size(990, 157);
+            //this.ucComment2.TabIndex = 1;
             // 
             // guna2CustomGradientPanel2
             // 
@@ -942,7 +942,7 @@ namespace ProjectWin_Demo_
             this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
             this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // FDetail
+            // FChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -951,7 +951,7 @@ namespace ProjectWin_Demo_
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.pToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FDetail";
+            this.Name = "FChiTiet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FDetail_Load);
             this.pToolBar.ResumeLayout(false);
@@ -963,7 +963,7 @@ namespace ProjectWin_Demo_
             this.groupBox1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.fPanelDanhGiaSP.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -1012,7 +1012,7 @@ namespace ProjectWin_Demo_
         private Guna.UI2.WinForms.Guna2RadioButton rdbAnhBanDau;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGiaBanDau;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fPanelDanhGiaSP;
         private UCBinhLuan ucComment1;
         private UCBinhLuan ucComment2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
