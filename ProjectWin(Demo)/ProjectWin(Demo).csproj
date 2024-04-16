@@ -534,5 +534,14 @@
   <ItemGroup>
     <None Include="Resources\Icons8-Ios7-Gaming-Hearts.48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OOjs_UI_icon_trash-destructive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_4735813.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-icon-28349.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

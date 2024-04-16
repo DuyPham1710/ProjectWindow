@@ -173,6 +173,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart_icon_28349 {
+            get {
+                object obj = ResourceManager.GetObject("cart-icon-28349", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cart_shopping_solid {
             get {
                 object obj = ResourceManager.GetObject("cart-shopping-solid", resourceCulture);
@@ -236,6 +246,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap Double_J_Design_Ravenna_3d_Credit_Card_64 {
             get {
                 object obj = ResourceManager.GetObject("Double-J-Design-Ravenna-3d-Credit-Card.64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_4735813 {
+            get {
+                object obj = ResourceManager.GetObject("edit_4735813", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -496,6 +516,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap Momo {
             get {
                 object obj = ResourceManager.GetObject("Momo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OOjs_UI_icon_trash_destructive {
+            get {
+                object obj = ResourceManager.GetObject("OOjs_UI_icon_trash-destructive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

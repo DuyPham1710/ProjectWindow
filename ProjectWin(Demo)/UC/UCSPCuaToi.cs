@@ -44,7 +44,7 @@ namespace ProjectWin_Demo_
         private void pcbDelete_MouseHover(object sender, EventArgs e)
         {
             pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.BackColor = Color.MediumPurple;
+            this.BackColor = Color.LightCyan;
         }
 
         private void pcbDelete_MouseLeave(object sender, EventArgs e)

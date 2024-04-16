@@ -120,15 +120,15 @@ namespace ProjectWin_Demo_
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.Plum;
-            btnMyProduct.FillColor = Color.Thistle;
-            btnInfo.FillColor = Color.Thistle;
-            btnDonHang.FillColor = Color.Thistle;
+            btnHome.FillColor = Color.LightCyan;
+            btnMyProduct.FillColor = Color.White;
+            btnInfo.FillColor = Color.White;
+            btnDonHang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.Purple;
-            btnMyProduct.CustomBorderColor = Color.Thistle;
-            btnInfo.CustomBorderColor = Color.Thistle;
-            btnDonHang.CustomBorderColor = Color.Thistle;
+            btnHome.CustomBorderColor = Color.SkyBlue;
+            btnMyProduct.CustomBorderColor = Color.White;
+            btnInfo.CustomBorderColor = Color.White;
+            btnDonHang.CustomBorderColor = Color.White;
             openChildForm(new FTrangChu(id));
             
         }
@@ -140,29 +140,29 @@ namespace ProjectWin_Demo_
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.Thistle;
-            btnMyProduct.FillColor = Color.Thistle;
-            btnInfo.FillColor = Color.Plum;
-            btnDonHang.FillColor = Color.Thistle;
+            btnHome.FillColor = Color.White;
+            btnMyProduct.FillColor = Color.White;
+            btnInfo.FillColor = Color.LightCyan;
+            btnDonHang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.Thistle;
-            btnMyProduct.CustomBorderColor = Color.Thistle;
-            btnInfo.CustomBorderColor = Color.Purple;
-            btnDonHang.CustomBorderColor = Color.Thistle;
+            btnHome.CustomBorderColor = Color.White;
+            btnMyProduct.CustomBorderColor = Color.White;
+            btnInfo.CustomBorderColor = Color.SkyBlue;
+            btnDonHang.CustomBorderColor = Color.White;
             openChildForm(new FThongTin(id));
         }
 
         private void btnMyProduct_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.Thistle;
-            btnMyProduct.FillColor = Color.Plum;
-            btnInfo.FillColor = Color.Thistle;
-            btnDonHang.FillColor = Color.Thistle;
+            btnHome.FillColor = Color.White;
+            btnMyProduct.FillColor = Color.LightCyan;
+            btnInfo.FillColor = Color.White;
+            btnDonHang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.Thistle;
-            btnMyProduct.CustomBorderColor = Color.Purple;
-            btnInfo.CustomBorderColor = Color.Thistle;
-            btnDonHang.CustomBorderColor = Color.Thistle;
+            btnHome.CustomBorderColor = Color.White;
+            btnMyProduct.CustomBorderColor = Color.SkyBlue;
+            btnInfo.CustomBorderColor = Color.White;
+            btnDonHang.CustomBorderColor = Color.White;
 
             openChildForm(new FSPCuaToi(id));
 
@@ -199,15 +199,15 @@ namespace ProjectWin_Demo_
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.Thistle;
-            btnMyProduct.FillColor = Color.Thistle;
-            btnInfo.FillColor = Color.Thistle;
-            btnDonHang.FillColor = Color.Plum;
+            btnHome.FillColor = Color.White;
+            btnMyProduct.FillColor = Color.White;
+            btnInfo.FillColor = Color.White;
+            btnDonHang.FillColor = Color.LightCyan;
 
-            btnHome.CustomBorderColor = Color.Thistle;
-            btnMyProduct.CustomBorderColor = Color.Thistle;
-            btnInfo.CustomBorderColor = Color.Thistle;
-            btnDonHang.CustomBorderColor = Color.Purple;
+            btnHome.CustomBorderColor = Color.White;
+            btnMyProduct.CustomBorderColor = Color.White;
+            btnInfo.CustomBorderColor = Color.White;
+            btnDonHang.CustomBorderColor = Color.SkyBlue;
 
             openChildForm(new FDonHang(id));
         }

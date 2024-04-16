@@ -43,9 +43,10 @@
             // 
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaSP.Location = new System.Drawing.Point(142, 91);
+            this.lblMaSP.Location = new System.Drawing.Point(106, 71);
+            this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(67, 16);
+            this.lblMaSP.Size = new System.Drawing.Size(58, 13);
             this.lblMaSP.TabIndex = 2;
             this.lblMaSP.Text = "Mã: 00198";
             this.lblMaSP.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -54,9 +55,10 @@
             // lblTenSP
             // 
             this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(141, 30);
+            this.lblTenSP.Location = new System.Drawing.Point(106, 18);
+            this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(379, 44);
+            this.lblTenSP.Size = new System.Drawing.Size(284, 36);
             this.lblTenSP.TabIndex = 3;
             this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
             this.lblTenSP.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -66,9 +68,10 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(922, 32);
+            this.lblSoLuong.Location = new System.Drawing.Point(692, 26);
+            this.lblSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(27, 20);
+            this.lblSoLuong.Size = new System.Drawing.Size(22, 17);
             this.lblSoLuong.TabIndex = 13;
             this.lblSoLuong.Text = "14";
             this.lblSoLuong.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -78,9 +81,10 @@
             // 
             this.lblGia.AutoSize = true;
             this.lblGia.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGia.Location = new System.Drawing.Point(1087, 32);
+            this.lblGia.Location = new System.Drawing.Point(815, 26);
+            this.lblGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(99, 20);
+            this.lblGia.Size = new System.Drawing.Size(79, 17);
             this.lblGia.TabIndex = 14;
             this.lblGia.Text = "10.110.000đ";
             this.lblGia.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -90,9 +94,10 @@
             // 
             this.lblDanhMuc.AutoSize = true;
             this.lblDanhMuc.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDanhMuc.Location = new System.Drawing.Point(684, 32);
+            this.lblDanhMuc.Location = new System.Drawing.Point(513, 26);
+            this.lblDanhMuc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDanhMuc.Name = "lblDanhMuc";
-            this.lblDanhMuc.Size = new System.Drawing.Size(63, 20);
+            this.lblDanhMuc.Size = new System.Drawing.Size(52, 17);
             this.lblDanhMuc.TabIndex = 16;
             this.lblDanhMuc.Text = "Điện tử";
             this.lblDanhMuc.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -102,14 +107,15 @@
             // 
             this.btnEdit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnEdit.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Image = global::ProjectWin_Demo_.Properties.Resources.Iconoir_Team_Iconoir_Settings_48;
+            this.btnEdit.Image = global::ProjectWin_Demo_.Properties.Resources.edit_4735813;
             this.btnEdit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnEdit.ImageRotate = 0F;
             this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Location = new System.Drawing.Point(1312, 24);
+            this.btnEdit.Location = new System.Drawing.Point(996, 15);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Size = new System.Drawing.Size(32, 32);
+            this.btnEdit.Size = new System.Drawing.Size(35, 34);
             this.btnEdit.TabIndex = 18;
             this.btnEdit.Click += new System.EventHandler(this.pcbEdit_Click);
             // 
@@ -117,23 +123,25 @@
             // 
             this.btnDelete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnDelete.HoverState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Image = global::ProjectWin_Demo_.Properties.Resources.trash_can_regular;
+            this.btnDelete.Image = global::ProjectWin_Demo_.Properties.Resources.OOjs_UI_icon_trash_destructive;
             this.btnDelete.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnDelete.ImageRotate = 0F;
             this.btnDelete.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Location = new System.Drawing.Point(1362, 24);
+            this.btnDelete.Location = new System.Drawing.Point(1045, 20);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Size = new System.Drawing.Size(32, 32);
+            this.btnDelete.Size = new System.Drawing.Size(24, 26);
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Click += new System.EventHandler(this.pcbDelete_Click);
             // 
             // pctSanPham
             // 
             this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
-            this.pctSanPham.Location = new System.Drawing.Point(24, 16);
+            this.pctSanPham.Location = new System.Drawing.Point(18, 13);
+            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(100, 100);
+            this.pctSanPham.Size = new System.Drawing.Size(73, 74);
             this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctSanPham.TabIndex = 0;
             this.pctSanPham.TabStop = false;
@@ -142,7 +150,7 @@
             // 
             // UCSPCuaToi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.btnEdit);
@@ -153,8 +161,9 @@
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.pctSanPham);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCSPCuaToi";
-            this.Size = new System.Drawing.Size(1430, 126);
+            this.Size = new System.Drawing.Size(1111, 98);
             this.Load += new System.EventHandler(this.UCMyProduct_Load);
             this.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
