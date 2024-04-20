@@ -70,5 +70,19 @@ namespace ProjectWin_Demo_
         {
             BtnClick_Chon?.Invoke(this, e);
         }
+        private void nudSoLuong_ValueChanged(object sender, EventArgs e)
+        {
+            lblTongTien.Text = (nudSoLuong.Value * Decimal.Parse(sp.GiaHienTai)).ToString();
+        }
+
+        private void panelGioHanh_MouseHover(object sender, EventArgs e)
+        {
+            panelGioHanh.BackColor = Color.LightCyan;
+        }
+
+        private void panelGioHanh_MouseLeave(object sender, EventArgs e)
+        {
+            panelGioHanh.BackColor = Color.White;
+        }
     }
 }

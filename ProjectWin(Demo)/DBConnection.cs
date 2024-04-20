@@ -46,7 +46,7 @@ namespace ProjectWin_Demo_
         }
         public List<UCBinhLuan> LoadDanhGiaSP(string query)
         {
-             List<UCBinhLuan> binhLuan = new List<UCBinhLuan>();
+            List<UCBinhLuan> binhLuan = new List<UCBinhLuan>();
             try
             {
                 conn.Open();
@@ -58,7 +58,10 @@ namespace ProjectWin_Demo_
                     binhLuan.Add(ucBinhLuan);
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Không thể load đánh giá sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             finally
             {
                 conn.Close();

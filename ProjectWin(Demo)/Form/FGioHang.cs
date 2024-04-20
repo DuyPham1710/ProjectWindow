@@ -24,6 +24,10 @@ namespace ProjectWin_Demo_
 
         private void btnBuyNow_Click(object sender, EventArgs e)
         {
+            if (lblTongTien.Text == "0")
+            {
+                MessageBox.Show("Bạn vẫn chưa chọn sản phẩm nào để mua", "Thông báo");
+            }
             //FPayment fPayment = new FPayment();
             //fPayment.ShowDialog();
         }

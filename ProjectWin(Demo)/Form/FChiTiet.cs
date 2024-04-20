@@ -61,11 +61,22 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
+
+            // Load dánh giá sản phẩm
             fPanelDanhGiaSP.Controls.Clear();
-            List<UCBinhLuan> binhLuan = SPDao.LoadDanhGia();
-            foreach(UCBinhLuan txt in binhLuan)
+            List<UCBinhLuan> BinhLuan = SPDao.LoadDanhGia();
+            foreach(UCBinhLuan binhLuan in BinhLuan)
             {
-                fPanelDanhGiaSP.Controls.Add(txt);
+                fPanelDanhGiaSP.Controls.Add(binhLuan);
+            }
+            
+            // Load sản phẩm tương tự
+            fPanelSPTuongTu.Controls.Clear();
+            List<UCSanPham> SanPham = SPDao.LoadSanPhamTuongTu<UCSanPham>(sp);
+            foreach (UCSanPham sanPham in SanPham)
+            {
+                sanPham.Padding = new Padding(0);
+                fPanelSPTuongTu.Controls.Add(sanPham);
             }
         }
         private void btnNext_Click(object sender, EventArgs e)
@@ -169,6 +180,18 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
+        }
+
+        private void nudSoLuong_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudSoLuong.Value > Decimal.Parse(sp.SoLuong))
+            {
+                nudSoLuong.Value = Decimal.Parse(sp.SoLuong);
+            }
+            else if(nudSoLuong.Value == 0)
+            {
+                nudSoLuong.Value = 1;
+            }
         }
     }
 }

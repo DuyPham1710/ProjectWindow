@@ -43,10 +43,19 @@ namespace ProjectWin_Demo_
                 conn.Open();
                 if (thaoTac == "Them")
                 {
-                    string sqlStr = "SELECT count(*) FROM SanPham";
-
+                    string sqlStr = "SELECT max(MSP) FROM SanPham";
+                   
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    txtMaSP.Texts = "SP0" + ((int)cmd.ExecuteScalar() + 1).ToString();
+                    int maSP = int.Parse(cmd.ExecuteScalar().ToString().Substring(2)) + 1;
+                    if (maSP < 10)
+                    {
+                        txtMaSP.Texts = "SP0" + maSP.ToString();
+                    }
+                    else
+                    {
+                        txtMaSP.Texts = "SP" + maSP.ToString();
+                    }
+                    //txtMaSP.Texts = "SP0" + ((int)cmd.ExecuteScalar() + 1).ToString();
                     ma = txtMaSP.Texts;
                 }
                 else

@@ -46,7 +46,7 @@
             this.lblMaSP.Location = new System.Drawing.Point(106, 71);
             this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(58, 13);
+            this.lblMaSP.Size = new System.Drawing.Size(67, 16);
             this.lblMaSP.TabIndex = 2;
             this.lblMaSP.Text = "Mã: 00198";
             this.lblMaSP.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -111,7 +111,7 @@
             this.btnEdit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnEdit.ImageRotate = 0F;
             this.btnEdit.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnEdit.Location = new System.Drawing.Point(996, 15);
+            this.btnEdit.Location = new System.Drawing.Point(979, 15);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.PressedState.ImageSize = new System.Drawing.Size(32, 32);
@@ -127,7 +127,7 @@
             this.btnDelete.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnDelete.ImageRotate = 0F;
             this.btnDelete.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnDelete.Location = new System.Drawing.Point(1045, 20);
+            this.btnDelete.Location = new System.Drawing.Point(1028, 20);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.PressedState.ImageSize = new System.Drawing.Size(32, 32);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.pctSanPham);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCSPCuaToi";
             this.Size = new System.Drawing.Size(1111, 98);
             this.Load += new System.EventHandler(this.UCMyProduct_Load);

@@ -55,6 +55,7 @@
             // 
             this.fPanelSanPham.AutoScroll = true;
             this.fPanelSanPham.BackColor = System.Drawing.Color.White;
+            this.fPanelSanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fPanelSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.fPanelSanPham.Location = new System.Drawing.Point(0, 89);
             this.fPanelSanPham.Name = "fPanelSanPham";
@@ -219,7 +220,7 @@
             this.btnCatalog.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnCatalog.ForeColor = System.Drawing.Color.Black;
             this.btnCatalog.Location = new System.Drawing.Point(148, 53);
-            this.btnCatalog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCatalog.Margin = new System.Windows.Forms.Padding(2);
             this.btnCatalog.Name = "btnCatalog";
             this.btnCatalog.Size = new System.Drawing.Size(135, 31);
             this.btnCatalog.TabIndex = 14;
@@ -240,7 +241,7 @@
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnSort.ForeColor = System.Drawing.Color.Black;
             this.btnSort.Location = new System.Drawing.Point(288, 53);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(2);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(164, 31);
             this.btnSort.TabIndex = 15;
@@ -261,7 +262,7 @@
             this.btnbestSeller.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnbestSeller.ForeColor = System.Drawing.Color.Black;
             this.btnbestSeller.Location = new System.Drawing.Point(457, 53);
-            this.btnbestSeller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnbestSeller.Margin = new System.Windows.Forms.Padding(2);
             this.btnbestSeller.Name = "btnbestSeller";
             this.btnbestSeller.Size = new System.Drawing.Size(135, 31);
             this.btnbestSeller.TabIndex = 16;
@@ -282,7 +283,7 @@
             this.btnAllProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAllProduct.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.btnAllProduct.Location = new System.Drawing.Point(9, 53);
-            this.btnAllProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAllProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAllProduct.Name = "btnAllProduct";
             this.btnAllProduct.Size = new System.Drawing.Size(135, 31);
             this.btnAllProduct.TabIndex = 17;
@@ -332,7 +333,7 @@
             this.Controls.Add(this.btnCatalog);
             this.Controls.Add(this.fPanelSanPham);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FTrangChu";
             this.Text = "FHome";
             this.Load += new System.EventHandler(this.FTrangChu_Load);

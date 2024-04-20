@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace ProjectWin_Demo_
             this.sp = sp;
             this.id = id;
         }
-        public UCSanPham() 
+        public UCSanPham()
         {
             InitializeComponent();
         }
@@ -35,14 +36,14 @@ namespace ProjectWin_Demo_
 
         private void pctProduct_MouseHover(object sender, EventArgs e)
         {
-            pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.BackColor = Color.MistyRose;
+            //pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
+            //this.BackColor = Color.White;
         }
 
         private void pctProduct_MouseLeave(object sender, EventArgs e)
         {
-            pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
-            this.BackColor = Color.MintCream;
+            //pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
+            //this.BackColor = Color.White;
         }
 
         private void UCProducts_Load(object sender, EventArgs e)
@@ -75,7 +76,16 @@ namespace ProjectWin_Demo_
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
                 chon = false;
             }
-           
+
+        }
+        private void GunaPanel1_MouseEnter(object sender, EventArgs e)
+        {
+            PanelSanPham.BorderColor = Color.Gainsboro;
+        }
+
+        private void GunaPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            PanelSanPham.BorderColor = Color.White;
         }
     }
 }

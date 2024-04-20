@@ -53,6 +53,11 @@ namespace ProjectWin_Demo_
             string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
             return dBConnection.LoadSanPham<T>(sqlQuery);
         }
+        public List<T> LoadSanPhamTuongTu<T>(SanPham sp)
+        {
+            string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}' and MSP <> '{2}'", id, sp.DanhMuc, sp.MaSP);
+            return dBConnection.LoadSanPham<T>(sqlQuery);
+        }
         public List<UCBinhLuan> LoadDanhGia()
         {
             string query = string.Format("Select ID, FullName, Avarta, BinhLuan, SoSao from Person, DanhGia, SanPham Where Person.ID = DanhGia.IDNguoiMua and DanhGia.MSP = SanPham.MSP and IDNguoiMua = {0}", id);
