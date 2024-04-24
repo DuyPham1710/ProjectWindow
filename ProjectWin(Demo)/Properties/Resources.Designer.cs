@@ -453,6 +453,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Photo_512 {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Photo.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap InfoProduct {
             get {
                 object obj = ResourceManager.GetObject("InfoProduct", resourceCulture);
@@ -533,6 +543,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Paomedia_Small_N_Flat_Bubbles_48 {
+            get {
+                object obj = ResourceManager.GetObject("Paomedia-Small-N-Flat-Bubbles.48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Paomedia_Small_N_Flat_Star_48 {
             get {
                 object obj = ResourceManager.GetObject("Paomedia-Small-N-Flat-Star.48", resourceCulture);
@@ -557,6 +577,16 @@ namespace ProjectWin_Demo_.Properties {
             get {
                 object obj = ResourceManager.GetObject("pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-materia" +
                         "l-picture-image_1048684", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap products {
+            get {
+                object obj = ResourceManager.GetObject("products", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

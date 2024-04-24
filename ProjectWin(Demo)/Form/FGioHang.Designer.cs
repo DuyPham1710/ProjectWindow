@@ -31,6 +31,7 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnBuyNow = new CustomButton.VBButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fPanelGioHang = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnBuyNow = new CustomButton.VBButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel3.Controls.Add(this.btnBuyNow);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 682);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1180, 43);
             this.panel3.TabIndex = 5;
@@ -79,6 +79,28 @@
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 2;
             this.label7.Text = "Tổng số tiền:";
+            // 
+            // btnBuyNow
+            // 
+            this.btnBuyNow.BackColor = System.Drawing.Color.Crimson;
+            this.btnBuyNow.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnBuyNow.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuyNow.BorderRadius = 13;
+            this.btnBuyNow.BorderSize = 0;
+            this.btnBuyNow.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnBuyNow.FlatAppearance.BorderSize = 0;
+            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyNow.ForeColor = System.Drawing.Color.White;
+            this.btnBuyNow.Location = new System.Drawing.Point(1066, 0);
+            this.btnBuyNow.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuyNow.Name = "btnBuyNow";
+            this.btnBuyNow.Size = new System.Drawing.Size(114, 43);
+            this.btnBuyNow.TabIndex = 0;
+            this.btnBuyNow.Text = "Mua ngay";
+            this.btnBuyNow.TextColor = System.Drawing.Color.White;
+            this.btnBuyNow.UseVisualStyleBackColor = false;
+            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
             // 
             // label1
             // 
@@ -139,7 +161,7 @@
             // 
             this.cbChonTatCa.AutoSize = true;
             this.cbChonTatCa.Location = new System.Drawing.Point(11, 9);
-            this.cbChonTatCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbChonTatCa.Margin = new System.Windows.Forms.Padding(2);
             this.cbChonTatCa.Name = "cbChonTatCa";
             this.cbChonTatCa.Size = new System.Drawing.Size(15, 14);
             this.cbChonTatCa.TabIndex = 5;
@@ -170,7 +192,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1180, 46);
             this.panel1.TabIndex = 0;
@@ -180,32 +202,10 @@
             this.fPanelGioHang.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fPanelGioHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.fPanelGioHang.Location = new System.Drawing.Point(0, 44);
-            this.fPanelGioHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fPanelGioHang.Margin = new System.Windows.Forms.Padding(2);
             this.fPanelGioHang.Name = "fPanelGioHang";
             this.fPanelGioHang.Size = new System.Drawing.Size(1180, 638);
             this.fPanelGioHang.TabIndex = 6;
-            // 
-            // btnBuyNow
-            // 
-            this.btnBuyNow.BackColor = System.Drawing.Color.Crimson;
-            this.btnBuyNow.BackgroundColor = System.Drawing.Color.Crimson;
-            this.btnBuyNow.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuyNow.BorderRadius = 13;
-            this.btnBuyNow.BorderSize = 0;
-            this.btnBuyNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnBuyNow.FlatAppearance.BorderSize = 0;
-            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyNow.ForeColor = System.Drawing.Color.White;
-            this.btnBuyNow.Location = new System.Drawing.Point(1066, 0);
-            this.btnBuyNow.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuyNow.Name = "btnBuyNow";
-            this.btnBuyNow.Size = new System.Drawing.Size(114, 43);
-            this.btnBuyNow.TabIndex = 0;
-            this.btnBuyNow.Text = "Mua ngay";
-            this.btnBuyNow.TextColor = System.Drawing.Color.White;
-            this.btnBuyNow.UseVisualStyleBackColor = false;
-            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
             // 
             // FGioHang
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FGioHang";
             this.Text = "FCart";
             this.Load += new System.EventHandler(this.FGioHang_Load);
