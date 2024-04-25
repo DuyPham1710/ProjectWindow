@@ -814,7 +814,7 @@
             this.txtTinhTrang.Texts = "";
             this.txtTinhTrang.UnderlinedStyle = false;
             // 
-            // FAddProduct
+            // FTuyChinhSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -825,7 +825,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FAddProduct";
+            this.Name = "FTuyChinhSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAddProduct";
             this.Load += new System.EventHandler(this.FAddProduct_Load);

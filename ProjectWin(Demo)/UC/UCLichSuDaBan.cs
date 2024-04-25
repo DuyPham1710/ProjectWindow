@@ -34,18 +34,18 @@ namespace ProjectWin_Demo_
         }
         private List<SanPham> ThucThi()
         {
-            List<SanPham> products = new List<SanPham>();
+            List<SanPham> sanPham = new List<SanPham>();
             try
             {
                 conn.Open();
-                string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, "Đã giao");
+                string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}' order by SoLuongDaMua DESC", id, "Đã giao");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    products.Add(sp);
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuongDaMua"].ToString(), (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    sanPham.Add(sp);
                 }
 
             }
@@ -55,7 +55,7 @@ namespace ProjectWin_Demo_
                 conn.Close();
 
             }
-            return products;
+            return sanPham;
         }
     }
 }

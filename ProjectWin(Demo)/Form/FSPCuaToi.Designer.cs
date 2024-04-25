@@ -271,7 +271,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.panelTieuDe);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel1);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(37, 199);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1488, 655);
             this.guna2CustomGradientPanel2.TabIndex = 0;
@@ -282,7 +282,7 @@
             this.fPanelHienThi.BackColor = System.Drawing.Color.White;
             this.fPanelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fPanelHienThi.Location = new System.Drawing.Point(0, 122);
-            this.fPanelHienThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fPanelHienThi.Margin = new System.Windows.Forms.Padding(4);
             this.fPanelHienThi.Name = "fPanelHienThi";
             this.fPanelHienThi.Size = new System.Drawing.Size(1488, 533);
             this.fPanelHienThi.TabIndex = 8;
@@ -353,7 +353,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(40, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -91,7 +91,6 @@ namespace ProjectWin_Demo_.UC
             btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
-            btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
             sanPham = sanPhamDao.DSDonBan("Chờ xác nhận");
             trangThai = "Đang xử lý";
@@ -110,7 +109,6 @@ namespace ProjectWin_Demo_.UC
             btnDangXuLy.CustomBorderColor = Color.Gold;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
-            btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
             sanPham = sanPhamDao.DSDonBan("Đang xử lý");
             trangThai = "Đang giao";
@@ -129,7 +127,6 @@ namespace ProjectWin_Demo_.UC
             btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;
-            btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
             sanPham = sanPhamDao.DSDonBan("Đang giao");
             trangThai = "Đã giao";
@@ -148,10 +145,10 @@ namespace ProjectWin_Demo_.UC
             btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.Gold;
-            btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
             sanPham = sanPhamDao.DSDonBan("Đã giao");
-            trangThai = "Hoàn tiền/Hủy đơn";
+            trangThai = "Đã giao";
+            //trangThai = "Hoàn tiền/Hủy đơn";
             foreach (SanPham item in sanPham)
             {
                 UCSPDaBan ucSP = new UCSPDaBan(item, id);
@@ -161,20 +158,25 @@ namespace ProjectWin_Demo_.UC
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
-            btnChoXacNhan.CustomBorderColor = Color.White;
-            btnDangXuLy.CustomBorderColor = Color.White;
-            btnDangGiao.CustomBorderColor = Color.White;
-            btnDaGiao.CustomBorderColor = Color.White;
-            btnHuyDon.CustomBorderColor = Color.Gold;
-            fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan("Hoàn tiền/Hủy đơn");
-            trangThai = "Hoàn tiền/Hủy đơn";
-            foreach (SanPham item in sanPham)
-            {
-                UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
-                ucSP.ButtonClickCustom += btnXacNhan_Click;
-                fPanelDonhang.Controls.Add(ucSP);
-            }
+
         }
+
+        //private void btnHuyDon_Click(object sender, EventArgs e)
+        //{
+        //    btnChoXacNhan.CustomBorderColor = Color.White;
+        //    btnDangXuLy.CustomBorderColor = Color.White;
+        //    btnDangGiao.CustomBorderColor = Color.White;
+        //    btnDaGiao.CustomBorderColor = Color.White;
+        //    btnHuyDon.CustomBorderColor = Color.Gold;
+        //    fPanelDonhang.Controls.Clear();
+        //    sanPham = sanPhamDao.DSDonBan("Hoàn tiền/Hủy đơn");
+        //    trangThai = "Hoàn tiền/Hủy đơn";
+        //    foreach (SanPham item in sanPham)
+        //    {
+        //        UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
+        //        ucSP.ButtonClickCustom += btnXacNhan_Click;
+        //        fPanelDonhang.Controls.Add(ucSP);
+        //    }
+        //}
     }
 }

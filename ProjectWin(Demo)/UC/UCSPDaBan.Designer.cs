@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMaSP = new System.Windows.Forms.Label();
             this.lblPhanLoai = new System.Windows.Forms.Label();
             this.lblNguoiMua = new System.Windows.Forms.Label();
             this.lblGia = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
-            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.lblSoLuongSP = new System.Windows.Forms.Label();
-            this.lblMaSP = new System.Windows.Forms.Label();
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
@@ -60,6 +60,16 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1430, 115);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // lblMaSP
+            // 
+            this.lblMaSP.AutoSize = true;
+            this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblMaSP.Location = new System.Drawing.Point(142, 75);
+            this.lblMaSP.Name = "lblMaSP";
+            this.lblMaSP.Size = new System.Drawing.Size(29, 16);
+            this.lblMaSP.TabIndex = 16;
+            this.lblMaSP.Text = "Mã:";
+            // 
             // lblPhanLoai
             // 
             this.lblPhanLoai.AutoSize = true;
@@ -74,7 +84,7 @@
             // 
             this.lblNguoiMua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNguoiMua.ForeColor = System.Drawing.Color.Tomato;
-            this.lblNguoiMua.Location = new System.Drawing.Point(1309, 16);
+            this.lblNguoiMua.Location = new System.Drawing.Point(1285, 16);
             this.lblNguoiMua.Name = "lblNguoiMua";
             this.lblNguoiMua.Size = new System.Drawing.Size(118, 91);
             this.lblNguoiMua.TabIndex = 12;
@@ -101,16 +111,6 @@
             this.lblTenSP.TabIndex = 7;
             this.lblTenSP.Text = "Điện thoại Apple iPhone 15 Pro Max 256GB";
             // 
-            // pctSanPham
-            // 
-            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
-            this.pctSanPham.Location = new System.Drawing.Point(24, 16);
-            this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(100, 91);
-            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctSanPham.TabIndex = 4;
-            this.pctSanPham.TabStop = false;
-            // 
             // lblSoLuongSP
             // 
             this.lblSoLuongSP.AutoSize = true;
@@ -121,15 +121,15 @@
             this.lblSoLuongSP.TabIndex = 5;
             this.lblSoLuongSP.Text = "1";
             // 
-            // lblMaSP
+            // pctSanPham
             // 
-            this.lblMaSP.AutoSize = true;
-            this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaSP.Location = new System.Drawing.Point(142, 75);
-            this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(29, 16);
-            this.lblMaSP.TabIndex = 16;
-            this.lblMaSP.Text = "Mã:";
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.iphone_15_pro_max_gold_thumbnew_200x200;
+            this.pctSanPham.Location = new System.Drawing.Point(24, 16);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(100, 91);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctSanPham.TabIndex = 4;
+            this.pctSanPham.TabStop = false;
             // 
             // elipseControl1
             // 

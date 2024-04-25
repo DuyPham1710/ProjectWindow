@@ -165,6 +165,20 @@ namespace ProjectWin_Demo_
             fDCNH.ShowDialog();
         }
 
-      
+        private void nudSoLuong_ValueChanged(object sender, EventArgs e)
+        {        
+            if (nudSoLuong.Value > Decimal.Parse(sp.SoLuong))
+            {
+                nudSoLuong.Value = Decimal.Parse(sp.SoLuong);
+            }
+            else if (nudSoLuong.Value == 0)
+            {
+                nudSoLuong.Value = 1;
+            }
+            else
+            {
+                lblTongTien.Text = (nudSoLuong.Value * Decimal.Parse(sp.GiaHienTai)).ToString() + "đ";
+            }
+        }
     }
 }

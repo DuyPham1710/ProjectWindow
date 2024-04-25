@@ -86,5 +86,10 @@ namespace ProjectWin_Demo_.UC
             //}
 
         }
+
+        private void btnHuyDon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

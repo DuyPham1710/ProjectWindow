@@ -105,6 +105,7 @@
             this.btnHuyDon.Text = "Hủy đơn";
             this.btnHuyDon.TextColor = System.Drawing.Color.White;
             this.btnHuyDon.UseVisualStyleBackColor = false;
+            this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
             // 
             // panel3
             // 

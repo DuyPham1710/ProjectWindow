@@ -34,7 +34,7 @@
             // fPanel
             // 
             this.fPanel.AutoScroll = true;
-            this.fPanel.BackColor = System.Drawing.Color.Lavender;
+            this.fPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fPanel.Location = new System.Drawing.Point(0, 0);
             this.fPanel.Name = "fPanel";

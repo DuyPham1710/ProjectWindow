@@ -43,7 +43,7 @@
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1450, 57);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1573, 57);
             this.guna2CustomGradientPanel1.TabIndex = 1;
             // 
             // btnDonMua
@@ -91,7 +91,7 @@
             this.PanelDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDonHang.Location = new System.Drawing.Point(0, 57);
             this.PanelDonHang.Name = "PanelDonHang";
-            this.PanelDonHang.Size = new System.Drawing.Size(1450, 735);
+            this.PanelDonHang.Size = new System.Drawing.Size(1573, 835);
             this.PanelDonHang.TabIndex = 2;
             // 
             // FDonHang
@@ -99,7 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1450, 792);
+            this.ClientSize = new System.Drawing.Size(1573, 892);
             this.Controls.Add(this.PanelDonHang);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHuyDon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDaGiao = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDangXuLy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDangGiao = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -52,7 +51,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnHuyDon);
             this.panel1.Controls.Add(this.btnDaGiao);
             this.panel1.Controls.Add(this.btnDangXuLy);
             this.panel1.Controls.Add(this.btnDangGiao);
@@ -60,28 +58,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1450, 60);
+            this.panel1.Size = new System.Drawing.Size(1573, 60);
             this.panel1.TabIndex = 3;
-            // 
-            // btnHuyDon
-            // 
-            this.btnHuyDon.CustomBorderColor = System.Drawing.Color.White;
-            this.btnHuyDon.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnHuyDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuyDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuyDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHuyDon.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHuyDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHuyDon.FillColor = System.Drawing.Color.Transparent;
-            this.btnHuyDon.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnHuyDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyDon.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHuyDon.Location = new System.Drawing.Point(992, 9);
-            this.btnHuyDon.Name = "btnHuyDon";
-            this.btnHuyDon.Size = new System.Drawing.Size(217, 45);
-            this.btnHuyDon.TabIndex = 15;
-            this.btnHuyDon.Text = "Hoàn tiền/Hủy đơn";
-            this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
             // 
             // btnDaGiao
             // 
@@ -177,13 +155,13 @@
             this.pTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTieuDe.Location = new System.Drawing.Point(0, 60);
             this.pTieuDe.Name = "pTieuDe";
-            this.pTieuDe.Size = new System.Drawing.Size(1450, 46);
+            this.pTieuDe.Size = new System.Drawing.Size(1573, 49);
             this.pTieuDe.TabIndex = 15;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(1105, 6);
+            this.panel7.Location = new System.Drawing.Point(1105, 8);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1, 35);
             this.panel7.TabIndex = 13;
@@ -191,7 +169,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(937, 6);
+            this.panel6.Location = new System.Drawing.Point(937, 8);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1, 35);
             this.panel6.TabIndex = 14;
@@ -199,7 +177,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(687, 6);
+            this.panel5.Location = new System.Drawing.Point(687, 8);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1, 35);
             this.panel5.TabIndex = 15;
@@ -207,7 +185,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(506, 6);
+            this.panel4.Location = new System.Drawing.Point(506, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 35);
             this.panel4.TabIndex = 12;
@@ -216,7 +194,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(1240, 14);
+            this.label5.Location = new System.Drawing.Point(1240, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 8;
@@ -226,7 +204,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(995, 13);
+            this.label2.Location = new System.Drawing.Point(995, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 10;
@@ -236,7 +214,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(775, 13);
+            this.label4.Location = new System.Drawing.Point(775, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 9;
@@ -246,7 +224,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(565, 13);
+            this.label3.Location = new System.Drawing.Point(565, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 8;
@@ -256,7 +234,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(55, 12);
+            this.label7.Location = new System.Drawing.Point(55, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 20);
             this.label7.TabIndex = 7;
@@ -264,11 +242,11 @@
             // 
             // fPanelDonhang
             // 
-            this.fPanelDonhang.BackColor = System.Drawing.Color.Honeydew;
+            this.fPanelDonhang.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fPanelDonhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fPanelDonhang.Location = new System.Drawing.Point(0, 106);
+            this.fPanelDonhang.Location = new System.Drawing.Point(0, 109);
             this.fPanelDonhang.Name = "fPanelDonhang";
-            this.fPanelDonhang.Size = new System.Drawing.Size(1450, 636);
+            this.fPanelDonhang.Size = new System.Drawing.Size(1573, 726);
             this.fPanelDonhang.TabIndex = 16;
             // 
             // UCDonBan
@@ -280,7 +258,7 @@
             this.Controls.Add(this.pTieuDe);
             this.Controls.Add(this.panel1);
             this.Name = "UCDonBan";
-            this.Size = new System.Drawing.Size(1450, 742);
+            this.Size = new System.Drawing.Size(1573, 835);
             this.Load += new System.EventHandler(this.UCSalesOrder_Load);
             this.panel1.ResumeLayout(false);
             this.pTieuDe.ResumeLayout(false);
@@ -292,7 +270,6 @@
         #endregion
 
         public System.Windows.Forms.Panel panel1;
-        public Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
         public Guna.UI2.WinForms.Guna2GradientButton btnDaGiao;
         public Guna.UI2.WinForms.Guna2GradientButton btnDangXuLy;
         public Guna.UI2.WinForms.Guna2GradientButton btnDangGiao;

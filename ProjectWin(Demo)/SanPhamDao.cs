@@ -115,8 +115,8 @@ namespace ProjectWin_Demo_
         
         public void Update(SanPham sp, Decimal soLuongSP)
         {
-            string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai) VALUES ('{0}', '{1}', N'{2}')",
-                       id, sp.MaSP, "Chờ xác nhận");
+            string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai, SoLuongDaMua) VALUES ({0}, '{1}', N'{2}', {3})",
+                       id, sp.MaSP, "Chờ xác nhận", soLuongSP);
             dBConnection.thucThi(sqlStr);
             sqlStr = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - soLuongSP).ToString(), sp.MaSP);
             dBConnection.thucThi(sqlStr);
@@ -136,7 +136,7 @@ namespace ProjectWin_Demo_
 
         public List<SanPham> DSDonBan(string trangThai)
         {
-            string query = string.Format("SELECT *FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
+            string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
             return dBConnection.LoadDSDonhang(query);
         }
 
@@ -144,6 +144,13 @@ namespace ProjectWin_Demo_
         {
             string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sanPham.MaSP);
             dBConnection.thucThi(query);
+        }
+        public void LyDoHuySP(SanPham sp, string lyDo)
+        {
+            string sqlStr = string.Format("INSERT INTO SanPhamHuy(ID, MSP, LyDoHuy, ThoiGianHuy) VALUES ({0}, '{1}', N'{2}', '{3}')",
+                       id, sp.MaSP, lyDo, DateTime.Now);
+            dBConnection.thucThi(sqlStr);
+            XacNhanDonhang(sp, "Đã hủy");
         }
     }
 }

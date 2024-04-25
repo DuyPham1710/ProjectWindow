@@ -58,7 +58,6 @@ namespace ProjectWin_Demo_.UC
         private void btnChoXacNhan_Click(object sender, EventArgs e)
         {
             btnChoXacNhan.CustomBorderColor = Color.Gold;
-            btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
@@ -66,31 +65,30 @@ namespace ProjectWin_Demo_.UC
             sanPham = sanPhamDao.DSDonMua("Chờ xác nhận");
             foreach (SanPham item in sanPham)
             {
-                UCSanPham ucSP = new UCSanPham(item, id);
+                UCSanPhamMua ucSP = new UCSanPhamMua(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
 
-        private void btnDangXuLy_Click(object sender, EventArgs e)
-        {
-            btnChoXacNhan.CustomBorderColor = Color.White;
-            btnDangXuLy.CustomBorderColor = Color.Gold;
-            btnDangGiao.CustomBorderColor = Color.White;
-            btnDaGiao.CustomBorderColor = Color.White;
-            btnHuyDon.CustomBorderColor = Color.White;
-            fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Đang xử lý");
-            foreach (SanPham item in sanPham)
-            {
-                UCSanPham ucSP = new UCSanPham(item, id);
-                fPanelDonhang.Controls.Add(ucSP);
-            }
-        }
+        //private void btnDangXuLy_Click(object sender, EventArgs e)
+        //{
+        //    btnChoXacNhan.CustomBorderColor = Color.White;
+        //    btnDangXuLy.CustomBorderColor = Color.Gold;
+        //    btnDangGiao.CustomBorderColor = Color.White;
+        //    btnDaGiao.CustomBorderColor = Color.White;
+        //    btnHuyDon.CustomBorderColor = Color.White;
+        //    fPanelDonhang.Controls.Clear();
+        //    sanPham = sanPhamDao.DSDonMua("Đang xử lý");
+        //    foreach (SanPham item in sanPham)
+        //    {
+        //        UCSanPham ucSP = new UCSanPham(item, id);
+        //        fPanelDonhang.Controls.Add(ucSP);
+        //    }
+        //}
 
         private void btnDangGiao_Click(object sender, EventArgs e)
         {
             btnChoXacNhan.CustomBorderColor = Color.White;
-            btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
@@ -98,7 +96,7 @@ namespace ProjectWin_Demo_.UC
             sanPham = sanPhamDao.DSDonMua("Đang giao");
             foreach (SanPham item in sanPham)
             {
-                UCSanPham ucSP = new UCSanPham(item, id);
+                UCSanPhamMua ucSP = new UCSanPhamMua(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
@@ -106,7 +104,6 @@ namespace ProjectWin_Demo_.UC
         private void btnDaGiao_Click(object sender, EventArgs e)
         {
             btnChoXacNhan.CustomBorderColor = Color.White;
-            btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.Gold;
             btnHuyDon.CustomBorderColor = Color.White;
@@ -122,15 +119,15 @@ namespace ProjectWin_Demo_.UC
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
             btnChoXacNhan.CustomBorderColor = Color.White;
-            btnDangXuLy.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Hoàn tiền/Hủy đơn");
+            sanPham = sanPhamDao.DSDonMua("Đã hủy");
             foreach (SanPham item in sanPham)
             {
-                UCSanPham ucSP = new UCSanPham(item, id);
+                UCSPDaMua ucSP = new UCSPDaMua(item, id);
+                ucSP.btnDanhGia.Hide();
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
