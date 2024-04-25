@@ -142,9 +142,6 @@
   <data name="Graphicloads-100-Flat-Cart-add.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Graphicloads-100-Flat-Cart-add.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thongTin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thongTin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icons8-Windows-8-Ecommerce-Product.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons8-Windows-8-Ecommerce-Product.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,9 +163,6 @@
   <data name="1559144-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1559144-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Iconoir-Team-Iconoir-Settings.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconoir-Team-Iconoir-Settings.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="arrow-right-from-bracket-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-right-from-bracket-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,8 +178,8 @@
   <data name="cart-shopping-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cart-shopping-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Custom-Icon-Design-Mono-General-3-Home.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Custom-Icon-Design-Mono-General-3-Home.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-password-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-password-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,6 +205,9 @@
   <data name="InfoProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InfoProduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-plus-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-plus-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ionic-Ionicons-Location-outline.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ionic-Ionicons-Location-outline.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,8 +226,8 @@
   <data name="Lich" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lich.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="google" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Iconoir-Team-Iconoir-Settings.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconoir-Team-Iconoir-Settings.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,8 +277,11 @@
   <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-plus-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-plus-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Custom-Icon-Design-Mono-General-3-Home.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Mono-General-3-Home.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="google" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="envelope-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\envelope-solid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,8 +295,8 @@
   <data name="Iconsmind-Outline-Home-2-2.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconsmind-Outline-Home-2-2.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="thongTin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thongTin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -318,5 +318,8 @@
   </data>
   <data name="Iconsmind-Outline-Photo.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconsmind-Outline-Photo.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Roundicons-100-Free-Solid-Shop.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Roundicons-100-Free-Solid-Shop.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

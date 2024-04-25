@@ -38,5 +38,10 @@ namespace ProjectWin_Demo_
         {
 
         }
+        public List<UCShop> LocTheoDoUyTin(string danhMuc)
+        {
+            string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} = N'{1}'", id, danhMuc);
+            return dBConnection.LoadShop(sqlQuery);
+        }
     }
 }

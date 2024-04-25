@@ -225,6 +225,7 @@
             this.btnCatalog.Size = new System.Drawing.Size(135, 31);
             this.btnCatalog.TabIndex = 14;
             this.btnCatalog.Text = "Doanh mục";
+            this.btnCatalog.Click += new System.EventHandler(this.btnCatalog_Click);
             // 
             // btnSort
             // 
@@ -266,7 +267,8 @@
             this.btnbestSeller.Name = "btnbestSeller";
             this.btnbestSeller.Size = new System.Drawing.Size(135, 31);
             this.btnbestSeller.TabIndex = 16;
-            this.btnbestSeller.Text = "Bán chạy nhất";
+            this.btnbestSeller.Text = "Ưa chuộng";
+            this.btnbestSeller.Click += new System.EventHandler(this.btnbestSeller_Click);
             // 
             // btnAllProduct
             // 

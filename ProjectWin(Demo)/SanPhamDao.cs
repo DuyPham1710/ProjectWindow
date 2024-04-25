@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
@@ -143,7 +144,22 @@ namespace ProjectWin_Demo_
         public void XacNhanDonhang(SanPham sanPham, string trangThai)
         {
             string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sanPham.MaSP);
+            if(trangThai == "Đã giao")
+            {
+                query = string.Format("UPDATE SanPham SET SoLuongDaBan = (SoluongDaBan + 1) where MSP = '{1}'", trangThai, sanPham.MaSP);
+            }
             dBConnection.thucThi(query);
         }
+
+        public List<T> SanPhamUaChuong<T>()
+        {
+            string sqlStr = string.Format("SELECT AVG(SoLuongDaBan) FROM SanPham)");
+            int tb = dBConnection.demDB(sqlStr);
+            MessageBox.Show(tb.ToString(), "");
+            sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and SoLuongDaBan > {1} FROM SanPham)", id,tb);
+            return dBConnection.LoadSanPham<T>(sqlStr);
+        }
+
+
     }
 }

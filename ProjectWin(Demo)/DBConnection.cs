@@ -68,6 +68,30 @@ namespace ProjectWin_Demo_
             }
             return binhLuan;
         }
+        public List<UCShop> LoadShop(string query)
+        {
+            List<UCShop> shop = new List<UCShop>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    UCShop ucS = new UCShop();
+                    shop.Add(ucS);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể load các shop", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return shop;
+        }
         public List<T> LoadSanPham<T>(string query)
         {
             List<T> SanPham = new List<T>();
