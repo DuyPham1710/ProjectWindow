@@ -15,6 +15,7 @@ namespace ProjectWin_Demo_
         SanPham sp;
         int id;
         string[] AnhCu = { };
+        public event EventHandler BtnClick_HuyDon;
         public UCSanPhamMua(SanPham sp, int id)
         {
             InitializeComponent();
@@ -24,8 +25,9 @@ namespace ProjectWin_Demo_
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
-            FLyDoHuyDon fLyDoHuy = new FLyDoHuyDon(sp, id);
-            fLyDoHuy.ShowDialog();
+            BtnClick_HuyDon?.Invoke(this, e);
+            //FLyDoHuyDon fLyDoHuy = new FLyDoHuyDon(sp, id);
+            //fLyDoHuy.ShowDialog();
         }
 
         private void UCSanPhamMua_Load(object sender, EventArgs e)

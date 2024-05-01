@@ -203,7 +203,7 @@ namespace ProjectWin_Demo_
         //    }
         //    return null;
         //}
-        public List<SanPham> LoadDSDonhang(string query)
+        public List<SanPham> LoadDanhSachSanPham(string query)
         {
             List<SanPham> sanPham = new List<SanPham>();
             try
@@ -215,6 +215,29 @@ namespace ProjectWin_Demo_
                 {
                     SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
                         (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                    sanPham.Add(sp);
+                }
+            }
+            catch (Exception ex) { }
+            finally
+            {
+                conn.Close();
+
+            }
+            return sanPham;
+        }
+        public List<SanPham> LoadDSDonhang(string query)
+        {
+            List<SanPham> sanPham = new List<SanPham>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuongDaMua"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
                     sanPham.Add(sp);
                 }
             }

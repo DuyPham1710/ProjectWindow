@@ -16,7 +16,9 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
+
         SanPham sp;
+        //List<SanPham> sanPham = new List<SanPham>();
         int id;
         string[] AnhCu = { };
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
@@ -29,41 +31,53 @@ namespace ProjectWin_Demo_
             this.id = id;
             SPDao = new SanPhamDao(id);
         }
+        //public FThanhToan(List<SanPham> sanPham, int id)
+        //{
+        //    InitializeComponent();
+        //    this.sanPham = sanPham;
+        //    this.id = id;
+        //    SPDao = new SanPhamDao(id);
+
+        //}
         private void FThanhToan_Load(object sender, EventArgs e)
         {
-            txtTenSP.Text = sp.TenSP;
-            txtPhanLoai.Text = sp.DanhMuc;
-            txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
-            lblTongTien.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
-            DateTime date = DateTime.Now;
-            txtNgay.Text = date.Day.ToString();
-            txtThang.Text = date.Month.ToString();
-            txtNam.Text = date.Year.ToString();
-            if (sp.AnhHienTai != "")
-                AnhCu = sp.AnhHienTai.Split(',');
-            if (AnhCu.Length > 0)
-            {
-                Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
-                pctSanPham.Image = bitmap;
-            }
-            else
-                pctSanPham.Image = null;
-            try
-            {
-                conn.Open();
-                string query = "select * from Person where ID = " + id;
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+            //foreach (SanPham sp in sanPham)
+            //{
+                txtTenSP.Text = sp.TenSP;
+                txtPhanLoai.Text = sp.DanhMuc;
+                txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
+                lblTongTien.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
+                DateTime date = DateTime.Now;
+                txtNgay.Text = date.Day.ToString();
+                txtThang.Text = date.Month.ToString();
+                txtNam.Text = date.Year.ToString();
+                if (sp.AnhHienTai != "")
+                    AnhCu = sp.AnhHienTai.Split(',');
+                if (AnhCu.Length > 0)
                 {
-                    txtHoTen.Text = (string)reader["FullName"];
-                    txtSoDT.Text = (string)reader["Phone"];
-                    txtDiaChi.Text = (string)reader["Addr"];
+                    Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
+                    pctSanPham.Image = bitmap;
                 }
+                else
+                    pctSanPham.Image = null;
+                try
+                {
+                    conn.Open();
+                    string query = "select * from Person where ID = " + id;
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        txtHoTen.Text = (string)reader["FullName"];
+                        txtSoDT.Text = (string)reader["Phone"];
+                        txtDiaChi.Text = (string)reader["Addr"];
+                    }
 
-            }
-            catch { }
-            finally { conn.Close(); }
+                }
+                catch { }
+                finally { conn.Close(); }
+            //}   
+            
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)

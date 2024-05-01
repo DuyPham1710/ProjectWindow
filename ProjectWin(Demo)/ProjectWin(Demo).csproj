@@ -54,10 +54,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="FLyDoHuyDon.cs">
+    <Compile Include="Form\FDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLyDoHuyDon.Designer.cs">
+    <Compile Include="Form\FDonBan.Designer.cs">
+      <DependentUpon>FDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FDonMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FDonMua.Designer.cs">
+      <DependentUpon>FDonMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FLyDoHuyDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FLyDoHuyDon.Designer.cs">
       <DependentUpon>FLyDoHuyDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FDiaChiNhanHang.cs">
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Form\FDangKy.Designer.cs">
       <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FShop.Designer.cs">
+      <DependentUpon>FShop.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\ElipseControl.cs">
       <SubType>Component</SubType>
@@ -159,10 +177,22 @@
     <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCSanPhamMua.cs">
+    <Compile Include="UCShop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSanPhamMua.Designer.cs">
+    <Compile Include="UCShop.Designer.cs">
+      <DependentUpon>UCShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSPDaHuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSPDaHuy.Designer.cs">
+      <DependentUpon>UCSPDaHuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSanPhamMua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSanPhamMua.Designer.cs">
       <DependentUpon>UCSanPhamMua.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCLichSuDaBan.cs">
@@ -228,25 +258,19 @@
     <Compile Include="Funtion\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\UCDonMua.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCDonMua.Designer.cs">
-      <DependentUpon>UCDonMua.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC\UCDoanhThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCDoanhThu.Designer.cs">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCDonBan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCDonBan.Designer.cs">
-      <DependentUpon>UCDonBan.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FLyDoHuyDon.resx">
+    <EmbeddedResource Include="Form\FDonBan.resx">
+      <DependentUpon>FDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FDonMua.resx">
+      <DependentUpon>FDonMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FLyDoHuyDon.resx">
       <DependentUpon>FLyDoHuyDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FDiaChiNhanHang.resx">
@@ -299,7 +323,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSanPhamMua.resx">
+    <EmbeddedResource Include="UC\UCSPDaHuy.resx">
+      <DependentUpon>UCSPDaHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSanPhamMua.resx">
       <DependentUpon>UCSanPhamMua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCBinhLuan.resx">
@@ -332,14 +359,8 @@
     <EmbeddedResource Include="UC\UCSanPham.resx">
       <DependentUpon>UCSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCDonMua.resx">
-      <DependentUpon>UCDonMua.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCDoanhThu.resx">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCDonBan.resx">
-      <DependentUpon>UCDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -551,6 +572,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cart-icon-28349.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5400072685156_72eea7dd5b197d112a808f8d35cc4730.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spTuongTu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mess.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

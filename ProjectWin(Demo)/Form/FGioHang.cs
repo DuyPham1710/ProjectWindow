@@ -22,14 +22,26 @@ namespace ProjectWin_Demo_
             SPDao = new SanPhamDao(id);
         }
 
-        private void btnBuyNow_Click(object sender, EventArgs e)
+        private void btnMuaHang_Click(object sender, EventArgs e)
         {
             if (lblTongTien.Text == "0")
             {
                 MessageBox.Show("Bạn vẫn chưa chọn sản phẩm nào để mua", "Thông báo");
             }
-            //FPayment fPayment = new FPayment();
-            //fPayment.ShowDialog();
+            //else
+            //{
+            //    List<SanPham> sanPham  = new List<SanPham>();
+            //    foreach (UCGioHang gh in gioHang)
+            //    {
+            //        if (gh.cbChonSP.Checked)
+            //        {
+            //            SanPham sp = new SanPham(gh.lblMaSP.Text);
+            //            sanPham.Add(sp);
+            //        }
+            //    }
+            //    FThanhToan fThanhToan = new FThanhToan(sanPham, id);
+            //    fThanhToan.ShowDialog();
+            //}
         }
 
         private void FGioHang_Load(object sender, EventArgs e)
@@ -49,7 +61,6 @@ namespace ProjectWin_Demo_
         {
             UCGioHang sanPham = sender as UCGioHang;
             List<SanPham> sp = SPDao.chiTietSanPham(sanPham.lblMaSP.Text);
-            //SanPham sp = new SanPham(sanPham.lblMaSP.Text);
             FChiTiet fChiTiet = new FChiTiet(sp[0], id);
             fChiTiet.ShowDialog();
         }
@@ -65,20 +76,22 @@ namespace ProjectWin_Demo_
                 //MessageBox.Show("Xóa thành công", "Thông báo");
             }
         }
+        
         private void cbChonSP_Click(object sender, EventArgs e)
         {
             UCGioHang sanPham = sender as UCGioHang;
             if (sanPham.cbChonSP.Checked)
             {
                 lblTongTien.Text = (int.Parse(lblTongTien.Text) + int.Parse(sanPham.lblTongTien.Text)).ToString();
+                sanPham.panelGioHanh.BackColor = Color.LightCyan;
             }
             else
             {
                 lblTongTien.Text = (int.Parse(lblTongTien.Text) - int.Parse(sanPham.lblTongTien.Text)).ToString();
+                sanPham.panelGioHanh.BackColor = Color.White;
             }
             
         }
-
         private void cbChonTatCa_CheckedChanged(object sender, EventArgs e)
         {
             if (cbChonTatCa.Checked)
@@ -86,9 +99,8 @@ namespace ProjectWin_Demo_
                 foreach(UCGioHang gh in gioHang)
                 {
                     gh.cbChonSP.Checked = true;
-                    
+                    gh.panelGioHanh.BackColor = Color.LightCyan;
                     lblTongTien.Text = (int.Parse(lblTongTien.Text) + int.Parse(gh.lblTongTien.Text)).ToString();
-                    
                 }
                 
             }
@@ -97,10 +109,12 @@ namespace ProjectWin_Demo_
                 foreach (UCGioHang gh in gioHang)
                 {
                     gh.cbChonSP.Checked = false;
-
+                    gh.panelGioHanh.BackColor = Color.White;
                 }
                 lblTongTien.Text = "0";
             }
         }
+
+    
     }
 }

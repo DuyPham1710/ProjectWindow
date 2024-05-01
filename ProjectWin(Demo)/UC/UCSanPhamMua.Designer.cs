@@ -109,7 +109,7 @@
             this.btnHuyDon.FillColor2 = System.Drawing.Color.MediumSlateBlue;
             this.btnHuyDon.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnHuyDon.ForeColor = System.Drawing.Color.White;
-            this.btnHuyDon.Location = new System.Drawing.Point(1274, 21);
+            this.btnHuyDon.Location = new System.Drawing.Point(1276, 21);
             this.btnHuyDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuyDon.Name = "btnHuyDon";
             this.btnHuyDon.Size = new System.Drawing.Size(164, 50);
@@ -136,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.btnHuyDon);
             this.Controls.Add(this.lblDanhMuc);
             this.Controls.Add(this.lblGia);
@@ -161,6 +162,6 @@
         public System.Windows.Forms.Label lblTenSP;
         public System.Windows.Forms.Label lblMaSP;
         public System.Windows.Forms.PictureBox pctSanPham;
-        private Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
+        public Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
     }
 }

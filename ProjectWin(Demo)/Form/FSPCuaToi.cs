@@ -93,12 +93,12 @@ namespace ProjectWin_Demo_
             btnProductSold.ForeColor = Color.Black;
             FSPCuaToi_Load(sender, e);
         }
-        private void addUserControl(UserControl userControl)
-        {
-            fPanelHienThi.Controls.Clear();
-            fPanelHienThi.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
+        //private void addUserControl(UserControl userControl)
+        //{
+        //    fPanelHienThi.Controls.Clear();
+        //    fPanelHienThi.Controls.Add(userControl);
+        //    userControl.BringToFront();
+        //}
 
         private void pcbDelete_Click(object sender, EventArgs e)
         {

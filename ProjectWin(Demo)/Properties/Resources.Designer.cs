@@ -513,6 +513,26 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_solid {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mess {
+            get {
+                object obj = ResourceManager.GetObject("mess", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Momo {
             get {
                 object obj = ResourceManager.GetObject("Momo", resourceCulture);
@@ -587,6 +607,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25 {
             get {
                 object obj = ResourceManager.GetObject("smart-tivi-4k-sony-kd-55x75k-55-inch-google-tv_c2bfad25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spTuongTu {
+            get {
+                object obj = ResourceManager.GetObject("spTuongTu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -697,6 +727,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap z5217272932631_72c73dc409773a73013edce5ca74c052 {
             get {
                 object obj = ResourceManager.GetObject("z5217272932631_72c73dc409773a73013edce5ca74c052", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z5400072685156_72eea7dd5b197d112a808f8d35cc4730 {
+            get {
+                object obj = ResourceManager.GetObject("z5400072685156_72eea7dd5b197d112a808f8d35cc4730", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

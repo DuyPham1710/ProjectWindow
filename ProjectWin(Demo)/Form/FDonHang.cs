@@ -32,8 +32,7 @@ namespace ProjectWin_Demo_
             btnDonMua.ForeColor = Color.MediumSlateBlue;
             btnDonBan.CustomBorderColor = Color.White;
             btnDonBan.ForeColor = Color.Black;
-            UCDonMua ucDonMua = new UCDonMua(id);
-            addUserControl(ucDonMua);
+            openChildForm(new FDonMua(id));
         }
 
         private void btnDonBan_Click(object sender, EventArgs e)
@@ -42,16 +41,22 @@ namespace ProjectWin_Demo_
             btnDonMua.ForeColor = Color.Black;
             btnDonBan.CustomBorderColor = Color.MediumSlateBlue;
             btnDonBan.ForeColor = Color.MediumSlateBlue;
-            UCDonBan ucDonBan = new UCDonBan(id);
-            addUserControl(ucDonBan);
+            openChildForm(new FDonBan(id));
         }
-       
-        private void addUserControl(UserControl userControl)
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-            PanelDonHang.Controls.Clear();
-            PanelDonHang.Controls.Add(userControl);
-            userControl.BringToFront();
-            userControl.Dock = DockStyle.Fill;
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            PanelDonHang.Controls.Add(childForm);
+            PanelDonHang.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

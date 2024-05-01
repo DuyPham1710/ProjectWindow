@@ -88,6 +88,7 @@
             // 
             // PanelDonHang
             // 
+            this.PanelDonHang.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDonHang.Location = new System.Drawing.Point(0, 57);
             this.PanelDonHang.Name = "PanelDonHang";
@@ -116,7 +117,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnDonMua;
         private Guna.UI2.WinForms.Guna2GradientButton btnDonBan;
-        private UC.UCDonMua ucPurchaseOrder1;
         private System.Windows.Forms.Panel PanelDonHang;
     }
 }

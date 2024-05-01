@@ -31,6 +31,7 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnMuaHang = new CustomButton.VBButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fPanelGioHang = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnBuyNow = new CustomButton.VBButton();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,10 +49,9 @@
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(772, 11);
-            this.lblTongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTongTien.Location = new System.Drawing.Point(1029, 14);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(15, 17);
+            this.lblTongTien.Size = new System.Drawing.Size(18, 19);
             this.lblTongTien.TabIndex = 1;
             this.lblTongTien.Text = "0";
             // 
@@ -61,33 +60,53 @@
             this.panel3.BackColor = System.Drawing.Color.OldLace;
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.lblTongTien);
-            this.panel3.Controls.Add(this.btnBuyNow);
+            this.panel3.Controls.Add(this.btnMuaHang);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 682);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(0, 839);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1180, 43);
+            this.panel3.Size = new System.Drawing.Size(1573, 53);
             this.panel3.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(670, 11);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(893, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 17);
+            this.label7.Size = new System.Drawing.Size(105, 19);
             this.label7.TabIndex = 2;
             this.label7.Text = "Tổng số tiền:";
+            // 
+            // btnMuaHang
+            // 
+            this.btnMuaHang.BackColor = System.Drawing.Color.Crimson;
+            this.btnMuaHang.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnMuaHang.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMuaHang.BorderRadius = 13;
+            this.btnMuaHang.BorderSize = 0;
+            this.btnMuaHang.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMuaHang.FlatAppearance.BorderSize = 0;
+            this.btnMuaHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMuaHang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuaHang.ForeColor = System.Drawing.Color.White;
+            this.btnMuaHang.Location = new System.Drawing.Point(1421, 0);
+            this.btnMuaHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMuaHang.Name = "btnMuaHang";
+            this.btnMuaHang.Size = new System.Drawing.Size(152, 53);
+            this.btnMuaHang.TabIndex = 0;
+            this.btnMuaHang.Text = "Mua ngay";
+            this.btnMuaHang.TextColor = System.Drawing.Color.White;
+            this.btnMuaHang.UseVisualStyleBackColor = false;
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(104, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(86, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sản phẩm";
             // 
@@ -95,10 +114,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(528, 7);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(704, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.Size = new System.Drawing.Size(73, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đơn giá";
             // 
@@ -106,10 +124,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(723, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(964, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.Size = new System.Drawing.Size(82, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số lượng";
             // 
@@ -117,10 +134,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(892, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1189, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 19);
+            this.label4.Size = new System.Drawing.Size(107, 22);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tổng số tiền";
             // 
@@ -128,20 +144,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(310, 7);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(413, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(84, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "Phân loại";
             // 
             // cbChonTatCa
             // 
             this.cbChonTatCa.AutoSize = true;
-            this.cbChonTatCa.Location = new System.Drawing.Point(11, 9);
-            this.cbChonTatCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbChonTatCa.Location = new System.Drawing.Point(15, 11);
+            this.cbChonTatCa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbChonTatCa.Name = "cbChonTatCa";
-            this.cbChonTatCa.Size = new System.Drawing.Size(15, 14);
+            this.cbChonTatCa.Size = new System.Drawing.Size(18, 17);
             this.cbChonTatCa.TabIndex = 5;
             this.cbChonTatCa.UseVisualStyleBackColor = true;
             this.cbChonTatCa.CheckedChanged += new System.EventHandler(this.cbChonTatCa_CheckedChanged);
@@ -150,10 +165,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1100, 7);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(1467, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 19);
+            this.label6.Size = new System.Drawing.Size(43, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "Xóa";
             // 
@@ -170,54 +184,32 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 46);
+            this.panel1.Size = new System.Drawing.Size(1573, 56);
             this.panel1.TabIndex = 0;
             // 
             // fPanelGioHang
             // 
             this.fPanelGioHang.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fPanelGioHang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.fPanelGioHang.Location = new System.Drawing.Point(0, 44);
-            this.fPanelGioHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fPanelGioHang.Location = new System.Drawing.Point(0, 54);
+            this.fPanelGioHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fPanelGioHang.Name = "fPanelGioHang";
-            this.fPanelGioHang.Size = new System.Drawing.Size(1180, 638);
+            this.fPanelGioHang.Size = new System.Drawing.Size(1573, 785);
             this.fPanelGioHang.TabIndex = 6;
-            // 
-            // btnBuyNow
-            // 
-            this.btnBuyNow.BackColor = System.Drawing.Color.Crimson;
-            this.btnBuyNow.BackgroundColor = System.Drawing.Color.Crimson;
-            this.btnBuyNow.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnBuyNow.BorderRadius = 13;
-            this.btnBuyNow.BorderSize = 0;
-            this.btnBuyNow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnBuyNow.FlatAppearance.BorderSize = 0;
-            this.btnBuyNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuyNow.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyNow.ForeColor = System.Drawing.Color.White;
-            this.btnBuyNow.Location = new System.Drawing.Point(1066, 0);
-            this.btnBuyNow.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuyNow.Name = "btnBuyNow";
-            this.btnBuyNow.Size = new System.Drawing.Size(114, 43);
-            this.btnBuyNow.TabIndex = 0;
-            this.btnBuyNow.Text = "Mua ngay";
-            this.btnBuyNow.TextColor = System.Drawing.Color.White;
-            this.btnBuyNow.UseVisualStyleBackColor = false;
-            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
             // 
             // FGioHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1180, 725);
+            this.ClientSize = new System.Drawing.Size(1573, 892);
             this.Controls.Add(this.fPanelGioHang);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FGioHang";
             this.Text = "FCart";
             this.Load += new System.EventHandler(this.FGioHang_Load);
@@ -232,7 +224,7 @@
         #endregion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTongTien;
-        private CustomButton.VBButton btnBuyNow;
+        private CustomButton.VBButton btnMuaHang;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

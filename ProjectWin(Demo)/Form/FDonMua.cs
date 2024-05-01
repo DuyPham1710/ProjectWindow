@@ -2,28 +2,30 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjectWin_Demo_.UC
+namespace ProjectWin_Demo_
 {
-    public partial class UCDonMua : UserControl
+    public partial class FDonMua : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private int id;
         SanPhamDao sanPhamDao;
         List<SanPham> sanPham = new List<SanPham>();
-        public UCDonMua(int id)
+        public FDonMua(int id)
         {
             InitializeComponent();
             this.id = id;
             sanPhamDao = new SanPhamDao(id);
         }
 
+        private void FDonMua_Load(object sender, EventArgs e)
+        {
+            btnChoXacNhan_Click(sender, e);
+        }
         //private List<SanPham> ThucThi(string trangThai)
         //{
         //    List<SanPham> products = new List<SanPham>();  
@@ -45,16 +47,10 @@ namespace ProjectWin_Demo_.UC
         //    finally
         //    {
         //        conn.Close();
-                
+
         //    }
         //    return products;
         //}
-
-        private void UCPurchaseOrder_Load(object sender, EventArgs e)
-        {
-            btnChoXacNhan_Click(sender, e);
-        }
-
         private void btnChoXacNhan_Click(object sender, EventArgs e)
         {
             btnChoXacNhan.CustomBorderColor = Color.Gold;
@@ -66,10 +62,18 @@ namespace ProjectWin_Demo_.UC
             foreach (SanPham item in sanPham)
             {
                 UCSanPhamMua ucSP = new UCSanPhamMua(item, id);
+                ucSP.BtnClick_HuyDon += btnHuySPDaMua_Click;
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
-
+        private void btnHuySPDaMua_Click(object sender, EventArgs e)
+        {
+            UCSanPhamMua uCSanPhamMua = sender as UCSanPhamMua;
+            SanPham sp = new SanPham(uCSanPhamMua.lblMaSP.Text);
+            FLyDoHuyDon fLyDoHuy = new FLyDoHuyDon(sp, id);
+            fLyDoHuy.ShowDialog();
+            btnChoXacNhan_Click(sender, e);
+        }
         //private void btnDangXuLy_Click(object sender, EventArgs e)
         //{
         //    btnChoXacNhan.CustomBorderColor = Color.White;
@@ -118,6 +122,7 @@ namespace ProjectWin_Demo_.UC
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
+            pTieuDe.Hide();
             btnChoXacNhan.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
@@ -126,8 +131,7 @@ namespace ProjectWin_Demo_.UC
             sanPham = sanPhamDao.DSDonMua("Đã hủy");
             foreach (SanPham item in sanPham)
             {
-                UCSPDaMua ucSP = new UCSPDaMua(item, id);
-                ucSP.btnDanhGia.Hide();
+                UCSPDaHuy ucSP = new UCSPDaHuy(item, id);
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }

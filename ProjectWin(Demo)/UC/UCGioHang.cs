@@ -18,7 +18,6 @@ namespace ProjectWin_Demo_
         public event EventHandler BtnClick_ChiTiet;
         public event EventHandler BtnClick_Xoa;
         public event EventHandler BtnClick_Chon;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string[] AnhCu = { };
         SanPhamDao SPDao;
         private int soLuong;
@@ -51,16 +50,7 @@ namespace ProjectWin_Demo_
         private void pcbBin_Click(object sender, EventArgs e)
         {
             BtnClick_Xoa?.Invoke(this, e);
-            //DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa sản phẩm này", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            //if (result == DialogResult.Yes)
-            //{
-            //    UCGioHang sanPham = sender as UCGioHang;
-            //    SanPham sp = new SanPham(sanPham.lblMaSP.Text);
-            //    SPDao.Delete(sp, "GioHang");
-            //    //MessageBox.Show("Xóa thành công", "Thông báo");
-            //}
         }
-
         private void panel1_Click(object sender, EventArgs e)
         {
             BtnClick_ChiTiet?.Invoke(this, e);

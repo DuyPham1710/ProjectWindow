@@ -24,7 +24,7 @@ namespace ProjectWin_Demo_
         public List<SanPham> chiTietSanPham(string maSP)
         {
             string sqlStr = string.Format("SELECT * FROM SanPham WHERE MSP = '{0}'", maSP);
-            return dBConnection.LoadDSDonhang(sqlStr);
+            return dBConnection.LoadDanhSachSanPham(sqlStr);
         }
         public List<T> LoadSanPham<T>(string toanTu)
         {
@@ -36,11 +36,6 @@ namespace ProjectWin_Demo_
             string sqlStr = string.Format("SELECT * FROM SanPham inner join DaMua on SanPham.MSP = DaMua.MSP WHERE IDchuSP = {0} and TrangThai = N'Đã giao'", id);
             return dBConnection.LoadSanPham<T>(sqlStr);
         }
-        //public List<UCSPCuaToi> LoadSanPhamCuaToi(int id)
-        //{
-        //    string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP = {0}", id);
-        //    return dBConnection.LoadSanPhamCuaToi(sqlStr);
-        //}
 
         public List<T> timKiem<T>(string searchText, string toanTu)
         {
@@ -86,7 +81,7 @@ namespace ProjectWin_Demo_
             {
                 sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} Order By GiaTienBayGio DESC", id);
             }
-            return dBConnection.LoadDSDonhang(sqlStr);
+            return dBConnection.LoadDanhSachSanPham(sqlStr);
         }
 
         public void ThemGioHang(SanPham sanPham, int soLuong)
@@ -144,6 +139,11 @@ namespace ProjectWin_Demo_
         {
             string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sanPham.MaSP);
             dBConnection.thucThi(query);
+            if (trangThai == "Đã giao")
+            {
+                query = string.Format("UPDATE SanPham SET BanDuoc = (BanDuoc + 1) where MSP = '{1}'", trangThai, sanPham.MaSP);
+                dBConnection.thucThi(query);
+            }
         }
         public void LyDoHuySP(SanPham sp, string lyDo)
         {
@@ -151,6 +151,13 @@ namespace ProjectWin_Demo_
                        id, sp.MaSP, lyDo, DateTime.Now);
             dBConnection.thucThi(sqlStr);
             XacNhanDonhang(sp, "Đã hủy");
+        }
+        public List<T> SanPhamUaChuong<T>()
+        {
+            string sqlStr = string.Format("SELECT AVG(BanDuoc) FROM SanPham");
+            int tb = dBConnection.demDB(sqlStr);
+            sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and BanDuoc > {1} ", id, tb);
+            return dBConnection.LoadSanPham<T>(sqlStr);
         }
     }
 }

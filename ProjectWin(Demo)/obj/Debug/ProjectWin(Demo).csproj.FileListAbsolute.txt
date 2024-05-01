@@ -638,12 +638,13 @@ D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCThongTin.re
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPCuaToi.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCQuyTrinhDonHang.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSanPham.resources
-D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCDonMua.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCDoanhThu.resources
-D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCDonBan.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.GenerateResource.cache
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CoreCompileInputs.cache
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CopyComplete
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).exe
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).pdb
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FLyDoHuyDon.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDaHuy.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDonBan.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDonMua.resources

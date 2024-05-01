@@ -159,5 +159,15 @@ namespace ProjectWin_Demo_
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
+
+        private void btnUuChuong_Click(object sender, EventArgs e)
+        {
+            fPanelSanPham.Controls.Clear();
+            List<UCSanPham> sanPham = SPDao.SanPhamUaChuong<UCSanPham>();
+            foreach (UCSanPham sp in sanPham)
+            {
+                fPanelSanPham.Controls.Add(sp);
+            }
+        }
     }
 }
