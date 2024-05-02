@@ -288,7 +288,7 @@ namespace ProjectWin_Demo_
             btnInfo.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.SkyBlue;
             btnDonHang.CustomBorderColor = Color.White;
-            openChildForm(new FShop());
+            openChildForm(new FShop(id));
         }
     }
 }

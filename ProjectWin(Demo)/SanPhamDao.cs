@@ -108,12 +108,22 @@ namespace ProjectWin_Demo_
             dBConnection.thucThi(sqlStr);
         }
         
-        public void Update(SanPham sp, Decimal soLuongSP)
+        //public void Update(SanPham sp, Decimal soLuongSP)
+        //{
+        //    string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai, SoLuongDaMua) VALUES ({0}, '{1}', N'{2}', {3})",
+        //               id, sp.MaSP, "Chờ xác nhận", soLuongSP);
+        //    dBConnection.thucThi(sqlStr);
+        //    sqlStr = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - soLuongSP).ToString(), sp.MaSP);
+        //    dBConnection.thucThi(sqlStr);
+        //}
+        public void DatHang(SanPham sp, Decimal soLuongSP)
         {
             string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai, SoLuongDaMua) VALUES ({0}, '{1}', N'{2}', {3})",
-                       id, sp.MaSP, "Chờ xác nhận", soLuongSP);
+                       id, sp.MaSP, "Chờ xác nhận", sp.SoLuong);
             dBConnection.thucThi(sqlStr);
-            sqlStr = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - soLuongSP).ToString(), sp.MaSP);
+            sqlStr = string.Format("Select SoLuong from SanPham where MSP = '{0}'", sp.MaSP);
+            int soLuongBanDau = dBConnection.soLuongSanPham(sqlStr);
+            sqlStr = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (soLuongBanDau - Decimal.Parse(sp.SoLuong)).ToString(), sp.MaSP);
             dBConnection.thucThi(sqlStr);
         }
 
@@ -158,6 +168,12 @@ namespace ProjectWin_Demo_
             int tb = dBConnection.demDB(sqlStr);
             sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and BanDuoc > {1} ", id, tb);
             return dBConnection.LoadSanPham<T>(sqlStr);
+        }
+       
+        public void DiaChiNhanHang(string hoTen, string sdt, string DiaChiNhanHang)
+        {
+            string sqlStr = string.Format("INSERT INTO DiaChiGiaoHang(IDNguoiMua, MSP, HoTen, soDT, DiaChiNhanHang) VALUES ({0}, N'{1}', '{2}', N'{3}'", id, hoTen, sdt, DiaChiNhanHang);
+            dBConnection.thucThi(sqlStr);
         }
     }
 }

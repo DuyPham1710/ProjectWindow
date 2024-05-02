@@ -108,7 +108,10 @@ namespace ProjectWin_Demo_
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            FThanhToan fPayment = new FThanhToan(sp, nudSoLuong.Value, id);
+            List<SanPham> sanPham = new List<SanPham>();
+            sp.SoLuong = nudSoLuong.Value.ToString();
+            sanPham.Add(sp);
+            FThanhToan fPayment = new FThanhToan(sanPham, id);
             fPayment.ShowDialog();
             FDetail_Load(sender, e);
             //SPDao.Update(sp, nudSoLuong.Value);

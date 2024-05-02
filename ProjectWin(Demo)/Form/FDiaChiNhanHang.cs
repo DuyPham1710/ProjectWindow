@@ -12,14 +12,23 @@ namespace ProjectWin_Demo_
 {
     public partial class FDiaChiNhanHang : Form
     {
-        public FDiaChiNhanHang()
+        SanPhamDao SPDao;
+        private int id;
+        public FDiaChiNhanHang(int id)
         {
             InitializeComponent();
+            this.id = id;
+            SPDao = new SanPhamDao(id);
         }
 
         private void btnTroLai_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            SPDao.DiaChiNhanHang(txtHoTen.Text, txtSoDT.Text, txtDiaChiNhanHang.Text);
         }
     }
 }

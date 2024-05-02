@@ -289,6 +289,56 @@ namespace ProjectWin_Demo_
                 conn.Close();
             }
         }
-       
+        public int soLuongSanPham(string sql)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return Convert.ToInt32(reader["SoLuong"]);
+                }
+                else
+                {
+                    return 0;
+                }
+               
+            }
+            catch
+            {
+                return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public List<UCShop> LoadShop(string query)
+        {
+            List<UCShop> shop = new List<UCShop>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    UCShop uCShop = new UCShop((int)reader["ID"], (string)reader["FullName"], (Byte[])reader["Avarta"], (int)reader["SoLuong"]);
+                    shop.Add(uCShop);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể load Shop", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return shop;
+        }
+
     }
 }

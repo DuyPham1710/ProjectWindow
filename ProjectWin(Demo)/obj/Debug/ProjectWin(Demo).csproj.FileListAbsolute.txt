@@ -648,3 +648,6 @@ D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FLyDoHuyDon.r
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDaHuy.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDonBan.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDonMua.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCShop.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FShop.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FChiTietShop.resources

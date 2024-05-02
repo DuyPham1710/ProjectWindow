@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="FChiTietShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChiTietShop.Designer.cs">
+      <DependentUpon>FChiTietShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     <Compile Include="UC\UCDoanhThu.Designer.cs">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FChiTietShop.resx">
+      <DependentUpon>FChiTietShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FDonBan.resx">
       <DependentUpon>FDonBan.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +321,9 @@
     <EmbeddedResource Include="Form\FDangKy.resx">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FShop.resx">
+      <DependentUpon>FShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Funtion\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +334,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCShop.resx">
+      <DependentUpon>UCShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSPDaHuy.resx">
       <DependentUpon>UCSPDaHuy.cs</DependentUpon>

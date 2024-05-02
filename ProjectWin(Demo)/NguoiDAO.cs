@@ -30,6 +30,7 @@ namespace ProjectWin_Demo_
                     nguoi.ID, nguoi.UserName, nguoi.Password, nguoi.Position);
             dBConnection.thucThi(sqlStr);
         }
+       
         public void suaTaiKhoan()
         {
 
@@ -37,6 +38,16 @@ namespace ProjectWin_Demo_
         public void xoaTaiKhoan()
         {
 
+        }
+        public List<UCShop> LoadShop()
+        {
+            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0", id);
+            return dBConnection.LoadShop(sqlStr);
+        }
+        public List<UCShop> UyTin(string toantu)
+        {
+            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong, Sum(Distinct BanDuoc) AS daban FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0 and TK.daban {1} 5", id, toantu);
+            return dBConnection.LoadShop(sqlStr);
         }
     }
 }

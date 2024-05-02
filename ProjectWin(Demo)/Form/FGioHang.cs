@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ProjectWin_Demo_
         private int id;
         SanPhamDao SPDao;
         List<UCGioHang> gioHang = new List<UCGioHang>();
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FGioHang(int id)
         {
             InitializeComponent();
@@ -28,20 +30,38 @@ namespace ProjectWin_Demo_
             {
                 MessageBox.Show("Bạn vẫn chưa chọn sản phẩm nào để mua", "Thông báo");
             }
-            //else
-            //{
-            //    List<SanPham> sanPham  = new List<SanPham>();
-            //    foreach (UCGioHang gh in gioHang)
-            //    {
-            //        if (gh.cbChonSP.Checked)
-            //        {
-            //            SanPham sp = new SanPham(gh.lblMaSP.Text);
-            //            sanPham.Add(sp);
-            //        }
-            //    }
-            //    FThanhToan fThanhToan = new FThanhToan(sanPham, id);
-            //    fThanhToan.ShowDialog();
-            //}
+            else
+            {
+                List<SanPham> sanPham = new List<SanPham>();
+                foreach (UCGioHang gh in gioHang)
+                {
+                    if (gh.cbChonSP.Checked)
+                    {
+                        SanPham sp = new SanPham(gh.lblMaSP.Text);
+                        try
+                        {
+                            conn.Open();
+                            string query = string.Format("Select * from SanPham WHERE MSP = '{0}'", sp.MaSP);
+                            SqlCommand cmd = new SqlCommand(query, conn);
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                SanPham sps = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
+                                (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
+                                sps.SoLuong = gh.nudSoLuong.Value.ToString();
+                                sps.GiaHienTai = (Int32.Parse(sps.GiaHienTai) * gh.nudSoLuong.Value).ToString();
+                                sanPham.Add(sps);
+                            }
+                        }
+                        catch { }
+                        finally { conn.Close(); }
+                        //sp.SoLuong = gh.nudSoLuong.Value.ToString();
+                        //sanPham.Add(sp);
+                    }
+                }
+                FThanhToan fThanhToan = new FThanhToan(sanPham, id);
+                fThanhToan.ShowDialog();
+            }
         }
 
         private void FGioHang_Load(object sender, EventArgs e)
