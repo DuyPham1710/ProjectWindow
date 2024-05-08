@@ -34,27 +34,28 @@
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btnKhachhang = new Guna.UI2.WinForms.Guna2Button();
             this.btnShop = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBoxCart = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +69,7 @@
             this.panel1.Controls.Add(this.pictureBoxCart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1249, 47);
             this.panel1.TabIndex = 0;
@@ -100,7 +101,7 @@
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton2.Location = new System.Drawing.Point(28, 7);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.Size = new System.Drawing.Size(15, 16);
@@ -120,7 +121,7 @@
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMinimize.Location = new System.Drawing.Point(48, 7);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnMinimize.Size = new System.Drawing.Size(15, 16);
@@ -141,7 +142,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Location = new System.Drawing.Point(9, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnClose.Size = new System.Drawing.Size(15, 16);
@@ -149,39 +150,13 @@
             this.btnClose.UseTransparentBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pcbAvt
-            // 
-            this.pcbAvt.FillColor = System.Drawing.Color.Gainsboro;
-            this.pcbAvt.ImageRotate = 0F;
-            this.pcbAvt.Location = new System.Drawing.Point(1196, 3);
-            this.pcbAvt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pcbAvt.Name = "pcbAvt";
-            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pcbAvt.Size = new System.Drawing.Size(38, 41);
-            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbAvt.TabIndex = 1;
-            this.pcbAvt.TabStop = false;
-            this.pcbAvt.Click += new System.EventHandler(this.avt_Click);
-            // 
-            // pictureBoxCart
-            // 
-            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_icon_28349;
-            this.pictureBoxCart.Location = new System.Drawing.Point(1030, 7);
-            this.pictureBoxCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBoxCart.Name = "pictureBoxCart";
-            this.pictureBoxCart.Size = new System.Drawing.Size(36, 34);
-            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCart.TabIndex = 2;
-            this.pictureBoxCart.TabStop = false;
-            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
-            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelChildForm.Location = new System.Drawing.Point(69, 47);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1180, 725);
             this.panelChildForm.TabIndex = 2;
@@ -189,6 +164,7 @@
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.White;
+            this.panelControl.Controls.Add(this.btnKhachhang);
             this.panelControl.Controls.Add(this.btnShop);
             this.panelControl.Controls.Add(this.btnLogOut);
             this.panelControl.Controls.Add(this.btnInfo);
@@ -199,10 +175,83 @@
             this.panelControl.Controls.Add(this.panel3);
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl.Location = new System.Drawing.Point(0, 47);
-            this.panelControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(63, 725);
             this.panelControl.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 713);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(63, 12);
+            this.panel6.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnMenu);
+            this.panel3.Controls.Add(this.guna2Separator1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(63, 51);
+            this.panel3.TabIndex = 12;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
+            this.guna2Separator1.Location = new System.Drawing.Point(-74, 42);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(225, 8);
+            this.guna2Separator1.TabIndex = 0;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 13;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 13;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // btnKhachhang
+            // 
+            this.btnKhachhang.Animated = true;
+            this.btnKhachhang.BackColor = System.Drawing.Color.White;
+            this.btnKhachhang.BorderColor = System.Drawing.Color.White;
+            this.btnKhachhang.BorderRadius = 5;
+            this.btnKhachhang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKhachhang.CustomBorderColor = System.Drawing.Color.White;
+            this.btnKhachhang.CustomBorderThickness = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnKhachhang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhachhang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKhachhang.FillColor = System.Drawing.Color.White;
+            this.btnKhachhang.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.btnKhachhang.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachhang.HoverState.CustomBorderColor = System.Drawing.Color.MediumOrchid;
+            this.btnKhachhang.Image = global::ProjectWin_Demo_.Properties.Resources.people_carry_box_solid;
+            this.btnKhachhang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhachhang.ImageOffset = new System.Drawing.Point(3, 0);
+            this.btnKhachhang.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnKhachhang.Location = new System.Drawing.Point(0, 371);
+            this.btnKhachhang.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKhachhang.Name = "btnKhachhang";
+            this.btnKhachhang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnKhachhang.Size = new System.Drawing.Size(63, 64);
+            this.btnKhachhang.TabIndex = 27;
+            this.btnKhachhang.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnKhachhang.TextOffset = new System.Drawing.Point(-5, 0);
+            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
             // 
             // btnShop
             // 
@@ -227,7 +276,7 @@
             this.btnShop.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnShop.ImageSize = new System.Drawing.Size(32, 32);
             this.btnShop.Location = new System.Drawing.Point(0, 307);
-            this.btnShop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnShop.Margin = new System.Windows.Forms.Padding(2);
             this.btnShop.Name = "btnShop";
             this.btnShop.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnShop.Size = new System.Drawing.Size(63, 64);
@@ -255,7 +304,7 @@
             this.btnLogOut.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnLogOut.ImageSize = new System.Drawing.Size(32, 32);
             this.btnLogOut.Location = new System.Drawing.Point(0, 649);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnLogOut.Size = new System.Drawing.Size(63, 64);
@@ -287,7 +336,7 @@
             this.btnInfo.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnInfo.ImageSize = new System.Drawing.Size(32, 32);
             this.btnInfo.Location = new System.Drawing.Point(0, 243);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnInfo.Size = new System.Drawing.Size(63, 64);
@@ -319,7 +368,7 @@
             this.btnDonHang.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnDonHang.ImageSize = new System.Drawing.Size(32, 32);
             this.btnDonHang.Location = new System.Drawing.Point(0, 179);
-            this.btnDonHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDonHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnDonHang.Size = new System.Drawing.Size(63, 64);
@@ -351,7 +400,7 @@
             this.btnMyProduct.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnMyProduct.ImageSize = new System.Drawing.Size(32, 32);
             this.btnMyProduct.Location = new System.Drawing.Point(0, 115);
-            this.btnMyProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMyProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnMyProduct.Name = "btnMyProduct";
             this.btnMyProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnMyProduct.Size = new System.Drawing.Size(63, 64);
@@ -383,7 +432,7 @@
             this.btnHome.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(32, 32);
             this.btnHome.Location = new System.Drawing.Point(0, 51);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnHome.Size = new System.Drawing.Size(63, 64);
@@ -391,27 +440,6 @@
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnHome.TextOffset = new System.Drawing.Point(-5, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 713);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(63, 12);
-            this.panel6.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.btnMenu);
-            this.panel3.Controls.Add(this.guna2Separator1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(63, 51);
-            this.panel3.TabIndex = 12;
             // 
             // btnMenu
             // 
@@ -429,31 +457,37 @@
             this.btnMenu.Image = global::ProjectWin_Demo_.Properties.Resources.DanhMucSanPham;
             this.btnMenu.ImageSize = new System.Drawing.Size(25, 25);
             this.btnMenu.Location = new System.Drawing.Point(4, 6);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(40, 32);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // guna2Separator1
+            // pcbAvt
             // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(-74, 42);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(225, 8);
-            this.guna2Separator1.TabIndex = 0;
+            this.pcbAvt.FillColor = System.Drawing.Color.Gainsboro;
+            this.pcbAvt.ImageRotate = 0F;
+            this.pcbAvt.Location = new System.Drawing.Point(1196, 3);
+            this.pcbAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbAvt.Name = "pcbAvt";
+            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pcbAvt.Size = new System.Drawing.Size(38, 41);
+            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbAvt.TabIndex = 1;
+            this.pcbAvt.TabStop = false;
+            this.pcbAvt.Click += new System.EventHandler(this.avt_Click);
             // 
-            // guna2Elipse1
+            // pictureBoxCart
             // 
-            this.guna2Elipse1.BorderRadius = 13;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.BorderRadius = 13;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
-            this.guna2ShadowForm1.TargetForm = this;
+            this.pictureBoxCart.Image = global::ProjectWin_Demo_.Properties.Resources.cart_icon_28349;
+            this.pictureBoxCart.Location = new System.Drawing.Point(1030, 7);
+            this.pictureBoxCart.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxCart.Name = "pictureBoxCart";
+            this.pictureBoxCart.Size = new System.Drawing.Size(36, 34);
+            this.pictureBoxCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCart.TabIndex = 2;
+            this.pictureBoxCart.TabStop = false;
+            this.pictureBoxCart.Click += new System.EventHandler(this.pictureBoxCart_Click);
             // 
             // FNguoiDung
             // 
@@ -466,17 +500,17 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FUser";
             this.Load += new System.EventHandler(this.FUser_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.panelControl.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,5 +538,6 @@
         public Guna.UI2.WinForms.Guna2CirclePictureBox pcbAvt;
         private Guna.UI2.WinForms.Guna2Button btnShop;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2Button btnKhachhang;
     }
 }

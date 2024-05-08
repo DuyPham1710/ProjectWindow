@@ -563,6 +563,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap people_carry_box_solid {
+            get {
+                object obj = ResourceManager.GetObject("people-carry-box-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phanLoai {
             get {
                 object obj = ResourceManager.GetObject("phanLoai", resourceCulture);

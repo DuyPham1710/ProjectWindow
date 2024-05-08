@@ -62,6 +62,12 @@
     <Compile Include="FDoanhThu.Designer.cs">
       <DependentUpon>FDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKhachHang.Designer.cs">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FChiTietShop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     <Compile Include="DAO\VoucherDAO.cs" />
     <EmbeddedResource Include="FDoanhThu.resx">
       <DependentUpon>FDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKhachHang.resx">
+      <DependentUpon>FKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FChiTietShop.resx">
       <DependentUpon>FChiTietShop.cs</DependentUpon>
@@ -658,6 +667,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mess.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-carry-box-solid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

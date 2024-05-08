@@ -31,7 +31,7 @@ namespace ProjectWin_Demo_.UC
         {
             try
             {
-                string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MSP = '{0}'", sp.MaSP);
+                string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MaVanChuyen = '{0}'", MaVanChuyen);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();

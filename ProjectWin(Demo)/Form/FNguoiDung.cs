@@ -103,6 +103,7 @@ namespace ProjectWin_Demo_
                 btnDonHang.Text = "Đơn hàng";
                 btnLogOut.Text = "Đăng xuất";
                 btnShop.Text = "Danh sách\nshop   ";
+                btnKhachhang.Text = "Khách hàng";
                 growTimer.Stop();
             }
         }
@@ -122,6 +123,7 @@ namespace ProjectWin_Demo_
             btnDonHang.Text = "";
             btnLogOut.Text = "";
             btnShop.Text = "";
+            btnKhachhang.Text = "";
         }
         private void openChildForm(Form childForm)
         {
@@ -144,12 +146,14 @@ namespace ProjectWin_Demo_
             btnInfo.FillColor = Color.White;
             btnShop.FillColor = Color.White;
             btnDonHang.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.White;
 
             btnHome.CustomBorderColor = Color.SkyBlue;
             btnMyProduct.CustomBorderColor = Color.White;
             btnInfo.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
+            btnKhachhang.CustomBorderColor = Color.White;
             openChildForm(new FTrangChu(id));
 
         }
@@ -166,12 +170,14 @@ namespace ProjectWin_Demo_
             btnInfo.FillColor = Color.LightCyan;
             btnDonHang.FillColor = Color.White;
             btnShop.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.White;
 
             btnHome.CustomBorderColor = Color.White;
             btnMyProduct.CustomBorderColor = Color.White;
             btnInfo.CustomBorderColor = Color.SkyBlue;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
+            btnKhachhang.CustomBorderColor = Color.White;
             openChildForm(new FThongTin(id));
         }
 
@@ -182,13 +188,14 @@ namespace ProjectWin_Demo_
             btnInfo.FillColor = Color.White;
             btnDonHang.FillColor = Color.White;
             btnShop.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.White;
 
             btnHome.CustomBorderColor = Color.White;
             btnMyProduct.CustomBorderColor = Color.SkyBlue;
             btnInfo.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
-
+            btnKhachhang.CustomBorderColor = Color.White;
             openChildForm(new FSPCuaToi(id));
 
         }
@@ -229,13 +236,14 @@ namespace ProjectWin_Demo_
             btnInfo.FillColor = Color.White;
             btnDonHang.FillColor = Color.LightCyan;
             btnShop.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.White;
 
             btnHome.CustomBorderColor = Color.White;
             btnMyProduct.CustomBorderColor = Color.White;
             btnInfo.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.SkyBlue;
             btnShop.CustomBorderColor = Color.White;
-
+            btnKhachhang.CustomBorderColor = Color.White;
             openChildForm(new FDonHang(id));
         }
 
@@ -268,13 +276,33 @@ namespace ProjectWin_Demo_
             btnShop.FillColor = Color.LightCyan;
             btnDonHang.FillColor = Color.White;
             btnInfo.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.White;
 
             btnHome.CustomBorderColor = Color.White;
             btnMyProduct.CustomBorderColor = Color.White;
             btnInfo.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.SkyBlue;
             btnDonHang.CustomBorderColor = Color.White;
+            btnKhachhang.CustomBorderColor = Color.White;
             openChildForm(new FShop(id));
+        }
+
+        private void btnKhachhang_Click(object sender, EventArgs e)
+        {
+            btnHome.FillColor = Color.White;
+            btnMyProduct.FillColor = Color.White;
+            btnShop.FillColor = Color.White;
+            btnDonHang.FillColor = Color.White;
+            btnInfo.FillColor = Color.White;
+            btnKhachhang.FillColor = Color.LightCyan;
+
+            btnHome.CustomBorderColor = Color.White;
+            btnMyProduct.CustomBorderColor = Color.White;
+            btnInfo.CustomBorderColor = Color.White;
+            btnShop.CustomBorderColor = Color.White;
+            btnDonHang.CustomBorderColor = Color.White;
+            btnKhachhang.CustomBorderColor = Color.SkyBlue;
+            openChildForm(new FKhachHang(id));
         }
     }
 }

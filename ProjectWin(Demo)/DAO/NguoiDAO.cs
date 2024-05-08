@@ -43,6 +43,18 @@ namespace ProjectWin_Demo_
             }
             //return dBConnection.LoadAvt(query);
         }
+        public DataTable ThongTinKhachHang()
+        {
+            string query = string.Format("select SanPham.MSP, TenSP, FullName, Phone, Email, SoLuongDaMua, Gia, Addr, TrangThai from Person, SanPham, DaMua where DaMua.ID = Person.ID and SanPham.MSP = DaMua.MSP and IDChuSP = {0}", id);
+            DataTable dt = dBConnection.LoadDuLieu(query);
+            return dt;
+        }
+        public DataTable LoadKhachhang()
+        {
+            string query = string.Format("select Person.ID, FullName, Phone, Gender, Email, Addr, SoLuotMua from Person, (select DaMua.ID, count(DaMua.ID) as SoLuotMua from SanPham, DaMua where SanPham.IDChuSP = {0} and DaMua.MSP = SanPham.MSP and DaMua.TrangThai= N'Đã giao' group by DaMua.ID) Q where Person.ID = Q.ID", id);
+            DataTable dt = dBConnection.LoadDuLieu(query);
+            return dt;
+        }
         public Nguoi LoadThongTinCaNhan()
         {
             string query = "SELECT * FROM Person,Account WHERE Person.ID = Account.ID and Account.ID = " + id.ToString();

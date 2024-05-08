@@ -657,3 +657,4 @@ D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDatHang.r
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCVoucherCuaToi.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FTuyChinhVoucher.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDoanhThu.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FKhachHang.resources
