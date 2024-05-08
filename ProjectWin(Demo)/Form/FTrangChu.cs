@@ -33,10 +33,18 @@ namespace ProjectWin_Demo_
             List<UCSanPham> sanPham = SPDao.LoadSanPham<UCSanPham>("<>");
             foreach (UCSanPham sp in sanPham)
             {
+                sp.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(sp);
             }
         }
-
+        private void UCChiTiet_Click(object sender, EventArgs e)
+        {
+            UCSanPham sp = sender as UCSanPham;
+            SanPham sanPham = SPDao.LoadSanPhamChinhSua(sp.lblMaSP.Text);
+            FChiTiet fChiTiet = new FChiTiet(sanPham, id);
+            fChiTiet.ShowDialog();
+            FTrangChu_Load(sender, e);
+        }
         private void btnSort_MouseDown(object sender, MouseEventArgs e)
         {
             Point location = btnSort.PointToScreen(new Point(0, btnSort.Height));

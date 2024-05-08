@@ -34,8 +34,8 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.fPanelSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBoxUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,10 +56,11 @@
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.lblDiaChi = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).BeginInit();
@@ -118,8 +119,9 @@
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.BorderRadius = 10;
-            this.guna2CustomGradientPanel1.Controls.Add(this.label5);
-            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBoxUser);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblDiaChi);
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblTen);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pcbAvt);
             this.guna2CustomGradientPanel1.Controls.Add(this.label4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label3);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
@@ -144,30 +146,30 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(285, 351);
             this.guna2CustomGradientPanel1.TabIndex = 43;
             // 
-            // label5
+            // lblTen
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 109);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Điện Máy Xanh";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTen.BackColor = System.Drawing.Color.Transparent;
+            this.lblTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTen.Location = new System.Drawing.Point(124, 18);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(137, 109);
+            this.lblTen.TabIndex = 39;
+            this.lblTen.Text = "Điện Máy Xanh";
+            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBoxUser
+            // pcbAvt
             // 
-            this.pictureBoxUser.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
-            this.pictureBoxUser.ImageRotate = 0F;
-            this.pictureBoxUser.Location = new System.Drawing.Point(18, 18);
-            this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBoxUser.Size = new System.Drawing.Size(100, 109);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUser.TabIndex = 38;
-            this.pictureBoxUser.TabStop = false;
+            this.pcbAvt.BackColor = System.Drawing.Color.Transparent;
+            this.pcbAvt.Image = global::ProjectWin_Demo_.Properties.Resources._277404204_1025346704736303_4250379289102117478_n;
+            this.pcbAvt.ImageRotate = 0F;
+            this.pcbAvt.Location = new System.Drawing.Point(18, 18);
+            this.pcbAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbAvt.Name = "pcbAvt";
+            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pcbAvt.Size = new System.Drawing.Size(100, 109);
+            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbAvt.TabIndex = 38;
+            this.pcbAvt.TabStop = false;
             // 
             // label4
             // 
@@ -178,9 +180,9 @@
             this.label4.Location = new System.Drawing.Point(45, 300);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 37;
-            this.label4.Text = "Địa chỉ: UTE";
+            this.label4.Text = "Địa chỉ:";
             // 
             // label3
             // 
@@ -449,6 +451,19 @@
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblDiaChi.Location = new System.Drawing.Point(102, 300);
+            this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(33, 16);
+            this.lblDiaChi.TabIndex = 40;
+            this.lblDiaChi.Text = "UTE";
+            // 
             // FChiTietShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,11 +476,12 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FChiTietShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FChiTietShop_Load);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox7)).EndInit();
@@ -492,7 +508,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         public Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxUser;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pcbAvt;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
@@ -507,8 +523,9 @@
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public Guna.UI2.WinForms.Guna2GradientButton btnTheoDoi;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.FlowLayoutPanel fPanelSanPham;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        public System.Windows.Forms.Label lblDiaChi;
     }
 }

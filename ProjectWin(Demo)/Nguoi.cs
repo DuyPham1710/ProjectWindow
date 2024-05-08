@@ -74,7 +74,7 @@ namespace ProjectWin_Demo_
             DateOfBirth = DateTime.Parse(duLieu.Rows[0]["Bith"].ToString());
             object avarta = duLieu.Rows[0]["Avarta"];
             Avt = avarta != DBNull.Value ? (byte[])avarta : null;
-            //Avt = (byte[])duLieu.Rows[0]["Avarta"];
+            //     Avt = (byte[])duLieu.Rows[0]["Avarta"];
         }
     }
 }

@@ -32,8 +32,8 @@ namespace ProjectWin_Demo_
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             UCQuyTrinhDonHang sp = sender as UCQuyTrinhDonHang;
-            SanPham sanPham = new SanPham(sp.lblMaSP.Text);
-            sanPhamDao.XacNhanDonhang(sanPham, trangThai);
+            SanPham sanPham = new SanPham(Int32.Parse(sp.lblMaVanChuyen.Text));
+            sanPhamDao.XacNhanDonhang(sanPham, trangThai, Int32.Parse(sp.lblSoLuong.Text));
             FDonBan_Load(sender, e);
         }
         private void btnChoXacNhan_Click(object sender, EventArgs e)
@@ -44,14 +44,20 @@ namespace ProjectWin_Demo_
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan("Chờ xác nhận");
+            List<UCQuyTrinhDonHang> uCQuyTrinhDonHangs = sanPhamDao.DSDonBan("Chờ xác nhận");
+            //sanPham = sanPhamDao.DSDonBan("Chờ xác nhận");
             trangThai = "Đang xử lý";
-            foreach (SanPham item in sanPham)
+            foreach (UCQuyTrinhDonHang ucSP in uCQuyTrinhDonHangs)
             {
-                UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
                 ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanelDonhang.Controls.Add(ucSP);
             }
+            //foreach (SanPham item in sanPham)
+            //{
+            //    UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
+            //    ucSP.ButtonClickCustom += btnXacNhan_Click;
+            //    fPanelDonhang.Controls.Add(ucSP);
+            //}
         }
 
         private void btnDangXuLy_Click(object sender, EventArgs e)
@@ -62,11 +68,10 @@ namespace ProjectWin_Demo_
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan("Đang xử lý");
+            List<UCQuyTrinhDonHang> uCQuyTrinhDonHangs = sanPhamDao.DSDonBan("Đang xử lý");
             trangThai = "Đang giao";
-            foreach (SanPham item in sanPham)
+            foreach (UCQuyTrinhDonHang ucSP in uCQuyTrinhDonHangs)
             {
-                UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
                 ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanelDonhang.Controls.Add(ucSP);
             }
@@ -80,11 +85,10 @@ namespace ProjectWin_Demo_
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan("Đang giao");
+            List<UCQuyTrinhDonHang> uCQuyTrinhDonHangs = sanPhamDao.DSDonBan("Đang giao");
             trangThai = "Đã giao";
-            foreach (SanPham item in sanPham)
+            foreach (UCQuyTrinhDonHang ucSP in uCQuyTrinhDonHangs)
             {
-                UCQuyTrinhDonHang ucSP = new UCQuyTrinhDonHang(item, id);
                 ucSP.ButtonClickCustom += btnXacNhan_Click;
                 fPanelDonhang.Controls.Add(ucSP);
             }
@@ -98,7 +102,7 @@ namespace ProjectWin_Demo_
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonBan("Đã giao");
+            sanPham = sanPhamDao.DSDaBan("Đã giao");
             trangThai = "Đã giao";
             foreach (SanPham item in sanPham)
             {

@@ -34,8 +34,16 @@ namespace ProjectWin_Demo_
                 DSGioHang.Add(ucSP);
             }
             return DSGioHang;
-           
         }
+        //public SanPham LoadDanhSachSanPham(string maSP, decimal SoLuongDaChon)
+        //{
+        //    string query = string.Format("Select * from SanPham WHERE MSP = '{0}'", maSP);
+        //    DataTable dt = dBConnection.LoadDuLieu(query);
+        //    SanPham sp = new SanPham(dt.Rows[0]);
+        //    sp.SoLuong = SoLuongDaChon.ToString();
+        //    sp.GiaHienTai = (Int32.Parse(sp.GiaHienTai) * SoLuongDaChon).ToString();
+        //    return sp;
+        //}
         public List<UCGioHang> timKiemGioHang(string searchText)
         {
             string sqlStr = string.Format("SELECT SanPham.*, GioHang.SoLuong as SLGioHang FROM GioHang, SanPham WHERE GioHang.MSP = SanPham.MSP and IDNguoiMua = {0} and TenSP LIKE N'%{1}%'", id, searchText);

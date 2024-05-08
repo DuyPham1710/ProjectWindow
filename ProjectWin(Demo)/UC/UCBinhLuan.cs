@@ -17,7 +17,7 @@ namespace ProjectWin_Demo_
         private SanPham sp;
         SanPhamDao SPDao;
         MemoryStream ms;
-        public UCBinhLuan(int id, string hoTen, Byte[] Avt, string binhLuan, int soSao)
+        public UCBinhLuan(int id, string hoTen, byte[] Avt, string binhLuan, int soSao)
         {
             InitializeComponent();
             this.id = id;
@@ -25,14 +25,17 @@ namespace ProjectWin_Demo_
             txtBinhLuan.Text = binhLuan;
             Star.Value = soSao;
             //pcbAvt = Avt
-            ms = new MemoryStream(Avt);
-            pcbAvt.Image = Image.FromStream(ms);
+            if (Avt != null)
+            {
+                ms = new MemoryStream(Avt);
+                pcbAvt.Image = Image.FromStream(ms);
+            }
             SPDao = new SanPhamDao(id);
         }
 
         private void UCBinhLuan_Load(object sender, EventArgs e)
         {
-            SPDao.LoadDanhGia();
+            //SPDao.LoadDanhGia(sp.MaSP);
         }
     }
 }

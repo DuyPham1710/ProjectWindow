@@ -208,6 +208,7 @@
             // 
             // btnCatalog
             // 
+            this.btnCatalog.Animated = true;
             this.btnCatalog.BackColor = System.Drawing.Color.Transparent;
             this.btnCatalog.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.btnCatalog.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -229,6 +230,7 @@
             // 
             // btnSort
             // 
+            this.btnSort.Animated = true;
             this.btnSort.BackColor = System.Drawing.Color.Transparent;
             this.btnSort.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.btnSort.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -250,6 +252,7 @@
             // 
             // btnbestSeller
             // 
+            this.btnbestSeller.Animated = true;
             this.btnbestSeller.BackColor = System.Drawing.Color.Transparent;
             this.btnbestSeller.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.btnbestSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -271,6 +274,7 @@
             // 
             // btnAllProduct
             // 
+            this.btnAllProduct.Animated = true;
             this.btnAllProduct.BackColor = System.Drawing.Color.Transparent;
             this.btnAllProduct.CustomBorderColor = System.Drawing.Color.MediumTurquoise;
             this.btnAllProduct.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -319,6 +323,7 @@
             // 
             // btnUuChuong
             // 
+            this.btnUuChuong.Animated = true;
             this.btnUuChuong.BackColor = System.Drawing.Color.Transparent;
             this.btnUuChuong.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.btnUuChuong.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);

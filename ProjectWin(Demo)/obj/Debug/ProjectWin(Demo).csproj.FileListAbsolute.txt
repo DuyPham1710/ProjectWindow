@@ -652,7 +652,8 @@ D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCShop.resour
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FShop.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FChiTietShop.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FVoucher.resources
-D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FThemVoucher.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCVoucher.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPDatHang.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCVoucherCuaToi.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FTuyChinhVoucher.resources
+D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.FDoanhThu.resources

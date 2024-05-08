@@ -68,6 +68,7 @@
             // 
             // btnChonVoucher
             // 
+            this.btnChonVoucher.Animated = true;
             this.btnChonVoucher.BorderRadius = 10;
             this.btnChonVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChonVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -129,6 +130,7 @@
             // 
             // btnTroLai
             // 
+            this.btnTroLai.Animated = true;
             this.btnTroLai.BorderRadius = 10;
             this.btnTroLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTroLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

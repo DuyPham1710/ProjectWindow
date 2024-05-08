@@ -59,10 +59,10 @@ namespace ProjectWin_Demo_
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Chờ xác nhận");
-            foreach (SanPham item in sanPham)
+            List<UCSanPhamMua> uCSanPhamMuas = sanPhamDao.DSDonMua("Chờ xác nhận");
+            //sanPham = sanPhamDao.DSDonMua("Chờ xác nhận");
+            foreach (UCSanPhamMua ucSP in uCSanPhamMuas)
             {
-                UCSanPhamMua ucSP = new UCSanPhamMua(item, id);
                 ucSP.BtnClick_HuyDon += btnHuySPDaMua_Click;
                 fPanelDonhang.Controls.Add(ucSP);
             }
@@ -71,6 +71,7 @@ namespace ProjectWin_Demo_
         {
             UCSanPhamMua uCSanPhamMua = sender as UCSanPhamMua;
             SanPham sp = new SanPham(uCSanPhamMua.lblMaSP.Text);
+            sp.MaVanChuyen = Int32.Parse(uCSanPhamMua.lblMaVanChuyen.Text);
             FLyDoHuyDon fLyDoHuy = new FLyDoHuyDon(sp, id);
             fLyDoHuy.ShowDialog();
             btnChoXacNhan_Click(sender, e);
@@ -99,10 +100,10 @@ namespace ProjectWin_Demo_
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Đang giao");
+            sanPham = sanPhamDao.DanhSachDonMua("Đang giao");
             foreach (SanPham item in sanPham)
             {
-                UCSanPhamMua ucSP = new UCSanPhamMua(item, id);
+                UCSanPhamMua ucSP = new UCSanPhamMua(item, id, default);
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
@@ -114,7 +115,7 @@ namespace ProjectWin_Demo_
             btnDaGiao.CustomBorderColor = Color.Gold;
             btnHuyDon.CustomBorderColor = Color.White;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Đã giao");
+            sanPham = sanPhamDao.DanhSachDonMua("Đã giao");
             foreach (SanPham item in sanPham)
             {
                 UCSPDaMua ucSP = new UCSPDaMua(item, id);
@@ -130,7 +131,7 @@ namespace ProjectWin_Demo_
             btnDaGiao.CustomBorderColor = Color.White;
             btnHuyDon.CustomBorderColor = Color.Gold;
             fPanelDonhang.Controls.Clear();
-            sanPham = sanPhamDao.DSDonMua("Đã hủy");
+            sanPham = sanPhamDao.DanhSachDonMua("Đã hủy");
             foreach (SanPham item in sanPham)
             {
                 UCSPDaHuy ucSP = new UCSPDaHuy(item, id);

@@ -88,7 +88,7 @@
             this.pTieuDeSP.Controls.Add(this.label2);
             this.pTieuDeSP.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTieuDeSP.Location = new System.Drawing.Point(0, 62);
-            this.pTieuDeSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pTieuDeSP.Margin = new System.Windows.Forms.Padding(2);
             this.pTieuDeSP.Name = "pTieuDeSP";
             this.pTieuDeSP.Size = new System.Drawing.Size(1116, 37);
             this.pTieuDeSP.TabIndex = 7;
@@ -97,7 +97,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(919, 5);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1, 28);
             this.panel7.TabIndex = 13;
@@ -106,7 +106,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(795, 5);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1, 28);
             this.panel6.TabIndex = 14;
@@ -115,7 +115,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Black;
             this.panel5.Location = new System.Drawing.Point(608, 5);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1, 28);
             this.panel5.TabIndex = 15;
@@ -124,7 +124,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(472, 5);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 28);
             this.panel4.TabIndex = 12;
@@ -245,7 +245,7 @@
             this.btnTongSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTongSP.ForeColor = System.Drawing.Color.MediumSlateBlue;
             this.btnTongSP.Location = new System.Drawing.Point(49, 125);
-            this.btnTongSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTongSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnTongSP.Name = "btnTongSP";
             this.btnTongSP.Size = new System.Drawing.Size(135, 37);
             this.btnTongSP.TabIndex = 8;
@@ -268,7 +268,7 @@
             this.btnSPDaBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSPDaBan.ForeColor = System.Drawing.Color.Black;
             this.btnSPDaBan.Location = new System.Drawing.Point(327, 125);
-            this.btnSPDaBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSPDaBan.Margin = new System.Windows.Forms.Padding(2);
             this.btnSPDaBan.Name = "btnSPDaBan";
             this.btnSPDaBan.Size = new System.Drawing.Size(142, 37);
             this.btnSPDaBan.TabIndex = 4;
@@ -284,7 +284,7 @@
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1116, 62);
             this.guna2Panel1.TabIndex = 3;
@@ -327,7 +327,7 @@
             this.pTieuDeVoucher.Controls.Add(this.label12);
             this.pTieuDeVoucher.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTieuDeVoucher.Location = new System.Drawing.Point(0, 99);
-            this.pTieuDeVoucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pTieuDeVoucher.Margin = new System.Windows.Forms.Padding(2);
             this.pTieuDeVoucher.Name = "pTieuDeVoucher";
             this.pTieuDeVoucher.Size = new System.Drawing.Size(1116, 37);
             this.pTieuDeVoucher.TabIndex = 8;
@@ -336,7 +336,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
             this.panel9.Location = new System.Drawing.Point(950, 5);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1, 28);
             this.panel9.TabIndex = 17;
@@ -358,7 +358,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(777, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 28);
             this.panel1.TabIndex = 13;
@@ -367,7 +367,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(643, 5);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 28);
             this.panel2.TabIndex = 14;
@@ -376,7 +376,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(424, 5);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 28);
             this.panel3.TabIndex = 15;
@@ -385,7 +385,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
             this.panel8.Location = new System.Drawing.Point(288, 5);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 28);
             this.panel8.TabIndex = 12;
@@ -487,6 +487,7 @@
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.Animated = true;
             this.btnAddProduct.BorderRadius = 10;
             this.btnAddProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -498,7 +499,7 @@
             this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Location = new System.Drawing.Point(955, 17);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(144, 44);
             this.btnAddProduct.TabIndex = 3;
@@ -515,7 +516,7 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.WhiteSmoke;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 25);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1119, 83);
             this.guna2CustomGradientPanel1.TabIndex = 10;
@@ -532,6 +533,7 @@
             // 
             // btnThemVoucher
             // 
+            this.btnThemVoucher.Animated = true;
             this.btnThemVoucher.BorderRadius = 10;
             this.btnThemVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThemVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -543,7 +545,7 @@
             this.btnThemVoucher.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnThemVoucher.ForeColor = System.Drawing.Color.White;
             this.btnThemVoucher.Location = new System.Drawing.Point(782, 17);
-            this.btnThemVoucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemVoucher.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemVoucher.Name = "btnThemVoucher";
             this.btnThemVoucher.Size = new System.Drawing.Size(144, 44);
             this.btnThemVoucher.TabIndex = 11;
@@ -566,7 +568,7 @@
             this.btnVoucher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoucher.ForeColor = System.Drawing.Color.Black;
             this.btnVoucher.Location = new System.Drawing.Point(184, 125);
-            this.btnVoucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoucher.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoucher.Name = "btnVoucher";
             this.btnVoucher.Size = new System.Drawing.Size(142, 37);
             this.btnVoucher.TabIndex = 12;
@@ -585,7 +587,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnSPDaBan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FSPCuaToi";
             this.Text = "FMyProduct";
             this.Load += new System.EventHandler(this.FSPCuaToi_Load);

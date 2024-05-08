@@ -72,14 +72,14 @@ namespace ProjectWin_Demo_
         }
         private void btnThemVoucher_Click(object sender, EventArgs e)
         {
-            FThemVoucher fThemVoucher = new FThemVoucher(id, "", "Them");
+            FTuyChinhVoucher fThemVoucher = new FTuyChinhVoucher(id, "", "Them");
             fThemVoucher.ShowDialog();
             btnVoucher_Click(sender, e);
         }
         private void btnSuaVoucher_Click(object sender, EventArgs e)
         {
             UCVoucherCuaToi voucher = sender as UCVoucherCuaToi;
-            FThemVoucher fThemVoucher = new FThemVoucher(id, voucher.lblMaVoucher.Text, "Sua");
+            FTuyChinhVoucher fThemVoucher = new FTuyChinhVoucher(id, voucher.lblMaVoucher.Text, "Sua");
             fThemVoucher.ShowDialog();
             btnVoucher_Click(sender, e);
         }

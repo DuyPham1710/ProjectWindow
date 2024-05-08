@@ -18,6 +18,7 @@ namespace ProjectWin_Demo_
         internal object btnXacNhan;
         string[] AnhCu = { };
         private bool chon = false;
+        public event EventHandler BtnClick_ChiTiet;
         public UCSanPham(SanPham sp, int id)
         {
             InitializeComponent();
@@ -30,8 +31,9 @@ namespace ProjectWin_Demo_
         }
         private void UCProducts_Click(object sender, EventArgs e)
         {
-            FChiTiet fChiTiet = new FChiTiet(sp, id);
-            fChiTiet.ShowDialog();
+            BtnClick_ChiTiet?.Invoke(this, e);
+            //FChiTiet fChiTiet = new FChiTiet(sp, id);
+            //fChiTiet.ShowDialog();
         }
 
         private void pctProduct_MouseHover(object sender, EventArgs e)
@@ -48,6 +50,7 @@ namespace ProjectWin_Demo_
 
         private void UCProducts_Load(object sender, EventArgs e)
         {
+            lblMaSP.Text = sp.MaSP;
             lblTenSP.Text = sp.TenSP;
             lblGiaSP.Text = sp.GiaHienTai + "đ";
             lblGiaBanDau.Text = sp.GiaBanDau + "đ";

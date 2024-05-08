@@ -64,7 +64,7 @@ namespace ProjectWin_Demo_
 
             // Load dánh giá sản phẩm
             fPanelDanhGiaSP.Controls.Clear();
-            List<UCBinhLuan> BinhLuan = SPDao.LoadDanhGia();
+            List<UCBinhLuan> BinhLuan = SPDao.LoadDanhGia(sp.MaSP);
             foreach(UCBinhLuan binhLuan in BinhLuan)
             {
                 fPanelDanhGiaSP.Controls.Add(binhLuan);
@@ -113,7 +113,8 @@ namespace ProjectWin_Demo_
             sanPham.Add(sp);
             FThanhToan fPayment = new FThanhToan(sanPham, id);
             fPayment.ShowDialog();
-            FDetail_Load(sender, e);
+            this.Close();
+           // FDetail_Load(sender, e);
             //SPDao.Update(sp, nudSoLuong.Value);
         }
 

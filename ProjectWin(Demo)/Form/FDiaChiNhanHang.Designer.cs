@@ -44,6 +44,7 @@
             // 
             // btnTroLai
             // 
+            this.btnTroLai.Animated = true;
             this.btnTroLai.BorderRadius = 10;
             this.btnTroLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTroLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -64,6 +65,7 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.Animated = true;
             this.btnXacNhan.BorderRadius = 10;
             this.btnXacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnXacNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

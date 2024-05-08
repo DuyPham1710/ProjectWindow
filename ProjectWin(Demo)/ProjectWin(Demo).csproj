@@ -53,8 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DonMua.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DAO\DiaChiGiaoHangDAO.cs" />
+    <Compile Include="FDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDoanhThu.Designer.cs">
+      <DependentUpon>FDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FChiTietShop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,11 +140,11 @@
     <Compile Include="Form\FShop.Designer.cs">
       <DependentUpon>FShop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FThemVoucher.cs">
+    <Compile Include="Form\FTuyChinhVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FThemVoucher.Designer.cs">
-      <DependentUpon>FThemVoucher.cs</DependentUpon>
+    <Compile Include="Form\FTuyChinhVoucher.Designer.cs">
+      <DependentUpon>FTuyChinhVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\ElipseControl.cs">
       <SubType>Component</SubType>
@@ -304,6 +311,9 @@
     </Compile>
     <Compile Include="Voucher.cs" />
     <Compile Include="DAO\VoucherDAO.cs" />
+    <EmbeddedResource Include="FDoanhThu.resx">
+      <DependentUpon>FDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FChiTietShop.resx">
       <DependentUpon>FChiTietShop.cs</DependentUpon>
     </EmbeddedResource>
@@ -358,8 +368,8 @@
     <EmbeddedResource Include="Form\FShop.resx">
       <DependentUpon>FShop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FThemVoucher.resx">
-      <DependentUpon>FThemVoucher.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FTuyChinhVoucher.resx">
+      <DependentUpon>FTuyChinhVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funtion\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>

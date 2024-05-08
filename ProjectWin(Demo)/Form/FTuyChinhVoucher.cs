@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
-    public partial class FThemVoucher : Form
+    public partial class FTuyChinhVoucher : Form
     {
         private bool isDragging;
         private Point lastCursor;
@@ -21,7 +21,7 @@ namespace ProjectWin_Demo_
         VoucherDAO voucherDAO;
         private string thaoTac;
         private string maVoucherCu;
-        public FThemVoucher(int id, string maVoucher, string thaoTac)
+        public FTuyChinhVoucher(int id, string maVoucher, string thaoTac)
         {
             InitializeComponent();
             this.id = id;
@@ -29,6 +29,25 @@ namespace ProjectWin_Demo_
             this.thaoTac = thaoTac;
             voucherDAO = new VoucherDAO(id);
             
+        }
+        private void FTuyChinhVoucher_Load(object sender, EventArgs e)
+        {
+            if (thaoTac == "Them")
+            {
+                lblTieuDe.Text = "Thêm Voucher";
+            }
+            else
+            {
+                lblTieuDe.Text = "Sửa Voucher";
+                btnThem.Text = "Sửa";
+                Voucher voucher = voucherDAO.LayVoucher(maVoucher);
+                txtMaVoucher.Texts = voucher.MaVoucher;
+                maVoucherCu = voucher.MaVoucher;
+                txtMota.Texts = voucher.MoTa;
+                txtGiaTri.Texts = voucher.GiaTri.ToString();
+                DtpHSD.Value = voucher.HSD;
+                nudSoLuong.Value = voucher.SoLuong;
+            }
         }
         private void FThemVoucher_Load(object sender, EventArgs e)
         {

@@ -1,6 +1,6 @@
 ﻿namespace ProjectWin_Demo_
 {
-    partial class FThemVoucher
+    partial class FTuyChinhVoucher
     {
         /// <summary>
         /// Required designer variable.
@@ -75,6 +75,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Animated = true;
             this.btnThem.BorderRadius = 10;
             this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -119,6 +120,7 @@
             // 
             // DtpHSD
             // 
+            this.DtpHSD.Animated = true;
             this.DtpHSD.BackColor = System.Drawing.SystemColors.Window;
             this.DtpHSD.BorderColor = System.Drawing.Color.Gray;
             this.DtpHSD.BorderRadius = 10;
@@ -287,7 +289,7 @@
             this.txtMota.Texts = "";
             this.txtMota.UnderlinedStyle = false;
             // 
-            // FThemVoucher
+            // FTuyChinhVoucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +305,7 @@
             this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FThemVoucher";
+            this.Name = "FTuyChinhVoucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThemVoucher";
             this.Load += new System.EventHandler(this.FThemVoucher_Load);

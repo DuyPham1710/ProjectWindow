@@ -61,12 +61,14 @@
             this.panel1.Controls.Add(this.btnChoXacNhan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1573, 60);
+            this.panel1.Size = new System.Drawing.Size(1180, 49);
             this.panel1.TabIndex = 2;
             // 
             // btnHuyDon
             // 
+            this.btnHuyDon.Animated = true;
             this.btnHuyDon.CustomBorderColor = System.Drawing.Color.White;
             this.btnHuyDon.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnHuyDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -78,15 +80,17 @@
             this.btnHuyDon.FillColor2 = System.Drawing.Color.Transparent;
             this.btnHuyDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuyDon.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHuyDon.Location = new System.Drawing.Point(763, 9);
+            this.btnHuyDon.Location = new System.Drawing.Point(572, 7);
+            this.btnHuyDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHuyDon.Name = "btnHuyDon";
-            this.btnHuyDon.Size = new System.Drawing.Size(217, 45);
+            this.btnHuyDon.Size = new System.Drawing.Size(163, 37);
             this.btnHuyDon.TabIndex = 15;
             this.btnHuyDon.Text = "Đã hủy";
             this.btnHuyDon.Click += new System.EventHandler(this.btnHuyDon_Click);
             // 
             // btnDaGiao
             // 
+            this.btnDaGiao.Animated = true;
             this.btnDaGiao.CustomBorderColor = System.Drawing.Color.White;
             this.btnDaGiao.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnDaGiao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -98,15 +102,17 @@
             this.btnDaGiao.FillColor2 = System.Drawing.Color.Transparent;
             this.btnDaGiao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDaGiao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDaGiao.Location = new System.Drawing.Point(528, 9);
+            this.btnDaGiao.Location = new System.Drawing.Point(396, 7);
+            this.btnDaGiao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDaGiao.Name = "btnDaGiao";
-            this.btnDaGiao.Size = new System.Drawing.Size(198, 45);
+            this.btnDaGiao.Size = new System.Drawing.Size(148, 37);
             this.btnDaGiao.TabIndex = 14;
             this.btnDaGiao.Text = "Đã giao";
             this.btnDaGiao.Click += new System.EventHandler(this.btnDaGiao_Click);
             // 
             // btnDangGiao
             // 
+            this.btnDangGiao.Animated = true;
             this.btnDangGiao.CustomBorderColor = System.Drawing.Color.White;
             this.btnDangGiao.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnDangGiao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -118,15 +124,17 @@
             this.btnDangGiao.FillColor2 = System.Drawing.Color.Transparent;
             this.btnDangGiao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangGiao.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangGiao.Location = new System.Drawing.Point(290, 9);
+            this.btnDangGiao.Location = new System.Drawing.Point(218, 7);
+            this.btnDangGiao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangGiao.Name = "btnDangGiao";
-            this.btnDangGiao.Size = new System.Drawing.Size(198, 45);
+            this.btnDangGiao.Size = new System.Drawing.Size(148, 37);
             this.btnDangGiao.TabIndex = 12;
             this.btnDangGiao.Text = "Đang giao";
             this.btnDangGiao.Click += new System.EventHandler(this.btnDangGiao_Click);
             // 
             // btnChoXacNhan
             // 
+            this.btnChoXacNhan.Animated = true;
             this.btnChoXacNhan.CustomBorderColor = System.Drawing.Color.Gold;
             this.btnChoXacNhan.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnChoXacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -138,9 +146,10 @@
             this.btnChoXacNhan.FillColor2 = System.Drawing.Color.Transparent;
             this.btnChoXacNhan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChoXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnChoXacNhan.Location = new System.Drawing.Point(65, 9);
+            this.btnChoXacNhan.Location = new System.Drawing.Point(49, 7);
+            this.btnChoXacNhan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChoXacNhan.Name = "btnChoXacNhan";
-            this.btnChoXacNhan.Size = new System.Drawing.Size(198, 45);
+            this.btnChoXacNhan.Size = new System.Drawing.Size(148, 37);
             this.btnChoXacNhan.TabIndex = 11;
             this.btnChoXacNhan.Text = "Chờ xác nhận";
             this.btnChoXacNhan.Click += new System.EventHandler(this.btnChoXacNhan_Click);
@@ -151,10 +160,9 @@
             this.guna2CustomGradientPanel2.BorderRadius = 20;
             this.guna2CustomGradientPanel2.Controls.Add(this.fPanelDonhang);
             this.guna2CustomGradientPanel2.Controls.Add(this.pTieuDe);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(44, 85);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(33, 69);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1488, 723);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1116, 587);
             this.guna2CustomGradientPanel2.TabIndex = 10;
             // 
             // fPanelDonhang
@@ -162,10 +170,9 @@
             this.fPanelDonhang.AutoScroll = true;
             this.fPanelDonhang.BackColor = System.Drawing.Color.White;
             this.fPanelDonhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fPanelDonhang.Location = new System.Drawing.Point(0, 46);
-            this.fPanelDonhang.Margin = new System.Windows.Forms.Padding(4);
+            this.fPanelDonhang.Location = new System.Drawing.Point(0, 37);
             this.fPanelDonhang.Name = "fPanelDonhang";
-            this.fPanelDonhang.Size = new System.Drawing.Size(1488, 677);
+            this.fPanelDonhang.Size = new System.Drawing.Size(1116, 550);
             this.fPanelDonhang.TabIndex = 8;
             // 
             // pTieuDe
@@ -181,9 +188,9 @@
             this.pTieuDe.Controls.Add(this.label8);
             this.pTieuDe.Dock = System.Windows.Forms.DockStyle.Top;
             this.pTieuDe.Location = new System.Drawing.Point(0, 0);
-            this.pTieuDe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pTieuDe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pTieuDe.Name = "pTieuDe";
-            this.pTieuDe.Size = new System.Drawing.Size(1488, 46);
+            this.pTieuDe.Size = new System.Drawing.Size(1116, 37);
             this.pTieuDe.TabIndex = 7;
             // 
             // label2
@@ -192,46 +199,47 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(1298, 14);
+            this.label2.Location = new System.Drawing.Point(974, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 22);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 16;
             this.label2.Text = "Hủy đơn hàng";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(1241, 6);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(931, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 34);
+            this.panel2.Size = new System.Drawing.Size(1, 28);
             this.panel2.TabIndex = 13;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(1076, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(807, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 34);
+            this.panel3.Size = new System.Drawing.Size(1, 28);
             this.panel3.TabIndex = 14;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(837, 6);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Location = new System.Drawing.Point(628, 5);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 34);
+            this.panel8.Size = new System.Drawing.Size(1, 28);
             this.panel8.TabIndex = 15;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(645, 6);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Location = new System.Drawing.Point(484, 5);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1, 34);
+            this.panel9.Size = new System.Drawing.Size(1, 28);
             this.panel9.TabIndex = 12;
             // 
             // label1
@@ -240,9 +248,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(1133, 14);
+            this.label1.Location = new System.Drawing.Point(850, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 22);
+            this.label1.Size = new System.Drawing.Size(30, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Giá";
             // 
@@ -252,9 +261,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(915, 14);
+            this.label6.Location = new System.Drawing.Point(686, 11);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 22);
+            this.label6.Size = new System.Drawing.Size(64, 19);
             this.label6.TabIndex = 9;
             this.label6.Text = "Số lượng";
             // 
@@ -264,9 +274,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(704, 14);
+            this.label7.Location = new System.Drawing.Point(528, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 22);
+            this.label7.Size = new System.Drawing.Size(64, 19);
             this.label7.TabIndex = 8;
             this.label7.Text = "Phân loại";
             // 
@@ -276,9 +287,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(55, 12);
+            this.label8.Location = new System.Drawing.Point(41, 10);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 22);
+            this.label8.Size = new System.Drawing.Size(93, 19);
             this.label8.TabIndex = 7;
             this.label8.Text = "Tên sản phẩm";
             // 
@@ -289,13 +301,14 @@
             // 
             // FDonMua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1573, 835);
+            this.ClientSize = new System.Drawing.Size(1180, 678);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FDonMua";
             this.Text = "FDonMua";
             this.Load += new System.EventHandler(this.FDonMua_Load);

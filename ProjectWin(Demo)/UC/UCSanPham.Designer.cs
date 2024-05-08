@@ -40,6 +40,7 @@
             this.lblGiaBanDau = new System.Windows.Forms.Label();
             this.PanelSanPham = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblMaSP = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.PanelSanPham.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -201,11 +202,12 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Controls.Add(this.pctSanPham);
+            this.guna2ShadowPanel1.Controls.Add(this.lblMaSP);
             this.guna2ShadowPanel1.Controls.Add(this.lblGiaSP);
             this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.lblTenSP);
             this.guna2ShadowPanel1.Controls.Add(this.lblLuotXem);
-            this.guna2ShadowPanel1.Controls.Add(this.pctSanPham);
             this.guna2ShadowPanel1.Controls.Add(this.lblDiaChiShop);
             this.guna2ShadowPanel1.Controls.Add(this.lblGiaBanDau);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -216,6 +218,15 @@
             this.guna2ShadowPanel1.ShadowShift = 4;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(196, 321);
             this.guna2ShadowPanel1.TabIndex = 15;
+            // 
+            // lblMaSP
+            // 
+            this.lblMaSP.AutoSize = true;
+            this.lblMaSP.Location = new System.Drawing.Point(135, 163);
+            this.lblMaSP.Name = "lblMaSP";
+            this.lblMaSP.Size = new System.Drawing.Size(13, 13);
+            this.lblMaSP.TabIndex = 15;
+            this.lblMaSP.Text = "a";
             // 
             // UCSanPham
             // 
@@ -250,5 +261,6 @@
         private System.Windows.Forms.PictureBox pctSanPham;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelSanPham;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        public System.Windows.Forms.Label lblMaSP;
     }
 }

@@ -46,6 +46,9 @@
             this.lblMaSP = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblMaVanChuyen = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -110,6 +113,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblTongTien);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblSoLuong);
@@ -145,11 +149,11 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(7, 14);
+            this.lblSoLuong.Location = new System.Drawing.Point(21, 15);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(72, 16);
+            this.lblSoLuong.Size = new System.Drawing.Size(14, 16);
             this.lblSoLuong.TabIndex = 0;
-            this.lblSoLuong.Text = "1 sản phẩm";
+            this.lblSoLuong.Text = "1";
             // 
             // panel2
             // 
@@ -227,6 +231,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.lblMaVanChuyen);
+            this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.lblMaSP);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(10, 279);
@@ -239,7 +245,7 @@
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaSP.ForeColor = System.Drawing.Color.Gray;
-            this.lblMaSP.Location = new System.Drawing.Point(262, 13);
+            this.lblMaSP.Location = new System.Drawing.Point(262, 7);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(66, 15);
             this.lblMaSP.TabIndex = 2;
@@ -249,7 +255,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 13);
+            this.label7.Location = new System.Drawing.Point(10, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 1;
@@ -270,6 +276,37 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(374, 339);
             this.guna2ShadowPanel1.TabIndex = 10;
+            // 
+            // lblMaVanChuyen
+            // 
+            this.lblMaVanChuyen.AutoSize = true;
+            this.lblMaVanChuyen.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaVanChuyen.ForeColor = System.Drawing.Color.Gray;
+            this.lblMaVanChuyen.Location = new System.Drawing.Point(262, 32);
+            this.lblMaVanChuyen.Name = "lblMaVanChuyen";
+            this.lblMaVanChuyen.Size = new System.Drawing.Size(66, 15);
+            this.lblMaVanChuyen.TabIndex = 4;
+            this.lblMaVanChuyen.Text = "A12355FFS";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Mã đơn hàng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Sản phẩm";
             // 
             // UCQuyTrinhDonHang
             // 
@@ -314,5 +351,8 @@
         public System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        public System.Windows.Forms.Label lblMaVanChuyen;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
     }
 }

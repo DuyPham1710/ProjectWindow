@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 using TheArtOfDevHtmlRenderer.Adapters;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -66,7 +67,7 @@ namespace ProjectWin_Demo_
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Không load được dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);    
+                MessageBox.Show("Không load được dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -701,7 +702,7 @@ namespace ProjectWin_Demo_
                 {
                     return 0;
                 }
-               
+
             }
             catch
             {
@@ -736,48 +737,169 @@ namespace ProjectWin_Demo_
         //    }
         //    return shop;
         //}
-        public int giaVoucher(string sqlStr)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    return (int)reader["GiaTri"];
-                }
-            }
-            catch (Exception ex) 
-            {
-                return 0;
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return 0;
-        }
+        //public int giaVoucher(string sqlStr)
+        //{
+        //    try
+        //    {
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand(sqlStr, conn);
+        //        SqlDataReader reader = cmd.ExecuteReader();
+        //        if (reader.Read())
+        //        {
+        //            return (int)reader["GiaTri"];
+        //        }
+        //    }
+        //    catch (Exception ex) 
+        //    {
+        //        return 0;
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //    return 0;
+        //}
 
-        public Voucher LayVoucher(string sqlStr)
+        //public Voucher LayVoucher(string sqlStr)
+        //{
+        //    try
+        //    {
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand(sqlStr, conn);
+        //        SqlDataReader reader = cmd.ExecuteReader();
+        //        if (reader.Read())
+        //        {
+        //            Voucher voucher = new Voucher((int)reader["ID"], (int)reader["GiaTri"], (int)reader["SoLuongVoucher"], (string)reader["MaVoucher"], (string)reader["Mota"], (DateTime)reader["HSD"]);
+        //            return voucher;
+        //        }
+        //    }
+        //    catch (Exception ex) { }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //    return null;
+        //}
+        public void LoadDoanhThu(DataGridView gv, string thang, string nam)
         {
+            string loc = "";
+            if (thang != "")
+            {
+                loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
+            }
+            if (nam != "" && int.TryParse(nam, out int nguyen))
+            {
+                loc = loc + " and " + loc + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
+            }
+            string sql = string.Format("select sum(CAST(DaMua.SoLuongDaMua  as int)) as TongSoLuong, sum(DaMua.Gia) as TongTien from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP  and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1} group by SanPham.IDChuSP", id, loc);
             try
             {
+                gv.DataSource = default;
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    Voucher voucher = new Voucher((int)reader["ID"], (int)reader["GiaTri"], (int)reader["SoLuongVoucher"], (string)reader["MaVoucher"], (string)reader["Mota"], (DateTime)reader["HSD"]);
-                    return voucher;
-                }
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                gv.DataSource = dt;
+                gv.Columns[0].HeaderText = "Số lượng bán được";
+                gv.Columns[1].HeaderText = "Tổng tiền";
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không load được", "Thông báo");
+            }
             finally
             {
                 conn.Close();
             }
-            return null;
+        }
+        public void LoadBieuDoDoanhThu(string nam, Chart doanhthu)
+        {
+            string sql = string.Format("select DATEPART(month, DaMua.ThoiGianHienTai) as Thang, sum(ThanhToan.gia) as TongTien from SanPham, DaMua, ThanhToan, Person Where SanPham.MSP = DaMua.MSP and DaMua.MSP = ThanhToan.MSP and ThanhToan.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = 'Đã giao' and DATEPART(year, DaMua.ThoiGianHienTai) = {1}  group by DATEPART(month, DaMua.ThoiGianHienTai) ", id, nam);
+            try
+            {
+                doanhthu.DataSource = default;
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                //SeriesCollection series = new SeriesCollection();
+
+                //// Lặp qua từng hàng trong DataTable và thêm dữ liệu vào SeriesCollection
+                //foreach (DataRow row in dt.Rows)
+                //{
+                //    series.Add(new ColumnSeries
+                //    {
+                //        Title = row["Month"].ToString(),
+                //        Values = new ChartValues<decimal> { Convert.ToDecimal(row["Revenue"]) }
+                //    });
+                //}
+
+                //// Hiển thị dữ liệu lên biểu đồ
+                //cartesianChart.Series = series;
+                //cartesianChart.AxisX.Add(new Axis
+                //{
+                //    Title = "Months",
+                //    Labels = dt.AsEnumerable().Select(r => r.Field<string>("Month")).ToArray()
+                //});
+                //cartesianChart.AxisY.Add(new Axis
+                //{
+                //    Title = "Revenue",
+                //    LabelFormatter = value => value.ToString("C") // Định dạng hiển thị tiền tệ
+                //});
+                foreach (DataRow row in dt.Rows)
+                {
+                    doanhthu.Series[0].Points[0].XValue = 1;
+                    Console.WriteLine($"ID: {row["ID"]}, Name: {row["Name"]}");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không load được", "Thông báo");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void LoadChiTietDoanhThu(DataGridView gv, string thang, string nam)
+        {
+            string loc = "";
+            if (thang != "")
+            {
+                loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
+            }
+            if (nam != "" && int.TryParse(nam, out int nguyen))
+            {
+                loc = loc +" and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
+            }
+            string sql = string.Format("select SanPham.MSP, TenSP, SoLuongDaMua, FullName, ThoiGianDat, ThoiGianHienTai, Addr, Gia from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1}", id, loc);
+            try
+            {
+                gv.DataSource = default;
+                conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                gv.DataSource = dt;
+                gv.Columns[0].HeaderText = "MSP";
+                gv.Columns[1].HeaderText = "Tên Sản phẩm";
+                gv.Columns[2].HeaderText = "Số lượng bán";
+                gv.Columns[3].HeaderText = "Người mua";
+                gv.Columns[4].HeaderText = "Thời gian đặt";
+                gv.Columns[5].HeaderText = "Thời gian nhận";
+                gv.Columns[6].HeaderText = "Địa chỉ giao";
+                gv.Columns[7].HeaderText = "Thành tiền";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không load được", "Thông báo");
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

@@ -22,8 +22,9 @@ namespace ProjectWin_Demo_
         int id;
         UCThongTin ucThongTin;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        byte[] duLieuAnh;
-        string gender = "";
+        
+        
+        NguoiDAO nguoiDAO;
         public FThongTin(int id)
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace ProjectWin_Demo_
             ucThongTin.btnSave.Click += btnSave_Click;
             panelTieuDe.Hide();
             this.id = id;
+            nguoiDAO = new NguoiDAO(id);
+        }
+        private void FInfo_Load(object sender, EventArgs e)
+        {
+            addUserControl(ucThongTin);
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -43,22 +49,24 @@ namespace ProjectWin_Demo_
                 try
                 {
                     ucThongTin.pictureBoxUser.Image.Save(pic, ucThongTin.pictureBoxUser.Image.RawFormat);
-                    duLieuAnh = pic.ToArray();
+                    byte[] duLieuAnh = pic.ToArray();
                     conn.Open();
-                    gender = ucThongTin.rdoNam.Checked ? "Nam" : ucThongTin.rdoNu.Checked ? "Nữ" : "Khác";
-                    Nguoi person = new Nguoi(id, ucThongTin.txtName.Text, ucThongTin.txtEmail.Text, ucThongTin.txtPhoneNumber.Text, ucThongTin.txtCCCD.Text
+                    string gender = ucThongTin.rdoNam.Checked ? "Nam" : ucThongTin.rdoNu.Checked ? "Nữ" : "Khác";
+                    Nguoi nguoi = new Nguoi(id, ucThongTin.txtName.Text, ucThongTin.txtEmail.Text, ucThongTin.txtPhoneNumber.Text, ucThongTin.txtCCCD.Text
                    , gender, ucThongTin.cbAddress.Text, ucThongTin.txtUserName.Text, ucThongTin.txtPass.Text, ucThongTin.dtpNgaySinh.Value, duLieuAnh);
+                  //  nguoiDAO.suaTaiKhoan(nguoi);
+                   // FInfo_Load(sender, e);
                     string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    cmd.Parameters.AddWithValue("@name", person.FullName);
-                    cmd.Parameters.AddWithValue("@phone", person.PhoneNumber);
-                    cmd.Parameters.AddWithValue("@cccd", person.Cccd);
-                    cmd.Parameters.AddWithValue("@gender", person.Gender);
-                    cmd.Parameters.AddWithValue("@birth", person.DateOfBirth);
-                    cmd.Parameters.AddWithValue("@email", person.Email);
-                    cmd.Parameters.AddWithValue("@avatar", person.Avt);
-                    cmd.Parameters.AddWithValue("@address", person.Address);
-                    cmd.Parameters.AddWithValue("@id", person.ID);
+                    cmd.Parameters.AddWithValue("@name", nguoi.FullName);
+                    cmd.Parameters.AddWithValue("@phone", nguoi.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@cccd", nguoi.Cccd);
+                    cmd.Parameters.AddWithValue("@gender", nguoi.Gender);
+                    cmd.Parameters.AddWithValue("@birth", nguoi.DateOfBirth);
+                    cmd.Parameters.AddWithValue("@email", nguoi.Email);
+                    cmd.Parameters.AddWithValue("@avatar", nguoi.Avt);
+                    cmd.Parameters.AddWithValue("@address", nguoi.Address);
+                    cmd.Parameters.AddWithValue("@id", nguoi.ID);
                     if (cmd.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Lưu thông tin thành công", "Thông báo");
@@ -118,8 +126,8 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.MediumSlateBlue;
             btnRevenue.CustomBorderColor = Color.MediumSlateBlue;
-            UCDoanhThu ucRevenue = new UCDoanhThu();
-            addUserControl(ucRevenue);
+            //UCDoanhThu ucRevenue = new UCDoanhThu();
+            openChildForm(new FDoanhThu(id));
         }
         private void addUserControl(UserControl userControl)
         {
@@ -129,12 +137,20 @@ namespace ProjectWin_Demo_
             userControl.BringToFront();
         }
 
-        private void FInfo_Load(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
         {
-           // ucThongTin = new ucThongTin(id);
-            addUserControl(ucThongTin);
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
-
         private void ItemPurchaseHistoryToolStripMenuItem(object sender, EventArgs e)
         {
             panelTieuDe.Hide();

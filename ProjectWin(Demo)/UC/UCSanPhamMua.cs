@@ -16,11 +16,13 @@ namespace ProjectWin_Demo_
         int id;
         string[] AnhCu = { };
         public event EventHandler BtnClick_HuyDon;
-        public UCSanPhamMua(SanPham sp, int id)
+        int MaVanChuyen;
+        public UCSanPhamMua(SanPham sp, int id, int maVanChuyen)
         {
             InitializeComponent();
             this.sp = sp;
             this.id = id;
+            MaVanChuyen = maVanChuyen;
         }
 
         private void btnHuyDon_Click(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace ProjectWin_Demo_
         {
             lblTenSP.Text = sp.TenSP;
             lblMaSP.Text = sp.MaSP;
+            lblMaVanChuyen.Text = MaVanChuyen.ToString();
             lblSoLuong.Text = sp.SoLuong;
             lblGia.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString();
             lblDanhMuc.Text = sp.DanhMuc;

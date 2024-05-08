@@ -13,7 +13,7 @@ namespace ProjectWin_Demo_
         private int iDChuSP;
         private string maSP, tenSP, danhMuc, giaBanDau, giaHienTai, soLuong, xuatXu, baoHanh, tinhTrang, moTaTinhTrang, motaSP, anhBanDau, anhHienTai; 
         private DateTime ngayMuaSP;
-
+        private int maVanChuyen;
         public int IDChuSP { get => iDChuSP; set => iDChuSP = value; }
         public string MaSP { get => maSP; set => maSP = value; }
         public string TenSP { get => tenSP; set => tenSP = value; }
@@ -29,10 +29,15 @@ namespace ProjectWin_Demo_
         public DateTime NgayMuaSP { get => ngayMuaSP; set => ngayMuaSP = value; }
         public string AnhBanDau { get => anhBanDau; set => anhBanDau = value; }
         public string AnhHienTai { get => anhHienTai; set => anhHienTai = value; }
+        public int MaVanChuyen { get => maVanChuyen; set => maVanChuyen = value; }
 
         public SanPham(string MaSP)
         {
             this.MaSP = MaSP;
+        }
+        public SanPham(int MaVanChuyen)
+        {
+            this.MaVanChuyen = MaVanChuyen;
         }
         public SanPham(string MaSP, int IDChuSP, string TenSP, string DanhMuc, string GiaBanDau, string GiaHienTai, DateTime NgayMuaSP,
             string SoLuong, string XuatXu, string BaoHanh, string TinhTrang, string MoTaTinhTrang, string MotaSP, string AnhBanDau, 

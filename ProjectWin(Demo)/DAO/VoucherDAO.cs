@@ -63,8 +63,13 @@ namespace ProjectWin_Demo_
         {
             //string sqlStr = string.Format("UPDATE DaMua SET MaVoucher = '{0}' WHERE ID = {1}", MaVoucher, id);
             //dBConnection.thucThi(sqlStr);
-            string sqlStr = string.Format("UPDATE Voucher SET SoLuongVoucher = (SoLuongVoucher - 1) WHERE MaVoucher = '{0}'", MaVoucher);
-            dBConnection.thucThi(sqlStr);
+            if (MaVoucher != "")
+            {
+                string sqlStr = string.Format("UPDATE Voucher SET SoLuongVoucher = (SoLuongVoucher - 1) WHERE MaVoucher = '{0}'", MaVoucher);
+                dBConnection.thucThi(sqlStr);
+
+            }
+          
         }
         public void ThemVoucher(Voucher voucher)
         {
@@ -84,15 +89,22 @@ namespace ProjectWin_Demo_
             string sqlStr = string.Format("DELETE FROM Voucher WHERE MaVoucher = '{0}'", MaVoucher);
             dBConnection.thucThi(sqlStr);
         }
-        public int GiaVoucher(string maVoucher)
-        {
-            string sqlStr = string.Format("SELECT GiaTri FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
-            return dBConnection.giaVoucher(sqlStr);
-        }
+        //public int GiaVoucher(string maVoucher)
+        //{
+        //    string sqlStr = string.Format("SELECT GiaTri FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
+        //    DataTable dt = dBConnection.LoadDuLieu(sqlStr);
+        //    if (dt.Rows.Count == 0)
+        //        return 0;
+        //    return Int32.Parse(dt.Rows[0]["GiaTri"].ToString());
+        //    //return dBConnection.giaVoucher(sqlStr);
+        //}
         public Voucher LayVoucher(string maVoucher)
         {
             string sqlStr = string.Format("SELECT * FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
-            return dBConnection.LayVoucher(sqlStr);
+            DataTable dt = dBConnection.LoadDuLieu(sqlStr);
+            Voucher voucher = new Voucher(dt.Rows[0]);
+            return voucher;
+            //return dBConnection.LayVoucher(sqlStr);
         }
     }
 }

@@ -94,6 +94,7 @@ namespace ProjectWin_Demo_
             }
             //return dBConnection.DangNhap(query);
         }
+        // sửa chổ này nha
         public int TaoID()
         {
             string idStr = "SELECT count(*) FROM Person";
@@ -110,9 +111,11 @@ namespace ProjectWin_Demo_
             dBConnection.thucThi(sqlStr);
         }
        
-        public void suaTaiKhoan()
+        public void suaTaiKhoan(Nguoi nguoiDung)
         {
-
+            string sqlStr = string.Format("UPDATE Person SET FullName = N'{0}', Phone = '{1}', CCCD = '{2}', Gender = N'{3}', Bith = '{4}', Email = '{5}', Avarta = 0x{6}, Addr = N'{7}' WHERE ID = {8}", 
+                nguoiDung.FullName, nguoiDung.PhoneNumber, nguoiDung.Cccd, nguoiDung.Gender, nguoiDung.DateOfBirth, nguoiDung.Email, nguoiDung.Avt.Length, nguoiDung.Address, nguoiDung.ID);
+            dBConnection.thucThi(sqlStr);
         }
         public void xoaTaiKhoan()
         {
@@ -120,24 +123,24 @@ namespace ProjectWin_Demo_
         }
         public List<UCShop> LoadShop()
         {
-            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0", id);
+            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0", id); 
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<UCShop> ucShops = new List<UCShop>();
             foreach (DataRow row in dt.Rows)
             {
-                UCShop ucShop = new UCShop(Int32.Parse(row["ID"].ToString()), row["FullName"].ToString(), (byte[])row["Avarta"], Int32.Parse(row["SoLuong"].ToString()));
+                UCShop ucShop = new UCShop(id, Int32.Parse(row["ID"].ToString()), row["FullName"].ToString(), (byte[])row["Avarta"], Int32.Parse(row["SoLuong"].ToString()));
                 ucShops.Add(ucShop);
             }
             return ucShops;
         }
         public List<UCShop> UyTin(string toantu)
         {
-            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong, Sum(Distinct BanDuoc) AS daban FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0 and TK.daban {1} 5", id, toantu);
+            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong,S.TBSao FROM (select Account.ID, AVG(DanhGia.SoSao) as TBSao from Account, Person, SanPham, DanhGia Where Account.ID = Person.ID and Person.ID = SanPham.IDChuSP and SanPham.MSP = DanhGia.MSP Group by Account.ID) as S,Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK WHERE TK.IDChuSP = Person.ID and S.ID=Person.ID and Person.ID <> {0} and TK.SoLuong > 0 and TBSao {1} 3", id, toantu); 
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<UCShop> ucShops = new List<UCShop>();
             foreach (DataRow row in dt.Rows)
             {
-                UCShop ucShop = new UCShop(Int32.Parse(row["ID"].ToString()), row["FullName"].ToString(), (byte[])row["Avarta"], Int32.Parse(row["SoLuong"].ToString()));
+                UCShop ucShop = new UCShop(id, Int32.Parse(row["ID"].ToString()), row["FullName"].ToString(), (byte[])row["Avarta"], Int32.Parse(row["SoLuong"].ToString()));
                 ucShops.Add(ucShop);
             }
             return ucShops;

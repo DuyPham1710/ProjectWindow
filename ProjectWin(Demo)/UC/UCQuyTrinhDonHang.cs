@@ -18,24 +18,28 @@ namespace ProjectWin_Demo_.UC
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public event EventHandler ButtonClickCustom;
         string[] AnhCu = { };
-        public UCQuyTrinhDonHang(SanPham sp, int id)
+        int MaVanChuyen;
+        public UCQuyTrinhDonHang(SanPham sp, int id, int MaVanChuyen)
         {
             InitializeComponent();
             this.id = id;
             this.sp = sp;
+            this.MaVanChuyen = MaVanChuyen;
         }
 
         private void UCProcessSales_Load(object sender, EventArgs e)
         {
             try
             {
-                string query = string.Format("Select FullName from Person,DaMua where Person.ID = DaMua.ID and DaMua.MSP = '{0}'", sp.MaSP);
+                string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MSP = '{0}'", sp.MaSP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    lblNguoiMua.Text = reader[0].ToString();
+                    lblNguoiMua.Text = reader["FullName"].ToString();
+                    lblMaVanChuyen.Text = MaVanChuyen.ToString();
+                    lblSoLuong.Text = reader["SoLuongDaMua"].ToString();
                 }
             }
             catch
@@ -48,7 +52,7 @@ namespace ProjectWin_Demo_.UC
             }            
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
-            lblSoLuong.Text = "1 sản phẩm";
+            //lblSoLuong.Text = "1 sản phẩm";
             lblTongTien.Text = sp.GiaHienTai + "đ";
             lblMaSP.Text = sp.MaSP;
             if (sp.AnhHienTai != "")

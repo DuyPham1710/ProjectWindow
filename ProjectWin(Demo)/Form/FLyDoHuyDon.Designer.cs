@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 83);
             this.panel1.TabIndex = 0;
@@ -78,7 +78,7 @@
             this.rdoLyDo1.CheckedState.InnerOffset = -4;
             this.rdoLyDo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoLyDo1.Location = new System.Drawing.Point(21, 151);
-            this.rdoLyDo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoLyDo1.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLyDo1.Name = "rdoLyDo1";
             this.rdoLyDo1.Size = new System.Drawing.Size(394, 37);
             this.rdoLyDo1.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.rdoLyDo2.CheckedState.InnerOffset = -4;
             this.rdoLyDo2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoLyDo2.Location = new System.Drawing.Point(21, 203);
-            this.rdoLyDo2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoLyDo2.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLyDo2.Name = "rdoLyDo2";
             this.rdoLyDo2.Size = new System.Drawing.Size(394, 37);
             this.rdoLyDo2.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.rdoLyDo3.CheckedState.InnerOffset = -4;
             this.rdoLyDo3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoLyDo3.Location = new System.Drawing.Point(21, 249);
-            this.rdoLyDo3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoLyDo3.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLyDo3.Name = "rdoLyDo3";
             this.rdoLyDo3.Size = new System.Drawing.Size(422, 41);
             this.rdoLyDo3.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.rdoLyDo4.CheckedState.InnerOffset = -4;
             this.rdoLyDo4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoLyDo4.Location = new System.Drawing.Point(21, 296);
-            this.rdoLyDo4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoLyDo4.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLyDo4.Name = "rdoLyDo4";
             this.rdoLyDo4.Size = new System.Drawing.Size(394, 37);
             this.rdoLyDo4.TabIndex = 5;
@@ -154,7 +154,7 @@
             this.rdoLyDo5.CheckedState.InnerOffset = -4;
             this.rdoLyDo5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoLyDo5.Location = new System.Drawing.Point(21, 347);
-            this.rdoLyDo5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoLyDo5.Margin = new System.Windows.Forms.Padding(2);
             this.rdoLyDo5.Name = "rdoLyDo5";
             this.rdoLyDo5.Size = new System.Drawing.Size(394, 46);
             this.rdoLyDo5.TabIndex = 6;
@@ -166,6 +166,7 @@
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.Animated = true;
             this.btnXacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnXacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnXacNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -176,7 +177,7 @@
             this.btnXacNhan.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
             this.btnXacNhan.Location = new System.Drawing.Point(0, 435);
-            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(2);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(454, 41);
             this.btnXacNhan.TabIndex = 7;
@@ -189,7 +190,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 38);
             this.panel2.TabIndex = 8;
@@ -210,7 +211,7 @@
             this.btnDong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDong.ForeColor = System.Drawing.Color.Transparent;
             this.btnDong.Location = new System.Drawing.Point(430, 7);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
             this.btnDong.Name = "btnDong";
             this.btnDong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnDong.Size = new System.Drawing.Size(15, 16);
@@ -255,7 +256,7 @@
             this.Controls.Add(this.rdoLyDo1);
             this.Controls.Add(this.rdoLyDo3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FLyDoHuyDon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLyDoHuyDon";

@@ -46,6 +46,8 @@ namespace ProjectWin_Demo_
             this.rdbHienTai = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbAnhBanDau = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnNext = new CustomButton.VBButton();
+            this.btnPre = new CustomButton.VBButton();
             this.pctSanPham = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -82,22 +84,20 @@ namespace ProjectWin_Demo_
             this.nudSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lblAmount = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.vbButton2 = new CustomButton.VBButton();
+            this.vbButton1 = new CustomButton.VBButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
+            this.btnBuy = new CustomButton.VBButton();
             this.lblGiaHienTai = new System.Windows.Forms.Label();
+            this.btnCart = new CustomButton.VBButton();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDiaChiShop = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnNext = new CustomButton.VBButton();
-            this.btnPre = new CustomButton.VBButton();
-            this.vbButton2 = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
-            this.btnBuy = new CustomButton.VBButton();
-            this.btnCart = new CustomButton.VBButton();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
@@ -159,7 +159,7 @@ namespace ProjectWin_Demo_
             this.guna2Panel4.Controls.Add(this.lblDiaChiShop);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel4.Location = new System.Drawing.Point(0, 30);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(1091, 808);
             this.guna2Panel4.TabIndex = 23;
@@ -188,7 +188,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox10.Image = global::ProjectWin_Demo_.Properties.Resources.mess;
             this.guna2PictureBox10.ImageRotate = 0F;
             this.guna2PictureBox10.Location = new System.Drawing.Point(39, 1487);
-            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
             this.guna2PictureBox10.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +200,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox9.Image = global::ProjectWin_Demo_.Properties.Resources.spTuongTu;
             this.guna2PictureBox9.ImageRotate = 0F;
             this.guna2PictureBox9.Location = new System.Drawing.Point(40, 1127);
-            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox9.Name = "guna2PictureBox9";
             this.guna2PictureBox9.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +212,7 @@ namespace ProjectWin_Demo_
             this.fPanelDanhGiaSP.BackColor = System.Drawing.Color.White;
             this.fPanelDanhGiaSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fPanelDanhGiaSP.Location = new System.Drawing.Point(22, 1521);
-            this.fPanelDanhGiaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fPanelDanhGiaSP.Margin = new System.Windows.Forms.Padding(2);
             this.fPanelDanhGiaSP.Name = "fPanelDanhGiaSP";
             this.fPanelDanhGiaSP.Size = new System.Drawing.Size(1026, 270);
             this.fPanelDanhGiaSP.TabIndex = 18;
@@ -253,7 +253,7 @@ namespace ProjectWin_Demo_
             this.lblGiaBanDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaBanDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblGiaBanDau.Location = new System.Drawing.Point(726, 103);
-            this.lblGiaBanDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblGiaBanDau.Margin = new System.Windows.Forms.Padding(2);
             this.lblGiaBanDau.Name = "lblGiaBanDau";
             this.lblGiaBanDau.Size = new System.Drawing.Size(83, 19);
             this.lblGiaBanDau.TabIndex = 40;
@@ -261,6 +261,7 @@ namespace ProjectWin_Demo_
             // 
             // rdbHienTai
             // 
+            this.rdbHienTai.Animated = true;
             this.rdbHienTai.AutoSize = true;
             this.rdbHienTai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdbHienTai.CheckedState.BorderThickness = 0;
@@ -269,7 +270,7 @@ namespace ProjectWin_Demo_
             this.rdbHienTai.CheckedState.InnerOffset = -4;
             this.rdbHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbHienTai.Location = new System.Drawing.Point(383, 409);
-            this.rdbHienTai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbHienTai.Margin = new System.Windows.Forms.Padding(2);
             this.rdbHienTai.Name = "rdbHienTai";
             this.rdbHienTai.Size = new System.Drawing.Size(93, 20);
             this.rdbHienTai.TabIndex = 38;
@@ -282,6 +283,7 @@ namespace ProjectWin_Demo_
             // 
             // rdbAnhBanDau
             // 
+            this.rdbAnhBanDau.Animated = true;
             this.rdbAnhBanDau.AutoSize = true;
             this.rdbAnhBanDau.Checked = true;
             this.rdbAnhBanDau.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -291,7 +293,7 @@ namespace ProjectWin_Demo_
             this.rdbAnhBanDau.CheckedState.InnerOffset = -4;
             this.rdbAnhBanDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAnhBanDau.Location = new System.Drawing.Point(187, 409);
-            this.rdbAnhBanDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbAnhBanDau.Margin = new System.Windows.Forms.Padding(2);
             this.rdbAnhBanDau.Name = "rdbAnhBanDau";
             this.rdbAnhBanDau.Size = new System.Drawing.Size(122, 20);
             this.rdbAnhBanDau.TabIndex = 37;
@@ -313,10 +315,52 @@ namespace ProjectWin_Demo_
             this.guna2Panel2.Controls.Add(this.btnPre);
             this.guna2Panel2.Controls.Add(this.pctSanPham);
             this.guna2Panel2.Location = new System.Drawing.Point(28, 50);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(604, 343);
             this.guna2Panel2.TabIndex = 36;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnNext.BorderRadius = 0;
+            this.btnNext.BorderSize = 0;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(584, 137);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(18, 36);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = ">";
+            this.btnNext.TextColor = System.Drawing.Color.White;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPre
+            // 
+            this.btnPre.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPre.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.btnPre.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPre.BorderRadius = 0;
+            this.btnPre.BorderSize = 0;
+            this.btnPre.FlatAppearance.BorderSize = 0;
+            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPre.ForeColor = System.Drawing.Color.White;
+            this.btnPre.Location = new System.Drawing.Point(2, 138);
+            this.btnPre.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPre.Name = "btnPre";
+            this.btnPre.Size = new System.Drawing.Size(18, 36);
+            this.btnPre.TabIndex = 0;
+            this.btnPre.Text = "<";
+            this.btnPre.TextColor = System.Drawing.Color.White;
+            this.btnPre.UseVisualStyleBackColor = false;
+            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
             // 
             // pctSanPham
             // 
@@ -326,7 +370,7 @@ namespace ProjectWin_Demo_
             this.pctSanPham.FillColor = System.Drawing.Color.Transparent;
             this.pctSanPham.ImageRotate = 0F;
             this.pctSanPham.Location = new System.Drawing.Point(0, 0);
-            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.pctSanPham.Name = "pctSanPham";
             this.pctSanPham.Size = new System.Drawing.Size(604, 343);
             this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -338,7 +382,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox7.Image = global::ProjectWin_Demo_.Properties.Resources.Ionic_Ionicons_Location_outline_48;
             this.guna2PictureBox7.ImageRotate = 0F;
             this.guna2PictureBox7.Location = new System.Drawing.Point(676, 238);
-            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox7.Name = "guna2PictureBox7";
             this.guna2PictureBox7.Size = new System.Drawing.Size(18, 20);
             this.guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -351,9 +395,9 @@ namespace ProjectWin_Demo_
             this.groupBox1.Controls.Add(this.guna2Panel1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(22, 436);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(1028, 680);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
@@ -391,7 +435,7 @@ namespace ProjectWin_Demo_
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(2, 21);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1024, 657);
             this.guna2Panel1.TabIndex = 0;
@@ -403,7 +447,7 @@ namespace ProjectWin_Demo_
             this.guna2CustomGradientPanel2.BorderThickness = 1;
             this.guna2CustomGradientPanel2.Controls.Add(this.rtbMoTaTinhTrang);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(15, 143);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(995, 139);
             this.guna2CustomGradientPanel2.TabIndex = 45;
@@ -413,7 +457,7 @@ namespace ProjectWin_Demo_
             this.rtbMoTaTinhTrang.BackColor = System.Drawing.Color.White;
             this.rtbMoTaTinhTrang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMoTaTinhTrang.Location = new System.Drawing.Point(7, 7);
-            this.rtbMoTaTinhTrang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbMoTaTinhTrang.Margin = new System.Windows.Forms.Padding(2);
             this.rtbMoTaTinhTrang.Name = "rtbMoTaTinhTrang";
             this.rtbMoTaTinhTrang.Size = new System.Drawing.Size(714, 129);
             this.rtbMoTaTinhTrang.TabIndex = 0;
@@ -492,7 +536,7 @@ namespace ProjectWin_Demo_
             // guna2Separator5
             // 
             this.guna2Separator5.Location = new System.Drawing.Point(509, 82);
-            this.guna2Separator5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator5.Name = "guna2Separator5";
             this.guna2Separator5.Size = new System.Drawing.Size(216, 22);
             this.guna2Separator5.TabIndex = 41;
@@ -534,7 +578,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox8.Image = global::ProjectWin_Demo_.Properties.Resources.elt_warranty;
             this.guna2PictureBox8.ImageRotate = 0F;
             this.guna2PictureBox8.Location = new System.Drawing.Point(509, 11);
-            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox8.Name = "guna2PictureBox8";
             this.guna2PictureBox8.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -548,7 +592,7 @@ namespace ProjectWin_Demo_
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.rtbMoTaSP);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(15, 327);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(995, 302);
             this.guna2CustomGradientPanel1.TabIndex = 22;
@@ -558,7 +602,7 @@ namespace ProjectWin_Demo_
             this.rtbMoTaSP.BackColor = System.Drawing.Color.White;
             this.rtbMoTaSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMoTaSP.Location = new System.Drawing.Point(7, 7);
-            this.rtbMoTaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbMoTaSP.Margin = new System.Windows.Forms.Padding(2);
             this.rtbMoTaSP.Name = "rtbMoTaSP";
             this.rtbMoTaSP.Size = new System.Drawing.Size(986, 282);
             this.rtbMoTaSP.TabIndex = 0;
@@ -579,7 +623,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox6.Image = global::ProjectWin_Demo_.Properties.Resources.Lich;
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(265, 11);
-            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -589,7 +633,7 @@ namespace ProjectWin_Demo_
             // guna2Separator6
             // 
             this.guna2Separator6.Location = new System.Drawing.Point(509, 29);
-            this.guna2Separator6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator6.Name = "guna2Separator6";
             this.guna2Separator6.Size = new System.Drawing.Size(216, 22);
             this.guna2Separator6.TabIndex = 19;
@@ -599,7 +643,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox5.Image = global::ProjectWin_Demo_.Properties.Resources.InfoProduct;
             this.guna2PictureBox5.ImageRotate = 0F;
             this.guna2PictureBox5.Location = new System.Drawing.Point(15, 288);
-            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -649,7 +693,7 @@ namespace ProjectWin_Demo_
             // guna2Separator4
             // 
             this.guna2Separator4.Location = new System.Drawing.Point(265, 80);
-            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator4.Name = "guna2Separator4";
             this.guna2Separator4.Size = new System.Drawing.Size(216, 22);
             this.guna2Separator4.TabIndex = 10;
@@ -659,7 +703,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox3.Image = global::ProjectWin_Demo_.Properties.Resources.xuatXu;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(15, 11);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -669,7 +713,7 @@ namespace ProjectWin_Demo_
             // guna2Separator3
             // 
             this.guna2Separator3.Location = new System.Drawing.Point(265, 29);
-            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator3.Name = "guna2Separator3";
             this.guna2Separator3.Size = new System.Drawing.Size(216, 22);
             this.guna2Separator3.TabIndex = 7;
@@ -679,7 +723,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox2.Image = global::ProjectWin_Demo_.Properties.Resources.phanLoai;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(15, 63);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -689,7 +733,7 @@ namespace ProjectWin_Demo_
             // guna2Separator2
             // 
             this.guna2Separator2.Location = new System.Drawing.Point(15, 82);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(212, 22);
             this.guna2Separator2.TabIndex = 4;
@@ -699,7 +743,7 @@ namespace ProjectWin_Demo_
             this.guna2PictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.tinhTrang;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(15, 109);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(24, 26);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -709,7 +753,7 @@ namespace ProjectWin_Demo_
             // guna2Separator1
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(15, 29);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(212, 22);
             this.guna2Separator1.TabIndex = 1;
@@ -719,7 +763,7 @@ namespace ProjectWin_Demo_
             this.guna2RatingStar1.FillColor = System.Drawing.Color.White;
             this.guna2RatingStar1.FocusedColor = System.Drawing.Color.Yellow;
             this.guna2RatingStar1.Location = new System.Drawing.Point(676, 138);
-            this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2RatingStar1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2RatingStar1.Name = "guna2RatingStar1";
             this.guna2RatingStar1.RatingColor = System.Drawing.Color.Yellow;
             this.guna2RatingStar1.ReadOnly = true;
@@ -774,198 +818,10 @@ namespace ProjectWin_Demo_
             this.panel3.Controls.Add(this.vbButton1);
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Location = new System.Drawing.Point(676, 179);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(226, 41);
             this.panel3.TabIndex = 30;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(44, 12);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(87, 16);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "ShopDienMay";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::ProjectWin_Demo_.Properties.Resources.Iconsmind_Outline_Coins_48;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(676, 100);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 26);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 9;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // lblTenSP
-            // 
-            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(672, 50);
-            this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(270, 43);
-            this.lblTenSP.TabIndex = 24;
-            this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
-            // 
-            // lblGiaHienTai
-            // 
-            this.lblGiaHienTai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaHienTai.ForeColor = System.Drawing.Color.Crimson;
-            this.lblGiaHienTai.Location = new System.Drawing.Point(825, 100);
-            this.lblGiaHienTai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblGiaHienTai.Name = "lblGiaHienTai";
-            this.lblGiaHienTai.Size = new System.Drawing.Size(117, 26);
-            this.lblGiaHienTai.TabIndex = 25;
-            this.lblGiaHienTai.Text = "10.110.000đ";
-            this.lblGiaHienTai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(801, 148);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Đã bán 100";
-            // 
-            // lblDiaChiShop
-            // 
-            this.lblDiaChiShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChiShop.Location = new System.Drawing.Point(699, 237);
-            this.lblDiaChiShop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDiaChiShop.Name = "lblDiaChiShop";
-            this.lblDiaChiShop.Size = new System.Drawing.Size(131, 22);
-            this.lblDiaChiShop.TabIndex = 27;
-            this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
-            this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.Red;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Location = new System.Drawing.Point(9, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(15, 16);
-            this.btnClose.TabIndex = 19;
-            this.btnClose.UseTransparentBackground = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimize.FillColor = System.Drawing.Color.Lime;
-            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Location = new System.Drawing.Point(48, 7);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMinimize.Size = new System.Drawing.Size(15, 16);
-            this.btnMinimize.TabIndex = 20;
-            this.btnMinimize.UseTransparentBackground = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // guna2CircleButton2
-            // 
-            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton2.FillColor = System.Drawing.Color.Gold;
-            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(28, 7);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2CircleButton2.Name = "guna2CircleButton2";
-            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(15, 16);
-            this.guna2CircleButton2.TabIndex = 21;
-            this.guna2CircleButton2.UseTransparentBackground = true;
-            // 
-            // pToolBar
-            // 
-            this.pToolBar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pToolBar.BorderColor = System.Drawing.Color.Black;
-            this.pToolBar.Controls.Add(this.guna2CircleButton2);
-            this.pToolBar.Controls.Add(this.btnMinimize);
-            this.pToolBar.Controls.Add(this.btnClose);
-            this.pToolBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pToolBar.Location = new System.Drawing.Point(0, 0);
-            this.pToolBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pToolBar.Name = "pToolBar";
-            this.pToolBar.Size = new System.Drawing.Size(1091, 30);
-            this.pToolBar.TabIndex = 22;
-            this.pToolBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseDown);
-            this.pToolBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseMove);
-            this.pToolBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseUp);
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnNext.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnNext.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnNext.BorderRadius = 0;
-            this.btnNext.BorderSize = 0;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(584, 137);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(18, 36);
-            this.btnNext.TabIndex = 1;
-            this.btnNext.Text = ">";
-            this.btnNext.TextColor = System.Drawing.Color.White;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPre
-            // 
-            this.btnPre.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnPre.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.btnPre.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPre.BorderRadius = 0;
-            this.btnPre.BorderSize = 0;
-            this.btnPre.FlatAppearance.BorderSize = 0;
-            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPre.ForeColor = System.Drawing.Color.White;
-            this.btnPre.Location = new System.Drawing.Point(2, 138);
-            this.btnPre.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPre.Name = "btnPre";
-            this.btnPre.Size = new System.Drawing.Size(18, 36);
-            this.btnPre.TabIndex = 0;
-            this.btnPre.Text = "<";
-            this.btnPre.TextColor = System.Drawing.Color.White;
-            this.btnPre.UseVisualStyleBackColor = false;
-            this.btnPre.Click += new System.EventHandler(this.btnPre_Click);
             // 
             // vbButton2
             // 
@@ -1007,6 +863,40 @@ namespace ProjectWin_Demo_
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(44, 12);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(87, 16);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "ShopDienMay";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::ProjectWin_Demo_.Properties.Resources.Iconsmind_Outline_Coins_48;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(676, 100);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(24, 26);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 9;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // lblTenSP
+            // 
+            this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Location = new System.Drawing.Point(672, 50);
+            this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(270, 43);
+            this.lblTenSP.TabIndex = 24;
+            this.lblTenSP.Text = "Smart Tivi 4K Sony KD-55X75K 55 inch Google TV";
+            // 
             // btnBuy
             // 
             this.btnBuy.BackColor = System.Drawing.Color.LightSalmon;
@@ -1027,6 +917,18 @@ namespace ProjectWin_Demo_
             this.btnBuy.TextColor = System.Drawing.Color.Black;
             this.btnBuy.UseVisualStyleBackColor = false;
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
+            // lblGiaHienTai
+            // 
+            this.lblGiaHienTai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaHienTai.ForeColor = System.Drawing.Color.Crimson;
+            this.lblGiaHienTai.Location = new System.Drawing.Point(825, 100);
+            this.lblGiaHienTai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGiaHienTai.Name = "lblGiaHienTai";
+            this.lblGiaHienTai.Size = new System.Drawing.Size(117, 26);
+            this.lblGiaHienTai.TabIndex = 25;
+            this.lblGiaHienTai.Text = "10.110.000đ";
+            this.lblGiaHienTai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCart
             // 
@@ -1051,6 +953,106 @@ namespace ProjectWin_Demo_
             this.btnCart.UseVisualStyleBackColor = false;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(801, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Đã bán 100";
+            // 
+            // lblDiaChiShop
+            // 
+            this.lblDiaChiShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaChiShop.Location = new System.Drawing.Point(699, 237);
+            this.lblDiaChiShop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiaChiShop.Name = "lblDiaChiShop";
+            this.lblDiaChiShop.Size = new System.Drawing.Size(131, 22);
+            this.lblDiaChiShop.TabIndex = 27;
+            this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
+            this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Location = new System.Drawing.Point(9, 7);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnClose.Size = new System.Drawing.Size(15, 16);
+            this.btnClose.TabIndex = 19;
+            this.btnClose.UseTransparentBackground = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimize.FillColor = System.Drawing.Color.Lime;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Location = new System.Drawing.Point(48, 7);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnMinimize.Size = new System.Drawing.Size(15, 16);
+            this.btnMinimize.TabIndex = 20;
+            this.btnMinimize.UseTransparentBackground = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.Gold;
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2CircleButton2.Location = new System.Drawing.Point(28, 7);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(15, 16);
+            this.guna2CircleButton2.TabIndex = 21;
+            this.guna2CircleButton2.UseTransparentBackground = true;
+            // 
+            // pToolBar
+            // 
+            this.pToolBar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pToolBar.BorderColor = System.Drawing.Color.Black;
+            this.pToolBar.Controls.Add(this.guna2CircleButton2);
+            this.pToolBar.Controls.Add(this.btnMinimize);
+            this.pToolBar.Controls.Add(this.btnClose);
+            this.pToolBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pToolBar.Location = new System.Drawing.Point(0, 0);
+            this.pToolBar.Margin = new System.Windows.Forms.Padding(2);
+            this.pToolBar.Name = "pToolBar";
+            this.pToolBar.Size = new System.Drawing.Size(1091, 30);
+            this.pToolBar.TabIndex = 22;
+            this.pToolBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseDown);
+            this.pToolBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseMove);
+            this.pToolBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseUp);
+            // 
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.BorderRadius = 13;
@@ -1066,7 +1068,7 @@ namespace ProjectWin_Demo_
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.pToolBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FChiTiet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FDetail_Load);

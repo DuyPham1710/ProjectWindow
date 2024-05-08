@@ -49,6 +49,7 @@
             // 
             // btnLoc
             // 
+            this.btnLoc.Animated = true;
             this.btnLoc.BackColor = System.Drawing.Color.Transparent;
             this.btnLoc.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.btnLoc.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -70,6 +71,7 @@
             // 
             // btnAllShop
             // 
+            this.btnAllShop.Animated = true;
             this.btnAllShop.BackColor = System.Drawing.Color.Transparent;
             this.btnAllShop.CustomBorderColor = System.Drawing.Color.MediumTurquoise;
             this.btnAllShop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -88,6 +90,7 @@
             this.btnAllShop.Size = new System.Drawing.Size(135, 31);
             this.btnAllShop.TabIndex = 17;
             this.btnAllShop.Text = "Tất cả shop";
+            this.btnAllShop.Click += new System.EventHandler(this.btnAllShop_Click);
             // 
             // guna2CustomGradientPanel1
             // 
@@ -103,6 +106,7 @@
             // 
             // guna2GradientButton2
             // 
+            this.guna2GradientButton2.Animated = true;
             this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2GradientButton2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
@@ -125,6 +129,7 @@
             // 
             // guna2GradientButton1
             // 
+            this.guna2GradientButton1.Animated = true;
             this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientButton1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2GradientButton1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);

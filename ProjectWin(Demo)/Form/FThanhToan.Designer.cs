@@ -67,17 +67,18 @@
             this.FPanelSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblSdt = new System.Windows.Forms.Label();
+            this.lblHoTen = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.txtNam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtThang = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNgay = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.lblHoTen = new System.Windows.Forms.Label();
-            this.lblSdt = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.pTieuDe.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -272,6 +273,7 @@
             // 
             // btnThayDoiDC
             // 
+            this.btnThayDoiDC.Animated = true;
             this.btnThayDoiDC.BorderRadius = 10;
             this.btnThayDoiDC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThayDoiDC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -450,6 +452,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.label2);
             this.panel11.Controls.Add(this.lblTongTien);
             this.panel11.Controls.Add(this.lblTienVoucher);
             this.panel11.Controls.Add(this.lblTienSP);
@@ -590,6 +593,66 @@
             this.panel2.Size = new System.Drawing.Size(1157, 176);
             this.panel2.TabIndex = 0;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DimGray;
+            this.panel12.Location = new System.Drawing.Point(607, 99);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(360, 1);
+            this.panel12.TabIndex = 47;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DimGray;
+            this.panel6.Location = new System.Drawing.Point(405, 99);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(130, 1);
+            this.panel6.TabIndex = 46;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DimGray;
+            this.panel4.Location = new System.Drawing.Point(187, 99);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(140, 1);
+            this.panel4.TabIndex = 45;
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.lblDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblDiaChi.Location = new System.Drawing.Point(609, 79);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(342, 17);
+            this.lblDiaChi.TabIndex = 44;
+            this.lblDiaChi.Text = "Xã xuân hòa, Xã Xuân Hòa, Huyện Xuân Lộc, Đồng Nai";
+            // 
+            // lblSdt
+            // 
+            this.lblSdt.AutoSize = true;
+            this.lblSdt.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.lblSdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblSdt.Location = new System.Drawing.Point(412, 79);
+            this.lblSdt.Name = "lblSdt";
+            this.lblSdt.Size = new System.Drawing.Size(78, 17);
+            this.lblSdt.TabIndex = 43;
+            this.lblSdt.Text = "0794821201";
+            // 
+            // lblHoTen
+            // 
+            this.lblHoTen.AutoSize = true;
+            this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.lblHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblHoTen.Location = new System.Drawing.Point(194, 79);
+            this.lblHoTen.Name = "lblHoTen";
+            this.lblHoTen.Size = new System.Drawing.Size(107, 17);
+            this.lblHoTen.TabIndex = 42;
+            this.lblHoTen.Text = "Phạm Ngọc Duy";
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DarkGray;
@@ -598,6 +661,12 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1105, 1);
             this.panel7.TabIndex = 40;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 17;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowForm1.TargetForm = this;
             // 
             // txtNam
             // 
@@ -680,71 +749,16 @@
             this.txtNgay.TabIndex = 32;
             this.txtNgay.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2ShadowForm1
+            // label2
             // 
-            this.guna2ShadowForm1.BorderRadius = 17;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
-            this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // lblHoTen
-            // 
-            this.lblHoTen.AutoSize = true;
-            this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.lblHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblHoTen.Location = new System.Drawing.Point(194, 79);
-            this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(107, 17);
-            this.lblHoTen.TabIndex = 42;
-            this.lblHoTen.Text = "Phạm Ngọc Duy";
-            // 
-            // lblSdt
-            // 
-            this.lblSdt.AutoSize = true;
-            this.lblSdt.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.lblSdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblSdt.Location = new System.Drawing.Point(412, 79);
-            this.lblSdt.Name = "lblSdt";
-            this.lblSdt.Size = new System.Drawing.Size(78, 17);
-            this.lblSdt.TabIndex = 43;
-            this.lblSdt.Text = "0794821201";
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.lblDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.lblDiaChi.Location = new System.Drawing.Point(609, 79);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(342, 17);
-            this.lblDiaChi.TabIndex = 44;
-            this.lblDiaChi.Text = "Xã xuân hòa, Xã Xuân Hòa, Huyện Xuân Lộc, Đồng Nai";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DimGray;
-            this.panel4.Location = new System.Drawing.Point(187, 99);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(140, 1);
-            this.panel4.TabIndex = 45;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DimGray;
-            this.panel6.Location = new System.Drawing.Point(405, 99);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(130, 1);
-            this.panel6.TabIndex = 46;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.DimGray;
-            this.panel12.Location = new System.Drawing.Point(607, 99);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(360, 1);
-            this.panel12.TabIndex = 47;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(1067, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 24);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "đ";
             // 
             // FThanhToan
             // 
@@ -827,5 +841,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
     }
 }

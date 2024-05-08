@@ -95,7 +95,7 @@
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.LightCyan;
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.LightSeaGreen;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(675, 572);
             this.guna2CustomGradientPanel1.TabIndex = 16;
@@ -116,7 +116,7 @@
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.Transparent;
             this.guna2CircleButton2.Location = new System.Drawing.Point(28, 7);
-            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleButton2.Size = new System.Drawing.Size(15, 16);
@@ -136,7 +136,7 @@
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMinimize.Location = new System.Drawing.Point(48, 7);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnMinimize.Size = new System.Drawing.Size(15, 16);
@@ -157,7 +157,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Location = new System.Drawing.Point(9, 7);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnClose.Size = new System.Drawing.Size(15, 16);
@@ -181,6 +181,7 @@
             // 
             // btnSignUp
             // 
+            this.btnSignUp.Animated = true;
             this.btnSignUp.BorderRadius = 17;
             this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -192,7 +193,7 @@
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(180, 430);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(200, 33);
             this.btnSignUp.TabIndex = 20;
@@ -218,9 +219,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(25, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(246, 289);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -233,7 +234,7 @@
             this.dtpBornYear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpBornYear.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBornYear.Location = new System.Drawing.Point(8, 100);
-            this.dtpBornYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpBornYear.Margin = new System.Windows.Forms.Padding(2);
             this.dtpBornYear.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpBornYear.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBornYear.Name = "dtpBornYear";
@@ -294,7 +295,7 @@
             this.rdoOther.AutoSize = true;
             this.rdoOther.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.rdoOther.Location = new System.Drawing.Point(124, 162);
-            this.rdoOther.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoOther.Margin = new System.Windows.Forms.Padding(2);
             this.rdoOther.Name = "rdoOther";
             this.rdoOther.Size = new System.Drawing.Size(54, 20);
             this.rdoOther.TabIndex = 15;
@@ -307,7 +308,7 @@
             this.rdoWoman.AutoSize = true;
             this.rdoWoman.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.rdoWoman.Location = new System.Drawing.Point(68, 162);
-            this.rdoWoman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoWoman.Margin = new System.Windows.Forms.Padding(2);
             this.rdoWoman.Name = "rdoWoman";
             this.rdoWoman.Size = new System.Drawing.Size(43, 20);
             this.rdoWoman.TabIndex = 14;
@@ -320,7 +321,7 @@
             this.rdoMan.AutoSize = true;
             this.rdoMan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMan.Location = new System.Drawing.Point(8, 162);
-            this.rdoMan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoMan.Margin = new System.Windows.Forms.Padding(2);
             this.rdoMan.Name = "rdoMan";
             this.rdoMan.Size = new System.Drawing.Size(52, 20);
             this.rdoMan.TabIndex = 13;
@@ -444,9 +445,9 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(285, 28);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(254, 381);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
@@ -699,9 +700,9 @@
             this.groupBox3.Controls.Add(this.lbl7);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(25, 332);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(246, 77);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
@@ -791,7 +792,7 @@
             "Vĩnh Phúc",
             "Yên Bái"});
             this.cbAddress.Location = new System.Drawing.Point(8, 24);
-            this.cbAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAddress.Margin = new System.Windows.Forms.Padding(2);
             this.cbAddress.Name = "cbAddress";
             this.cbAddress.Size = new System.Drawing.Size(221, 36);
             this.cbAddress.StartIndex = 0;
@@ -824,7 +825,7 @@
             this.ClientSize = new System.Drawing.Size(675, 572);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

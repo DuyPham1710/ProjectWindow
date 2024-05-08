@@ -14,7 +14,6 @@ namespace ProjectWin_Demo_
     public partial class UCSPCuaToi : UserControl
     {
         SanPham sp;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         string[] AnhCu = { };
         public event EventHandler BtnClick_edit;
         public event EventHandler BtnClick_delete;

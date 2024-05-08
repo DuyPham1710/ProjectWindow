@@ -60,7 +60,7 @@ namespace ProjectWin_Demo_
             txtThang.Text = date.Month.ToString();
             txtNam.Text = date.Year.ToString();
             lblTienSP.Text = tongTienSP.ToString();
-            lblTongTien.Text = tongTienSP.ToString() + "đ";
+            lblTongTien.Text = tongTienSP.ToString();
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)
@@ -103,16 +103,16 @@ namespace ProjectWin_Demo_
             int i = 0;
             foreach (SanPham sp in sanPham)
             {
-                if (MaVouchers.Count == 0)
+                if (MaVouchers.Count == 0 || MaVouchers.Count < i)
                 {
-                    SPDao.DatHang(sp, "");
+                    SPDao.DatHang(sp, "", Int32.Parse(lblTongTien.Text));
                 }
                 else
                 {
-                    SPDao.DatHang(sp, MaVouchers[i]);
+                    SPDao.DatHang(sp, MaVouchers[i], Int32.Parse(lblTongTien.Text));
                     i++;
                 }
-              
+              // chưa làm khi add voucher vô thanh toán thì giá lúc đặt cũng trừ theo
             }
             this.Close();
             //try
@@ -202,15 +202,15 @@ namespace ProjectWin_Demo_
             UCSPDatHang ucSPDatHang = sender as UCSPDatHang;
             FVoucher fVoucher = new FVoucher(id, ucSPDatHang.lblMaSP.Text);
             fVoucher.ShowDialog();
-            if (fVoucher.MaVoucher != "") 
-            {
-                MaVouchers.Add(fVoucher.MaVoucher);
-            }
+            //if (fVoucher.MaVoucher != "") 
+            //{
+            MaVouchers.Add(fVoucher.MaVoucher);
+            //}
             
             VoucherDAO voucherDAO = new VoucherDAO(id);
-            int GiatriVoucher = voucherDAO.GiaVoucher(fVoucher.MaVoucher);
-            lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + GiatriVoucher).ToString();
-            lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString() + "đ";
+            Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoucher);         
+            lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
+            lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString();
         }
     }
 }
