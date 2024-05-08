@@ -14,50 +14,29 @@ namespace ProjectWin_Demo_
     public partial class UCLichSuDaBan : UserControl
     {
         private int id;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        List<SanPham> sanPham = new List<SanPham>();
+        SanPhamDao SPDao;
         public UCLichSuDaBan(int id)
         {
             InitializeComponent();
             this.id = id;
+            SPDao = new SanPhamDao(id);
         }
 
         private void UCLichSuDaBan_Load(object sender, EventArgs e)
         {
             fPanel.Controls.Clear();
-            sanPham = ThucThi();
-            foreach (SanPham item in sanPham)
+            List<SanPham> sanPham = SPDao.DSDaBan("Đã giao");
+
+            NguoiDAO nguoiDAO = new NguoiDAO(id);
+            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua();
+            int i = 0;
+            foreach (SanPham sp in sanPham)
             {
-                UCSPDaBan ucSP = new UCSPDaBan(item, id);
+                UCSPDaBan ucSP = new UCSPDaBan(sp, id);
+                ucSP.lblNguoiMua.Text = DSNguoiMua[i].FullName;
                 fPanel.Controls.Add(ucSP);
+                i++;
             }
-        }
-        private List<SanPham> ThucThi()
-        {
-            List<SanPham> sanPham = new List<SanPham>();
-            try
-            {
-                conn.Open();
-                //string query = string.Format("select ID, count(ID) as SLMua from DaMua where DaMua.TrangThai = N'Đã giao' group by ID order by SLMua DESC");
-
-                string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}' order by SoLuongDaMua DESC", id, "Đã giao");
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuongDaMua"].ToString(), (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    sanPham.Add(sp);
-                }
-
-            }
-            catch (Exception ex) { }
-            finally
-            {
-                conn.Close();
-
-            }
-            return sanPham;
         }
     }
 }

@@ -13,7 +13,6 @@ namespace ProjectWin_Demo_
 {
     public partial class UCSPDaBan : UserControl
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         private int id;
         string[] AnhCu = { };
@@ -26,10 +25,12 @@ namespace ProjectWin_Demo_
 
         private void UCSPDaBan_Load(object sender, EventArgs e)
         {
+            lblMaSP.Text = sp.MaSP;
             lblTenSP.Text = sp.TenSP;
-            lblGia.Text = sp.GiaHienTai + "đ";
+            lblGia.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString() + "đ";
             lblSoLuongSP.Text = sp.SoLuong;
             lblPhanLoai.Text = sp.DanhMuc;
+
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
             if (AnhCu.Length > 0)
@@ -39,20 +40,6 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
-
-            try
-            {
-                conn.Open();
-                string query = string.Format("select UserName from DaMua inner join Account on DaMua.ID = Account.ID where DaMua.ID = {0}", id);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                if (rdr.Read())
-                {
-                    lblNguoiMua.Text = (string)rdr["UserName"];
-                }
-            }
-            catch { }
-            finally { conn.Close(); }
         }
     }
 }

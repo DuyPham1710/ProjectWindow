@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,14 @@ namespace ProjectWin_Demo_
         int curr = 0;
         int id;
         SanPhamDao SPDao;
+        NguoiDAO nguoiDAO;
         public FChiTiet(SanPham sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
             this.id = id;
             SPDao = new SanPhamDao(id);
+            nguoiDAO = new NguoiDAO(sp.IDChuSP);
         }
       
         private void FDetail_Load(object sender, EventArgs e)
@@ -77,6 +80,20 @@ namespace ProjectWin_Demo_
             {
                 sanPham.Padding = new Padding(0);
                 fPanelSPTuongTu.Controls.Add(sanPham);
+            }
+
+            //Load Thông tin shop
+            Nguoi nguoiDung = nguoiDAO.LoadThongTinCaNhan();
+            if (nguoiDung != null)
+            {
+                if (nguoiDung.Avt != null)
+                {
+                    byte[] imageBytes = nguoiDung.Avt;
+                    MemoryStream ms = new MemoryStream(imageBytes);
+                    pcbAvt.Image = Image.FromStream(ms);
+                }
+                lblTenShop.Text = nguoiDung.UserName;
+                lblDiaChiShop.Text = nguoiDung.Address;
             }
         }
         private void btnNext_Click(object sender, EventArgs e)
@@ -197,6 +214,13 @@ namespace ProjectWin_Demo_
             {
                 nudSoLuong.Value = 1;
             }
+        }
+
+        private void btnXemTrang_Click(object sender, EventArgs e)
+        {
+            FChiTietShop fChiTietShop = new FChiTietShop(id, sp.IDChuSP);
+            fChiTietShop.ShowDialog();
+            this.Close();
         }
     }
 }

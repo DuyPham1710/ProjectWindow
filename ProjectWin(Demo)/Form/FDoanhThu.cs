@@ -59,12 +59,23 @@ namespace ProjectWin_Demo_
         {
             if (detail)
             {
-                a.LoadChiTietDoanhThu(gvChiTiet, cbxThang.Text, txtNam.Text);
+                btnChiTiet_Click(sender, e);
             }
             else
             {
                 btnThongKe_Click(sender, e);
             }
+        }
+
+        private void FDoanhThu_Load(object sender, EventArgs e)
+        {
+            btnThongKe.CustomBorderColor = Color.White;
+            btnChiTiet.CustomBorderColor = Color.DarkTurquoise;
+            gvDoanhThu.Hide();
+            chartDoanhThu.Hide();
+            gvChiTiet.Show();
+            detail = true;
+            a.LoadChiTietDoanhThu(gvChiTiet, cbxThang.Text, txtNam.Text);
         }
     }
 }

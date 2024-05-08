@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVoucher));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnChonVoucher = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnMaVoucher = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fPanelVoucher = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,7 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnChonVoucher);
+            this.panel1.Controls.Add(this.btnMaVoucher);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(25, 63);
@@ -66,25 +66,26 @@
             this.panel1.Size = new System.Drawing.Size(484, 63);
             this.panel1.TabIndex = 27;
             // 
-            // btnChonVoucher
+            // btnMaVoucher
             // 
-            this.btnChonVoucher.Animated = true;
-            this.btnChonVoucher.BorderRadius = 10;
-            this.btnChonVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnChonVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnChonVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChonVoucher.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnChonVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChonVoucher.FillColor = System.Drawing.Color.CornflowerBlue;
-            this.btnChonVoucher.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnChonVoucher.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChonVoucher.ForeColor = System.Drawing.Color.White;
-            this.btnChonVoucher.Location = new System.Drawing.Point(372, 12);
-            this.btnChonVoucher.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChonVoucher.Name = "btnChonVoucher";
-            this.btnChonVoucher.Size = new System.Drawing.Size(94, 39);
-            this.btnChonVoucher.TabIndex = 40;
-            this.btnChonVoucher.Text = "Áp dụng";
+            this.btnMaVoucher.Animated = true;
+            this.btnMaVoucher.BorderRadius = 10;
+            this.btnMaVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMaVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMaVoucher.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMaVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMaVoucher.FillColor = System.Drawing.Color.CornflowerBlue;
+            this.btnMaVoucher.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnMaVoucher.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaVoucher.ForeColor = System.Drawing.Color.White;
+            this.btnMaVoucher.Location = new System.Drawing.Point(372, 12);
+            this.btnMaVoucher.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaVoucher.Name = "btnMaVoucher";
+            this.btnMaVoucher.Size = new System.Drawing.Size(94, 39);
+            this.btnMaVoucher.TabIndex = 40;
+            this.btnMaVoucher.Text = "Áp dụng";
+            this.btnMaVoucher.Click += new System.EventHandler(this.btnMaVoucher_Click);
             // 
             // txtTimKiem
             // 
@@ -212,7 +213,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
-        private Guna.UI2.WinForms.Guna2GradientButton btnChonVoucher;
+        private Guna.UI2.WinForms.Guna2GradientButton btnMaVoucher;
         private System.Windows.Forms.FlowLayoutPanel fPanelVoucher;
         private Guna.UI2.WinForms.Guna2GradientButton btnTroLai;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

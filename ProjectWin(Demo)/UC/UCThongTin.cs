@@ -75,8 +75,6 @@ namespace ProjectWin_Demo_
                     MemoryStream ms = new MemoryStream(imageBytes);
                     pictureBoxUser.Image = Image.FromStream(ms);  
                 }
-              
-                 
 
                 txtName.Text = nguoiDung.FullName;
                 txtPhoneNumber.Text = nguoiDung.PhoneNumber;

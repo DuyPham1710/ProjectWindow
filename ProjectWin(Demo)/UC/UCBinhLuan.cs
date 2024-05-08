@@ -24,7 +24,6 @@ namespace ProjectWin_Demo_
             lblHoTen.Text = hoTen;
             txtBinhLuan.Text = binhLuan;
             Star.Value = soSao;
-            //pcbAvt = Avt
             if (Avt != null)
             {
                 ms = new MemoryStream(Avt);

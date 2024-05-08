@@ -13,29 +13,32 @@ namespace ProjectWin_Demo_
 {
     public partial class UCSPDaHuy : UserControl
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        SanPhamDao sanPhamDao;
+        //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        //SanPhamDao sanPhamDao;
         private int id;
         private SanPham sp;
         string[] AnhCu = { };
+        NguoiDAO nguoiDAO;
         public UCSPDaHuy(SanPham sp, int id)
         {
             InitializeComponent();
             this.id = id;
             this.sp = sp;
-            sanPhamDao = new SanPhamDao(id);
-           
+            nguoiDAO = new NguoiDAO(id);
+            //sanPhamDao = new SanPhamDao(id);
+
         }
 
         private void UCSPDaHuy_Load(object sender, EventArgs e)
         {
+            lblMaSP.Text = sp.MaSP;
             lblTenSP.Text = sp.TenSP;
             lblPhanLoai.Text = sp.DanhMuc;
             lblGiaBanDau.Text = sp.GiaBanDau;
             lblGiaBanDau.Font = new Font(lblGiaBanDau.Font, FontStyle.Strikeout);
             lblDonGia.Text = sp.GiaHienTai + "đ";
-
-            lblThanhTien.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString() + "đ";
+            lblThanhTien.Text = sp.GiaHienTai + "đ";
+            //lblThanhTien.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString() + "đ";
             lblSoLuong.Text = "x" + sp.SoLuong;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
@@ -46,19 +49,21 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
-            try
-            {
-                conn.Open();
-                string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                if (rdr.Read())
-                {
-                    lblTenShop.Text = (string)rdr["UserName"];
-                }
-            }
-            catch { }
-            finally { conn.Close(); }
+            
+            lblTenShop.Text = nguoiDAO.LoadTenShop(sp.MaSP);
+            //try
+            //{
+            //    conn.Open();
+            //    string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
+            //    SqlCommand cmd = new SqlCommand(query, conn);
+            //    SqlDataReader rdr = cmd.ExecuteReader();
+            //    if (rdr.Read())
+            //    {
+            //        lblTenShop.Text = (string)rdr["UserName"];
+            //    }
+            //}
+            //catch { }
+            //finally { conn.Close(); }
         }
         private void btnMuaLai_Click(object sender, EventArgs e)
         {
@@ -67,15 +72,15 @@ namespace ProjectWin_Demo_
         private void pcbDelete_MouseHover(object sender, EventArgs e)
         {
             pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
+            ShadowPanel.FillColor = Color.LightCyan;
             this.BackColor = Color.LightCyan;
         }
 
         private void pcbDelete_MouseLeave(object sender, EventArgs e)
         {
             pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
-            this.BackColor = Color.WhiteSmoke;
+            ShadowPanel.FillColor = Color.White;
+            this.BackColor = Color.White;
         }
-
-      
     }
 }

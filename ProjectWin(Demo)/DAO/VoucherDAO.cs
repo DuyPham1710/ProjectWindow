@@ -59,6 +59,14 @@ namespace ProjectWin_Demo_
         //    string sqlStr = string.Format("select distinct Q.* from (select Voucher.* from Voucher, Account where Voucher.ID = Account.ID) Q where Q.ID = (select IDChuSP from SanPham where MSP = '{0}')", maSP);
         //    return dBConnection.LoadVoucher<T>(sqlStr);
         //}
+        public bool KiemTraVoucher(string maVoucher)
+        {
+            string sqlStr = string.Format("SELECT * FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
+            DataTable dt = dBConnection.LoadDuLieu(sqlStr);
+            if (dt.Rows.Count == 0)
+                return false;
+            return true;
+        }
         public void capNhatVoucher(string MaVoucher)
         {
             //string sqlStr = string.Format("UPDATE DaMua SET MaVoucher = '{0}' WHERE ID = {1}", MaVoucher, id);

@@ -76,5 +76,18 @@ namespace ProjectWin_Demo_
             Avt = avarta != DBNull.Value ? (byte[])avarta : null;
             //     Avt = (byte[])duLieu.Rows[0]["Avarta"];
         }
+        public Nguoi(DataRow duLieu)
+        {
+            ID = Int32.Parse(duLieu["ID"].ToString());
+            FullName = duLieu["FullName"].ToString();
+            Email = duLieu["Email"].ToString();
+            PhoneNumber = duLieu["Phone"].ToString();
+            Cccd = duLieu["CCCD"].ToString();
+            Gender = duLieu["Gender"].ToString();
+            Address = duLieu["Addr"].ToString();
+            DateOfBirth = DateTime.Parse(duLieu["Bith"].ToString());
+            object avarta = duLieu["Avarta"];
+            Avt = avarta != DBNull.Value ? (byte[])avarta : null;
+        }
     }
 }

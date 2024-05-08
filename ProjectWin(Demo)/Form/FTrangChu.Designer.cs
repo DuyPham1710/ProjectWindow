@@ -44,7 +44,7 @@
             this.giảmDầnGiáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCatalog = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSort = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnbestSeller = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnYeuThich = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAllProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnUuChuong = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -250,27 +250,28 @@
             this.btnSort.TabIndex = 15;
             this.btnSort.Text = "Sắp xếp sản phẩm";
             // 
-            // btnbestSeller
+            // btnYeuThich
             // 
-            this.btnbestSeller.Animated = true;
-            this.btnbestSeller.BackColor = System.Drawing.Color.Transparent;
-            this.btnbestSeller.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.btnbestSeller.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnbestSeller.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnbestSeller.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnbestSeller.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbestSeller.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnbestSeller.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnbestSeller.FillColor = System.Drawing.Color.Transparent;
-            this.btnbestSeller.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnbestSeller.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnbestSeller.ForeColor = System.Drawing.Color.Black;
-            this.btnbestSeller.Location = new System.Drawing.Point(457, 53);
-            this.btnbestSeller.Margin = new System.Windows.Forms.Padding(2);
-            this.btnbestSeller.Name = "btnbestSeller";
-            this.btnbestSeller.Size = new System.Drawing.Size(135, 31);
-            this.btnbestSeller.TabIndex = 16;
-            this.btnbestSeller.Text = "Bán chạy nhất";
+            this.btnYeuThich.Animated = true;
+            this.btnYeuThich.BackColor = System.Drawing.Color.Transparent;
+            this.btnYeuThich.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnYeuThich.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnYeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYeuThich.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnYeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnYeuThich.FillColor = System.Drawing.Color.Transparent;
+            this.btnYeuThich.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnYeuThich.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnYeuThich.ForeColor = System.Drawing.Color.Black;
+            this.btnYeuThich.Location = new System.Drawing.Point(457, 53);
+            this.btnYeuThich.Margin = new System.Windows.Forms.Padding(2);
+            this.btnYeuThich.Name = "btnYeuThich";
+            this.btnYeuThich.Size = new System.Drawing.Size(135, 31);
+            this.btnYeuThich.TabIndex = 16;
+            this.btnYeuThich.Text = "Yêu thích";
+            this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
             // 
             // btnAllProduct
             // 
@@ -353,7 +354,7 @@
             this.Controls.Add(this.btnUuChuong);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnAllProduct);
-            this.Controls.Add(this.btnbestSeller);
+            this.Controls.Add(this.btnYeuThich);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnCatalog);
             this.Controls.Add(this.fPanelSanPham);
@@ -379,7 +380,7 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip ContextMenuStripSort;
         private Guna.UI2.WinForms.Guna2GradientButton btnCatalog;
         private Guna.UI2.WinForms.Guna2GradientButton btnSort;
-        private Guna.UI2.WinForms.Guna2GradientButton btnbestSeller;
+        private Guna.UI2.WinForms.Guna2GradientButton btnYeuThich;
         private Guna.UI2.WinForms.Guna2GradientButton btnAllProduct;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;

@@ -56,5 +56,15 @@ namespace ProjectWin_Demo_
         {
             FShop_Load(sender, e);
         }
+
+        private void btnShopTheoDoi_Click(object sender, EventArgs e)
+        {
+            fPanelShop.Controls.Clear();
+            List<UCShop> shop = nguoiDao.TheoDoi();
+            foreach (UCShop s in shop)
+            {
+                fPanelShop.Controls.Add(s);
+            }
+        }
     }
 }

@@ -176,5 +176,18 @@ namespace ProjectWin_Demo_
                 fPanelSanPham.Controls.Add(sp);
             }
         }
+
+        private void btnYeuThich_Click(object sender, EventArgs e)
+        {
+            YeuThichDAO yeuThichDAO = new YeuThichDAO(id);
+            fPanelSanPham.Controls.Clear();
+            List<UCSanPham> sanPham = yeuThichDAO.LoadSanPhamYeuThich();
+            foreach (UCSanPham sp in sanPham)
+            {
+                sp.btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
+                sp.chon = true;
+                fPanelSanPham.Controls.Add(sp);
+            }
+        }
     }
 }

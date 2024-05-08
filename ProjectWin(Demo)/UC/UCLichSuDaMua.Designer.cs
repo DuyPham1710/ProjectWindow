@@ -34,21 +34,22 @@
             // fPanel
             // 
             this.fPanel.AutoScroll = true;
-            this.fPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.fPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fPanel.Location = new System.Drawing.Point(0, 0);
+            this.fPanel.BackColor = System.Drawing.Color.White;
+            this.fPanel.Location = new System.Drawing.Point(17, 29);
+            this.fPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fPanel.Name = "fPanel";
-            this.fPanel.Size = new System.Drawing.Size(1450, 742);
+            this.fPanel.Size = new System.Drawing.Size(1146, 606);
             this.fPanel.TabIndex = 0;
             // 
             // UCLichSuDaMua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.fPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCLichSuDaMua";
-            this.Size = new System.Drawing.Size(1450, 742);
+            this.Size = new System.Drawing.Size(1180, 684);
             this.Load += new System.EventHandler(this.UCHistory_Load);
             this.ResumeLayout(false);
 

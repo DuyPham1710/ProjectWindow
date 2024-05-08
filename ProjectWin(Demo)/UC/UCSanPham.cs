@@ -17,13 +17,16 @@ namespace ProjectWin_Demo_
         int id;
         internal object btnXacNhan;
         string[] AnhCu = { };
-        private bool chon = false;
+        public bool chon = false;
         public event EventHandler BtnClick_ChiTiet;
+        //public event EventHandler BtnClick_YeuThich;
+        YeuThichDAO yeuThichDAO;
         public UCSanPham(SanPham sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
             this.id = id;
+            yeuThichDAO = new YeuThichDAO(id);
         }
         public UCSanPham()
         {
@@ -65,17 +68,32 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
-        }
 
-        private void btnQuanTam_Click(object sender, EventArgs e)
-        {
-            if (chon == false)
+            // Load yêu thích
+            if (yeuThichDAO.KiemTraYeuThich(sp.MaSP))
             {
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
                 chon = true;
             }
             else
             {
+                btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
+                chon = false;
+            }
+        }
+
+        private void btnQuanTam_Click(object sender, EventArgs e)
+        {
+            //BtnClick_YeuThich?.Invoke(this, e);
+            if (chon == false)
+            {
+                yeuThichDAO.ThemYeuThich(sp.MaSP);
+                btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
+                chon = true;
+            }
+            else
+            {
+                yeuThichDAO.XoaYeuThich(sp.MaSP);
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
                 chon = false;
             }

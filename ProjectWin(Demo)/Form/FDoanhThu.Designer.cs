@@ -58,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.btnChiTiet);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.btnOK);
@@ -74,6 +75,7 @@
             // 
             // btnChiTiet
             // 
+            this.btnChiTiet.BorderRadius = 7;
             this.btnChiTiet.CustomBorderColor = System.Drawing.Color.White;
             this.btnChiTiet.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnChiTiet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -81,11 +83,11 @@
             this.btnChiTiet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChiTiet.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChiTiet.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChiTiet.FillColor = System.Drawing.Color.Transparent;
-            this.btnChiTiet.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnChiTiet.FillColor = System.Drawing.Color.White;
+            this.btnChiTiet.FillColor2 = System.Drawing.Color.White;
             this.btnChiTiet.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChiTiet.ForeColor = System.Drawing.Color.Black;
-            this.btnChiTiet.Location = new System.Drawing.Point(208, 52);
+            this.btnChiTiet.Location = new System.Drawing.Point(198, 52);
             this.btnChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(142, 37);
@@ -95,6 +97,7 @@
             // 
             // btnThongKe
             // 
+            this.btnThongKe.BorderRadius = 7;
             this.btnThongKe.CustomBorderColor = System.Drawing.Color.DarkTurquoise;
             this.btnThongKe.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -102,8 +105,8 @@
             this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThongKe.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongKe.FillColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnThongKe.FillColor = System.Drawing.Color.White;
+            this.btnThongKe.FillColor2 = System.Drawing.Color.White;
             this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.Black;
             this.btnThongKe.Location = new System.Drawing.Point(61, 52);
@@ -126,7 +129,7 @@
             this.btnOK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.Location = new System.Drawing.Point(788, 40);
+            this.btnOK.Location = new System.Drawing.Point(847, 40);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(86, 32);
@@ -138,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(496, 19);
+            this.label1.Location = new System.Drawing.Point(515, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 19);
@@ -159,7 +162,7 @@
             this.txtNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtNam.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtNam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNam.Location = new System.Drawing.Point(646, 46);
+            this.txtNam.Location = new System.Drawing.Point(670, 46);
             this.txtNam.Name = "txtNam";
             this.txtNam.PasswordChar = '\0';
             this.txtNam.PlaceholderText = "";
@@ -173,7 +176,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(643, 19);
+            this.label2.Location = new System.Drawing.Point(666, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
@@ -206,8 +209,9 @@
             "9",
             "10",
             "11",
-            "12"});
-            this.cbxThang.Location = new System.Drawing.Point(499, 43);
+            "12",
+            ""});
+            this.cbxThang.Location = new System.Drawing.Point(519, 40);
             this.cbxThang.Margin = new System.Windows.Forms.Padding(2);
             this.cbxThang.Name = "cbxThang";
             this.cbxThang.Size = new System.Drawing.Size(106, 36);
@@ -247,7 +251,7 @@
             this.gvChiTiet.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.gvChiTiet.EnableHeadersVisualStyles = false;
             this.gvChiTiet.GridColor = System.Drawing.Color.RosyBrown;
-            this.gvChiTiet.Location = new System.Drawing.Point(45, 138);
+            this.gvChiTiet.Location = new System.Drawing.Point(46, 121);
             this.gvChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.gvChiTiet.Name = "gvChiTiet";
             this.gvChiTiet.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -271,14 +275,14 @@
             this.chartDoanhThu.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartDoanhThu.Legends.Add(legend1);
-            this.chartDoanhThu.Location = new System.Drawing.Point(585, 147);
+            this.chartDoanhThu.Location = new System.Drawing.Point(556, 156);
             this.chartDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.chartDoanhThu.Name = "chartDoanhThu";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartDoanhThu.Series.Add(series1);
-            this.chartDoanhThu.Size = new System.Drawing.Size(508, 420);
+            this.chartDoanhThu.Size = new System.Drawing.Size(578, 426);
             this.chartDoanhThu.TabIndex = 27;
             this.chartDoanhThu.Text = "chart1";
             // 
@@ -316,7 +320,7 @@
             this.gvDoanhThu.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.gvDoanhThu.EnableHeadersVisualStyles = false;
             this.gvDoanhThu.GridColor = System.Drawing.Color.RosyBrown;
-            this.gvDoanhThu.Location = new System.Drawing.Point(61, 166);
+            this.gvDoanhThu.Location = new System.Drawing.Point(46, 156);
             this.gvDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.gvDoanhThu.Name = "gvDoanhThu";
             this.gvDoanhThu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -348,6 +352,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FDoanhThu";
             this.Text = "FDoanhThu";
+            this.Load += new System.EventHandler(this.FDoanhThu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvChiTiet)).EndInit();

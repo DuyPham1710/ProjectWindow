@@ -34,6 +34,7 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.fPanelSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblTen = new System.Windows.Forms.Label();
             this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.lblDiaChi = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -145,6 +145,19 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(285, 351);
             this.guna2CustomGradientPanel1.TabIndex = 43;
+            // 
+            // lblDiaChi
+            // 
+            this.lblDiaChi.AutoSize = true;
+            this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblDiaChi.Location = new System.Drawing.Point(102, 300);
+            this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiaChi.Name = "lblDiaChi";
+            this.lblDiaChi.Size = new System.Drawing.Size(33, 16);
+            this.lblDiaChi.TabIndex = 40;
+            this.lblDiaChi.Text = "UTE";
             // 
             // lblTen
             // 
@@ -361,6 +374,7 @@
             this.btnTheoDoi.Size = new System.Drawing.Size(107, 42);
             this.btnTheoDoi.TabIndex = 18;
             this.btnTheoDoi.Text = "Theo dõi +";
+            this.btnTheoDoi.Click += new System.EventHandler(this.btnTheoDoi_Click);
             // 
             // guna2CustomGradientPanel3
             // 
@@ -444,25 +458,15 @@
             this.pToolBar.Name = "pToolBar";
             this.pToolBar.Size = new System.Drawing.Size(1091, 30);
             this.pToolBar.TabIndex = 22;
+            this.pToolBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
+            this.pToolBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
+            this.pToolBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
             // 
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.BorderRadius = 13;
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
-            // 
-            // lblDiaChi
-            // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiaChi.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.lblDiaChi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblDiaChi.Location = new System.Drawing.Point(102, 300);
-            this.lblDiaChi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(33, 16);
-            this.lblDiaChi.TabIndex = 40;
-            this.lblDiaChi.Text = "UTE";
             // 
             // FChiTietShop
             // 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.fPanelShop = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnLoc = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnShopTheoDoi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAllShop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -47,27 +47,28 @@
             this.fPanelShop.Size = new System.Drawing.Size(887, 624);
             this.fPanelShop.TabIndex = 1;
             // 
-            // btnLoc
+            // btnShopTheoDoi
             // 
-            this.btnLoc.Animated = true;
-            this.btnLoc.BackColor = System.Drawing.Color.Transparent;
-            this.btnLoc.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.btnLoc.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoc.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoc.FillColor = System.Drawing.Color.Transparent;
-            this.btnLoc.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnLoc.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnLoc.ForeColor = System.Drawing.Color.Black;
-            this.btnLoc.Location = new System.Drawing.Point(16, 66);
-            this.btnLoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(135, 31);
-            this.btnLoc.TabIndex = 14;
-            this.btnLoc.Text = "Đang theo dõi";
+            this.btnShopTheoDoi.Animated = true;
+            this.btnShopTheoDoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnShopTheoDoi.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnShopTheoDoi.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnShopTheoDoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnShopTheoDoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnShopTheoDoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShopTheoDoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnShopTheoDoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnShopTheoDoi.FillColor = System.Drawing.Color.Transparent;
+            this.btnShopTheoDoi.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnShopTheoDoi.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnShopTheoDoi.ForeColor = System.Drawing.Color.Black;
+            this.btnShopTheoDoi.Location = new System.Drawing.Point(16, 66);
+            this.btnShopTheoDoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShopTheoDoi.Name = "btnShopTheoDoi";
+            this.btnShopTheoDoi.Size = new System.Drawing.Size(135, 31);
+            this.btnShopTheoDoi.TabIndex = 14;
+            this.btnShopTheoDoi.Text = "Đang theo dõi";
+            this.btnShopTheoDoi.Click += new System.EventHandler(this.btnShopTheoDoi_Click);
             // 
             // btnAllShop
             // 
@@ -98,7 +99,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAllShop);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnLoc);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnShopTheoDoi);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 89);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(166, 624);
@@ -196,7 +197,7 @@
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel fPanelShop;
-        private Guna.UI2.WinForms.Guna2GradientButton btnLoc;
+        private Guna.UI2.WinForms.Guna2GradientButton btnShopTheoDoi;
         private Guna.UI2.WinForms.Guna2GradientButton btnAllShop;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
 

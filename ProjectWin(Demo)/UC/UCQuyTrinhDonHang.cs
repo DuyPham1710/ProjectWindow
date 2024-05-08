@@ -17,39 +17,46 @@ namespace ProjectWin_Demo_.UC
         int id;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public event EventHandler ButtonClickCustom;
+        public event EventHandler ButtonClick_HuyDonHang;
         string[] AnhCu = { };
         int MaVanChuyen;
+        DaMuaDAO daMuaDAO;
         public UCQuyTrinhDonHang(SanPham sp, int id, int MaVanChuyen)
         {
             InitializeComponent();
             this.id = id;
             this.sp = sp;
             this.MaVanChuyen = MaVanChuyen;
+            daMuaDAO = new DaMuaDAO(id);
         }
 
         private void UCProcessSales_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MaVanChuyen = '{0}'", MaVanChuyen);
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    lblNguoiMua.Text = reader["FullName"].ToString();
-                    lblMaVanChuyen.Text = MaVanChuyen.ToString();
-                    lblSoLuong.Text = reader["SoLuongDaMua"].ToString();
-                }
-            }
-            catch
-            {
+            List<string> thongTin = daMuaDAO.LoadThongTinQuyTrinh(MaVanChuyen);
+            lblNguoiMua.Text = thongTin[0];
+            lblMaVanChuyen.Text = MaVanChuyen.ToString();
+            lblSoLuong.Text = thongTin[1];
+            //try
+            //{
+            //    string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MaVanChuyen = '{0}'", MaVanChuyen);
+            //    conn.Open();
+            //    SqlCommand cmd = new SqlCommand(query, conn);
+            //    SqlDataReader reader = cmd.ExecuteReader();
+            //    if (reader.Read())
+            //    {
+            //        lblNguoiMua.Text = reader["FullName"].ToString();
+            //        lblMaVanChuyen.Text = MaVanChuyen.ToString();
+            //        lblSoLuong.Text = reader["SoLuongDaMua"].ToString();
+            //    }
+            //}
+            //catch
+            //{
 
-            }
-            finally
-            {
-                conn.Close();
-            }            
+            //}
+            //finally
+            //{
+            //    conn.Close();
+            //}            
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
             //lblSoLuong.Text = "1 sản phẩm";
@@ -93,7 +100,8 @@ namespace ProjectWin_Demo_.UC
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
-
+            ButtonClick_HuyDonHang?.Invoke(this, e);
+            //daMuaDAO.HuyDonHang(MaVanChuyen);
         }
     }
 }

@@ -638,7 +638,6 @@ D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCThongTin.re
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSPCuaToi.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UC.UCQuyTrinhDonHang.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCSanPham.resources
-D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin_Demo_.UCDoanhThu.resources
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.GenerateResource.cache
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CoreCompileInputs.cache
 D:\lapTrinhWinhdow\win\ProjectWin(Demo)\obj\Debug\ProjectWin(Demo).csproj.CopyComplete

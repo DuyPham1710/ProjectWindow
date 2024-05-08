@@ -212,7 +212,7 @@ namespace ProjectWin_Demo_
             foreach (DataRow row in dt.Rows)
             {
                 SanPham sanPham = new SanPham(row);
-                UCSanPham ucSP = new UCSanPham(sp, id);
+                UCSanPham ucSP = new UCSanPham(sanPham, id);
                 DSSanPham.Add(ucSP);
             }
             return DSSanPham;
@@ -342,6 +342,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham sp = new SanPham(row);
                 sp.SoLuong = row["SoLuongDaMua"].ToString();
+                sp.GiaHienTai = row["Gia"].ToString();
                 DSSanPham.Add(sp);
             }
             return DSSanPham;
@@ -356,6 +357,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham sp = new SanPham(row);
                 sp.SoLuong = row["SoLuongDaMua"].ToString();
+                sp.GiaHienTai = row["Gia"].ToString();
                 UCSanPhamMua ucSP = new UCSanPhamMua(sp, id, Int32.Parse(row["MaVanChuyen"].ToString()));
                 DSSanPham.Add(ucSP);
             }
@@ -384,7 +386,7 @@ namespace ProjectWin_Demo_
             foreach (DataRow row in dt.Rows)
             {
                 SanPham sp = new SanPham(row);
-               
+                sp.SoLuong = row["SoLuongDaMua"].ToString();
                 DSSanPham.Add(sp);
             }
             return DSSanPham;

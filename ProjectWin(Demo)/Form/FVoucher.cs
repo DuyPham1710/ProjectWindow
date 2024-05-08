@@ -69,6 +69,20 @@ namespace ProjectWin_Demo_
             //}
             this.Close();
         }
+
+        private void btnMaVoucher_Click(object sender, EventArgs e)
+        {
+            if (voucherDAO.KiemTraVoucher(txtTimKiem.Text))
+            {
+                MaVoucher = txtTimKiem.Text;
+                MessageBox.Show("Đã chọn voucher " + MaVoucher);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Voucher không tồn tại");
+            }
+        }
         //private void btnApDung_Click(object sender, EventArgs e)
         //{
         //    UCVoucher ucVoucher = sender as UCVoucher;
@@ -84,5 +98,6 @@ namespace ProjectWin_Demo_
         //    }
         //    this.Close();
         //}
+
     }
 }

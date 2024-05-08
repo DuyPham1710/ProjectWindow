@@ -36,7 +36,8 @@ namespace ProjectWin_Demo_
             lblMaSP.Text = sp.MaSP;
             lblMaVanChuyen.Text = MaVanChuyen.ToString();
             lblSoLuong.Text = sp.SoLuong;
-            lblGia.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString();
+            lblGia.Text = sp.GiaHienTai + "đ";
+            //lblGia.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString();
             lblDanhMuc.Text = sp.DanhMuc;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');

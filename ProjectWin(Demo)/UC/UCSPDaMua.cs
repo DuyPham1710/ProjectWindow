@@ -13,15 +13,17 @@ namespace ProjectWin_Demo_
 {
     public partial class UCSPDaMua : UserControl
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         private int id;
         string[] AnhCu = { };
+        NguoiDAO nguoiDao;
         public UCSPDaMua(SanPham sp, int id)
         {
             InitializeComponent();
             this.sp = sp;
             this.id = id;
+            nguoiDao = new NguoiDAO(id);
         }
 
         private void btnComment_Click(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace ProjectWin_Demo_
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
             lblTongTien.Text = sp.GiaHienTai + "đ";
-            lblSoLuongSP.Text = "1 sản phẩm";
+            lblSoLuongSP.Text = sp.SoLuong;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
             if (AnhCu.Length > 0)
@@ -51,24 +53,20 @@ namespace ProjectWin_Demo_
             }
             else
                 pctSanPham.Image = null;
-            try
-            {
-                conn.Open();
-                string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                if (rdr.Read())
-                {
-                    lblTenShop.Text = (string)rdr["UserName"];
-                }
-            }
-            catch { }
-            finally { conn.Close(); }
-        }
-
-        private void lblTenShop_Click(object sender, EventArgs e)
-        {
-
+            lblTenShop.Text = nguoiDao.LoadTenShop(sp.MaSP);
+            //try
+            //{
+            //    conn.Open();
+            //    string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
+            //    SqlCommand cmd = new SqlCommand(query, conn);
+            //    SqlDataReader rdr = cmd.ExecuteReader();
+            //    if (rdr.Read())
+            //    {
+            //        lblTenShop.Text = (string)rdr["UserName"];
+            //    }
+            //}
+            //catch { }
+            //finally { conn.Close(); }
         }
     }
 }

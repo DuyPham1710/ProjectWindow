@@ -44,6 +44,7 @@
             this.btnMuaLai = new CustomButton.VBButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
@@ -71,12 +72,10 @@
             this.lblTenShop.Size = new System.Drawing.Size(106, 19);
             this.lblTenShop.TabIndex = 1;
             this.lblTenShop.Text = "Shop điện máy";
-            this.lblTenShop.Click += new System.EventHandler(this.lblTenShop_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lblGia);
             this.panel2.Controls.Add(this.lblTenSP);
             this.panel2.Controls.Add(this.pctSanPham);
@@ -119,12 +118,13 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblTongTien);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblSoLuongSP);
-            this.panel3.Location = new System.Drawing.Point(7, 171);
+            this.panel3.Location = new System.Drawing.Point(11, 171);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 49);
+            this.panel3.Size = new System.Drawing.Size(353, 49);
             this.panel3.TabIndex = 2;
             // 
             // lblTongTien
@@ -153,11 +153,11 @@
             // 
             this.lblSoLuongSP.AutoSize = true;
             this.lblSoLuongSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuongSP.Location = new System.Drawing.Point(7, 14);
+            this.lblSoLuongSP.Location = new System.Drawing.Point(5, 16);
             this.lblSoLuongSP.Name = "lblSoLuongSP";
-            this.lblSoLuongSP.Size = new System.Drawing.Size(72, 15);
+            this.lblSoLuongSP.Size = new System.Drawing.Size(14, 15);
             this.lblSoLuongSP.TabIndex = 0;
-            this.lblSoLuongSP.Text = "1 sản phẩm";
+            this.lblSoLuongSP.Text = "1";
             // 
             // btnDanhGia
             // 
@@ -230,6 +230,16 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(373, 287);
             this.guna2ShadowPanel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "sản phẩm";
+            // 
             // UCSPDaMua
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -266,5 +276,6 @@
         public System.Windows.Forms.Panel panel4;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        public System.Windows.Forms.Label label1;
     }
 }

@@ -253,7 +253,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lblGiaBanDau;
         private System.Windows.Forms.Label lblLuotXem;
-        private Guna.UI2.WinForms.Guna2CircleButton btnQuanTam;
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Label lblDiaChiShop;
         private System.Windows.Forms.Label label3;
@@ -262,5 +261,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelSanPham;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         public System.Windows.Forms.Label lblMaSP;
+        public Guna.UI2.WinForms.Guna2CircleButton btnQuanTam;
     }
 }

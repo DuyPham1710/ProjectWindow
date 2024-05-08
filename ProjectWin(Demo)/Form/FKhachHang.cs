@@ -26,6 +26,8 @@ namespace ProjectWin_Demo_
         }
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            btnDSKhachHang.CustomBorderColor = Color.DarkTurquoise;
+            btnKHHayMua.CustomBorderColor = Color.White;
             gvDanhSach.DataSource =  nguoiDAO.ThongTinKhachHang();
             gvDanhSach.Columns[0].HeaderText = "Mã sản phẩm";
             gvDanhSach.Columns[1].HeaderText = "Tên sản phẩm";
@@ -40,6 +42,8 @@ namespace ProjectWin_Demo_
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
+            btnDSKhachHang.CustomBorderColor = Color.White;
+            btnKHHayMua.CustomBorderColor = Color.DarkTurquoise;
             gvDanhSach.DataSource = nguoiDAO.LoadKhachhang();
             gvDanhSach.Columns[0].HeaderText = "ID";
             gvDanhSach.Columns[1].HeaderText = "Tên khách hàng";

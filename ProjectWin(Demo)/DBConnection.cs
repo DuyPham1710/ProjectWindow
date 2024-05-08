@@ -789,7 +789,7 @@ namespace ProjectWin_Demo_
             }
             if (nam != "" && int.TryParse(nam, out int nguyen))
             {
-                loc = loc + " and " + loc + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
+                loc = loc + " and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
             }
             string sql = string.Format("select sum(CAST(DaMua.SoLuongDaMua  as int)) as TongSoLuong, sum(DaMua.Gia) as TongTien from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP  and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1} group by SanPham.IDChuSP", id, loc);
             try
@@ -814,7 +814,8 @@ namespace ProjectWin_Demo_
         }
         public void LoadBieuDoDoanhThu(string nam, Chart doanhthu)
         {
-            string sql = string.Format("select DATEPART(month, DaMua.ThoiGianHienTai) as Thang, sum(ThanhToan.gia) as TongTien from SanPham, DaMua, ThanhToan, Person Where SanPham.MSP = DaMua.MSP and DaMua.MSP = ThanhToan.MSP and ThanhToan.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = 'Đã giao' and DATEPART(year, DaMua.ThoiGianHienTai) = {1}  group by DATEPART(month, DaMua.ThoiGianHienTai) ", id, nam);
+
+            string sql = string.Format("select MONTH(DaMua.ThoiGianHienTai) AS [Tháng], SUM(DaMua.Gia) AS [Doanh thu] from SanPham, DaMua Where SanPham.MSP = DaMua.MSP and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' and YEAR(DaMua.ThoiGianHienTai) = {1} GROUP BY MONTH(DaMua.ThoiGianHienTai)", id, nam);
             try
             {
                 doanhthu.DataSource = default;
@@ -822,36 +823,35 @@ namespace ProjectWin_Demo_
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
+                doanhthu.Series.Clear();
 
-                //SeriesCollection series = new SeriesCollection();
+                DataTable processedData = new DataTable();
+                processedData.Columns.Add("Tháng", typeof(int));
+                processedData.Columns.Add("Doanh thu", typeof(decimal));
 
-                //// Lặp qua từng hàng trong DataTable và thêm dữ liệu vào SeriesCollection
-                //foreach (DataRow row in dt.Rows)
-                //{
-                //    series.Add(new ColumnSeries
-                //    {
-                //        Title = row["Month"].ToString(),
-                //        Values = new ChartValues<decimal> { Convert.ToDecimal(row["Revenue"]) }
-                //    });
-                //}
-
-                //// Hiển thị dữ liệu lên biểu đồ
-                //cartesianChart.Series = series;
-                //cartesianChart.AxisX.Add(new Axis
-                //{
-                //    Title = "Months",
-                //    Labels = dt.AsEnumerable().Select(r => r.Field<string>("Month")).ToArray()
-                //});
-                //cartesianChart.AxisY.Add(new Axis
-                //{
-                //    Title = "Revenue",
-                //    LabelFormatter = value => value.ToString("C") // Định dạng hiển thị tiền tệ
-                //});
-                foreach (DataRow row in dt.Rows)
+                // Thêm dữ liệu đã xử lý từ dữ liệu ban đầu
+                for (int i = 1; i <= 12; i++)
                 {
-                    doanhthu.Series[0].Points[0].XValue = 1;
-                    Console.WriteLine($"ID: {row["ID"]}, Name: {row["Name"]}");
+                    DataRow[] rows = dt.Select($"Tháng = {i}");
+                    if (rows.Length > 0)
+                    {
+                        processedData.Rows.Add(i, rows[0]["Doanh thu"]);
+                    }
+                    else
+                    {
+                        processedData.Rows.Add(i, 0);
+                    }
                 }
+                // Thêm dữ liệu mới vào biểu đồ
+                Series series = doanhthu.Series.Add("Doanh thu");
+                series.ChartType = SeriesChartType.Area;
+
+                // Thêm các điểm dữ liệu vào loạt dữ liệu
+                foreach (DataRow row in processedData.Rows)
+                {
+                    series.Points.AddXY($"T {row["Tháng"]}", row["Doanh thu"]);
+                }
+
 
             }
             catch (Exception ex)

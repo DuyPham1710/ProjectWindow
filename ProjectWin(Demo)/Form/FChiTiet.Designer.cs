@@ -84,9 +84,7 @@ namespace ProjectWin_Demo_
             this.nudSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lblAmount = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.vbButton2 = new CustomButton.VBButton();
-            this.vbButton1 = new CustomButton.VBButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnXemTrang = new CustomButton.VBButton();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.btnBuy = new CustomButton.VBButton();
@@ -99,6 +97,8 @@ namespace ProjectWin_Demo_
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblTenShop = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -119,6 +119,7 @@ namespace ProjectWin_Demo_
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.pToolBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -178,16 +179,16 @@ namespace ProjectWin_Demo_
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(0, 1791);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(0, 1809);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1074, 36);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1074, 31);
             this.guna2CustomGradientPanel4.TabIndex = 52;
             // 
             // guna2PictureBox10
             // 
             this.guna2PictureBox10.Image = global::ProjectWin_Demo_.Properties.Resources.mess;
             this.guna2PictureBox10.ImageRotate = 0F;
-            this.guna2PictureBox10.Location = new System.Drawing.Point(39, 1487);
+            this.guna2PictureBox10.Location = new System.Drawing.Point(39, 1505);
             this.guna2PictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox10.Name = "guna2PictureBox10";
             this.guna2PictureBox10.Size = new System.Drawing.Size(24, 26);
@@ -211,7 +212,7 @@ namespace ProjectWin_Demo_
             // 
             this.fPanelDanhGiaSP.BackColor = System.Drawing.Color.White;
             this.fPanelDanhGiaSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fPanelDanhGiaSP.Location = new System.Drawing.Point(22, 1521);
+            this.fPanelDanhGiaSP.Location = new System.Drawing.Point(22, 1539);
             this.fPanelDanhGiaSP.Margin = new System.Windows.Forms.Padding(2);
             this.fPanelDanhGiaSP.Name = "fPanelDanhGiaSP";
             this.fPanelDanhGiaSP.Size = new System.Drawing.Size(1026, 270);
@@ -224,13 +225,13 @@ namespace ProjectWin_Demo_
             this.fPanelSPTuongTu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fPanelSPTuongTu.Location = new System.Drawing.Point(22, 1162);
             this.fPanelSPTuongTu.Name = "fPanelSPTuongTu";
-            this.fPanelSPTuongTu.Size = new System.Drawing.Size(1026, 314);
+            this.fPanelSPTuongTu.Size = new System.Drawing.Size(1026, 330);
             this.fPanelSPTuongTu.TabIndex = 48;
             // 
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 1827);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(0, 1840);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1074, 42);
             this.guna2CustomGradientPanel3.TabIndex = 42;
@@ -775,7 +776,7 @@ namespace ProjectWin_Demo_
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(74, 1494);
+            this.label5.Location = new System.Drawing.Point(74, 1512);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 19);
@@ -814,66 +815,35 @@ namespace ProjectWin_Demo_
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.vbButton2);
-            this.panel3.Controls.Add(this.vbButton1);
-            this.panel3.Controls.Add(this.linkLabel1);
+            this.panel3.Controls.Add(this.lblTenShop);
+            this.panel3.Controls.Add(this.pcbAvt);
+            this.panel3.Controls.Add(this.btnXemTrang);
             this.panel3.Location = new System.Drawing.Point(676, 179);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 41);
+            this.panel3.Size = new System.Drawing.Size(270, 54);
             this.panel3.TabIndex = 30;
             // 
-            // vbButton2
+            // btnXemTrang
             // 
-            this.vbButton2.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton2.BorderColor = System.Drawing.Color.DarkGray;
-            this.vbButton2.BorderRadius = 5;
-            this.vbButton2.BorderSize = 2;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton2.ForeColor = System.Drawing.Color.DarkGray;
-            this.vbButton2.Location = new System.Drawing.Point(135, 9);
-            this.vbButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(75, 21);
-            this.vbButton2.TabIndex = 17;
-            this.vbButton2.Text = "Xem trang";
-            this.vbButton2.TextColor = System.Drawing.Color.DarkGray;
-            this.vbButton2.UseVisualStyleBackColor = false;
-            // 
-            // vbButton1
-            // 
-            this.vbButton1.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 20;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Image = global::ProjectWin_Demo_.Properties.Resources.z5217272932631_72c73dc409773a73013edce5ca74c052;
-            this.vbButton1.Location = new System.Drawing.Point(4, 1);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(36, 39);
-            this.vbButton1.TabIndex = 16;
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(44, 12);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(87, 16);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "ShopDienMay";
+            this.btnXemTrang.BackColor = System.Drawing.Color.Transparent;
+            this.btnXemTrang.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnXemTrang.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXemTrang.BorderRadius = 5;
+            this.btnXemTrang.BorderSize = 2;
+            this.btnXemTrang.FlatAppearance.BorderSize = 0;
+            this.btnXemTrang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemTrang.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemTrang.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnXemTrang.Location = new System.Drawing.Point(176, 12);
+            this.btnXemTrang.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXemTrang.Name = "btnXemTrang";
+            this.btnXemTrang.Size = new System.Drawing.Size(90, 31);
+            this.btnXemTrang.TabIndex = 17;
+            this.btnXemTrang.Text = "Xem trang";
+            this.btnXemTrang.TextColor = System.Drawing.Color.DarkGray;
+            this.btnXemTrang.UseVisualStyleBackColor = false;
+            this.btnXemTrang.Click += new System.EventHandler(this.btnXemTrang_Click);
             // 
             // guna2PictureBox4
             // 
@@ -1059,6 +1029,27 @@ namespace ProjectWin_Demo_
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // pcbAvt
+            // 
+            this.pcbAvt.ImageRotate = 0F;
+            this.pcbAvt.Location = new System.Drawing.Point(3, 1);
+            this.pcbAvt.Name = "pcbAvt";
+            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pcbAvt.Size = new System.Drawing.Size(50, 50);
+            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbAvt.TabIndex = 18;
+            this.pcbAvt.TabStop = false;
+            // 
+            // lblTenShop
+            // 
+            this.lblTenShop.AutoSize = true;
+            this.lblTenShop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenShop.Location = new System.Drawing.Point(75, 17);
+            this.lblTenShop.Name = "lblTenShop";
+            this.lblTenShop.Size = new System.Drawing.Size(70, 19);
+            this.lblTenShop.TabIndex = 19;
+            this.lblTenShop.Text = "Tên shop";
+            // 
             // FChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1095,6 +1086,7 @@ namespace ProjectWin_Demo_
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.pToolBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1110,9 +1102,7 @@ namespace ProjectWin_Demo_
         private Guna.UI2.WinForms.Guna2NumericUpDown nudSoLuong;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Panel panel3;
-        private CustomButton.VBButton vbButton2;
-        private CustomButton.VBButton vbButton1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private CustomButton.VBButton btnXemTrang;
         private System.Windows.Forms.Label lblTenSP;
         private CustomButton.VBButton btnBuy;
         private System.Windows.Forms.Label lblGiaHienTai;
@@ -1169,5 +1159,7 @@ namespace ProjectWin_Demo_
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.Label lblTenShop;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pcbAvt;
     }
 }

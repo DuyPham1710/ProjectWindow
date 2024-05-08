@@ -94,7 +94,7 @@ namespace ProjectWin_Demo_
 
         private void btnDangGiao_Click(object sender, EventArgs e)
         {
-            pTieuDe.Show();
+            pTieuDe.Hide();
             btnChoXacNhan.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;
@@ -104,12 +104,14 @@ namespace ProjectWin_Demo_
             foreach (SanPham item in sanPham)
             {
                 UCSanPhamMua ucSP = new UCSanPhamMua(item, id, default);
+                ucSP.btnHuyDon.Hide();
                 fPanelDonhang.Controls.Add(ucSP);
             }
         }
 
         private void btnDaGiao_Click(object sender, EventArgs e)
         {
+            pTieuDe.Hide();
             btnChoXacNhan.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.Gold;

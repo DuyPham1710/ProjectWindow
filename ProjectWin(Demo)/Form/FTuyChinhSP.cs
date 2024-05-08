@@ -18,7 +18,6 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         private string ma;
         private int id;
         private string thaoTac;
@@ -38,81 +37,47 @@ namespace ProjectWin_Demo_
         }
         private void FTuyChinhSP_Load(object sender, EventArgs e)
         {
-            try
+            if (thaoTac == "Them")
             {
-                conn.Open();
-                if (thaoTac == "Them")
+                int maSP = SPDao.TaoMaSP();
+                if (maSP < 10)
                 {
-                    int maSP = SPDao.TaoMaSP();
-                    
-                    //string sqlStr = "SELECT count(MSP) FROM SanPham";
-                    //SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    //if (int.Parse(cmd.ExecuteScalar().ToString()) != 0)
-                    //{
-                    //    sqlStr = "SELECT max(MSP) FROM SanPham";
-
-                    //    cmd = new SqlCommand(sqlStr, conn);
-                    //    maSP = int.Parse(cmd.ExecuteScalar().ToString().Substring(2)) + 1;
-                    //}
-                    if (maSP < 10)
-                    {
-                        txtMaSP.Texts = "SP0" + maSP.ToString();
-                    }
-                    else
-                    {
-                        txtMaSP.Texts = "SP" + maSP.ToString();
-                    }
-                    //txtMaSP.Texts = "SP0" + ((int)cmd.ExecuteScalar() + 1).ToString();
-                    ma = txtMaSP.Texts;
+                    txtMaSP.Texts = "SP0" + maSP.ToString();
                 }
                 else
                 {
-                    SanPham sp = SPDao.LoadSanPhamChinhSua(ma);
-                    //string sqlStr = string.Format("SELECT * FROM SanPham WHERE MSP = '{0}'", ma);
-                    //SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    //SqlDataReader reader = cmd.ExecuteReader();
-                    //if (reader.Read())
-                    //{
-                    //    SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                    //    (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"],
-                    //    (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                    txtMaSP.Texts = sp.MaSP;
-                    cbBoxSoLuong.Value = Int32.Parse(sp.SoLuong);
-                    txtTenSP.Texts = sp.TenSP;
-                    cbBoxDanhMuc.SelectedItem = sp.DanhMuc;
-                    txtGiaBanDau.Texts = sp.GiaBanDau;
-                    txtGiaHienTai.Texts = sp.GiaHienTai;
-                    txtXuatXu.Texts = sp.XuatXu;
-                    cbBoxBaoHanh.SelectedItem = sp.BaoHanh;
-                    DtpNgayMua.Value = sp.NgayMuaSP;
-                    rtbMoTaSP.Text = sp.MotaSP;
-                    txtTinhTrang.Texts = sp.TinhTrang;
-                    rtbMoTaTinhTrang.Text = sp.MoTaTinhTrang;
-                    if (sp.AnhBanDau != "")
-                        AnhMoi.AddRange(sp.AnhBanDau.Split(','));
-                    if (sp.AnhHienTai != "")
-                        AnhCu.AddRange(sp.AnhHienTai.Split(','));
-                    if (AnhMoi.Count != 0)
-                    {
-                        A = AnhMoi;
-                        Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
-                        pctProduct.Image = bitmap;
-                    }
-                    else
-                        pctProduct.Image = null;
+                    txtMaSP.Texts = "SP" + maSP.ToString();
                 }
-
-                //    }
+                ma = txtMaSP.Texts;
             }
-            catch (Exception ex)
+            else
             {
+                SanPham sp = SPDao.LoadSanPhamChinhSua(ma);
+                txtMaSP.Texts = sp.MaSP;
+                cbBoxSoLuong.Value = Int32.Parse(sp.SoLuong);
+                txtTenSP.Texts = sp.TenSP;
+                cbBoxDanhMuc.SelectedItem = sp.DanhMuc;
+                txtGiaBanDau.Texts = sp.GiaBanDau;
+                txtGiaHienTai.Texts = sp.GiaHienTai;
+                txtXuatXu.Texts = sp.XuatXu;
+                cbBoxBaoHanh.SelectedItem = sp.BaoHanh;
+                DtpNgayMua.Value = sp.NgayMuaSP;
+                rtbMoTaSP.Text = sp.MotaSP;
+                txtTinhTrang.Texts = sp.TinhTrang;
+                rtbMoTaTinhTrang.Text = sp.MoTaTinhTrang;
+                if (sp.AnhBanDau != "")
+                    AnhMoi.AddRange(sp.AnhBanDau.Split(','));
+                if (sp.AnhHienTai != "")
+                    AnhCu.AddRange(sp.AnhHienTai.Split(','));
+                if (AnhMoi.Count != 0)
+                {
+                    A = AnhMoi;
+                    Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + A[curr]);
+                    pctProduct.Image = bitmap;
+                }
+                else
+                    pctProduct.Image = null;
             }
-            finally
-            {
-                conn.Close();
-            }
-
-
         }
         //private void FAddProduct_Load(object sender, EventArgs e)
         //{

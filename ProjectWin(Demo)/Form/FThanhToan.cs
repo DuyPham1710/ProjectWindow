@@ -210,7 +210,16 @@ namespace ProjectWin_Demo_
             VoucherDAO voucherDAO = new VoucherDAO(id);
             Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoucher);         
             lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
-            lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString();
+            int tongTien = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text));
+            if (tongTien < 0)
+            {
+                lblTongTien.Text = "0";
+            }
+            else
+            {
+                lblTongTien.Text = tongTien.ToString();
+            }
+            //lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString();
         }
     }
 }

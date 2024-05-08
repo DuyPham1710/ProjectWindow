@@ -53,19 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DaMuaDAO.cs" />
     <Compile Include="DonMua.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DAO\DiaChiGiaoHangDAO.cs" />
-    <Compile Include="FDoanhThu.cs">
+    <Compile Include="Form\FDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FDoanhThu.Designer.cs">
+    <Compile Include="Form\FDoanhThu.Designer.cs">
       <DependentUpon>FDoanhThu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FKhachHang.cs">
+    <Compile Include="Form\FKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FKhachHang.Designer.cs">
+    <Compile Include="Form\FKhachHang.Designer.cs">
       <DependentUpon>FKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FChiTietShop.cs">
@@ -309,18 +310,13 @@
     <Compile Include="Funtion\VBButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\UCDoanhThu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UCDoanhThu.Designer.cs">
-      <DependentUpon>UCDoanhThu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Voucher.cs" />
     <Compile Include="DAO\VoucherDAO.cs" />
-    <EmbeddedResource Include="FDoanhThu.resx">
+    <Compile Include="DAO\YeuThichDAO.cs" />
+    <EmbeddedResource Include="Form\FDoanhThu.resx">
       <DependentUpon>FDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FKhachHang.resx">
+    <EmbeddedResource Include="Form\FKhachHang.resx">
       <DependentUpon>FKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FChiTietShop.resx">
@@ -441,9 +437,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSanPham.resx">
       <DependentUpon>UCSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCDoanhThu.resx">
-      <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
