@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjectWin_Demo_
 {
@@ -56,6 +58,23 @@ namespace ProjectWin_Demo_
             Password = pass;
             DateOfBirth = bornYear;
             Avt = avtValue;
+        }
+        public Nguoi(DataTable duLieu)
+        {
+            ID = Int32.Parse(duLieu.Rows[0]["ID"].ToString());
+            FullName = duLieu.Rows[0]["FullName"].ToString();
+            Email = duLieu.Rows[0]["Email"].ToString();
+            PhoneNumber = duLieu.Rows[0]["Phone"].ToString();
+            Cccd = duLieu.Rows[0]["CCCD"].ToString();
+            Gender = duLieu.Rows[0]["Gender"].ToString();
+            Address = duLieu.Rows[0]["Addr"].ToString();
+            UserName = duLieu.Rows[0]["UserName"].ToString();
+            Password = duLieu.Rows[0]["Pass"].ToString();
+            Position = duLieu.Rows[0]["Position"].ToString();
+            DateOfBirth = DateTime.Parse(duLieu.Rows[0]["Bith"].ToString());
+            object avarta = duLieu.Rows[0]["Avarta"];
+            Avt = avarta != DBNull.Value ? (byte[])avarta : null;
+            //Avt = (byte[])duLieu.Rows[0]["Avarta"];
         }
     }
 }

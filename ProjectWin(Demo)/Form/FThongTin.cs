@@ -20,7 +20,7 @@ namespace ProjectWin_Demo_
     public partial class FThongTin : Form
     {
         int id;
-        UCThongTin ucInfo;
+        UCThongTin ucThongTin;
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         byte[] duLieuAnh;
         string gender = "";
@@ -30,8 +30,8 @@ namespace ProjectWin_Demo_
 
             btnHistory.MouseDown += btnHistory_MouseDown;
             guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
-            ucInfo = new UCThongTin(id);
-            ucInfo.btnSave.Click += btnSave_Click;
+            ucThongTin = new UCThongTin(id);
+            ucThongTin.btnSave.Click += btnSave_Click;
             panelTieuDe.Hide();
             this.id = id;
         }
@@ -42,12 +42,12 @@ namespace ProjectWin_Demo_
                 MemoryStream pic = new MemoryStream();
                 try
                 {
-                    ucInfo.pictureBoxUser.Image.Save(pic, ucInfo.pictureBoxUser.Image.RawFormat);
+                    ucThongTin.pictureBoxUser.Image.Save(pic, ucThongTin.pictureBoxUser.Image.RawFormat);
                     duLieuAnh = pic.ToArray();
                     conn.Open();
-                    gender = ucInfo.rdoNam.Checked ? "Nam" : ucInfo.rdoNu.Checked ? "Nữ" : "Khác";
-                    Nguoi person = new Nguoi(id, ucInfo.txtName.Text, ucInfo.txtEmail.Text, ucInfo.txtPhoneNumber.Text, ucInfo.txtCCCD.Text
-                   , gender, ucInfo.cbAddress.Text, ucInfo.txtUserName.Text, ucInfo.txtPass.Text, ucInfo.dtpNgaySinh.Value, duLieuAnh);
+                    gender = ucThongTin.rdoNam.Checked ? "Nam" : ucThongTin.rdoNu.Checked ? "Nữ" : "Khác";
+                    Nguoi person = new Nguoi(id, ucThongTin.txtName.Text, ucThongTin.txtEmail.Text, ucThongTin.txtPhoneNumber.Text, ucThongTin.txtCCCD.Text
+                   , gender, ucThongTin.cbAddress.Text, ucThongTin.txtUserName.Text, ucThongTin.txtPass.Text, ucThongTin.dtpNgaySinh.Value, duLieuAnh);
                     string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
                     SqlCommand cmd = new SqlCommand(sqlStr, conn);
                     cmd.Parameters.AddWithValue("@name", person.FullName);
@@ -94,8 +94,8 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.Black;
             btnRevenue.CustomBorderColor = Color.White;
-            //ucInfo = new UCInfo(id);
-            addUserControl(ucInfo);
+            //ucThongTin = new ucThongTin(id);
+            addUserControl(ucThongTin);
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
@@ -131,8 +131,8 @@ namespace ProjectWin_Demo_
 
         private void FInfo_Load(object sender, EventArgs e)
         {
-           // ucInfo = new UCInfo(id);
-            addUserControl(ucInfo);
+           // ucThongTin = new ucThongTin(id);
+            addUserControl(ucThongTin);
         }
 
         private void ItemPurchaseHistoryToolStripMenuItem(object sender, EventArgs e)

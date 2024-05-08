@@ -72,7 +72,7 @@ namespace ProjectWin_Demo_
             
             // Load sản phẩm tương tự
             fPanelSPTuongTu.Controls.Clear();
-            List<UCSanPham> SanPham = SPDao.LoadSanPhamTuongTu<UCSanPham>(sp);
+            List<UCSanPham> SanPham = SPDao.LoadSanPhamTuongTu(sp);
             foreach (UCSanPham sanPham in SanPham)
             {
                 sanPham.Padding = new Padding(0);
@@ -119,7 +119,8 @@ namespace ProjectWin_Demo_
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            SPDao.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
+            GioHangDAO ghDAO = new GioHangDAO(id);
+            ghDAO.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
             //MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
         }
 

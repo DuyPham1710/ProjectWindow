@@ -53,6 +53,7 @@ namespace ProjectWin_Demo_
         //}
         private void btnChoXacNhan_Click(object sender, EventArgs e)
         {
+            pTieuDe.Show();
             btnChoXacNhan.CustomBorderColor = Color.Gold;
             btnDangGiao.CustomBorderColor = Color.White;
             btnDaGiao.CustomBorderColor = Color.White;
@@ -92,6 +93,7 @@ namespace ProjectWin_Demo_
 
         private void btnDangGiao_Click(object sender, EventArgs e)
         {
+            pTieuDe.Show();
             btnChoXacNhan.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;

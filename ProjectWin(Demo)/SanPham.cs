@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -52,6 +53,24 @@ namespace ProjectWin_Demo_
             this.AnhBanDau = AnhBanDau;
             this.AnhHienTai = AnhHienTai;
             this.NgayMuaSP = NgayMuaSP;
+        }
+        public SanPham(DataRow duLieu)
+        {
+            this.MaSP = duLieu["MSP"].ToString(); 
+            this.IDChuSP = Int32.Parse(duLieu["IDChuSP"].ToString()); 
+            this.TenSP = duLieu["TenSP"].ToString(); 
+            this.DanhMuc = duLieu["DanhMuc"].ToString(); 
+            this.GiaBanDau = duLieu["GiaTienLucMoiMua"].ToString(); 
+            this.GiaHienTai = duLieu["GiaTienBayGio"].ToString();
+            this.SoLuong = duLieu["SoLuong"].ToString(); 
+            this.XuatXu = duLieu["XuatXu"].ToString(); 
+            this.BaoHanh = duLieu["BaoHanh"].ToString(); 
+            this.TinhTrang = duLieu["TinhTrang"].ToString(); 
+            this.MoTaTinhTrang = duLieu["MotaTinhTrang"].ToString(); 
+            this.MotaSP = duLieu["MotaSP"].ToString(); 
+            this.AnhBanDau = duLieu["AnhLucMoiMua"].ToString(); 
+            this.AnhHienTai = duLieu["AnhBayGio"].ToString(); 
+            this.NgayMuaSP = DateTime.Parse(duLieu["NgayMuaSP"].ToString()); 
         }
     }
 }

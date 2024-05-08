@@ -15,7 +15,6 @@ namespace ProjectWin_Demo_
 {
     public partial class FTrangChu : Form
     {
-        List<SanPham> SanPh = new List<SanPham>();
         private int id;
         SanPhamDao SPDao;
         public FTrangChu(int id)
@@ -67,10 +66,10 @@ namespace ProjectWin_Demo_
             }
             else
             {
-                SearchAndDisplay(txtTimKiem.Text);
+                timKiemVaHienThi(txtTimKiem.Text);
             }
         }
-        private void SearchAndDisplay(string searchText)
+        private void timKiemVaHienThi(string searchText)
         {
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.timKiem<UCSanPham>(searchText, "<>");
@@ -101,14 +100,14 @@ namespace ProjectWin_Demo_
         private void LocTheoDanhMucSP(string danhMuc)
         {
             fPanelSanPham.Controls.Clear();
-            List<UCSanPham> sanPham = SPDao.LocTheoDanhMuc<UCSanPham>(danhMuc);
+            List<UCSanPham> sanPham = SPDao.LocTheoDanhMuc(danhMuc);
             foreach (UCSanPham sp in sanPham)
             {
                 fPanelSanPham.Controls.Add(sp);
             }
         }
 
-        private void btnAllProduct_Click(object sender, EventArgs e)
+        private void btnTatCaSP_Click(object sender, EventArgs e)
         {
             FTrangChu_Load(sender, e);
         }
@@ -141,10 +140,10 @@ namespace ProjectWin_Demo_
         private void tăngDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fPanelSanPham.Controls.Clear();
-            List<SanPham> sanPham = SPDao.SapXepTheoGia("Tang dan");
-            foreach (SanPham sp in sanPham)
+            List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Tang dan");
+            foreach (UCSanPham uCSanPham in cacSanPham)
             {
-                UCSanPham uCSanPham = new UCSanPham(sp, id);
+                //UCSanPham uCSanPham = new UCSanPham(sp, id);
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
@@ -152,10 +151,10 @@ namespace ProjectWin_Demo_
         private void giảmDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fPanelSanPham.Controls.Clear();
-            List<SanPham> sanPham = SPDao.SapXepTheoGia("Giam dan");
-            foreach (SanPham sp in sanPham)
+            List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Giam dan");
+            foreach (UCSanPham uCSanPham in cacSanPham)
             {
-                UCSanPham uCSanPham = new UCSanPham(sp, id);
+                //UCSanPham uCSanPham = new UCSanPham(sp, id);
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
@@ -163,7 +162,7 @@ namespace ProjectWin_Demo_
         private void btnUuChuong_Click(object sender, EventArgs e)
         {
             fPanelSanPham.Controls.Clear();
-            List<UCSanPham> sanPham = SPDao.SanPhamUaChuong<UCSanPham>();
+            List<UCSanPham> sanPham = SPDao.SanPhamUaChuong();
             foreach (UCSanPham sp in sanPham)
             {
                 fPanelSanPham.Controls.Add(sp);

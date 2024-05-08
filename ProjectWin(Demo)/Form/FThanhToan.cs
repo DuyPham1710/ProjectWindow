@@ -19,9 +19,9 @@ namespace ProjectWin_Demo_
 
         //SanPham sp;
         List<SanPham> sanPham = new List<SanPham>();
+        List<string> MaVouchers = new List<string>();
         int id;
         string[] AnhCu = { };
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPhamDao SPDao;
         //public FThanhToan(SanPham sp, Decimal soLuongSP, int id)
         //{
@@ -42,85 +42,25 @@ namespace ProjectWin_Demo_
         private void FThanhToan_Load(object sender, EventArgs e)
         {
             FPanelSanPham.Controls.Clear();
-            int tongTien = 0;
+            int tongTienSP = 0;
             foreach (SanPham sp in sanPham)
             {
-                //try
-                //{
-                //    conn.Open();
-                //    string query = string.Format("Select * from SanPham WHERE MSP = '{0}'", sp.MaSP);
-                //    MessageBox.Show(query);
-                //    SqlCommand cmd = new SqlCommand(query, conn);
-                //    SqlDataReader reader = cmd.ExecuteReader();
-                //    if (reader.Read())
-                //    {
-                //        SanPham sps = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                //        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                //MessageBox.Show((string)reader["TenSP"] + " " + (string)reader["GiaTienBayGio"] + " " + (string)reader["AnhBayGio"]);
-                //sp.IDChuSP = (int)reader["IDChuShop"];
-                //sp.TenSP = (string)reader["TenSP"];
-                //sp.GiaHienTai = (string)reader["GiaTienBayGio"];
-                //sp.DanhMuc = (string)reader["DanhMuc"];
-                //sp.AnhHienTai = (string)reader["AnhBayGio"];
-                tongTien = tongTien + Int32.Parse(sp.GiaHienTai);
-                        UCSanPhamMua ucSPMua = new UCSanPhamMua(sp, id);
-                        ucSPMua.btnHuyDon.Hide();
-                        FPanelSanPham.Controls.Add(ucSPMua);
-                lblTongTien.Text = "Tổng tiền: " + tongTien.ToString();
-                //lblTenSP.Text = sp.TenSP;
-                //lblMaSP.Text = sp.MaSP;
-                //lblSoLuong.Text = sp.SoLuong;
-                //lblGia.Text = sp.GiaHienTai;
-                //lblDanhMuc.Text = sp.DanhMuc;
-                //if (sp.AnhHienTai != "")
-                //    AnhCu = sp.AnhHienTai.Split(',');
-                //if (AnhCu.Length > 0)
-                //{
-                //    Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
-                //    pctSanPham.Image = bitmap;
-                //}
-                //else
-                //    pctSanPham.Image = null;
-                //    }
-                //}
-                //catch { }
-                //finally { conn.Close(); }
-
-                //txtTenSP.Text = sp.TenSP;
-                //txtPhanLoai.Text = sp.DanhMuc;
-                //txtGia.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
-                //lblTongTien.Text = (Decimal.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString() + "đ";
-                DateTime date = DateTime.Now;
-                txtNgay.Text = date.Day.ToString();
-                txtThang.Text = date.Month.ToString();
-                txtNam.Text = date.Year.ToString();
-                //if (sp.AnhHienTai != "")
-                //    AnhCu = sp.AnhHienTai.Split(',');
-                //if (AnhCu.Length > 0)
-                //{
-                //    Bitmap bitmap = new Bitmap(Application.StartupPath + "\\AnhSanPham\\" + sp.MaSP + "\\" + AnhCu[0]);
-                //    pctSanPham.Image = bitmap;
-                //}
-                //else
-                //    pctSanPham.Image = null;
-                //try
-                //{
-                //    conn.Open();
-                //    string query = "select * from Person where ID = " + id;
-                //    SqlCommand cmd = new SqlCommand(query, conn);
-                //    SqlDataReader reader = cmd.ExecuteReader();
-                //    if (reader.Read())
-                //    {
-                //        txtHoTen.Text = (string)reader["FullName"];
-                //        txtSoDT.Text = (string)reader["Phone"];
-                //        txtDiaChi.Text = (string)reader["Addr"];
-                //    }
-
-                //}
-                //catch { }
-                //finally { conn.Close(); }
-            }   
-            
+                tongTienSP = tongTienSP + Int32.Parse(sp.GiaHienTai);
+                UCSPDatHang ucSPDatHang = new UCSPDatHang(sp, id);
+                ucSPDatHang.BtnClick_ChonVoucher += btnChonVoucher_Click;
+                FPanelSanPham.Controls.Add(ucSPDatHang);
+            }
+            NguoiDAO nguoiDAO = new NguoiDAO(id);
+            Nguoi nguoiMua = nguoiDAO.LoadThongTinCaNhan();
+            lblHoTen.Text = nguoiMua.FullName;
+            lblSdt.Text = nguoiMua.PhoneNumber;
+            lblDiaChi.Text = nguoiMua.Address;
+            DateTime date = DateTime.Now;
+            txtNgay.Text = date.Day.ToString();
+            txtThang.Text = date.Month.ToString();
+            txtNam.Text = date.Year.ToString();
+            lblTienSP.Text = tongTienSP.ToString();
+            lblTongTien.Text = tongTienSP.ToString() + "đ";
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)
@@ -159,10 +99,20 @@ namespace ProjectWin_Demo_
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
-            UCSanPhamMua uCSanPhamMua = sender as UCSanPhamMua;
+            UCSPDatHang uCSPDatHang = sender as UCSPDatHang;
+            int i = 0;
             foreach (SanPham sp in sanPham)
             {
-                SPDao.DatHang(sp, nudSoLuong.Value);
+                if (MaVouchers.Count == 0)
+                {
+                    SPDao.DatHang(sp, "");
+                }
+                else
+                {
+                    SPDao.DatHang(sp, MaVouchers[i]);
+                    i++;
+                }
+              
             }
             this.Close();
             //try
@@ -222,24 +172,45 @@ namespace ProjectWin_Demo_
 
         private void btnThayDoiDC_Click(object sender, EventArgs e)
         {
-            FDiaChiNhanHang fDCNH = new FDiaChiNhanHang(id);
+            FDiaChiNhanHang fDCNH = new FDiaChiNhanHang(id, sanPham);
             fDCNH.ShowDialog();
+            DiaChiGiaoHangDAO DiaChiDAO = new DiaChiGiaoHangDAO(id);
+            List<string> thongTinNhanHang= DiaChiDAO.LoadDiaChiMoi();
+            lblHoTen.Text = thongTinNhanHang[0];
+            lblSdt.Text = thongTinNhanHang[1];
+            lblDiaChi.Text = thongTinNhanHang[2];
         }
 
-        private void nudSoLuong_ValueChanged(object sender, EventArgs e)
-        {        
-            //if (nudSoLuong.Value > Decimal.Parse(sp.SoLuong))
-            //{
-            //    nudSoLuong.Value = Decimal.Parse(sp.SoLuong);
-            //}
-            //else if (nudSoLuong.Value == 0)
-            //{
-            //    nudSoLuong.Value = 1;
-            //}
-            //else
-            //{
-            //    lblTongTien.Text = (nudSoLuong.Value * Decimal.Parse(sp.GiaHienTai)).ToString() + "đ";
-            //}
+        //private void nudSoLuong_ValueChanged(object sender, EventArgs e)
+        //{        
+        //    //if (nudSoLuong.Value > Decimal.Parse(sp.SoLuong))
+        //    //{
+        //    //    nudSoLuong.Value = Decimal.Parse(sp.SoLuong);
+        //    //}
+        //    //else if (nudSoLuong.Value == 0)
+        //    //{
+        //    //    nudSoLuong.Value = 1;
+        //    //}
+        //    //else
+        //    //{
+        //    //    lblTongTien.Text = (nudSoLuong.Value * Decimal.Parse(sp.GiaHienTai)).ToString() + "đ";
+        //    //}
+        //}
+
+        private void btnChonVoucher_Click(object sender, EventArgs e)
+        {
+            UCSPDatHang ucSPDatHang = sender as UCSPDatHang;
+            FVoucher fVoucher = new FVoucher(id, ucSPDatHang.lblMaSP.Text);
+            fVoucher.ShowDialog();
+            if (fVoucher.MaVoucher != "") 
+            {
+                MaVouchers.Add(fVoucher.MaVoucher);
+            }
+            
+            VoucherDAO voucherDAO = new VoucherDAO(id);
+            int GiatriVoucher = voucherDAO.GiaVoucher(fVoucher.MaVoucher);
+            lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + GiatriVoucher).ToString();
+            lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString() + "đ";
         }
     }
 }

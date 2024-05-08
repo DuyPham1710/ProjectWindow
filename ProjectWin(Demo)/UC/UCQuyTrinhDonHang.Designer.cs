@@ -45,6 +45,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblMaSP = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAnhNguoiMua)).BeginInit();
             this.panel5.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
@@ -59,8 +61,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.btnXacNhan);
             this.panel4.Controls.Add(this.btnHuyDon);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 213);
+            this.panel4.Location = new System.Drawing.Point(10, 228);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(355, 49);
             this.panel4.TabIndex = 8;
@@ -112,9 +113,8 @@
             this.panel3.Controls.Add(this.lblTongTien);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblSoLuong);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(0, 164);
+            this.panel3.Location = new System.Drawing.Point(10, 178);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(355, 49);
             this.panel3.TabIndex = 7;
@@ -126,7 +126,7 @@
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
             this.lblTongTien.Location = new System.Drawing.Point(260, 16);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(80, 17);
+            this.lblTongTien.Size = new System.Drawing.Size(67, 15);
             this.lblTongTien.TabIndex = 3;
             this.lblTongTien.Text = "32 460 000đ";
             this.lblTongTien.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -137,7 +137,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(135, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 19);
+            this.label5.Size = new System.Drawing.Size(103, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tổng thanh toán:";
             // 
@@ -147,7 +147,7 @@
             this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuong.Location = new System.Drawing.Point(7, 14);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(84, 19);
+            this.lblSoLuong.Size = new System.Drawing.Size(72, 16);
             this.lblSoLuong.TabIndex = 0;
             this.lblSoLuong.Text = "1 sản phẩm";
             // 
@@ -157,8 +157,7 @@
             this.panel2.Controls.Add(this.lblGia);
             this.panel2.Controls.Add(this.lblTenSP);
             this.panel2.Controls.Add(this.pctSanPham);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(10, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 114);
             this.panel2.TabIndex = 6;
@@ -170,7 +169,7 @@
             this.lblGia.ForeColor = System.Drawing.Color.Red;
             this.lblGia.Location = new System.Drawing.Point(259, 77);
             this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(80, 17);
+            this.lblGia.Size = new System.Drawing.Size(67, 15);
             this.lblGia.TabIndex = 2;
             this.lblGia.Text = "32 460 000đ";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -198,8 +197,7 @@
             // 
             this.panel1.Controls.Add(this.pcbAnhNguoiMua);
             this.panel1.Controls.Add(this.lblNguoiMua);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(355, 50);
             this.panel1.TabIndex = 5;
@@ -223,7 +221,7 @@
             this.lblNguoiMua.ForeColor = System.Drawing.Color.Tomato;
             this.lblNguoiMua.Location = new System.Drawing.Point(55, 12);
             this.lblNguoiMua.Name = "lblNguoiMua";
-            this.lblNguoiMua.Size = new System.Drawing.Size(203, 23);
+            this.lblNguoiMua.Size = new System.Drawing.Size(166, 19);
             this.lblNguoiMua.TabIndex = 1;
             this.lblNguoiMua.Text = "Nguyễn Hữu Ngọc Duy";
             // 
@@ -231,8 +229,7 @@
             // 
             this.panel5.Controls.Add(this.lblMaSP);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 262);
+            this.panel5.Location = new System.Drawing.Point(10, 279);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(355, 52);
             this.panel5.TabIndex = 9;
@@ -244,7 +241,7 @@
             this.lblMaSP.ForeColor = System.Drawing.Color.Gray;
             this.lblMaSP.Location = new System.Drawing.Point(262, 13);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(78, 17);
+            this.lblMaSP.Size = new System.Drawing.Size(66, 15);
             this.lblMaSP.TabIndex = 2;
             this.lblMaSP.Text = "A12355FFS";
             // 
@@ -254,21 +251,33 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
+            this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 1;
             this.label7.Text = "Mã đơn hàng";
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Controls.Add(this.panel1);
+            this.guna2ShadowPanel1.Controls.Add(this.panel4);
+            this.guna2ShadowPanel1.Controls.Add(this.panel5);
+            this.guna2ShadowPanel1.Controls.Add(this.panel2);
+            this.guna2ShadowPanel1.Controls.Add(this.panel3);
+            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(374, 339);
+            this.guna2ShadowPanel1.TabIndex = 10;
             // 
             // UCQuyTrinhDonHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "UCQuyTrinhDonHang";
-            this.Size = new System.Drawing.Size(355, 314);
+            this.Size = new System.Drawing.Size(374, 339);
             this.Load += new System.EventHandler(this.UCProcessSales_Load);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -281,6 +290,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbAnhNguoiMua)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -303,5 +313,6 @@
         public System.Windows.Forms.Label lblNguoiMua;
         public System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
     }
 }

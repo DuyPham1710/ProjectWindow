@@ -19,7 +19,6 @@ namespace ProjectWin_Demo_
         private int id;
         private SanPham sp;
         SanPhamDao SPDao;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FDanhGia(int id, SanPham sp)
         {
             InitializeComponent();
@@ -31,15 +30,6 @@ namespace ProjectWin_Demo_
         private void btnComment_Click(object sender, EventArgs e)
         {
             SPDao.DanhGia(sp, txtBinhLuan.Text, Int32.Parse(Star.Value.ToString()));
-            //try
-            //{
-            //    conn.Open();
-            //    string query = string.Format("INSERT INTO DanhGia(ID, MSP, BinhLuan, SoSao) VALUES ({0}, '{1}', N'{2}', {3})", id, sp.MaSP, txtBinhLuan.Text, Star.Value);
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-            //    cmd.ExecuteNonQuery();
-               
-            //}
-            //MessageBox.Show("Đánh giá sản phẩm thành công", "Thông báo");
             this.Close();
         }
         private void pToolBar_MouseMove(object sender, MouseEventArgs e)

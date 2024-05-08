@@ -39,6 +39,7 @@
             this.btnMinimize = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pToolBar.SuspendLayout();
@@ -48,28 +49,33 @@
             // 
             this.groupBox1.Controls.Add(this.Star);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(35, 69);
+            this.groupBox1.Location = new System.Drawing.Point(26, 56);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(579, 100);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(434, 81);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đánh giá";
             // 
             // Star
             // 
-            this.Star.Location = new System.Drawing.Point(6, 29);
+            this.Star.Location = new System.Drawing.Point(4, 24);
+            this.Star.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Star.Name = "Star";
             this.Star.RatingColor = System.Drawing.Color.Yellow;
-            this.Star.Size = new System.Drawing.Size(312, 52);
+            this.Star.Size = new System.Drawing.Size(234, 42);
             this.Star.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtBinhLuan);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(35, 199);
+            this.groupBox2.Location = new System.Drawing.Point(26, 162);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(579, 161);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(434, 131);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bình luận";
@@ -78,9 +84,10 @@
             // 
             this.txtBinhLuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBinhLuan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBinhLuan.Location = new System.Drawing.Point(3, 26);
+            this.txtBinhLuan.Location = new System.Drawing.Point(2, 21);
+            this.txtBinhLuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBinhLuan.Name = "txtBinhLuan";
-            this.txtBinhLuan.Size = new System.Drawing.Size(573, 132);
+            this.txtBinhLuan.Size = new System.Drawing.Size(430, 108);
             this.txtBinhLuan.TabIndex = 0;
             this.txtBinhLuan.Text = "";
             // 
@@ -95,9 +102,10 @@
             this.btnComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComment.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComment.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnComment.Location = new System.Drawing.Point(241, 399);
+            this.btnComment.Location = new System.Drawing.Point(181, 324);
+            this.btnComment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(150, 40);
+            this.btnComment.Size = new System.Drawing.Size(112, 32);
             this.btnComment.TabIndex = 2;
             this.btnComment.Text = "Đánh giá";
             this.btnComment.TextColor = System.Drawing.Color.DarkOrange;
@@ -113,8 +121,9 @@
             this.pToolBar.Controls.Add(this.btnClose);
             this.pToolBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pToolBar.Location = new System.Drawing.Point(0, 0);
+            this.pToolBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pToolBar.Name = "pToolBar";
-            this.pToolBar.Size = new System.Drawing.Size(656, 37);
+            this.pToolBar.Size = new System.Drawing.Size(492, 30);
             this.pToolBar.TabIndex = 23;
             this.pToolBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseDown);
             this.pToolBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pToolBar_MouseMove);
@@ -132,10 +141,11 @@
             this.guna2CircleButton2.FillColor = System.Drawing.Color.Gold;
             this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2CircleButton2.Location = new System.Drawing.Point(38, 9);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(28, 7);
+            this.guna2CircleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CircleButton2.Name = "guna2CircleButton2";
             this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton2.Size = new System.Drawing.Size(20, 20);
+            this.guna2CircleButton2.Size = new System.Drawing.Size(15, 16);
             this.guna2CircleButton2.TabIndex = 21;
             this.guna2CircleButton2.UseTransparentBackground = true;
             // 
@@ -151,10 +161,11 @@
             this.btnMinimize.FillColor = System.Drawing.Color.Lime;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.Location = new System.Drawing.Point(64, 9);
+            this.btnMinimize.Location = new System.Drawing.Point(48, 7);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMinimize.Size = new System.Drawing.Size(20, 20);
+            this.btnMinimize.Size = new System.Drawing.Size(15, 16);
             this.btnMinimize.TabIndex = 20;
             this.btnMinimize.UseTransparentBackground = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -171,10 +182,11 @@
             this.btnClose.FillColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Location = new System.Drawing.Point(12, 9);
+            this.btnClose.Location = new System.Drawing.Point(9, 7);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.Size = new System.Drawing.Size(15, 16);
             this.btnClose.TabIndex = 19;
             this.btnClose.UseTransparentBackground = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -184,17 +196,24 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 20;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FDanhGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(656, 494);
+            this.ClientSize = new System.Drawing.Size(492, 401);
             this.Controls.Add(this.pToolBar);
             this.Controls.Add(this.btnComment);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FDanhGia";
             this.Text = "FComment";
             this.groupBox1.ResumeLayout(false);
@@ -216,5 +235,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

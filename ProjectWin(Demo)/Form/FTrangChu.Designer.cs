@@ -58,10 +58,9 @@
             this.fPanelSanPham.BackColor = System.Drawing.Color.White;
             this.fPanelSanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fPanelSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.fPanelSanPham.Location = new System.Drawing.Point(0, 110);
-            this.fPanelSanPham.Margin = new System.Windows.Forms.Padding(4);
+            this.fPanelSanPham.Location = new System.Drawing.Point(0, 89);
             this.fPanelSanPham.Name = "fPanelSanPham";
-            this.fPanelSanPham.Size = new System.Drawing.Size(1573, 782);
+            this.fPanelSanPham.Size = new System.Drawing.Size(1180, 636);
             this.fPanelSanPham.TabIndex = 1;
             // 
             // ContextMenuStripCatalog
@@ -87,14 +86,14 @@
             this.ContextMenuStripCatalog.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ContextMenuStripCatalog.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.ContextMenuStripCatalog.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.ContextMenuStripCatalog.Size = new System.Drawing.Size(254, 274);
+            this.ContextMenuStripCatalog.Size = new System.Drawing.Size(219, 238);
             // 
             // điệnTửToolStripMenuItem
             // 
             this.điệnTửToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.điệnTửToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.điệnTửToolStripMenuItem.Name = "điệnTửToolStripMenuItem";
-            this.điệnTửToolStripMenuItem.Size = new System.Drawing.Size(253, 30);
+            this.điệnTửToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.điệnTửToolStripMenuItem.Text = "Điện tử";
             this.điệnTửToolStripMenuItem.Click += new System.EventHandler(this.điệnTửToolStripMenuItem_Click);
             // 
@@ -103,7 +102,7 @@
             this.giaDụngToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.giaDụngToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.giaDụngToolStripMenuItem.Name = "giaDụngToolStripMenuItem";
-            this.giaDụngToolStripMenuItem.Size = new System.Drawing.Size(253, 30);
+            this.giaDụngToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.giaDụngToolStripMenuItem.Text = "Gia dụng";
             this.giaDụngToolStripMenuItem.Click += new System.EventHandler(this.giaDụngToolStripMenuItem_Click);
             // 
@@ -112,7 +111,7 @@
             this.họcTậpToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.họcTậpToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.họcTậpToolStripMenuItem.Name = "họcTậpToolStripMenuItem";
-            this.họcTậpToolStripMenuItem.Size = new System.Drawing.Size(253, 30);
+            this.họcTậpToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.họcTậpToolStripMenuItem.Text = "Học tập";
             this.họcTậpToolStripMenuItem.Click += new System.EventHandler(this.họcTậpToolStripMenuItem_Click);
             // 
@@ -121,7 +120,7 @@
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem1.Text = "Thời trang";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -130,7 +129,7 @@
             this.toolStripMenuItem5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem5.Text = "Thể thao & Du lịch";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -139,7 +138,7 @@
             this.toolStripMenuItem4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem4.Text = "Giày dép";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -148,7 +147,7 @@
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem3.Text = "Sắc đẹp";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -157,7 +156,7 @@
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem2.Text = "Sức khỏe";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -166,7 +165,7 @@
             this.toolStripMenuItem6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.toolStripMenuItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(253, 30);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(218, 26);
             this.toolStripMenuItem6.Text = "Sách";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
@@ -187,14 +186,14 @@
             this.ContextMenuStripSort.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.ContextMenuStripSort.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.ContextMenuStripSort.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.ContextMenuStripSort.Size = new System.Drawing.Size(215, 64);
+            this.ContextMenuStripSort.Size = new System.Drawing.Size(188, 56);
             // 
             // tăngDầnGiáToolStripMenuItem
             // 
             this.tăngDầnGiáToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.tăngDầnGiáToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.tăngDầnGiáToolStripMenuItem.Name = "tăngDầnGiáToolStripMenuItem";
-            this.tăngDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.tăngDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.tăngDầnGiáToolStripMenuItem.Text = "Tăng dần giá";
             this.tăngDầnGiáToolStripMenuItem.Click += new System.EventHandler(this.tăngDầnGiáToolStripMenuItem_Click);
             // 
@@ -203,7 +202,7 @@
             this.giảmDầnGiáToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.giảmDầnGiáToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.giảmDầnGiáToolStripMenuItem.Name = "giảmDầnGiáToolStripMenuItem";
-            this.giảmDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+            this.giảmDầnGiáToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.giảmDầnGiáToolStripMenuItem.Text = "Giảm dần giá";
             this.giảmDầnGiáToolStripMenuItem.Click += new System.EventHandler(this.giảmDầnGiáToolStripMenuItem_Click);
             // 
@@ -221,10 +220,10 @@
             this.btnCatalog.FillColor2 = System.Drawing.Color.Transparent;
             this.btnCatalog.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnCatalog.ForeColor = System.Drawing.Color.Black;
-            this.btnCatalog.Location = new System.Drawing.Point(197, 65);
-            this.btnCatalog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCatalog.Location = new System.Drawing.Point(148, 53);
+            this.btnCatalog.Margin = new System.Windows.Forms.Padding(2);
             this.btnCatalog.Name = "btnCatalog";
-            this.btnCatalog.Size = new System.Drawing.Size(180, 38);
+            this.btnCatalog.Size = new System.Drawing.Size(135, 31);
             this.btnCatalog.TabIndex = 14;
             this.btnCatalog.Text = "Doanh mục";
             // 
@@ -242,10 +241,10 @@
             this.btnSort.FillColor2 = System.Drawing.Color.Transparent;
             this.btnSort.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnSort.ForeColor = System.Drawing.Color.Black;
-            this.btnSort.Location = new System.Drawing.Point(384, 65);
-            this.btnSort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSort.Location = new System.Drawing.Point(288, 53);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(219, 38);
+            this.btnSort.Size = new System.Drawing.Size(164, 31);
             this.btnSort.TabIndex = 15;
             this.btnSort.Text = "Sắp xếp sản phẩm";
             // 
@@ -263,10 +262,10 @@
             this.btnbestSeller.FillColor2 = System.Drawing.Color.Transparent;
             this.btnbestSeller.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnbestSeller.ForeColor = System.Drawing.Color.Black;
-            this.btnbestSeller.Location = new System.Drawing.Point(609, 65);
-            this.btnbestSeller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnbestSeller.Location = new System.Drawing.Point(457, 53);
+            this.btnbestSeller.Margin = new System.Windows.Forms.Padding(2);
             this.btnbestSeller.Name = "btnbestSeller";
-            this.btnbestSeller.Size = new System.Drawing.Size(180, 38);
+            this.btnbestSeller.Size = new System.Drawing.Size(135, 31);
             this.btnbestSeller.TabIndex = 16;
             this.btnbestSeller.Text = "Bán chạy nhất";
             // 
@@ -284,13 +283,13 @@
             this.btnAllProduct.FillColor2 = System.Drawing.Color.Transparent;
             this.btnAllProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAllProduct.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAllProduct.Location = new System.Drawing.Point(12, 65);
-            this.btnAllProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAllProduct.Location = new System.Drawing.Point(9, 53);
+            this.btnAllProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAllProduct.Name = "btnAllProduct";
-            this.btnAllProduct.Size = new System.Drawing.Size(180, 38);
+            this.btnAllProduct.Size = new System.Drawing.Size(135, 31);
             this.btnAllProduct.TabIndex = 17;
             this.btnAllProduct.Text = "Tất cả sản phẩm";
-            this.btnAllProduct.Click += new System.EventHandler(this.btnAllProduct_Click);
+            this.btnAllProduct.Click += new System.EventHandler(this.btnTatCaSP_Click);
             // 
             // txtTimKiem
             // 
@@ -307,13 +306,13 @@
             this.txtTimKiem.IconRight = global::ProjectWin_Demo_.Properties.Resources.magnifying_glass_solid;
             this.txtTimKiem.IconRightOffset = new System.Drawing.Point(10, 0);
             this.txtTimKiem.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txtTimKiem.Location = new System.Drawing.Point(393, 11);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTimKiem.Location = new System.Drawing.Point(295, 9);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "Tìm kiếm sản phẩm";
             this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(587, 48);
+            this.txtTimKiem.Size = new System.Drawing.Size(440, 39);
             this.txtTimKiem.TabIndex = 28;
             this.txtTimKiem.TextOffset = new System.Drawing.Point(5, 0);
             this.txtTimKiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyUp);
@@ -332,20 +331,20 @@
             this.btnUuChuong.FillColor2 = System.Drawing.Color.Transparent;
             this.btnUuChuong.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnUuChuong.ForeColor = System.Drawing.Color.Black;
-            this.btnUuChuong.Location = new System.Drawing.Point(795, 66);
-            this.btnUuChuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUuChuong.Location = new System.Drawing.Point(596, 54);
+            this.btnUuChuong.Margin = new System.Windows.Forms.Padding(2);
             this.btnUuChuong.Name = "btnUuChuong";
-            this.btnUuChuong.Size = new System.Drawing.Size(180, 38);
+            this.btnUuChuong.Size = new System.Drawing.Size(135, 31);
             this.btnUuChuong.TabIndex = 29;
             this.btnUuChuong.Text = "Ưa chuộng";
             this.btnUuChuong.Click += new System.EventHandler(this.btnUuChuong_Click);
             // 
             // FTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1573, 892);
+            this.ClientSize = new System.Drawing.Size(1180, 725);
             this.Controls.Add(this.btnUuChuong);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnAllProduct);
@@ -354,7 +353,7 @@
             this.Controls.Add(this.btnCatalog);
             this.Controls.Add(this.fPanelSanPham);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FTrangChu";
             this.Text = "FHome";
             this.Load += new System.EventHandler(this.FTrangChu_Load);

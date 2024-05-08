@@ -17,54 +17,43 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-
+        NguoiDAO nguoiDAO;
         public FDangNhap()
         {
             InitializeComponent();
+            nguoiDAO = new NguoiDAO();
 
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string query = string.Format("SELECT ID, Position FROM Account WHERE UserName = '{0}' and Pass = '{1}'", txtUserName.Text, txtPassword.Text);
-            SqlCommand cmd = new SqlCommand(query, conn);
-            try
+            Dictionary<int, string> thongTin = nguoiDAO.DangNhap(txtUserName.Text, txtPassword.Text);
+            if (thongTin != null)
             {
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                string viTri = "";
+                foreach (int key in thongTin.Keys)
                 {
-                    id = reader.GetInt32(0);
-                    string pos = reader.GetString(1);
-                    if (rdoUser.Checked && pos == rdoUser.Text)
-                    {
-                        this.Hide();
-                        Form form = new FNguoiDung(id);
-                        form.ShowDialog();
-                        this.Show();
-                    }
-                    else if (rdoAdmin.Checked && pos == rdoAdmin.Text)
-                    {
-                        this.Hide();
-                        Form form = new FAdmin();
-                        form.ShowDialog();
-                        this.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
-                    }
+                    id = key;
+                    viTri = thongTin[key];
+                }
+                if (rdoUser.Checked && viTri == rdoUser.Text)
+                {
+                    this.Hide();
+                    Form form = new FNguoiDung(id);
+                    form.ShowDialog();
+                    this.Show();
+                }
+                else if (rdoAdmin.Checked && viTri == rdoAdmin.Text)
+                {
+                    this.Hide();
+                    Form form = new FAdmin();
+                    form.ShowDialog();
+                    this.Show();
                 }
                 else
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
-            }
-            finally { conn.Close(); } 
         }
 
         private void FLogin_MouseDown(object sender, MouseEventArgs e)

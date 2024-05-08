@@ -38,6 +38,8 @@ namespace ProjectWin_Demo_
             try
             {
                 conn.Open();
+                //string query = string.Format("select ID, count(ID) as SLMua from DaMua where DaMua.TrangThai = N'Đã giao' group by ID order by SLMua DESC");
+
                 string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}' order by SoLuongDaMua DESC", id, "Đã giao");
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();

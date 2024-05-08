@@ -21,13 +21,15 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
+
         private Form activeForm = null;
+
         Timer growTimer = new Timer();
         Timer shrinkTimer = new Timer();
         int originalWidth;
+
         int id;
 
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         public FNguoiDung(int id)
         {
             InitializeComponent();
@@ -45,7 +47,22 @@ namespace ProjectWin_Demo_
             shrinkTimer.Tick += ShrinkTimer_Tick;
             this.id = id;
         }
-        
+        private void FUser_Load(object sender, EventArgs e)
+        {
+            NguoiDAO nguoiDAO = new NguoiDAO(id);
+            Nguoi nguoiDung = nguoiDAO.LoadThongTinCaNhan();
+            lbTenNguoiDung.Text = nguoiDung.FullName;
+            //byte[] img = nguoiDung.Avt;
+            
+            //MemoryStream ms = nguoiDAO.LoadAvt();
+            if (nguoiDung.Avt != null)
+            {
+                MemoryStream ms = new MemoryStream(nguoiDung.Avt);
+                pcbAvt.Image = Image.FromStream(ms);
+            }
+            //lbTenNguoiDung.Text = nguoiDAO.LoadThongTinCaNhan().FullName;
+        }
+
         private void Panel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -242,38 +259,7 @@ namespace ProjectWin_Demo_
             }
         }
 
-        private void FUser_Load(object sender, EventArgs e)
-        {
-            //NguoiDAO nguoiDAO = new NguoiDAO(id);
-            //MemoryStream ms = nguoiDAO.LoadAvt();
-            //pcbAvt.Image = Image.FromStream(ms);
-            try
-            {
-                string query = "SELECT  * FROM Person WHERE id = " + id.ToString();
-                conn.Open();
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            byte[] imageBytes = (byte[])reader["Avarta"];
-                            MemoryStream ms = new MemoryStream(imageBytes);
-                            pcbAvt.Image = Image.FromStream(ms);
-                        }
-                    }
-                }
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-        }
+      
 
         private void btnShop_Click(object sender, EventArgs e)
         {

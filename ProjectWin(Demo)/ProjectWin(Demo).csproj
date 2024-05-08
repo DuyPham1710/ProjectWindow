@@ -54,10 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="FChiTietShop.cs">
+    <Compile Include="DAO\DiaChiGiaoHangDAO.cs" />
+    <Compile Include="Form\FChiTietShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FChiTietShop.Designer.cs">
+    <Compile Include="Form\FChiTietShop.Designer.cs">
       <DependentUpon>FChiTietShop.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FDonBan.cs">
@@ -126,11 +127,17 @@
     <Compile Include="Form\FDangKy.Designer.cs">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FShop.cs">
+    <Compile Include="Form\FShop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FShop.Designer.cs">
+    <Compile Include="Form\FShop.Designer.cs">
       <DependentUpon>FShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FThemVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FThemVoucher.Designer.cs">
+      <DependentUpon>FThemVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="Funtion\ElipseControl.cs">
       <SubType>Component</SubType>
@@ -177,17 +184,42 @@
     <Compile Include="Form\FNguoiDung.Designer.cs">
       <DependentUpon>FNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiDAO.cs" />
-    <Compile Include="SanPhamDao.cs" />
+    <Compile Include="Form\FVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FVoucher.Designer.cs">
+      <DependentUpon>FVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\GioHangDAO.cs" />
+    <Compile Include="DAO\NguoiDAO.cs" />
+    <Compile Include="DAO\SanPhamDao.cs" />
     <Compile Include="Nguoi.cs" />
     <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UCShop.cs">
+    <Compile Include="UC\UCVoucherCuaToi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCShop.Designer.cs">
+    <Compile Include="UC\UCVoucherCuaToi.Designer.cs">
+      <DependentUpon>UCVoucherCuaToi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCShop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCShop.Designer.cs">
       <DependentUpon>UCShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCSPDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCSPDatHang.Designer.cs">
+      <DependentUpon>UCSPDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCVoucher.Designer.cs">
+      <DependentUpon>UCVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCSPDaHuy.cs">
       <SubType>UserControl</SubType>
@@ -270,7 +302,9 @@
     <Compile Include="UC\UCDoanhThu.Designer.cs">
       <DependentUpon>UCDoanhThu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FChiTietShop.resx">
+    <Compile Include="Voucher.cs" />
+    <Compile Include="DAO\VoucherDAO.cs" />
+    <EmbeddedResource Include="Form\FChiTietShop.resx">
       <DependentUpon>FChiTietShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FDonBan.resx">
@@ -321,8 +355,11 @@
     <EmbeddedResource Include="Form\FDangKy.resx">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FShop.resx">
+    <EmbeddedResource Include="Form\FShop.resx">
       <DependentUpon>FShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FThemVoucher.resx">
+      <DependentUpon>FThemVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funtion\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
@@ -330,13 +367,25 @@
     <EmbeddedResource Include="Form\FNguoiDung.resx">
       <DependentUpon>FNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FVoucher.resx">
+      <DependentUpon>FVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCShop.resx">
+    <EmbeddedResource Include="UC\UCVoucherCuaToi.resx">
+      <DependentUpon>UCVoucherCuaToi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCShop.resx">
       <DependentUpon>UCShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCSPDatHang.resx">
+      <DependentUpon>UCSPDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCVoucher.resx">
+      <DependentUpon>UCVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCSPDaHuy.resx">
       <DependentUpon>UCSPDaHuy.cs</DependentUpon>

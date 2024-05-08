@@ -12,7 +12,6 @@ namespace ProjectWin_Demo_
 {
     public partial class FShop : Form
     {
-        List<Nguoi> nguoi = new List<Nguoi>();
         private int id;
         NguoiDAO nguoiDao;
         public FShop(int id)
@@ -25,32 +24,29 @@ namespace ProjectWin_Demo_
         private void FShop_Load(object sender, EventArgs e)
         {
             fPanelShop.Controls.Clear();
-            List<UCShop> shop = nguoiDao.LoadShop();
-            foreach (UCShop s in shop)
+            List<UCShop> shops = nguoiDao.LoadShop();
+            foreach (UCShop shop in shops)
             {
-
-                fPanelShop.Controls.Add(s);
+                fPanelShop.Controls.Add(shop);
             }
         }
         private void btnUyTin_Click(object sender, EventArgs e)
         {
             fPanelShop.Controls.Clear();
-            List<UCShop> shop = nguoiDao.UyTin(">");
-            foreach (UCShop s in shop)
+            List<UCShop> shops = nguoiDao.UyTin(">");
+            foreach (UCShop shop in shops)
             {
-
-                fPanelShop.Controls.Add(s);
+                fPanelShop.Controls.Add(shop);
             }
         }
 
         private void btnItUyTin_Click(object sender, EventArgs e)
         {
             fPanelShop.Controls.Clear();
-            List<UCShop> shop = nguoiDao.UyTin("<");
-            foreach (UCShop s in shop)
+            List<UCShop> shops = nguoiDao.UyTin("<");
+            foreach (UCShop shop in shops)
             {
-
-                fPanelShop.Controls.Add(s);
+                fPanelShop.Controls.Add(shop);
             }
         }
     }

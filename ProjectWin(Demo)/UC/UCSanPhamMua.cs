@@ -25,9 +25,7 @@ namespace ProjectWin_Demo_
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
-            BtnClick_HuyDon?.Invoke(this, e);
-            //FLyDoHuyDon fLyDoHuy = new FLyDoHuyDon(sp, id);
-            //fLyDoHuy.ShowDialog();
+            BtnClick_HuyDon?.Invoke(this, e);      
         }
 
         private void UCSanPhamMua_Load(object sender, EventArgs e)
@@ -35,7 +33,7 @@ namespace ProjectWin_Demo_
             lblTenSP.Text = sp.TenSP;
             lblMaSP.Text = sp.MaSP;
             lblSoLuong.Text = sp.SoLuong;
-            lblGia.Text = sp.GiaHienTai;
+            lblGia.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString();
             lblDanhMuc.Text = sp.DanhMuc;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');

@@ -23,11 +23,11 @@ namespace ProjectWin_Demo_
 
             foreach (Control control in fPanelHienThi.Controls)
             {
-                control.Margin = new Padding(5); // Đặt giá trị phần đệm là 5 cho các cạnh
+                control.Margin = new Padding(5);
             }
             this.id = id;
             SPDao = new SanPhamDao(id);
-
+            pTieuDeVoucher.Hide();
         }
         private void FSPCuaToi_Load(object sender, EventArgs e)
         {
@@ -40,25 +40,6 @@ namespace ProjectWin_Demo_
                 sp.BtnClick_edit += pcbEdit_Click;
                 fPanelHienThi.Controls.Add(sp);
             }
-            //try
-            //{
-            //    conn.Open();
-            //    string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP = {0}", id);
-            //    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-            //    SqlDataReader reader = cmd.ExecuteReader();
-            //    while (reader.Read())
-            //    {
-            //        SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-            //            (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-            //        UCSPCuaToi uCMyProduct = new UCSPCuaToi(sp);
-            //        uCMyProduct.BtnClick_delete += pcbDelete_Click;
-            //        uCMyProduct.BtnClick_edit += pcbEdit_Click;
-            //        fPanelHienThi.Controls.Add(uCMyProduct);
-
-            //    
-            //}
-            //catch { }
-            //finally { conn.Close(); }
         }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
@@ -67,30 +48,86 @@ namespace ProjectWin_Demo_
             addProduct.ShowDialog();
             FSPCuaToi_Load(sender, e);
         }
+        private void btnVoucher_Click(object sender, EventArgs e)
+        {
+            btnTongSP.CustomBorderColor = Color.White;
+            btnTongSP.ForeColor = Color.Black;
+            btnVoucher.CustomBorderColor = Color.MediumSlateBlue;
+            btnVoucher.ForeColor = Color.MediumSlateBlue;
+            btnSPDaBan.CustomBorderColor = Color.White;
+            btnSPDaBan.ForeColor = Color.Black;
 
+            pTieuDeVoucher.Show();
+            pTieuDeSP.Hide();
+            fPanelHienThi.Controls.Clear();
+            VoucherDAO voucherDAO = new VoucherDAO(id);
+            string maSP = SPDao.LayMaSP();
+            List<UCVoucherCuaToi> vouchers = voucherDAO.LoadVoucher<UCVoucherCuaToi>(maSP);
+            foreach (UCVoucherCuaToi voucher in vouchers)
+            {
+                voucher.BtnClick_sua += btnSuaVoucher_Click;
+                voucher.BtnClick_xoa += btnXoaVoucher_Click;
+                fPanelHienThi.Controls.Add(voucher);
+            }
+        }
+        private void btnThemVoucher_Click(object sender, EventArgs e)
+        {
+            FThemVoucher fThemVoucher = new FThemVoucher(id, "", "Them");
+            fThemVoucher.ShowDialog();
+            btnVoucher_Click(sender, e);
+        }
+        private void btnSuaVoucher_Click(object sender, EventArgs e)
+        {
+            UCVoucherCuaToi voucher = sender as UCVoucherCuaToi;
+            FThemVoucher fThemVoucher = new FThemVoucher(id, voucher.lblMaVoucher.Text, "Sua");
+            fThemVoucher.ShowDialog();
+            btnVoucher_Click(sender, e);
+        }
+
+        private void btnXoaVoucher_Click(object sender, EventArgs e)
+        {
+            VoucherDAO voucherDAO = new VoucherDAO(id);
+            UCVoucherCuaToi voucher = sender as UCVoucherCuaToi;
+            DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa voucher này", "Xác nhận xóa", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                voucherDAO.xoaVoucher(voucher.lblMaVoucher.Text);
+                btnVoucher_Click(sender, e);
+            }
+        }
         private void btnSPBanDuoc_Click(object sender, EventArgs e)
         {
-            btnTotalProduct.CustomBorderColor = Color.White;
-            btnTotalProduct.ForeColor = Color.Black;
-            btnProductSold.CustomBorderColor = Color.MediumSlateBlue;
-            btnProductSold.ForeColor = Color.MediumSlateBlue;
+            btnTongSP.CustomBorderColor = Color.White;
+            btnTongSP.ForeColor = Color.Black;
+            btnVoucher.CustomBorderColor = Color.White;
+            btnVoucher.ForeColor = Color.Black;
+            btnSPDaBan.CustomBorderColor = Color.MediumSlateBlue;
+            btnSPDaBan.ForeColor = Color.MediumSlateBlue;
+
+            pTieuDeVoucher.Hide();
+            pTieuDeSP.Show();
             lblTuyChon.Text = "Người mua";
             fPanelHienThi.Controls.Clear();
-            List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan<UCSPDaBan>();
+            //List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan<UCSPDaBan>();
+            List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan();
             foreach (UCSPDaBan sp in sanPham)
             {
                 fPanelHienThi.Controls.Add(sp);
             }
-            //UCHistory uCHistory = new UCHistory();
-            //addUserControl(uCHistory);
         }
         private void btnTongSanPham_Click(object sender, EventArgs e)
         {
+            pTieuDeVoucher.Hide();
+            pTieuDeSP.Show();
+
             lblTuyChon.Text = "Tùy chọn";
-            btnTotalProduct.CustomBorderColor = Color.MediumSlateBlue;
-            btnTotalProduct.ForeColor = Color.MediumSlateBlue;
-            btnProductSold.CustomBorderColor = Color.White;
-            btnProductSold.ForeColor = Color.Black;
+            btnTongSP.CustomBorderColor = Color.MediumSlateBlue;
+            btnTongSP.ForeColor = Color.MediumSlateBlue;
+            btnVoucher.CustomBorderColor = Color.White;
+            btnVoucher.ForeColor = Color.Black;
+            btnSPDaBan.CustomBorderColor = Color.White;
+            btnSPDaBan.ForeColor = Color.Black;
+
             FSPCuaToi_Load(sender, e);
         }
         //private void addUserControl(UserControl userControl)
@@ -107,7 +144,7 @@ namespace ProjectWin_Demo_
             if (result == DialogResult.Yes)
             {
                 SanPham sanPham = new SanPham(sp.lblMaSP.Text);
-                SPDao.Delete(sanPham, "SanPham");
+                SPDao.xoaSP(sanPham);
                 FSPCuaToi_Load(sender, e);          
             }
         }
@@ -130,10 +167,10 @@ namespace ProjectWin_Demo_
             }
             else
             {
-                SearchAndDisplay(txtTimKiem.Text);
+                timKiemVaHienThi(txtTimKiem.Text);
             }          
         }
-        private void SearchAndDisplay(string searchText)
+        private void timKiemVaHienThi(string searchText)
         {
             fPanelHienThi.Controls.Clear();
             List<UCSPCuaToi> sanPham = SPDao.timKiem<UCSPCuaToi>(searchText, "=");
@@ -143,29 +180,6 @@ namespace ProjectWin_Demo_
                 sp.BtnClick_edit += pcbEdit_Click;
                 fPanelHienThi.Controls.Add(sp);
             }
-            //try
-            //{
-            //    conn.Open();
-
-            //    string sqlQuery = "SELECT * FROM SanPham WHERE TenSP LIKE @searchText";
-            //    SqlCommand cmd = new SqlCommand(sqlQuery, conn);
-            //    cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
-
-            //    SqlDataReader reader = cmd.ExecuteReader();
-            //    fPanelHienThi.Controls.Clear();
-
-            //    while (reader.Read())
-            //    {
-            //        SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-            //            (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-            //        //SanPham.Add(sp);
-            //        UCSPCuaToi ucSP = new UCSPCuaToi(sp);
-            //        fPanelHienThi.Controls.Add(ucSP);
-            //    }
-            //}
-            //catch (Exception ex) { }
-            //finally { conn.Close(); }
-
         }
     }
 }

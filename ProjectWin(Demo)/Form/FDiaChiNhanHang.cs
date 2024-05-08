@@ -12,13 +12,19 @@ namespace ProjectWin_Demo_
 {
     public partial class FDiaChiNhanHang : Form
     {
-        SanPhamDao SPDao;
+        private bool isDragging;
+        private Point lastCursor;
+        private Point lastForm;
+
+        DiaChiGiaoHangDAO DiaChiDAO;
         private int id;
-        public FDiaChiNhanHang(int id)
+        List<SanPham> cacSanPham;
+        public FDiaChiNhanHang(int id, List<SanPham> cacSanPham)
         {
             InitializeComponent();
             this.id = id;
-            SPDao = new SanPhamDao(id);
+            DiaChiDAO = new DiaChiGiaoHangDAO(id);
+            this.cacSanPham = cacSanPham;
         }
 
         private void btnTroLai_Click(object sender, EventArgs e)
@@ -28,7 +34,39 @@ namespace ProjectWin_Demo_
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            SPDao.DiaChiNhanHang(txtHoTen.Text, txtSoDT.Text, txtDiaChiNhanHang.Text);
+            string cacMaSP = "";
+            foreach (SanPham sp in cacSanPham)
+            {
+                cacMaSP = cacMaSP + sp.MaSP + ", ";
+            }
+            DiaChiDAO.DiaChiNhanHang(txtHoTen.Text, cacMaSP, txtSoDT.Text, txtDiaChiNhanHang.Text);
+            this.Close();
+        }
+        private void Panel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = this.Location;
+            }
+        }
+
+        private void Panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point currentCursor = Cursor.Position;
+                this.Location = new Point(lastForm.X + (currentCursor.X - lastCursor.X), lastForm.Y + (currentCursor.Y - lastCursor.Y));
+            }
+        }
+
+        private void Panel_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
         }
     }
 }

@@ -36,17 +36,22 @@
             this.btnEdit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnDelete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pctSanPham = new System.Windows.Forms.PictureBox();
+            this.ShadowPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
+            this.ShadowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMaSP
             // 
             this.lblMaSP.AutoSize = true;
+            this.lblMaSP.BackColor = System.Drawing.Color.Transparent;
             this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaSP.Location = new System.Drawing.Point(106, 71);
+            this.lblMaSP.Location = new System.Drawing.Point(106, 75);
             this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(67, 16);
+            this.lblMaSP.Size = new System.Drawing.Size(58, 13);
             this.lblMaSP.TabIndex = 2;
             this.lblMaSP.Text = "Mã: 00198";
             this.lblMaSP.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
@@ -54,6 +59,7 @@
             // 
             // lblTenSP
             // 
+            this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
             this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.Location = new System.Drawing.Point(106, 18);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -67,6 +73,7 @@
             // lblSoLuong
             // 
             this.lblSoLuong.AutoSize = true;
+            this.lblSoLuong.BackColor = System.Drawing.Color.Transparent;
             this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuong.Location = new System.Drawing.Point(692, 26);
             this.lblSoLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -80,6 +87,7 @@
             // lblGia
             // 
             this.lblGia.AutoSize = true;
+            this.lblGia.BackColor = System.Drawing.Color.Transparent;
             this.lblGia.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGia.Location = new System.Drawing.Point(815, 26);
             this.lblGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -93,6 +101,7 @@
             // lblDanhMuc
             // 
             this.lblDanhMuc.AutoSize = true;
+            this.lblDanhMuc.BackColor = System.Drawing.Color.Transparent;
             this.lblDanhMuc.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDanhMuc.Location = new System.Drawing.Point(513, 26);
             this.lblDanhMuc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -137,22 +146,71 @@
             // 
             // pctSanPham
             // 
+            this.pctSanPham.BackColor = System.Drawing.Color.Transparent;
             this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
             this.pctSanPham.Location = new System.Drawing.Point(18, 13);
             this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(73, 74);
+            this.pctSanPham.Size = new System.Drawing.Size(75, 81);
             this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctSanPham.TabIndex = 0;
             this.pctSanPham.TabStop = false;
             this.pctSanPham.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.pctSanPham.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             // 
+            // ShadowPanel
+            // 
+            this.ShadowPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ShadowPanel.Controls.Add(this.guna2ImageButton2);
+            this.ShadowPanel.Controls.Add(this.guna2ImageButton1);
+            this.ShadowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ShadowPanel.FillColor = System.Drawing.Color.White;
+            this.ShadowPanel.Location = new System.Drawing.Point(0, 0);
+            this.ShadowPanel.Name = "ShadowPanel";
+            this.ShadowPanel.ShadowColor = System.Drawing.Color.Black;
+            this.ShadowPanel.ShadowShift = 4;
+            this.ShadowPanel.Size = new System.Drawing.Size(1095, 105);
+            this.ShadowPanel.TabIndex = 19;
+            this.ShadowPanel.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
+            this.ShadowPanel.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Image = global::ProjectWin_Demo_.Properties.Resources.OOjs_UI_icon_trash_destructive;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(1028, 20);
+            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(24, 26);
+            this.guna2ImageButton1.TabIndex = 17;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.pcbDelete_Click);
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Image = global::ProjectWin_Demo_.Properties.Resources.edit_4735813;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(979, 15);
+            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(35, 34);
+            this.guna2ImageButton2.TabIndex = 18;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.pcbEdit_Click);
+            // 
             // UCSPCuaToi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblDanhMuc);
@@ -161,13 +219,15 @@
             this.Controls.Add(this.lblTenSP);
             this.Controls.Add(this.lblMaSP);
             this.Controls.Add(this.pctSanPham);
+            this.Controls.Add(this.ShadowPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCSPCuaToi";
-            this.Size = new System.Drawing.Size(1111, 98);
+            this.Size = new System.Drawing.Size(1095, 105);
             this.Load += new System.EventHandler(this.UCMyProduct_Load);
             this.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
+            this.ShadowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +243,8 @@
         public System.Windows.Forms.Label lblDanhMuc;
         public Guna.UI2.WinForms.Guna2ImageButton btnDelete;
         public Guna.UI2.WinForms.Guna2ImageButton btnEdit;
+        private Guna.UI2.WinForms.Guna2ShadowPanel ShadowPanel;
+        public Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        public Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

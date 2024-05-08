@@ -18,10 +18,11 @@ namespace ProjectWin_Demo_
         private bool isDragging;
         private Point lastCursor;
         private Point lastForm;
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
+        NguoiDAO nguoiDAO;
         public FDangKy()
         {
             InitializeComponent();
+            nguoiDAO = new NguoiDAO();
             lbl0.Hide();
             lbl1.Hide();
             lbl2.Hide();
@@ -35,47 +36,50 @@ namespace ProjectWin_Demo_
         }
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            string gender = "";
+            string gioiTinh = "";
             if (rdoMan.Checked)
-                gender = rdoMan.Text;
+                gioiTinh = rdoMan.Text;
             else if (rdoWoman.Checked)
-                gender = rdoWoman.Text;
+                gioiTinh = rdoWoman.Text;
             else
-                gender = rdoOther.Text;
-            try
-            {
-                conn.Open();
-                string idStr = "SELECT count(*) FROM Person";
-                SqlCommand cmd = new SqlCommand(idStr, conn);
-                int id = (int)cmd.ExecuteScalar() + 1;
-
-                Nguoi person = new Nguoi(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text,  gender, cbAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
-
-                string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Addr) VALUES ({0}, N'{1}', '{2}', '{3}', N'{4}', '{5}', '{6}', N'{7}')",
-                person.ID, person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Address);
-
-                SqlCommand cmd1 = new SqlCommand(sqlStr, conn);
-
-                sqlStr = string.Format("INSERT INTO Account(ID, UserName, Pass, Position) VALUES ({0}, '{1}', '{2}', '{3}')",
-                    person.ID, person.UserName, person.Password, person.Position);
-                
-                SqlCommand cmd2 = new SqlCommand(sqlStr, conn);
-
-                if (cmd1.ExecuteNonQuery() > 0 && cmd2.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Đăng kí tài khoản thành công", "Thông báo");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đăng kí tài khoản thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            
+                gioiTinh = rdoOther.Text;
+            int id = nguoiDAO.TaoID();
+            Nguoi nguoiDung = new Nguoi(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text, gioiTinh, cbAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
+            nguoiDAO.DangKy(nguoiDung);
             this.Close();
+
+            //try
+            //{
+            //    conn.Open();
+            //    string idStr = "SELECT count(*) FROM Person";
+            //    SqlCommand cmd = new SqlCommand(idStr, conn);
+            //    int id = (int)cmd.ExecuteScalar() + 1;
+
+            //    Nguoi person = new Nguoi(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text, gioiTinh, cbAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
+
+            //    string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Addr) VALUES ({0}, N'{1}', '{2}', '{3}', N'{4}', '{5}', '{6}', N'{7}')",
+            //    person.ID, person.FullName, person.PhoneNumber, person.Cccd, person.Gender, person.DateOfBirth.ToString(), person.Email, person.Address);
+
+            //    SqlCommand cmd1 = new SqlCommand(sqlStr, conn);
+
+            //    sqlStr = string.Format("INSERT INTO Account(ID, UserName, Pass, Position) VALUES ({0}, '{1}', '{2}', '{3}')",
+            //        person.ID, person.UserName, person.Password, person.Position);
+                
+            //    SqlCommand cmd2 = new SqlCommand(sqlStr, conn);
+
+            //    if (cmd1.ExecuteNonQuery() > 0 && cmd2.ExecuteNonQuery() > 0)
+            //    {
+            //        MessageBox.Show("Đăng kí tài khoản thành công", "Thông báo");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Đăng kí tài khoản thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+            //finally
+            //{
+            //    conn.Close();
+            //}
         }
         private void FSignUp_MouseDown(object sender, MouseEventArgs e)
         {
@@ -101,7 +105,6 @@ namespace ProjectWin_Demo_
                 this.Location = new Point(lastForm.X + (currentCursor.X - lastCursor.X), lastForm.Y + (currentCursor.Y - lastCursor.Y));
             }
         }
-       
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {

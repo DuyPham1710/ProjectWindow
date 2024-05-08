@@ -39,8 +39,10 @@
             this.lblLuotXem = new System.Windows.Forms.Label();
             this.lblGiaBanDau = new System.Windows.Forms.Label();
             this.PanelSanPham = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.PanelSanPham.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -52,8 +54,8 @@
             // 
             this.pctSanPham.BackColor = System.Drawing.Color.White;
             this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources.smart_tivi_4k_sony_kd_55x75k_55_inch_google_tv_c2bfad25;
-            this.pctSanPham.Location = new System.Drawing.Point(5, 4);
-            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pctSanPham.Location = new System.Drawing.Point(13, 10);
+            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.pctSanPham.Name = "pctSanPham";
             this.pctSanPham.Size = new System.Drawing.Size(170, 176);
             this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -68,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(116, 231);
+            this.label3.Location = new System.Drawing.Point(120, 239);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
@@ -83,7 +85,7 @@
             // 
             this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
             this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(2, 184);
+            this.lblTenSP.Location = new System.Drawing.Point(10, 195);
             this.lblTenSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(152, 36);
@@ -99,7 +101,7 @@
             this.lblGiaSP.BackColor = System.Drawing.Color.Transparent;
             this.lblGiaSP.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaSP.ForeColor = System.Drawing.Color.Crimson;
-            this.lblGiaSP.Location = new System.Drawing.Point(2, 249);
+            this.lblGiaSP.Location = new System.Drawing.Point(9, 262);
             this.lblGiaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaSP.Name = "lblGiaSP";
             this.lblGiaSP.Size = new System.Drawing.Size(117, 26);
@@ -115,10 +117,10 @@
             // 
             this.lblDiaChiShop.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaChiShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChiShop.Location = new System.Drawing.Point(41, 283);
+            this.lblDiaChiShop.Location = new System.Drawing.Point(75, 288);
             this.lblDiaChiShop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiaChiShop.Name = "lblDiaChiShop";
-            this.lblDiaChiShop.Size = new System.Drawing.Size(131, 22);
+            this.lblDiaChiShop.Size = new System.Drawing.Size(108, 22);
             this.lblDiaChiShop.TabIndex = 11;
             this.lblDiaChiShop.Text = "TP.Hồ Chí Minh";
             this.lblDiaChiShop.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,7 +144,7 @@
             this.btnQuanTam.Image = global::ProjectWin_Demo_.Properties.Resources.Icons8_Ios7_Gaming_Hearts_48;
             this.btnQuanTam.ImageSize = new System.Drawing.Size(25, 25);
             this.btnQuanTam.Location = new System.Drawing.Point(138, 10);
-            this.btnQuanTam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuanTam.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuanTam.Name = "btnQuanTam";
             this.btnQuanTam.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnQuanTam.Size = new System.Drawing.Size(34, 37);
@@ -154,7 +156,7 @@
             // 
             this.lblLuotXem.AutoSize = true;
             this.lblLuotXem.BackColor = System.Drawing.Color.Transparent;
-            this.lblLuotXem.Location = new System.Drawing.Point(4, 288);
+            this.lblLuotXem.Location = new System.Drawing.Point(10, 294);
             this.lblLuotXem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLuotXem.Name = "lblLuotXem";
             this.lblLuotXem.Size = new System.Drawing.Size(65, 13);
@@ -169,7 +171,7 @@
             this.lblGiaBanDau.BackColor = System.Drawing.Color.Transparent;
             this.lblGiaBanDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaBanDau.ForeColor = System.Drawing.Color.Silver;
-            this.lblGiaBanDau.Location = new System.Drawing.Point(4, 223);
+            this.lblGiaBanDau.Location = new System.Drawing.Point(9, 231);
             this.lblGiaBanDau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaBanDau.Name = "lblGiaBanDau";
             this.lblGiaBanDau.Size = new System.Drawing.Size(112, 26);
@@ -184,23 +186,36 @@
             // 
             this.PanelSanPham.BorderColor = System.Drawing.Color.White;
             this.PanelSanPham.BorderThickness = 3;
-            this.PanelSanPham.Controls.Add(this.lblTenSP);
-            this.PanelSanPham.Controls.Add(this.lblGiaSP);
             this.PanelSanPham.Controls.Add(this.btnQuanTam);
-            this.PanelSanPham.Controls.Add(this.lblGiaBanDau);
-            this.PanelSanPham.Controls.Add(this.pctSanPham);
-            this.PanelSanPham.Controls.Add(this.label3);
-            this.PanelSanPham.Controls.Add(this.lblLuotXem);
-            this.PanelSanPham.Controls.Add(this.lblDiaChiShop);
+            this.PanelSanPham.Controls.Add(this.guna2ShadowPanel1);
             this.PanelSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelSanPham.Location = new System.Drawing.Point(0, 0);
-            this.PanelSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.PanelSanPham.Name = "PanelSanPham";
-            this.PanelSanPham.Size = new System.Drawing.Size(182, 312);
+            this.PanelSanPham.Size = new System.Drawing.Size(196, 321);
             this.PanelSanPham.TabIndex = 16;
             this.PanelSanPham.Click += new System.EventHandler(this.UCProducts_Click);
             this.PanelSanPham.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
             this.PanelSanPham.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Controls.Add(this.lblGiaSP);
+            this.guna2ShadowPanel1.Controls.Add(this.label3);
+            this.guna2ShadowPanel1.Controls.Add(this.lblTenSP);
+            this.guna2ShadowPanel1.Controls.Add(this.lblLuotXem);
+            this.guna2ShadowPanel1.Controls.Add(this.pctSanPham);
+            this.guna2ShadowPanel1.Controls.Add(this.lblDiaChiShop);
+            this.guna2ShadowPanel1.Controls.Add(this.lblGiaBanDau);
+            this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowPanel1.ShadowShift = 4;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(196, 321);
+            this.guna2ShadowPanel1.TabIndex = 15;
             // 
             // UCSanPham
             // 
@@ -208,16 +223,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PanelSanPham);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCSanPham";
-            this.Size = new System.Drawing.Size(182, 312);
+            this.Size = new System.Drawing.Size(196, 321);
             this.Load += new System.EventHandler(this.UCProducts_Load);
             this.Click += new System.EventHandler(this.UCProducts_Click);
             this.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
             this.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.PanelSanPham.ResumeLayout(false);
-            this.PanelSanPham.PerformLayout();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +249,6 @@
         private System.Windows.Forms.Label lblGiaSP;
         private System.Windows.Forms.PictureBox pctSanPham;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelSanPham;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
     }
 }
