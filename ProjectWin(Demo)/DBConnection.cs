@@ -616,7 +616,7 @@ namespace ProjectWin_Demo_
                 cmd = new SqlCommand(SQL, conn);
                 if (cmd.ExecuteNonQuery() > 0)
                 {
-                    MessageBox.Show("Thực thi thành công", "Thông báo");
+                    //MessageBox.Show("Thực thi thành công", "Thông báo");
                 }
             }
             catch (Exception ex)
@@ -780,126 +780,126 @@ namespace ProjectWin_Demo_
         //    }
         //    return null;
         //}
-        public void LoadDoanhThu(DataGridView gv, string thang, string nam)
-        {
-            string loc = "";
-            if (thang != "")
-            {
-                loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
-            }
-            if (nam != "" && int.TryParse(nam, out int nguyen))
-            {
-                loc = loc + " and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
-            }
-            string sql = string.Format("select sum(CAST(DaMua.SoLuongDaMua  as int)) as TongSoLuong, sum(DaMua.Gia) as TongTien from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP  and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1} group by SanPham.IDChuSP", id, loc);
-            try
-            {
-                gv.DataSource = default;
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                gv.DataSource = dt;
-                gv.Columns[0].HeaderText = "Số lượng bán được";
-                gv.Columns[1].HeaderText = "Tổng tiền";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không load được", "Thông báo");
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        public void LoadBieuDoDoanhThu(string nam, Chart doanhthu)
-        {
+        //public void LoadDoanhThu(DataGridView gv, string thang, string nam)
+        //{
+        //    string loc = "";
+        //    if (thang != "")
+        //    {
+        //        loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
+        //    }
+        //    if (nam != "" && int.TryParse(nam, out int nguyen))
+        //    {
+        //        loc = loc + " and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
+        //    }
+        //    string sql = string.Format("select sum(CAST(DaMua.SoLuongDaMua  as int)) as TongSoLuong, sum(DaMua.Gia) as TongTien from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP  and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1} group by SanPham.IDChuSP", id, loc);
+        //    try
+        //    {
+        //        gv.DataSource = default;
+        //        conn.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+        //        DataTable dt = new DataTable();
+        //        adapter.Fill(dt);
+        //        gv.DataSource = dt;
+        //        gv.Columns[0].HeaderText = "Số lượng bán được";
+        //        gv.Columns[1].HeaderText = "Tổng tiền";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Không load được", "Thông báo");
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
+        //public void LoadBieuDoDoanhThu(string nam, Chart doanhthu)
+        //{
 
-            string sql = string.Format("select MONTH(DaMua.ThoiGianHienTai) AS [Tháng], SUM(DaMua.Gia) AS [Doanh thu] from SanPham, DaMua Where SanPham.MSP = DaMua.MSP and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' and YEAR(DaMua.ThoiGianHienTai) = {1} GROUP BY MONTH(DaMua.ThoiGianHienTai)", id, nam);
-            try
-            {
-                doanhthu.DataSource = default;
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                doanhthu.Series.Clear();
+        //    string sql = string.Format("select MONTH(DaMua.ThoiGianHienTai) AS [Tháng], SUM(DaMua.Gia) AS [Doanh thu] from SanPham, DaMua Where SanPham.MSP = DaMua.MSP and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' and YEAR(DaMua.ThoiGianHienTai) = {1} GROUP BY MONTH(DaMua.ThoiGianHienTai)", id, nam);
+        //    try
+        //    {
+        //        doanhthu.DataSource = default;
+        //        conn.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+        //        DataTable dt = new DataTable();
+        //        adapter.Fill(dt);
+        //        doanhthu.Series.Clear();
 
-                DataTable processedData = new DataTable();
-                processedData.Columns.Add("Tháng", typeof(int));
-                processedData.Columns.Add("Doanh thu", typeof(decimal));
+        //        DataTable processedData = new DataTable();
+        //        processedData.Columns.Add("Tháng", typeof(int));
+        //        processedData.Columns.Add("Doanh thu", typeof(decimal));
 
-                // Thêm dữ liệu đã xử lý từ dữ liệu ban đầu
-                for (int i = 1; i <= 12; i++)
-                {
-                    DataRow[] rows = dt.Select($"Tháng = {i}");
-                    if (rows.Length > 0)
-                    {
-                        processedData.Rows.Add(i, rows[0]["Doanh thu"]);
-                    }
-                    else
-                    {
-                        processedData.Rows.Add(i, 0);
-                    }
-                }
-                // Thêm dữ liệu mới vào biểu đồ
-                Series series = doanhthu.Series.Add("Doanh thu");
-                series.ChartType = SeriesChartType.Area;
+        //        // Thêm dữ liệu đã xử lý từ dữ liệu ban đầu
+        //        for (int i = 1; i <= 12; i++)
+        //        {
+        //            DataRow[] rows = dt.Select($"Tháng = {i}");
+        //            if (rows.Length > 0)
+        //            {
+        //                processedData.Rows.Add(i, rows[0]["Doanh thu"]);
+        //            }
+        //            else
+        //            {
+        //                processedData.Rows.Add(i, 0);
+        //            }
+        //        }
+        //        // Thêm dữ liệu mới vào biểu đồ
+        //        Series series = doanhthu.Series.Add("Doanh thu");
+        //        series.ChartType = SeriesChartType.Area;
 
-                // Thêm các điểm dữ liệu vào loạt dữ liệu
-                foreach (DataRow row in processedData.Rows)
-                {
-                    series.Points.AddXY($"T {row["Tháng"]}", row["Doanh thu"]);
-                }
+        //        // Thêm các điểm dữ liệu vào loạt dữ liệu
+        //        foreach (DataRow row in processedData.Rows)
+        //        {
+        //            series.Points.AddXY($"T {row["Tháng"]}", row["Doanh thu"]);
+        //        }
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không load được", "Thông báo");
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        public void LoadChiTietDoanhThu(DataGridView gv, string thang, string nam)
-        {
-            string loc = "";
-            if (thang != "")
-            {
-                loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
-            }
-            if (nam != "" && int.TryParse(nam, out int nguyen))
-            {
-                loc = loc +" and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
-            }
-            string sql = string.Format("select SanPham.MSP, TenSP, SoLuongDaMua, FullName, ThoiGianDat, ThoiGianHienTai, Addr, Gia from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1}", id, loc);
-            try
-            {
-                gv.DataSource = default;
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                gv.DataSource = dt;
-                gv.Columns[0].HeaderText = "MSP";
-                gv.Columns[1].HeaderText = "Tên Sản phẩm";
-                gv.Columns[2].HeaderText = "Số lượng bán";
-                gv.Columns[3].HeaderText = "Người mua";
-                gv.Columns[4].HeaderText = "Thời gian đặt";
-                gv.Columns[5].HeaderText = "Thời gian nhận";
-                gv.Columns[6].HeaderText = "Địa chỉ giao";
-                gv.Columns[7].HeaderText = "Thành tiền";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Không load được", "Thông báo");
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Không load được", "Thông báo");
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
+        //public void LoadChiTietDoanhThu(DataGridView gv, string thang, string nam)
+        //{
+        //    string loc = "";
+        //    if (thang != "")
+        //    {
+        //        loc = " and " + loc + "DATEPART(month, DaMua.ThoiGianHienTai) = " + thang;
+        //    }
+        //    if (nam != "" && int.TryParse(nam, out int nguyen))
+        //    {
+        //        loc = loc +" and " + "DATEPART(year, DaMua.ThoiGianHienTai) = " + nam;
+        //    }
+        //    string sql = string.Format("select SanPham.MSP, TenSP, SoLuongDaMua, FullName, ThoiGianDat, ThoiGianHienTai, Addr, Gia from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1}", id, loc);
+        //    try
+        //    {
+        //        gv.DataSource = default;
+        //        conn.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+        //        DataTable dt = new DataTable();
+        //        adapter.Fill(dt);
+        //        gv.DataSource = dt;
+        //        gv.Columns[0].HeaderText = "MSP";
+        //        gv.Columns[1].HeaderText = "Tên Sản phẩm";
+        //        gv.Columns[2].HeaderText = "Số lượng bán";
+        //        gv.Columns[3].HeaderText = "Người mua";
+        //        gv.Columns[4].HeaderText = "Thời gian đặt";
+        //        gv.Columns[5].HeaderText = "Thời gian nhận";
+        //        gv.Columns[6].HeaderText = "Địa chỉ giao";
+        //        gv.Columns[7].HeaderText = "Thành tiền";
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Không load được", "Thông báo");
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
+        //}
     }
 }

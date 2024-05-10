@@ -208,6 +208,7 @@
     <Compile Include="DAO\NguoiDAO.cs" />
     <Compile Include="DAO\SanPhamDao.cs" />
     <Compile Include="Nguoi.cs" />
+    <Compile Include="DAO\QuanTamDAO.cs" />
     <Compile Include="SanPham.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

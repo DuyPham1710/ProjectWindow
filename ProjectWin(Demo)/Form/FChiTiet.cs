@@ -139,7 +139,7 @@ namespace ProjectWin_Demo_
         {
             GioHangDAO ghDAO = new GioHangDAO(id);
             ghDAO.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
-            //MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
+            MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
         }
 
         private void btnClose_Click(object sender, EventArgs e)

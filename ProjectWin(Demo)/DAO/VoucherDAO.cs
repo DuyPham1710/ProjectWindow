@@ -110,6 +110,8 @@ namespace ProjectWin_Demo_
         {
             string sqlStr = string.Format("SELECT * FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
+            if (dt.Rows.Count == 0)
+                return null;
             Voucher voucher = new Voucher(dt.Rows[0]);
             return voucher;
             //return dBConnection.LayVoucher(sqlStr);

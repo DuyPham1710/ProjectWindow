@@ -54,9 +54,9 @@
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Location = new System.Drawing.Point(148, 48);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(67, 13);
+            this.lblDiaChi.Size = new System.Drawing.Size(50, 13);
             this.lblDiaChi.TabIndex = 3;
-            this.lblDiaChi.Text = "Hồ Chí Minh";
+            this.lblDiaChi.Text = "Việt Nam";
             // 
             // btnGheShop
             // 

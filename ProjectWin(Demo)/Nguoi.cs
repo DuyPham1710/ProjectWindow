@@ -4,7 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProjectWin_Demo_
@@ -88,6 +90,56 @@ namespace ProjectWin_Demo_
             DateOfBirth = DateTime.Parse(duLieu["Bith"].ToString());
             object avarta = duLieu["Avarta"];
             Avt = avarta != DBNull.Value ? (byte[])avarta : null;
+        }
+        public virtual bool KiemTra()
+        {
+            var properties = typeof(Nguoi).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if ((value == null || string.IsNullOrWhiteSpace(value.ToString())) && ($"{property.Name}" != "Avt"))
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            // Biểu thức  kiểm tra email
+            string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(Email) == false)
+            {
+                MessageBox.Show("Email không hợp lệ", "Thông báo");
+                return false;
+            }
+            // Biểu thức kiểm tra số điện thoại (dạng xxx-xxxx-xxx)
+            //pattern = @"^\d{3}-\d{4}-\d{3}$";
+            //regex = new Regex(pattern);
+            //if (regex.IsMatch(phoneNumber) == false)
+            //{
+            //    MessageBox.Show("Số điện thoại không hợp lệ\n(xxx-xxxx-xxx)", "Thông báo");
+            //    return false;
+            //}
+            // Kiểm tra tuổi
+            int tuoi = (int)(((DateTime.Now - DateOfBirth).Days) / 365.25);
+            if (tuoi < 17)
+            {
+                MessageBox.Show("Chưa đủ 18 tuổi!!", "Thông báo");
+                return false;
+            }
+
+            //kiểm tra trùng tên đăng nhập không 
+            string sqlQuery = string.Format("SELECT * FROM Account WHERE UserName = '{0}'", UserName);
+            DBConnection dB = new DBConnection();
+            DataTable tmp = dB.LoadDuLieu(sqlQuery);
+            if (tmp.Rows.Count != 0)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại", "Thông báo");
+                return false;
+            }
+            return true;
+
         }
     }
 }

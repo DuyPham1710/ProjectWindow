@@ -145,6 +145,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham sanPham = new SanPham(sp.lblMaSP.Text);
                 SPDao.xoaSP(sanPham);
+                MessageBox.Show("Đã xóa sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FSPCuaToi_Load(sender, e);          
             }
         }

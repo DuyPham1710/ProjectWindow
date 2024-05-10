@@ -85,7 +85,8 @@ namespace ProjectWin_Demo_
         }
         public List<UCShop> TheoDoi()
         {
-            string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK,QuanTam WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0 and QuanTam.IDNguoiMua = {0}", id);
+            //string sqlStr = string.Format("SELECT Person.*, TK.SoLuong FROM Person, (SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK,QuanTam WHERE TK.IDChuSP = Person.ID and Person.ID <> {0} and TK.SoLuong > 0 and QuanTam.IDNguoiMua = {0}", id);
+            string sqlStr = string.Format("select * from (SELECT Person.* FROM  Person,QuanTam WHERE   Person.ID = QuanTam.IDShop and Person.ID<> {0} and QuanTam.IDNguoiMua = {0}) as P,(SELECT IDChuSP, COUNT(DISTINCT MSP) AS SoLuong FROM SanPham GROUP BY IDChuSP) as TK where TK.IDChuSP = P.ID", id);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<UCShop> ucShops = new List<UCShop>();
             foreach (DataRow row in dt.Rows)
@@ -95,28 +96,28 @@ namespace ProjectWin_Demo_
             }
             return ucShops;
         }
-        public void TheoDoiShop(int IDS)
-        {
-            string sqlStr = string.Format("INSERT INTO QuanTam(IDNguoiMua, IDShop) VALUES ({0}, {1})",
-                id, IDS);
-            dBConnection.thucThi(sqlStr);
-        }
-        public void BoTheoDoiShop(int IDS)
-        {
-            string sqlStr = string.Format("Delete from QuanTam where IDNguoiMua = {0} and IDShop = {1}",
-                id, IDS);
-            dBConnection.thucThi(sqlStr);
-        }
-        public bool KiemTraTheoDoi(int IDS)
-        {
-            string sqlStr = string.Format("select *from QuanTam where IDNguoiMua = {0} and IDShop = {1}", id, IDS);
-            DataTable tmp = dBConnection.LoadDuLieu(sqlStr);
-            if (tmp.Rows.Count == 0)
-            {
-                return false;
-            }
-            return true;
-        }
+        //public void TheoDoiShop(int IDS)
+        //{
+        //    string sqlStr = string.Format("INSERT INTO QuanTam(IDNguoiMua, IDShop) VALUES ({0}, {1})",
+        //        id, IDS);
+        //    dBConnection.thucThi(sqlStr);
+        //}
+        //public void BoTheoDoiShop(int IDS)
+        //{
+        //    string sqlStr = string.Format("Delete from QuanTam where IDNguoiMua = {0} and IDShop = {1}",
+        //        id, IDS);
+        //    dBConnection.thucThi(sqlStr);
+        //}
+        //public bool KiemTraTheoDoi(int IDS)
+        //{
+        //    string sqlStr = string.Format("select *from QuanTam where IDNguoiMua = {0} and IDShop = {1}", id, IDS);
+        //    DataTable tmp = dBConnection.LoadDuLieu(sqlStr);
+        //    if (tmp.Rows.Count == 0)
+        //    {
+        //        return false;
+        //    }
+        //    return true;
+        //}
         //public Nguoi LoadThongTinCaNhan()
         //{
         //    string query = "SELECT *FROM Person,Account WHERE Person.ID = Account.ID and Account.ID = " + id.ToString();

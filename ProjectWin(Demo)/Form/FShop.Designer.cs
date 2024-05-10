@@ -30,10 +30,10 @@
         {
             this.fPanelShop = new System.Windows.Forms.FlowLayoutPanel();
             this.btnShopTheoDoi = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnAllShop = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnTatCaShop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnUyTin = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnItUyTin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,86 +70,86 @@
             this.btnShopTheoDoi.Text = "Đang theo dõi";
             this.btnShopTheoDoi.Click += new System.EventHandler(this.btnShopTheoDoi_Click);
             // 
-            // btnAllShop
+            // btnTatCaShop
             // 
-            this.btnAllShop.Animated = true;
-            this.btnAllShop.BackColor = System.Drawing.Color.Transparent;
-            this.btnAllShop.CustomBorderColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAllShop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.btnAllShop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllShop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllShop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAllShop.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAllShop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAllShop.FillColor = System.Drawing.Color.Transparent;
-            this.btnAllShop.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnAllShop.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnAllShop.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAllShop.Location = new System.Drawing.Point(17, 7);
-            this.btnAllShop.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAllShop.Name = "btnAllShop";
-            this.btnAllShop.Size = new System.Drawing.Size(135, 31);
-            this.btnAllShop.TabIndex = 17;
-            this.btnAllShop.Text = "Tất cả shop";
-            this.btnAllShop.Click += new System.EventHandler(this.btnAllShop_Click);
+            this.btnTatCaShop.Animated = true;
+            this.btnTatCaShop.BackColor = System.Drawing.Color.Transparent;
+            this.btnTatCaShop.CustomBorderColor = System.Drawing.Color.MediumTurquoise;
+            this.btnTatCaShop.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnTatCaShop.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTatCaShop.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTatCaShop.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTatCaShop.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTatCaShop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTatCaShop.FillColor = System.Drawing.Color.Transparent;
+            this.btnTatCaShop.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnTatCaShop.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnTatCaShop.ForeColor = System.Drawing.Color.Black;
+            this.btnTatCaShop.Location = new System.Drawing.Point(17, 7);
+            this.btnTatCaShop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTatCaShop.Name = "btnTatCaShop";
+            this.btnTatCaShop.Size = new System.Drawing.Size(135, 31);
+            this.btnTatCaShop.TabIndex = 17;
+            this.btnTatCaShop.Text = "Tất cả shop";
+            this.btnTatCaShop.Click += new System.EventHandler(this.btnAllShop_Click);
             // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnAllShop);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnUyTin);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnItUyTin);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnTatCaShop);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnShopTheoDoi);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 89);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(166, 624);
             this.guna2CustomGradientPanel1.TabIndex = 28;
             // 
-            // guna2GradientButton2
+            // btnUyTin
             // 
-            this.guna2GradientButton2.Animated = true;
-            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.guna2GradientButton2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(16, 120);
-            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(135, 31);
-            this.guna2GradientButton2.TabIndex = 19;
-            this.guna2GradientButton2.Text = "Uy Tín";
-            this.guna2GradientButton2.Click += new System.EventHandler(this.btnUyTin_Click);
+            this.btnUyTin.Animated = true;
+            this.btnUyTin.BackColor = System.Drawing.Color.Transparent;
+            this.btnUyTin.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnUyTin.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnUyTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUyTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUyTin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUyTin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUyTin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUyTin.FillColor = System.Drawing.Color.Transparent;
+            this.btnUyTin.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnUyTin.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnUyTin.ForeColor = System.Drawing.Color.Black;
+            this.btnUyTin.Location = new System.Drawing.Point(16, 120);
+            this.btnUyTin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUyTin.Name = "btnUyTin";
+            this.btnUyTin.Size = new System.Drawing.Size(135, 31);
+            this.btnUyTin.TabIndex = 19;
+            this.btnUyTin.Text = "Uy Tín";
+            this.btnUyTin.Click += new System.EventHandler(this.btnUyTin_Click);
             // 
-            // guna2GradientButton1
+            // btnItUyTin
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.guna2GradientButton1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(16, 175);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(135, 31);
-            this.guna2GradientButton1.TabIndex = 18;
-            this.guna2GradientButton1.Text = "Ít uy tín";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.btnItUyTin_Click);
+            this.btnItUyTin.Animated = true;
+            this.btnItUyTin.BackColor = System.Drawing.Color.Transparent;
+            this.btnItUyTin.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.btnItUyTin.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnItUyTin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnItUyTin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnItUyTin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnItUyTin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnItUyTin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItUyTin.FillColor = System.Drawing.Color.Transparent;
+            this.btnItUyTin.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnItUyTin.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnItUyTin.ForeColor = System.Drawing.Color.Black;
+            this.btnItUyTin.Location = new System.Drawing.Point(16, 175);
+            this.btnItUyTin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnItUyTin.Name = "btnItUyTin";
+            this.btnItUyTin.Size = new System.Drawing.Size(135, 31);
+            this.btnItUyTin.TabIndex = 18;
+            this.btnItUyTin.Text = "Ít uy tín";
+            this.btnItUyTin.Click += new System.EventHandler(this.btnItUyTin_Click);
             // 
             // txtTimKiem
             // 
@@ -198,11 +198,11 @@
         #endregion
         private System.Windows.Forms.FlowLayoutPanel fPanelShop;
         private Guna.UI2.WinForms.Guna2GradientButton btnShopTheoDoi;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAllShop;
+        private Guna.UI2.WinForms.Guna2GradientButton btnTatCaShop;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
 
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUyTin;
+        private Guna.UI2.WinForms.Guna2GradientButton btnItUyTin;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
     }
 }

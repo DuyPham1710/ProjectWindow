@@ -24,6 +24,11 @@ namespace ProjectWin_Demo_
 
         private void FShop_Load(object sender, EventArgs e)
         {
+            btnTatCaShop.CustomBorderColor = Color.DarkTurquoise;
+            btnUyTin.CustomBorderColor = Color.White;
+            btnItUyTin.CustomBorderColor = Color.White;
+            btnShopTheoDoi.CustomBorderColor = Color.White;
+
             fPanelShop.Controls.Clear();
             List<UCShop> shop = nguoiDao.LoadShop();
             foreach (UCShop s in shop)
@@ -34,6 +39,11 @@ namespace ProjectWin_Demo_
         }
         private void btnUyTin_Click(object sender, EventArgs e)
         {
+            btnTatCaShop.CustomBorderColor = Color.White;
+            btnUyTin.CustomBorderColor = Color.DarkTurquoise;
+            btnItUyTin.CustomBorderColor = Color.White;
+            btnShopTheoDoi.CustomBorderColor = Color.White;
+
             fPanelShop.Controls.Clear();
             List<UCShop> shop = nguoiDao.UyTin(">");
             foreach (UCShop s in shop)
@@ -43,6 +53,11 @@ namespace ProjectWin_Demo_
         }
         private void btnItUyTin_Click(object sender, EventArgs e)
         {
+            btnTatCaShop.CustomBorderColor = Color.White;
+            btnUyTin.CustomBorderColor = Color.White;
+            btnItUyTin.CustomBorderColor = Color.DarkTurquoise;
+            btnShopTheoDoi.CustomBorderColor = Color.White;
+
             fPanelShop.Controls.Clear();
             List<UCShop> shop = nguoiDao.UyTin("<");
             foreach (UCShop s in shop)
@@ -59,6 +74,11 @@ namespace ProjectWin_Demo_
 
         private void btnShopTheoDoi_Click(object sender, EventArgs e)
         {
+            btnTatCaShop.CustomBorderColor = Color.White;
+            btnUyTin.CustomBorderColor = Color.White;
+            btnItUyTin.CustomBorderColor = Color.White;
+            btnShopTheoDoi.CustomBorderColor = Color.DarkTurquoise;
+
             fPanelShop.Controls.Clear();
             List<UCShop> shop = nguoiDao.TheoDoi();
             foreach (UCShop s in shop)

@@ -45,9 +45,12 @@ namespace ProjectWin_Demo_
                 gioiTinh = rdoOther.Text;
             int id = nguoiDAO.TaoID();
             Nguoi nguoiDung = new Nguoi(id, txtFullName.Text, txtEmail.Text, txtPhoneNumber.Text, txtCCCD.Text, gioiTinh, cbAddress.Text, txtUserName.Text, txtPassWord.Text, "User", dtpBornYear.Value, null);
-            nguoiDAO.DangKy(nguoiDung);
-            this.Close();
-
+            if (nguoiDung.KiemTra())
+            {
+                nguoiDAO.DangKy(nguoiDung);
+                MessageBox.Show("Đăng ký tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
             //try
             //{
             //    conn.Open();

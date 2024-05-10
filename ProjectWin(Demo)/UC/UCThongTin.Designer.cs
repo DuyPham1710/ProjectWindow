@@ -480,7 +480,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnThemAvt);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(85, 58);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(94, 58);
             this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(285, 351);
@@ -706,7 +706,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox3);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox2);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox1);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(426, 25);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(483, 58);
             this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(548, 463);
@@ -792,13 +792,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnXoaTaiKhan);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCThongTin";
-            this.Size = new System.Drawing.Size(1080, 603);
+            this.Size = new System.Drawing.Size(1180, 683);
             this.Load += new System.EventHandler(this.UCThongTin_Load);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);

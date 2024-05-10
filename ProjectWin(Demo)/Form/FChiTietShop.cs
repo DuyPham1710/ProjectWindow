@@ -24,6 +24,7 @@ namespace ProjectWin_Demo_
         private int ID;
         private int IDShop;
         SanPhamDao sanPhamDao;
+        QuanTamDAO quanTamDAO;
         NguoiDAO nguoiDAO;
         bool theodoi = false;
         public FChiTietShop(int id, int iDShop)
@@ -32,8 +33,8 @@ namespace ProjectWin_Demo_
             ID = id;
             IDShop = iDShop;
             sanPhamDao = new SanPhamDao(ID, IDShop);
+            quanTamDAO = new QuanTamDAO(iDShop);
             nguoiDAO = new NguoiDAO(iDShop);
-
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -43,7 +44,7 @@ namespace ProjectWin_Demo_
         private void FChiTietShop_Load(object sender, EventArgs e)
         {
             //Kiem tra theo doi
-            NguoiDAO nguoiMua = new NguoiDAO(ID);
+            QuanTamDAO nguoiMua = new QuanTamDAO(ID);
             if (nguoiMua.KiemTraTheoDoi(IDShop))
             {
                 theodoi = true;
@@ -82,17 +83,19 @@ namespace ProjectWin_Demo_
         {
             if (!theodoi)
             {
-                NguoiDAO nguoiMua = new NguoiDAO(ID);
+                QuanTamDAO nguoiMua = new QuanTamDAO(ID);
                 nguoiMua.TheoDoiShop(IDShop);
                 btnTheoDoi.Text = "Đang theo dõi";
                 theodoi = true;
+                //MessageBox.Show("Đã theo dõi shop", "Thông báo");
             }
             else
             {
-                NguoiDAO nguoiMua = new NguoiDAO(ID);
+                QuanTamDAO nguoiMua = new QuanTamDAO(ID);
                 nguoiMua.BoTheoDoiShop(IDShop);
                 btnTheoDoi.Text = "Theo dõi +";
                 theodoi = false;
+                //MessageBox.Show("Đã bỏ theo dõi shop", "Thông báo");
             }
 
         }

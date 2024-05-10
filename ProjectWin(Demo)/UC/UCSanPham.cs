@@ -90,12 +90,14 @@ namespace ProjectWin_Demo_
                 yeuThichDAO.ThemYeuThich(sp.MaSP);
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
                 chon = true;
+                //MessageBox.Show("Đã thêm vào sản phẩm yêu thích", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 yeuThichDAO.XoaYeuThich(sp.MaSP);
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
                 chon = false;
+                //MessageBox.Show("Đã xóa khỏi mục ưa thích", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
