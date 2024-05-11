@@ -19,8 +19,9 @@ namespace ProjectWin_Demo_
         private string Name;
         private byte[] Avt;
         private int SoLuong;
+        private string DiaChi;
         MemoryStream ms;
-        public UCShop(int id, int idShop, string name, byte[] avt, int soluong)
+        public UCShop(int id, int idShop, string name, byte[] avt, int soluong, string DiaChi)
         {
             InitializeComponent();
             this.id = id;
@@ -28,12 +29,14 @@ namespace ProjectWin_Demo_
             Name = name;
             SoLuong = soluong;
             Avt = avt;
+            this.DiaChi = DiaChi;
         }
 
         private void UCShop_Load(object sender, EventArgs e)
         {
             ms = new MemoryStream(Avt);
             lblName.Text = Name;
+            lblDiaChi.Text = DiaChi;
             pcbAvt.Image = Image.FromStream(ms);
             lblSoSanPham.Text = "Tổng: " + SoLuong.ToString() + " sản phẩm";
         }

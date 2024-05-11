@@ -47,32 +47,41 @@ namespace ProjectWin_Demo_
             if (MessageBox.Show("Bạn có muốn lưu", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 MemoryStream pic = new MemoryStream();
+                byte[] duLieuAnh = null;
                 try
                 {
-                    ucThongTin.pictureBoxUser.Image.Save(pic, ucThongTin.pictureBoxUser.Image.RawFormat);
-                    byte[] duLieuAnh = pic.ToArray();
+                    if (ucThongTin.pictureBoxUser.Image != null)
+                    {
+                        ucThongTin.pictureBoxUser.Image.Save(pic, ucThongTin.pictureBoxUser.Image.RawFormat);
+                        duLieuAnh = pic.ToArray();
+                    }
+                    
+                    //byte[] duLieuAnh = pic.ToArray();
                     conn.Open();
                     string gender = ucThongTin.rdoNam.Checked ? "Nam" : ucThongTin.rdoNu.Checked ? "Nữ" : "Khác";
                     Nguoi nguoi = new Nguoi(id, ucThongTin.txtName.Text, ucThongTin.txtEmail.Text, ucThongTin.txtPhoneNumber.Text, ucThongTin.txtCCCD.Text
                    , gender, ucThongTin.cbAddress.Text, ucThongTin.txtUserName.Text, ucThongTin.txtPass.Text, ucThongTin.dtpNgaySinh.Value, duLieuAnh);
-                  //  nguoiDAO.suaTaiKhoan(nguoi);
-                   // FInfo_Load(sender, e);
-                    string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
-                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-                    cmd.Parameters.AddWithValue("@name", nguoi.FullName);
-                    cmd.Parameters.AddWithValue("@phone", nguoi.PhoneNumber);
-                    cmd.Parameters.AddWithValue("@cccd", nguoi.Cccd);
-                    cmd.Parameters.AddWithValue("@gender", nguoi.Gender);
-                    cmd.Parameters.AddWithValue("@birth", nguoi.DateOfBirth);
-                    cmd.Parameters.AddWithValue("@email", nguoi.Email);
-                    cmd.Parameters.AddWithValue("@avatar", nguoi.Avt);
-                    cmd.Parameters.AddWithValue("@address", nguoi.Address);
-                    cmd.Parameters.AddWithValue("@id", nguoi.ID);
-                    if (cmd.ExecuteNonQuery() > 0)
+                    if (nguoi.KiemTra("sửa"))
                     {
-                        MessageBox.Show("Lưu thông tin thành công", "Thông báo");
-                        FInfo_Load(sender, e);
+                        //FInfo_Load(sender, e);
+                        string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
+                        SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                        cmd.Parameters.AddWithValue("@name", nguoi.HoTen);
+                        cmd.Parameters.AddWithValue("@phone", nguoi.SoDT);
+                        cmd.Parameters.AddWithValue("@cccd", nguoi.Cccd);
+                        cmd.Parameters.AddWithValue("@gender", nguoi.GioiTinh);
+                        cmd.Parameters.AddWithValue("@birth", nguoi.NgaySinh);
+                        cmd.Parameters.AddWithValue("@email", nguoi.Email);
+                        cmd.Parameters.AddWithValue("@avatar", nguoi.Avt);
+                        cmd.Parameters.AddWithValue("@address", nguoi.DiaChi);
+                        cmd.Parameters.AddWithValue("@id", nguoi.ID);
+                        if (cmd.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("Lưu thông tin thành công", "Thông báo");
+                            FInfo_Load(sender, e);
+                        }
                     }
+
                 }
                 catch (Exception)
                 {
@@ -90,7 +99,9 @@ namespace ProjectWin_Demo_
             if (result == DialogResult.Yes)
             {
                 nguoiDAO.xoaTaiKhoan();
-                this.Close();
+                MessageBox.Show("Đã xóa tài khoản khỏi hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FNguoiDung fNguoiDung = new FNguoiDung(id);
+                fNguoiDung.btnLogOut_Click(sender, e);
             }
         }
         private void btnHistory_MouseDown(object sender, MouseEventArgs e)
@@ -112,7 +123,6 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.Black;
             btnRevenue.CustomBorderColor = Color.White;
-            //ucThongTin = new ucThongTin(id);
             addUserControl(ucThongTin);
         }
 
@@ -136,7 +146,6 @@ namespace ProjectWin_Demo_
             btnHistory.CustomBorderColor = Color.White;
             btnRevenue.ForeColor = Color.MediumSlateBlue;
             btnRevenue.CustomBorderColor = Color.MediumSlateBlue;
-            //UCDoanhThu ucRevenue = new UCDoanhThu();
             openChildForm(new FDoanhThu(id));
         }
         private void addUserControl(UserControl userControl)

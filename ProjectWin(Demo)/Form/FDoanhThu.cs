@@ -43,7 +43,6 @@ namespace ProjectWin_Demo_
             gvDoanhThu.DataSource = daMuaDAO.LoadDoanhThu(cbxThang.Text, txtNam.Text);
             gvDoanhThu.Columns[0].HeaderText = "Số lượng bán được";
             gvDoanhThu.Columns[1].HeaderText = "Tổng tiền";
-            //a.LoadDoanhThu(gvDoanhThu, cbxThang.Text, txtNam.Text);
             chartDoanhThu.Text = "Doanh thu năm: " + txtNam.Text;
             if (int.TryParse(txtNam.Text, out int nguyen))
             {
@@ -77,7 +76,6 @@ namespace ProjectWin_Demo_
                 {
                     series.Points.AddXY($"T {row["Tháng"]}", row["Doanh thu"]);
                 }
-                //a.LoadBieuDoDoanhThu(txtNam.Text, chartDoanhThu);
             }
         }
         private void btnChiTiet_Click(object sender, EventArgs e)
@@ -97,7 +95,6 @@ namespace ProjectWin_Demo_
             gvChiTiet.Columns[5].HeaderText = "Thời gian nhận";
             gvChiTiet.Columns[6].HeaderText = "Địa chỉ giao";
             gvChiTiet.Columns[7].HeaderText = "Thành tiền";
-            //a.LoadChiTietDoanhThu(gvChiTiet, cbxThang.Text, txtNam.Text);
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -115,13 +112,6 @@ namespace ProjectWin_Demo_
         private void FDoanhThu_Load(object sender, EventArgs e)
         {
             btnChiTiet_Click(sender, e);
-            //btnThongKe.CustomBorderColor = Color.White;
-            //btnChiTiet.CustomBorderColor = Color.DarkTurquoise;
-            //gvDoanhThu.Hide();
-            //chartDoanhThu.Hide();
-            //gvChiTiet.Show();
-            //detail = true;
-            //a.LoadChiTietDoanhThu(gvChiTiet, cbxThang.Text, txtNam.Text);
         }
     }
 }

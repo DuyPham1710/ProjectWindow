@@ -37,39 +37,30 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2GradientButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpBornYear = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.rdoOther = new System.Windows.Forms.RadioButton();
-            this.rdoWoman = new System.Windows.Forms.RadioButton();
-            this.rdoMan = new System.Windows.Forms.RadioButton();
-            this.lbl8 = new System.Windows.Forms.Label();
+            this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rdoKhac = new System.Windows.Forms.RadioButton();
+            this.rdoNu = new System.Windows.Forms.RadioButton();
+            this.rdoNam = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.lbl9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lbl0 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtVerifyPassWord = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtXacNhanMK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSoDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl4 = new System.Windows.Forms.Label();
+            this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.lbl6 = new System.Windows.Forms.Label();
+            this.lblXacNhanMK = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.lbl5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbAddress = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbl7 = new System.Windows.Forms.Label();
+            this.cbDiaChi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -190,32 +181,28 @@
             this.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSignUp.FillColor = System.Drawing.Color.Teal;
             this.btnSignUp.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSignUp.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(180, 430);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(200, 33);
             this.btnSignUp.TabIndex = 20;
-            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Text = "Đăng ký";
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FloralWhite;
-            this.groupBox1.Controls.Add(this.dtpBornYear);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.txtCCCD);
-            this.groupBox1.Controls.Add(this.txtFullName);
-            this.groupBox1.Controls.Add(this.rdoOther);
-            this.groupBox1.Controls.Add(this.rdoWoman);
-            this.groupBox1.Controls.Add(this.rdoMan);
-            this.groupBox1.Controls.Add(this.lbl8);
+            this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Controls.Add(this.rdoKhac);
+            this.groupBox1.Controls.Add(this.rdoNu);
+            this.groupBox1.Controls.Add(this.rdoNam);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.lbl9);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.lbl0);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.lbl1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(25, 31);
@@ -225,22 +212,22 @@
             this.groupBox1.Size = new System.Drawing.Size(246, 289);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personal";
+            this.groupBox1.Text = "Thông tin người dùng";
             // 
-            // dtpBornYear
+            // dtpNgaySinh
             // 
-            this.dtpBornYear.Checked = true;
-            this.dtpBornYear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtpBornYear.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBornYear.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBornYear.Location = new System.Drawing.Point(8, 100);
-            this.dtpBornYear.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpBornYear.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBornYear.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBornYear.Name = "dtpBornYear";
-            this.dtpBornYear.Size = new System.Drawing.Size(220, 27);
-            this.dtpBornYear.TabIndex = 18;
-            this.dtpBornYear.Value = new System.DateTime(2024, 3, 12, 15, 39, 52, 864);
+            this.dtpNgaySinh.Checked = true;
+            this.dtpNgaySinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(8, 123);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(220, 27);
+            this.dtpNgaySinh.TabIndex = 18;
+            this.dtpNgaySinh.Value = new System.DateTime(2024, 3, 12, 15, 39, 52, 864);
             // 
             // txtCCCD
             // 
@@ -256,7 +243,7 @@
             this.txtCCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtCCCD.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCCCD.Location = new System.Drawing.Point(5, 232);
+            this.txtCCCD.Location = new System.Drawing.Point(5, 247);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.PasswordChar = '\0';
             this.txtCCCD.PlaceholderText = "Enter CCCD";
@@ -266,182 +253,130 @@
             this.txtCCCD.TabIndex = 17;
             this.txtCCCD.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // txtFullName
+            // txtHoTen
             // 
-            this.txtFullName.BackColor = System.Drawing.Color.White;
-            this.txtFullName.BorderRadius = 30;
-            this.txtFullName.BorderThickness = 3;
-            this.txtFullName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtFullName.DefaultText = "";
-            this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFullName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFullName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtFullName.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Location = new System.Drawing.Point(5, 38);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
-            this.txtFullName.PlaceholderText = "Enter FullName";
-            this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(223, 26);
-            this.txtFullName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtFullName.TabIndex = 16;
-            this.txtFullName.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtHoTen.BackColor = System.Drawing.Color.White;
+            this.txtHoTen.BorderRadius = 30;
+            this.txtHoTen.BorderThickness = 3;
+            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtHoTen.DefaultText = "";
+            this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoTen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtHoTen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtHoTen.Location = new System.Drawing.Point(5, 58);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.PasswordChar = '\0';
+            this.txtHoTen.PlaceholderText = "Enter FullName";
+            this.txtHoTen.SelectedText = "";
+            this.txtHoTen.Size = new System.Drawing.Size(223, 26);
+            this.txtHoTen.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtHoTen.TabIndex = 16;
+            this.txtHoTen.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // rdoOther
+            // rdoKhac
             // 
-            this.rdoOther.AutoSize = true;
-            this.rdoOther.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.rdoOther.Location = new System.Drawing.Point(124, 162);
-            this.rdoOther.Margin = new System.Windows.Forms.Padding(2);
-            this.rdoOther.Name = "rdoOther";
-            this.rdoOther.Size = new System.Drawing.Size(54, 20);
-            this.rdoOther.TabIndex = 15;
-            this.rdoOther.TabStop = true;
-            this.rdoOther.Text = "Khác";
-            this.rdoOther.UseVisualStyleBackColor = true;
+            this.rdoKhac.AutoSize = true;
+            this.rdoKhac.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.rdoKhac.Location = new System.Drawing.Point(124, 182);
+            this.rdoKhac.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoKhac.Name = "rdoKhac";
+            this.rdoKhac.Size = new System.Drawing.Size(54, 20);
+            this.rdoKhac.TabIndex = 15;
+            this.rdoKhac.TabStop = true;
+            this.rdoKhac.Text = "Khác";
+            this.rdoKhac.UseVisualStyleBackColor = true;
             // 
-            // rdoWoman
+            // rdoNu
             // 
-            this.rdoWoman.AutoSize = true;
-            this.rdoWoman.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.rdoWoman.Location = new System.Drawing.Point(68, 162);
-            this.rdoWoman.Margin = new System.Windows.Forms.Padding(2);
-            this.rdoWoman.Name = "rdoWoman";
-            this.rdoWoman.Size = new System.Drawing.Size(43, 20);
-            this.rdoWoman.TabIndex = 14;
-            this.rdoWoman.TabStop = true;
-            this.rdoWoman.Text = "Nữ";
-            this.rdoWoman.UseVisualStyleBackColor = true;
+            this.rdoNu.AutoSize = true;
+            this.rdoNu.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.rdoNu.Location = new System.Drawing.Point(68, 182);
+            this.rdoNu.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoNu.Name = "rdoNu";
+            this.rdoNu.Size = new System.Drawing.Size(43, 20);
+            this.rdoNu.TabIndex = 14;
+            this.rdoNu.TabStop = true;
+            this.rdoNu.Text = "Nữ";
+            this.rdoNu.UseVisualStyleBackColor = true;
             // 
-            // rdoMan
+            // rdoNam
             // 
-            this.rdoMan.AutoSize = true;
-            this.rdoMan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMan.Location = new System.Drawing.Point(8, 162);
-            this.rdoMan.Margin = new System.Windows.Forms.Padding(2);
-            this.rdoMan.Name = "rdoMan";
-            this.rdoMan.Size = new System.Drawing.Size(52, 20);
-            this.rdoMan.TabIndex = 13;
-            this.rdoMan.TabStop = true;
-            this.rdoMan.Text = "Nam";
-            this.rdoMan.UseVisualStyleBackColor = true;
-            // 
-            // lbl8
-            // 
-            this.lbl8.AutoSize = true;
-            this.lbl8.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl8.ForeColor = System.Drawing.Color.Red;
-            this.lbl8.Location = new System.Drawing.Point(5, 262);
-            this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(106, 14);
-            this.lbl8.TabIndex = 12;
-            this.lbl8.Text = "Tên không chính xác";
+            this.rdoNam.AutoSize = true;
+            this.rdoNam.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNam.Location = new System.Drawing.Point(8, 182);
+            this.rdoNam.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoNam.Name = "rdoNam";
+            this.rdoNam.Size = new System.Drawing.Size(52, 20);
+            this.rdoNam.TabIndex = 13;
+            this.rdoNam.TabStop = true;
+            this.rdoNam.Text = "Nam";
+            this.rdoNam.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label16.Location = new System.Drawing.Point(5, 214);
+            this.label16.Location = new System.Drawing.Point(5, 222);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 16);
             this.label16.TabIndex = 11;
             this.label16.Text = "CCCD";
             // 
-            // lbl9
-            // 
-            this.lbl9.AutoSize = true;
-            this.lbl9.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.ForeColor = System.Drawing.Color.Red;
-            this.lbl9.Location = new System.Drawing.Point(6, 194);
-            this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(153, 14);
-            this.lbl9.TabIndex = 9;
-            this.lbl9.Text = "Vui lòng chọn giới tính phù hợp";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label11.Location = new System.Drawing.Point(5, 144);
+            this.label11.Location = new System.Drawing.Point(5, 164);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 16);
+            this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Gender";
-            // 
-            // lbl0
-            // 
-            this.lbl0.AutoSize = true;
-            this.lbl0.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl0.ForeColor = System.Drawing.Color.Red;
-            this.lbl0.Location = new System.Drawing.Point(5, 129);
-            this.lbl0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl0.Name = "lbl0";
-            this.lbl0.Size = new System.Drawing.Size(101, 14);
-            this.lbl0.TabIndex = 5;
-            this.lbl0.Text = "Chưa đủ tuổi đăng kí";
+            this.label11.Text = "Giới tính";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(5, 81);
+            this.label4.Location = new System.Drawing.Point(5, 101);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Date of Birth";
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Red;
-            this.lbl1.Location = new System.Drawing.Point(5, 67);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(106, 14);
-            this.lbl1.TabIndex = 2;
-            this.lbl1.Text = "Tên không chính xác";
+            this.label4.Text = "Ngày sinh";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(5, 20);
+            this.label1.Location = new System.Drawing.Point(5, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Full Name";
+            this.label1.Text = "Họ và tên";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FloralWhite;
-            this.groupBox2.Controls.Add(this.txtVerifyPassWord);
-            this.groupBox2.Controls.Add(this.txtPassWord);
-            this.groupBox2.Controls.Add(this.txtPhoneNumber);
+            this.groupBox2.Controls.Add(this.txtXacNhanMK);
+            this.groupBox2.Controls.Add(this.txtMatKhau);
+            this.groupBox2.Controls.Add(this.txtSoDT);
             this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.txtUserName);
-            this.groupBox2.Controls.Add(this.lbl4);
+            this.groupBox2.Controls.Add(this.txtTenDangNhap);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.lbl6);
+            this.groupBox2.Controls.Add(this.lblXacNhanMK);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.lbl5);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.lbl3);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.lbl2);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(285, 28);
@@ -451,79 +386,79 @@
             this.groupBox2.Size = new System.Drawing.Size(254, 381);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Account";
+            this.groupBox2.Text = "Tài khoản";
             // 
-            // txtVerifyPassWord
+            // txtXacNhanMK
             // 
-            this.txtVerifyPassWord.BackColor = System.Drawing.Color.White;
-            this.txtVerifyPassWord.BorderRadius = 30;
-            this.txtVerifyPassWord.BorderThickness = 3;
-            this.txtVerifyPassWord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtVerifyPassWord.DefaultText = "";
-            this.txtVerifyPassWord.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtVerifyPassWord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtVerifyPassWord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVerifyPassWord.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVerifyPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtVerifyPassWord.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtVerifyPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVerifyPassWord.Location = new System.Drawing.Point(6, 292);
-            this.txtVerifyPassWord.Name = "txtVerifyPassWord";
-            this.txtVerifyPassWord.PasswordChar = '\0';
-            this.txtVerifyPassWord.PlaceholderText = "Enter Verify PassWord";
-            this.txtVerifyPassWord.SelectedText = "";
-            this.txtVerifyPassWord.Size = new System.Drawing.Size(223, 26);
-            this.txtVerifyPassWord.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtVerifyPassWord.TabIndex = 21;
-            this.txtVerifyPassWord.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtXacNhanMK.BackColor = System.Drawing.Color.White;
+            this.txtXacNhanMK.BorderRadius = 30;
+            this.txtXacNhanMK.BorderThickness = 3;
+            this.txtXacNhanMK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtXacNhanMK.DefaultText = "";
+            this.txtXacNhanMK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtXacNhanMK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtXacNhanMK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtXacNhanMK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtXacNhanMK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtXacNhanMK.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtXacNhanMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtXacNhanMK.Location = new System.Drawing.Point(6, 308);
+            this.txtXacNhanMK.Name = "txtXacNhanMK";
+            this.txtXacNhanMK.PasswordChar = '\0';
+            this.txtXacNhanMK.PlaceholderText = "Enter Verify PassWord";
+            this.txtXacNhanMK.SelectedText = "";
+            this.txtXacNhanMK.Size = new System.Drawing.Size(223, 26);
+            this.txtXacNhanMK.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtXacNhanMK.TabIndex = 21;
+            this.txtXacNhanMK.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // txtPassWord
+            // txtMatKhau
             // 
-            this.txtPassWord.BackColor = System.Drawing.Color.White;
-            this.txtPassWord.BorderRadius = 30;
-            this.txtPassWord.BorderThickness = 3;
-            this.txtPassWord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPassWord.DefaultText = "";
-            this.txtPassWord.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassWord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassWord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassWord.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPassWord.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassWord.Location = new System.Drawing.Point(5, 232);
-            this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.PasswordChar = '\0';
-            this.txtPassWord.PlaceholderText = "Enter PassWord";
-            this.txtPassWord.SelectedText = "";
-            this.txtPassWord.Size = new System.Drawing.Size(223, 26);
-            this.txtPassWord.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtPassWord.TabIndex = 20;
-            this.txtPassWord.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtMatKhau.BackColor = System.Drawing.Color.White;
+            this.txtMatKhau.BorderRadius = 30;
+            this.txtMatKhau.BorderThickness = 3;
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtMatKhau.DefaultText = "";
+            this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.Location = new System.Drawing.Point(5, 248);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '\0';
+            this.txtMatKhau.PlaceholderText = "Enter PassWord";
+            this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.Size = new System.Drawing.Size(223, 26);
+            this.txtMatKhau.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtMatKhau.TabIndex = 20;
+            this.txtMatKhau.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // txtPhoneNumber
+            // txtSoDT
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.Color.White;
-            this.txtPhoneNumber.BorderRadius = 30;
-            this.txtPhoneNumber.BorderThickness = 3;
-            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPhoneNumber.DefaultText = "";
-            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(6, 164);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PasswordChar = '\0';
-            this.txtPhoneNumber.PlaceholderText = "Enter PhoneNumber";
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(224, 26);
-            this.txtPhoneNumber.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtPhoneNumber.TabIndex = 19;
-            this.txtPhoneNumber.TextOffset = new System.Drawing.Point(5, 0);
+            this.txtSoDT.BackColor = System.Drawing.Color.White;
+            this.txtSoDT.BorderRadius = 30;
+            this.txtSoDT.BorderThickness = 3;
+            this.txtSoDT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSoDT.DefaultText = "";
+            this.txtSoDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoDT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtSoDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoDT.Location = new System.Drawing.Point(6, 180);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.PasswordChar = '\0';
+            this.txtSoDT.PlaceholderText = "Enter PhoneNumber";
+            this.txtSoDT.SelectedText = "";
+            this.txtSoDT.Size = new System.Drawing.Size(224, 26);
+            this.txtSoDT.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtSoDT.TabIndex = 19;
+            this.txtSoDT.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // txtEmail
             // 
@@ -539,7 +474,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(5, 100);
+            this.txtEmail.Location = new System.Drawing.Point(5, 116);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Enter Email";
@@ -549,155 +484,106 @@
             this.txtEmail.TabIndex = 18;
             this.txtEmail.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // txtUserName
+            // txtTenDangNhap
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.White;
-            this.txtUserName.BorderRadius = 30;
-            this.txtUserName.BorderThickness = 3;
-            this.txtUserName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtUserName.DefaultText = "";
-            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtUserName.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserName.Location = new System.Drawing.Point(5, 38);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.PasswordChar = '\0';
-            this.txtUserName.PlaceholderText = "Enter UserName";
-            this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(223, 26);
-            this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtUserName.TabIndex = 17;
-            this.txtUserName.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // lbl4
-            // 
-            this.lbl4.AutoSize = true;
-            this.lbl4.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.ForeColor = System.Drawing.Color.Red;
-            this.lbl4.Location = new System.Drawing.Point(7, 193);
-            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(147, 14);
-            this.lbl4.TabIndex = 14;
-            this.lbl4.Text = "Số điện thoại không chính xác";
+            this.txtTenDangNhap.BackColor = System.Drawing.Color.White;
+            this.txtTenDangNhap.BorderRadius = 30;
+            this.txtTenDangNhap.BorderThickness = 3;
+            this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtTenDangNhap.DefaultText = "";
+            this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtTenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDangNhap.Location = new System.Drawing.Point(5, 56);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.PasswordChar = '\0';
+            this.txtTenDangNhap.PlaceholderText = "Enter UserName";
+            this.txtTenDangNhap.SelectedText = "";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(223, 26);
+            this.txtTenDangNhap.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtTenDangNhap.TabIndex = 17;
+            this.txtTenDangNhap.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label18.Location = new System.Drawing.Point(6, 145);
+            this.label18.Location = new System.Drawing.Point(6, 161);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(42, 16);
+            this.label18.Size = new System.Drawing.Size(80, 16);
             this.label18.TabIndex = 13;
-            this.label18.Text = "Phone";
+            this.label18.Text = "Số điện thoại";
             // 
-            // lbl6
+            // lblXacNhanMK
             // 
-            this.lbl6.AutoSize = true;
-            this.lbl6.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl6.ForeColor = System.Drawing.Color.Red;
-            this.lbl6.Location = new System.Drawing.Point(7, 324);
-            this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(137, 14);
-            this.lbl6.TabIndex = 11;
-            this.lbl6.Text = "Mật khẩu không trùng khớp";
+            this.lblXacNhanMK.AutoSize = true;
+            this.lblXacNhanMK.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblXacNhanMK.ForeColor = System.Drawing.Color.Red;
+            this.lblXacNhanMK.Location = new System.Drawing.Point(7, 340);
+            this.lblXacNhanMK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblXacNhanMK.Name = "lblXacNhanMK";
+            this.lblXacNhanMK.Size = new System.Drawing.Size(137, 14);
+            this.lblXacNhanMK.TabIndex = 11;
+            this.lblXacNhanMK.Text = "Mật khẩu không trùng khớp";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label14.Location = new System.Drawing.Point(6, 276);
+            this.label14.Location = new System.Drawing.Point(6, 292);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 16);
+            this.label14.Size = new System.Drawing.Size(117, 16);
             this.label14.TabIndex = 10;
-            this.label14.Text = "Verify PassWord";
-            // 
-            // lbl5
-            // 
-            this.lbl5.AutoSize = true;
-            this.lbl5.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.ForeColor = System.Drawing.Color.Red;
-            this.lbl5.Location = new System.Drawing.Point(7, 262);
-            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(156, 14);
-            this.lbl5.TabIndex = 8;
-            this.lbl5.Text = "Mật khẩu phải có ít nhất 8 kí tự";
+            this.label14.Text = "Xác nhận mật khẩu";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label10.Location = new System.Drawing.Point(6, 214);
+            this.label10.Location = new System.Drawing.Point(6, 230);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.Size = new System.Drawing.Size(63, 16);
             this.label10.TabIndex = 7;
-            this.label10.Text = "PassWord";
-            // 
-            // lbl3
-            // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.ForeColor = System.Drawing.Color.Red;
-            this.lbl3.Location = new System.Drawing.Point(7, 129);
-            this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(114, 14);
-            this.lbl3.TabIndex = 5;
-            this.lbl3.Text = "Email không chính xác";
+            this.label10.Text = "Mẩu khẩu";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label6.Location = new System.Drawing.Point(6, 81);
+            this.label6.Location = new System.Drawing.Point(6, 97);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Email";
             // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.ForeColor = System.Drawing.Color.Red;
-            this.lbl2.Location = new System.Drawing.Point(7, 67);
-            this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(106, 14);
-            this.lbl2.TabIndex = 2;
-            this.lbl2.Text = "Tên không chính xác";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label8.Location = new System.Drawing.Point(6, 20);
+            this.label8.Location = new System.Drawing.Point(6, 34);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 16);
+            this.label8.Size = new System.Drawing.Size(91, 16);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Name Login";
+            this.label8.Text = "Tên đăng nhập";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FloralWhite;
-            this.groupBox3.Controls.Add(this.cbAddress);
-            this.groupBox3.Controls.Add(this.lbl7);
+            this.groupBox3.Controls.Add(this.cbDiaChi);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(25, 332);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -706,28 +592,28 @@
             this.groupBox3.Size = new System.Drawing.Size(246, 77);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Address";
+            this.groupBox3.Text = "Địa chỉ";
             // 
-            // cbAddress
+            // cbDiaChi
             // 
-            this.cbAddress.AccessibleName = "";
-            this.cbAddress.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cbDiaChi.AccessibleName = "";
+            this.cbDiaChi.AutoCompleteCustomSource.AddRange(new string[] {
             "a"});
-            this.cbAddress.BackColor = System.Drawing.Color.Transparent;
-            this.cbAddress.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cbAddress.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.cbAddress.BorderThickness = 0;
-            this.cbAddress.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.cbAddress.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbAddress.DropDownHeight = 150;
-            this.cbAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAddress.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbAddress.IntegralHeight = false;
-            this.cbAddress.ItemHeight = 30;
-            this.cbAddress.Items.AddRange(new object[] {
+            this.cbDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.cbDiaChi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cbDiaChi.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.cbDiaChi.BorderThickness = 0;
+            this.cbDiaChi.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.cbDiaChi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDiaChi.DropDownHeight = 150;
+            this.cbDiaChi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDiaChi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiaChi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbDiaChi.IntegralHeight = false;
+            this.cbDiaChi.ItemHeight = 30;
+            this.cbDiaChi.Items.AddRange(new object[] {
             "An Giang",
             "Bà Rịa - Vũng Tàu",
             "Bạc Liêu",
@@ -791,25 +677,13 @@
             "Vĩnh Long",
             "Vĩnh Phúc",
             "Yên Bái"});
-            this.cbAddress.Location = new System.Drawing.Point(8, 24);
-            this.cbAddress.Margin = new System.Windows.Forms.Padding(2);
-            this.cbAddress.Name = "cbAddress";
-            this.cbAddress.Size = new System.Drawing.Size(221, 36);
-            this.cbAddress.StartIndex = 0;
-            this.cbAddress.TabIndex = 3;
-            this.cbAddress.UseWaitCursor = true;
-            // 
-            // lbl7
-            // 
-            this.lbl7.AutoSize = true;
-            this.lbl7.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl7.ForeColor = System.Drawing.Color.Red;
-            this.lbl7.Location = new System.Drawing.Point(5, 58);
-            this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(103, 14);
-            this.lbl7.TabIndex = 2;
-            this.lbl7.Text = "Vui lòng nhập địa chỉ";
+            this.cbDiaChi.Location = new System.Drawing.Point(8, 24);
+            this.cbDiaChi.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDiaChi.Name = "cbDiaChi";
+            this.cbDiaChi.Size = new System.Drawing.Size(221, 36);
+            this.cbDiaChi.StartIndex = 0;
+            this.cbDiaChi.TabIndex = 3;
+            this.cbDiaChi.UseWaitCursor = true;
             // 
             // guna2ShadowForm1
             // 
@@ -836,7 +710,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -845,17 +718,12 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbl7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.Label lblXacNhanMK;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -863,26 +731,22 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimize;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
-        private Guna.UI2.WinForms.Guna2TextBox txtVerifyPassWord;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassWord;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhoneNumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtXacNhanMK;
+        private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoDT;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBornYear;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenDangNhap;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaySinh;
         private Guna.UI2.WinForms.Guna2TextBox txtCCCD;
-        private Guna.UI2.WinForms.Guna2TextBox txtFullName;
-        private System.Windows.Forms.RadioButton rdoOther;
-        private System.Windows.Forms.RadioButton rdoWoman;
-        private System.Windows.Forms.RadioButton rdoMan;
-        private System.Windows.Forms.Label lbl8;
+        private Guna.UI2.WinForms.Guna2TextBox txtHoTen;
+        private System.Windows.Forms.RadioButton rdoKhac;
+        private System.Windows.Forms.RadioButton rdoNu;
+        private System.Windows.Forms.RadioButton rdoNam;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label lbl9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lbl0;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbAddress;
+        private Guna.UI2.WinForms.Guna2ComboBox cbDiaChi;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

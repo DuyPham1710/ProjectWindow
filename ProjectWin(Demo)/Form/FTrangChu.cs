@@ -83,6 +83,7 @@ namespace ProjectWin_Demo_
             List<UCSanPham> sanPham = SPDao.timKiem<UCSanPham>(searchText, "<>");
             foreach (UCSanPham sp in sanPham)
             {
+                sp.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(sp);
             }
         }
@@ -111,6 +112,7 @@ namespace ProjectWin_Demo_
             List<UCSanPham> sanPham = SPDao.LocTheoDanhMuc(danhMuc);
             foreach (UCSanPham sp in sanPham)
             {
+                sp.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(sp);
             }
         }
@@ -151,7 +153,8 @@ namespace ProjectWin_Demo_
             List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Tang dan");
             foreach (UCSanPham uCSanPham in cacSanPham)
             {
-                //UCSanPham uCSanPham = new UCSanPham(sp, id);
+                
+                uCSanPham.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
@@ -162,7 +165,7 @@ namespace ProjectWin_Demo_
             List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Giam dan");
             foreach (UCSanPham uCSanPham in cacSanPham)
             {
-                //UCSanPham uCSanPham = new UCSanPham(sp, id);
+                uCSanPham.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
@@ -171,9 +174,11 @@ namespace ProjectWin_Demo_
         {
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.SanPhamUaChuong();
-            foreach (UCSanPham sp in sanPham)
+            foreach (UCSanPham uCSanPham in sanPham)
             {
-                fPanelSanPham.Controls.Add(sp);
+
+                uCSanPham.BtnClick_ChiTiet += UCChiTiet_Click;
+                fPanelSanPham.Controls.Add(uCSanPham);
             }
         }
 
@@ -186,6 +191,7 @@ namespace ProjectWin_Demo_
             {
                 sp.btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
                 sp.chon = true;
+                sp.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(sp);
             }
         }

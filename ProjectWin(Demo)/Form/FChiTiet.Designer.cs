@@ -84,6 +84,8 @@ namespace ProjectWin_Demo_
             this.nudSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lblAmount = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTenShop = new System.Windows.Forms.Label();
+            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnXemTrang = new CustomButton.VBButton();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
@@ -97,8 +99,7 @@ namespace ProjectWin_Demo_
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.pcbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lblTenShop = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox9)).BeginInit();
@@ -117,9 +118,9 @@ namespace ProjectWin_Demo_
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.pToolBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -132,6 +133,7 @@ namespace ProjectWin_Demo_
             this.guna2Panel4.AutoScroll = true;
             this.guna2Panel4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel4.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.Controls.Add(this.label1);
             this.guna2Panel4.Controls.Add(this.guna2CustomGradientPanel4);
             this.guna2Panel4.Controls.Add(this.guna2PictureBox10);
@@ -240,12 +242,12 @@ namespace ProjectWin_Demo_
             // 
             this.lblSPConLai.AutoSize = true;
             this.lblSPConLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSPConLai.Location = new System.Drawing.Point(880, 276);
+            this.lblSPConLai.Location = new System.Drawing.Point(944, 281);
             this.lblSPConLai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSPConLai.Name = "lblSPConLai";
-            this.lblSPConLai.Size = new System.Drawing.Size(71, 17);
+            this.lblSPConLai.Size = new System.Drawing.Size(20, 17);
             this.lblSPConLai.TabIndex = 41;
-            this.lblSPConLai.Text = "Còn lại: 2 ";
+            this.lblSPConLai.Text = "2 ";
             this.lblSPConLai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblGiaBanDau
@@ -824,6 +826,27 @@ namespace ProjectWin_Demo_
             this.panel3.Size = new System.Drawing.Size(270, 54);
             this.panel3.TabIndex = 30;
             // 
+            // lblTenShop
+            // 
+            this.lblTenShop.AutoSize = true;
+            this.lblTenShop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenShop.Location = new System.Drawing.Point(75, 17);
+            this.lblTenShop.Name = "lblTenShop";
+            this.lblTenShop.Size = new System.Drawing.Size(70, 19);
+            this.lblTenShop.TabIndex = 19;
+            this.lblTenShop.Text = "Tên shop";
+            // 
+            // pcbAvt
+            // 
+            this.pcbAvt.ImageRotate = 0F;
+            this.pcbAvt.Location = new System.Drawing.Point(3, 1);
+            this.pcbAvt.Name = "pcbAvt";
+            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pcbAvt.Size = new System.Drawing.Size(50, 50);
+            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbAvt.TabIndex = 18;
+            this.pcbAvt.TabStop = false;
+            // 
             // btnXemTrang
             // 
             this.btnXemTrang.BackColor = System.Drawing.Color.Transparent;
@@ -1029,26 +1052,17 @@ namespace ProjectWin_Demo_
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // pcbAvt
+            // label2
             // 
-            this.pcbAvt.ImageRotate = 0F;
-            this.pcbAvt.Location = new System.Drawing.Point(3, 1);
-            this.pcbAvt.Name = "pcbAvt";
-            this.pcbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pcbAvt.Size = new System.Drawing.Size(50, 50);
-            this.pcbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbAvt.TabIndex = 18;
-            this.pcbAvt.TabStop = false;
-            // 
-            // lblTenShop
-            // 
-            this.lblTenShop.AutoSize = true;
-            this.lblTenShop.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenShop.Location = new System.Drawing.Point(75, 17);
-            this.lblTenShop.Name = "lblTenShop";
-            this.lblTenShop.Size = new System.Drawing.Size(70, 19);
-            this.lblTenShop.TabIndex = 19;
-            this.lblTenShop.Text = "Tên shop";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(885, 280);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Còn lại:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FChiTiet
             // 
@@ -1084,9 +1098,9 @@ namespace ProjectWin_Demo_
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.pToolBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1161,5 +1175,6 @@ namespace ProjectWin_Demo_
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private System.Windows.Forms.Label lblTenShop;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pcbAvt;
+        private System.Windows.Forms.Label label2;
     }
 }

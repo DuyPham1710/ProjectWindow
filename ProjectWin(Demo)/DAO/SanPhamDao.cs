@@ -53,11 +53,7 @@ namespace ProjectWin_Demo_
             }
             return dt.Rows[0]["MSP"].ToString();
         }
-        //public string LayMaSP()
-        //{
-        //    string sqlStr = string.Format("SELECT MSP FROM SanPham WHERE IDchuSP = {0}", id);
-        //    return dBConnection.LayMaSP(sqlStr);
-        //}
+       
         public List<SanPham> chiTietSanPham(string maSP)
         {
             string sqlStr = string.Format("SELECT * FROM SanPham WHERE MSP = '{0}'", maSP);
@@ -73,7 +69,6 @@ namespace ProjectWin_Demo_
         public List<T> LoadSanPham<T>(string toanTu)
         {
             string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP {0} {1}", toanTu, id);
-            //return dBConnection.LoadSanPham<T>(sqlStr);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<T> DSSanPham = new List<T>();
             foreach (DataRow row in dt.Rows)
@@ -90,18 +85,6 @@ namespace ProjectWin_Demo_
                     UCSPCuaToi ucSP = new UCSPCuaToi(sp);
                     DSSanPham.Add((T)(object)ucSP);
                 }
-                //else if (typeof(T) == typeof(UCSPDaBan))
-                //{
-                //    UCSPDaBan ucSP = new UCSPDaBan(sp, id);
-                //    DSSanPham.Add((T)(object)ucSP);
-                //}
-                //else if (typeof(T) == typeof(UCGioHang))
-                //{
-                //    //int soLuong = (int)reader["SLGioHang"];
-                //    int soLuong = Int32.Parse(dt.Rows[0]["SLGioHang"].ToString());
-                //    UCGioHang ucSP = new UCGioHang(sp, id, soLuong);
-                //    DSSanPham.Add((T)(object)ucSP);
-                //}
             }
             return DSSanPham;
 
@@ -132,17 +115,8 @@ namespace ProjectWin_Demo_
                 DSSanPham.Add(ucSP);
             }
             return DSSanPham;
-            //return dBConnection.LoadSanPham<T>(sqlStr);
         }
-        //public List<T> LoadSanPhamDaBan<T>()
-        //{
-        //    string sqlStr = string.Format("SELECT * FROM SanPham inner join DaMua on SanPham.MSP = DaMua.MSP WHERE IDchuSP = {0} and TrangThai = N'Đã giao'", id);
-        //    DataTable dt = dBConnection.LoadSanPham(sqlStr);
-        //    foreach (DataRow row in dt.Rows) { 
-        //    }
-        //    //return dBConnection.LoadSanPham<T>(sqlStr);
-        //}
-
+      
         public List<T> timKiem<T>(string searchText, string toanTu)
         {
             string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP {0} {1} and TenSP LIKE N'%{2}%'", toanTu, id, searchText);
@@ -180,11 +154,7 @@ namespace ProjectWin_Demo_
             SanPham sp = new SanPham(dt.Rows[0]);
             return sp;
         }
-        //public List<T> timKiemGioHang<T>(string searchText)
-        //{
-        //    string sqlStr = string.Format("SELECT SanPham.*, GioHang.SoLuong as SLGioHang FROM GioHang, SanPham WHERE GioHang.MSP = SanPham.MSP and IDNguoiMua = {0} and TenSP LIKE @searchText", id);
-        //    return dBConnection.timKiemSP<T>(sqlStr, searchText);
-        //}
+       
         public List<UCSanPham> LocTheoDanhMuc(string danhMuc)
         {
             string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
@@ -196,14 +166,9 @@ namespace ProjectWin_Demo_
                 UCSanPham ucSP = new UCSanPham(sp, id);
                 DSSanPham.Add(ucSP);
             }
-            return DSSanPham;
-           // return dBConnection.LoadSanPham(sqlQuery);
+            return DSSanPham;         
         }
-        //public List<T> LocTheoDanhMuc<T>(string danhMuc)
-        //{
-        //    string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}'", id, danhMuc);
-        //    return dBConnection.LoadSanPham<T>(sqlQuery);
-        //}
+    
         public List<UCSanPham> LoadSanPhamTuongTu(SanPham sp)
         {
             string sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}' and MSP <> '{2}'", id, sp.DanhMuc, sp.MaSP);
@@ -217,11 +182,7 @@ namespace ProjectWin_Demo_
             }
             return DSSanPham;
         }
-        //public List<T> LoadSanPhamTuongTu<T>(SanPham sp)
-        //{
-        //    string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and DanhMuc = N'{1}' and MSP <> '{2}'", id, sp.DanhMuc, sp.MaSP);
-        //    return dBConnection.LoadSanPham<T>(sqlQuery);
-        //}
+      
         public List<UCBinhLuan> LoadDanhGia(string maSP)
         {
             string query = string.Format("Select ID, FullName, Avarta, BinhLuan, SoSao from Person, DanhGia, SanPham Where Person.ID = DanhGia.IDNguoiMua and DanhGia.MSP = SanPham.MSP and SanPham.MSP = '{0}'", maSP);
@@ -269,36 +230,6 @@ namespace ProjectWin_Demo_
             }
             return DSSanPham;
         }
-        //public List<SanPham> SapXepTheoGia(string sapXep)
-        //{
-        //    string sqlStr = "";
-        //    if (sapXep == "Tang dan")
-        //    {
-        //        sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} Order By GiaTienBayGio ASC", id);
-        //    }
-        //    else if (sapXep == "Giam dan")
-        //    {
-        //        sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} Order By GiaTienBayGio DESC", id);
-        //    }
-        //    return dBConnection.LoadDanhSachSanPham(sqlStr);
-        //}
-
-        //public void ThemGioHang(SanPham sanPham, int soLuong)
-        //{
-        //    string sqlStr = string.Format("SELECT SoLuong FROM GioHang WHERE MSP = '{0}' and IDNguoiMua = {1}", sanPham.MaSP, id);
-        //    if (dBConnection.demDB(sqlStr) == 0)
-        //    {
-        //        sqlStr = string.Format("INSERT INTO GioHang(IDNguoiMua, MSP, SoLuong) VALUES ({0}, '{1}', {2})",
-        //              id, sanPham.MaSP, soLuong);
-        //    }
-        //    else
-        //    {
-        //        sqlStr = string.Format("UPDATE GioHang SET Soluong = {0} WHERE MSP = '{1}'", soLuong + dBConnection.demDB(sqlStr), sanPham.MaSP);
-
-        //    }
-        //    dBConnection.thucThi(sqlStr);
-
-        //}
 
         public void SuaSanPham(SanPham sanPham) 
         {
@@ -306,19 +237,11 @@ namespace ProjectWin_Demo_
                            sanPham.TenSP, sanPham.DanhMuc, sanPham.GiaBanDau, sanPham.GiaHienTai, sanPham.NgayMuaSP.ToString(), sanPham.SoLuong, sanPham.XuatXu, sanPham.BaoHanh, sanPham.TinhTrang, sanPham.MoTaTinhTrang, sanPham.MotaSP, sanPham.AnhBanDau, sanPham.AnhHienTai, sanPham.MaSP);
             dBConnection.thucThi(sqlStr);
         }
-        
-        //public void Update(SanPham sp, Decimal soLuongSP)
-        //{
-        //    string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai, SoLuongDaMua) VALUES ({0}, '{1}', N'{2}', {3})",
-        //               id, sp.MaSP, "Chờ xác nhận", soLuongSP);
-        //    dBConnection.thucThi(sqlStr);
-        //    sqlStr = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - soLuongSP).ToString(), sp.MaSP);
-        //    dBConnection.thucThi(sqlStr);
-        //}
-        public void DatHang(SanPham sp, string maVoucher, int gia)
+           
+        public void DatHang(SanPham sp, string maVoucher)
         {
             string sqlStr = string.Format("INSERT DaMua(ID, MSP, TrangThai, SoLuongDaMua, MaVoucher, Gia, ThoiGianHienTai, ThoiGianDat) VALUES ({0}, '{1}', N'{2}', {3}, '{4}', {5}, '{6}', '{7}')",
-                       id, sp.MaSP, "Chờ xác nhận", sp.SoLuong, maVoucher, gia, DateTime.Now, DateTime.Now);
+                       id, sp.MaSP, "Chờ xác nhận", sp.SoLuong, maVoucher, Int32.Parse(sp.GiaHienTai), DateTime.Now, DateTime.Now);
             dBConnection.thucThi(sqlStr);
             sqlStr = string.Format("Select SoLuong from SanPham where MSP = '{0}'", sp.MaSP);
             int soLuongBanDau = dBConnection.soLuongSanPham(sqlStr);
@@ -343,13 +266,14 @@ namespace ProjectWin_Demo_
                 SanPham sp = new SanPham(row);
                 sp.SoLuong = row["SoLuongDaMua"].ToString();
                 sp.GiaHienTai = row["Gia"].ToString();
+                sp.MaVanChuyen = Int32.Parse(row["MaVanChuyen"].ToString());
                 DSSanPham.Add(sp);
             }
             return DSSanPham;
         }
         public List<UCSanPhamMua> DSDonMua(string trangThai)
         {
-            string query = string.Format("Select * from SanPham, Person, DaMua where Person.ID = DaMua.ID and SanPham.MSP = DaMua.MSP and DaMua.ID = {0} and  DaMua.TrangThai = N'{1}'", id, trangThai);
+            string query = string.Format("Select * from SanPham, Person, DaMua where Person.ID = DaMua.ID and SanPham.MSP = DaMua.MSP and DaMua.ID = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
 
             DataTable dt = dBConnection.LoadDuLieu(query);
             List<UCSanPhamMua> DSSanPham = new List<UCSanPhamMua>();
@@ -365,7 +289,6 @@ namespace ProjectWin_Demo_
         }
         public List<UCQuyTrinhDonHang> DSDonBan(string trangThai)
         {
-            //string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
             string query = string.Format("Select * from SanPham, Person, DaMua where Person.ID = DaMua.ID and SanPham.MSP = DaMua.MSP and SanPham.IDChuSP = {0} and  DaMua.TrangThai = N'{1}'", id, trangThai);
 
             DataTable dt = dBConnection.LoadDuLieu(query);
@@ -391,18 +314,7 @@ namespace ProjectWin_Demo_
             }
             return DSSanPham;
         }
-        //public List<SanPham> DSDonMua(string trangThai)
-        //{
-        //    string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE DaMua.ID = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
-        //    return dBConnection.LoadDSDonhang(query);
-        //}
-
-        //public List<SanPham> DSDonBan(string trangThai)
-        //{
-        //    string query = string.Format("SELECT * FROM DaMua inner join SanPham on DaMua.MSP = SanPham.MSP WHERE SanPham.IDChuSP = {0} and DaMua.TrangThai = N'{1}'", id, trangThai);
-        //    return dBConnection.LoadDSDonhang(query);
-        //}
-
+       
         public void XacNhanDonhang(SanPham sanPham, string trangThai, int soLuongDaMua)
         {
             if (trangThai != "Đã hủy")
@@ -452,18 +364,5 @@ namespace ProjectWin_Demo_
             }
             return DSSanPham;
         }
-        //public List<T> SanPhamUaChuong<T>()
-        //{
-        //    string sqlStr = string.Format("SELECT AVG(BanDuoc) FROM SanPham");
-        //    int tb = dBConnection.demDB(sqlStr);
-        //    sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and BanDuoc > {1} ", id, tb);
-        //    return dBConnection.LoadSanPham<T>(sqlStr);
-        //}
-
-        //public void DiaChiNhanHang(string hoTen, string sdt, string DiaChiNhanHang)
-        //{
-        //    string sqlStr = string.Format("INSERT INTO DiaChiGiaoHang(IDNguoiMua, MSP, HoTen, soDT, DiaChiNhanHang) VALUES ({0}, N'{1}', '{2}', N'{3}'", id, hoTen, sdt, DiaChiNhanHang);
-        //    dBConnection.thucThi(sqlStr);
-        //}
     }
 }

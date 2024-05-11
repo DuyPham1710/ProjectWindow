@@ -33,33 +33,12 @@ namespace ProjectWin_Demo_.UC
         private void UCProcessSales_Load(object sender, EventArgs e)
         {
             List<string> thongTin = daMuaDAO.LoadThongTinQuyTrinh(MaVanChuyen);
+
             lblNguoiMua.Text = thongTin[0];
             lblMaVanChuyen.Text = MaVanChuyen.ToString();
             lblSoLuong.Text = thongTin[1];
-            //try
-            //{
-            //    string query = string.Format("Select * from Person,DaMua where Person.ID = DaMua.ID and DaMua.MaVanChuyen = '{0}'", MaVanChuyen);
-            //    conn.Open();
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-            //    SqlDataReader reader = cmd.ExecuteReader();
-            //    if (reader.Read())
-            //    {
-            //        lblNguoiMua.Text = reader["FullName"].ToString();
-            //        lblMaVanChuyen.Text = MaVanChuyen.ToString();
-            //        lblSoLuong.Text = reader["SoLuongDaMua"].ToString();
-            //    }
-            //}
-            //catch
-            //{
-
-            //}
-            //finally
-            //{
-            //    conn.Close();
-            //}            
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
-            //lblSoLuong.Text = "1 sản phẩm";
             lblTongTien.Text = sp.GiaHienTai + "đ";
             lblMaSP.Text = sp.MaSP;
             if (sp.AnhHienTai != "")
@@ -76,32 +55,11 @@ namespace ProjectWin_Demo_.UC
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             ButtonClickCustom?.Invoke(this, e);
-            //try
-            //{
-            //    string query = string.Format("UPDATE DaMua SET TrangThai = N'{0}' where MSP = '{1}'", trangThai, sp.MaSP);
-            //    conn.Open();
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-
-            //    if (cmd.ExecuteNonQuery() > 0)
-            //    {
-            //        MessageBox.Show("Xác nhận thành công", "Thông báo");
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Xác nhận thất bại", "Thông báo");
-            //}
-            //finally
-            //{
-            //    conn.Close();
-            //}
-
         }
 
         private void btnHuyDon_Click(object sender, EventArgs e)
         {
             ButtonClick_HuyDonHang?.Invoke(this, e);
-            //daMuaDAO.HuyDonHang(MaVanChuyen);
         }
     }
 }

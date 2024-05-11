@@ -37,7 +37,6 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.rdoAnhHienTai = new System.Windows.Forms.RadioButton();
             this.rdoAnhBanDau = new System.Windows.Forms.RadioButton();
-            this.btnDeletePicture = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAddPicture = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -105,7 +104,7 @@
             this.panel2.Controls.Add(this.pctProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(2, 19);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(402, 257);
             this.panel2.TabIndex = 12;
@@ -122,7 +121,7 @@
             this.btnNext.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(383, 110);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(18, 36);
             this.btnNext.TabIndex = 4;
@@ -143,7 +142,7 @@
             this.btnPre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPre.ForeColor = System.Drawing.Color.White;
             this.btnPre.Location = new System.Drawing.Point(0, 110);
-            this.btnPre.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPre.Name = "btnPre";
             this.btnPre.Size = new System.Drawing.Size(18, 36);
             this.btnPre.TabIndex = 3;
@@ -158,7 +157,7 @@
             this.pctProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctProduct.ImageRotate = 0F;
             this.pctProduct.Location = new System.Drawing.Point(0, 0);
-            this.pctProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.pctProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctProduct.Name = "pctProduct";
             this.pctProduct.Size = new System.Drawing.Size(402, 257);
             this.pctProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,9 +169,9 @@
             this.groupBox8.Controls.Add(this.panel2);
             this.groupBox8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(26, 6);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox8.Size = new System.Drawing.Size(406, 278);
             this.groupBox8.TabIndex = 13;
             this.groupBox8.TabStop = false;
@@ -186,11 +185,10 @@
             this.guna2CustomGradientPanel1.BorderThickness = 2;
             this.guna2CustomGradientPanel1.Controls.Add(this.rdoAnhHienTai);
             this.guna2CustomGradientPanel1.Controls.Add(this.rdoAnhBanDau);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnDeletePicture);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddPicture);
             this.guna2CustomGradientPanel1.Controls.Add(this.groupBox8);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(14, 49);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(447, 404);
             this.guna2CustomGradientPanel1.TabIndex = 20;
@@ -200,7 +198,7 @@
             this.rdoAnhHienTai.AutoSize = true;
             this.rdoAnhHienTai.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.rdoAnhHienTai.Location = new System.Drawing.Point(250, 309);
-            this.rdoAnhHienTai.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoAnhHienTai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoAnhHienTai.Name = "rdoAnhHienTai";
             this.rdoAnhHienTai.Size = new System.Drawing.Size(92, 20);
             this.rdoAnhHienTai.TabIndex = 26;
@@ -214,7 +212,7 @@
             this.rdoAnhBanDau.Checked = true;
             this.rdoAnhBanDau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoAnhBanDau.Location = new System.Drawing.Point(116, 309);
-            this.rdoAnhBanDau.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoAnhBanDau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoAnhBanDau.Name = "rdoAnhBanDau";
             this.rdoAnhBanDau.Size = new System.Drawing.Size(122, 20);
             this.rdoAnhBanDau.TabIndex = 25;
@@ -222,26 +220,6 @@
             this.rdoAnhBanDau.Text = "Ảnh lúc mới mua";
             this.rdoAnhBanDau.UseVisualStyleBackColor = true;
             this.rdoAnhBanDau.CheckedChanged += new System.EventHandler(this.rdoAnhBanDau_CheckedChanged);
-            // 
-            // btnDeletePicture
-            // 
-            this.btnDeletePicture.Animated = true;
-            this.btnDeletePicture.BorderRadius = 10;
-            this.btnDeletePicture.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeletePicture.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePicture.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeletePicture.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeletePicture.FillColor = System.Drawing.Color.Crimson;
-            this.btnDeletePicture.FillColor2 = System.Drawing.Color.DeepPink;
-            this.btnDeletePicture.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnDeletePicture.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePicture.Location = new System.Drawing.Point(250, 349);
-            this.btnDeletePicture.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeletePicture.Name = "btnDeletePicture";
-            this.btnDeletePicture.Size = new System.Drawing.Size(135, 37);
-            this.btnDeletePicture.TabIndex = 24;
-            this.btnDeletePicture.Text = "Xóa hình ảnh";
             // 
             // btnAddPicture
             // 
@@ -256,13 +234,13 @@
             this.btnAddPicture.FillColor2 = System.Drawing.Color.LimeGreen;
             this.btnAddPicture.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAddPicture.ForeColor = System.Drawing.Color.White;
-            this.btnAddPicture.Location = new System.Drawing.Point(75, 349);
-            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddPicture.Location = new System.Drawing.Point(163, 346);
+            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddPicture.Name = "btnAddPicture";
             this.btnAddPicture.Size = new System.Drawing.Size(135, 37);
             this.btnAddPicture.TabIndex = 23;
             this.btnAddPicture.Text = "+  Thêm hình ảnh";
-            this.btnAddPicture.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddPicture.Click += new System.EventHandler(this.btnThemAnh_Click);
             // 
             // guna2CustomGradientPanel2
             // 
@@ -280,7 +258,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox5);
             this.guna2CustomGradientPanel2.Controls.Add(this.groupBox1);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(481, 49);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(596, 471);
             this.guna2CustomGradientPanel2.TabIndex = 21;
@@ -291,9 +269,9 @@
             this.groupBox11.Controls.Add(this.cbBoxBaoHanh);
             this.groupBox11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox11.Location = new System.Drawing.Point(61, 228);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox11.Size = new System.Drawing.Size(226, 57);
             this.groupBox11.TabIndex = 32;
             this.groupBox11.TabStop = false;
@@ -316,7 +294,7 @@
             "Còn bảo hành",
             "Không còn bảo hành"});
             this.cbBoxBaoHanh.Location = new System.Drawing.Point(2, 19);
-            this.cbBoxBaoHanh.Margin = new System.Windows.Forms.Padding(2);
+            this.cbBoxBaoHanh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBoxBaoHanh.Name = "cbBoxBaoHanh";
             this.cbBoxBaoHanh.Size = new System.Drawing.Size(222, 36);
             this.cbBoxBaoHanh.TabIndex = 4;
@@ -327,9 +305,9 @@
             this.groupBox10.Controls.Add(this.DtpNgayMua);
             this.groupBox10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox10.Location = new System.Drawing.Point(334, 228);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox10.Size = new System.Drawing.Size(226, 57);
             this.groupBox10.TabIndex = 31;
             this.groupBox10.TabStop = false;
@@ -348,7 +326,7 @@
             this.DtpNgayMua.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtpNgayMua.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtpNgayMua.Location = new System.Drawing.Point(2, 19);
-            this.DtpNgayMua.Margin = new System.Windows.Forms.Padding(2);
+            this.DtpNgayMua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpNgayMua.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtpNgayMua.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtpNgayMua.Name = "DtpNgayMua";
@@ -362,9 +340,9 @@
             this.groupBox9.Controls.Add(this.txtXuatXu);
             this.groupBox9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(334, 162);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox9.Size = new System.Drawing.Size(226, 51);
             this.groupBox9.TabIndex = 30;
             this.groupBox9.TabStop = false;
@@ -381,7 +359,7 @@
             this.txtXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXuatXu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtXuatXu.Location = new System.Drawing.Point(2, 19);
-            this.txtXuatXu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtXuatXu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtXuatXu.Multiline = false;
             this.txtXuatXu.Name = "txtXuatXu";
             this.txtXuatXu.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -399,9 +377,9 @@
             this.groupBox7.Controls.Add(this.rtbMoTaSP);
             this.groupBox7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox7.Location = new System.Drawing.Point(61, 309);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox7.Size = new System.Drawing.Size(499, 147);
             this.groupBox7.TabIndex = 28;
             this.groupBox7.TabStop = false;
@@ -412,7 +390,7 @@
             this.rtbMoTaSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMoTaSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbMoTaSP.Location = new System.Drawing.Point(2, 19);
-            this.rtbMoTaSP.Margin = new System.Windows.Forms.Padding(2);
+            this.rtbMoTaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtbMoTaSP.Name = "rtbMoTaSP";
             this.rtbMoTaSP.Size = new System.Drawing.Size(495, 126);
             this.rtbMoTaSP.TabIndex = 0;
@@ -424,9 +402,9 @@
             this.groupBox2.Controls.Add(this.txtTenSP);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(333, 31);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Size = new System.Drawing.Size(226, 51);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
@@ -443,7 +421,7 @@
             this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenSP.Location = new System.Drawing.Point(2, 19);
-            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenSP.Multiline = false;
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -461,9 +439,9 @@
             this.groupBox3.Controls.Add(this.txtMaSP);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(61, 28);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Size = new System.Drawing.Size(130, 51);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
@@ -481,7 +459,7 @@
             this.txtMaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaSP.Location = new System.Drawing.Point(2, 19);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaSP.Multiline = false;
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -499,9 +477,9 @@
             this.groupBox4.Controls.Add(this.cbBoxSoLuong);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox4.Location = new System.Drawing.Point(193, 28);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Size = new System.Drawing.Size(94, 51);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
@@ -527,9 +505,9 @@
             this.groupBox5.Controls.Add(this.cbBoxDanhMuc);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox5.Location = new System.Drawing.Point(334, 87);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Size = new System.Drawing.Size(226, 66);
             this.groupBox5.TabIndex = 27;
             this.groupBox5.TabStop = false;
@@ -559,7 +537,7 @@
             "Sức khỏe",
             "Sách"});
             this.cbBoxDanhMuc.Location = new System.Drawing.Point(2, 19);
-            this.cbBoxDanhMuc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbBoxDanhMuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbBoxDanhMuc.Name = "cbBoxDanhMuc";
             this.cbBoxDanhMuc.Size = new System.Drawing.Size(222, 36);
             this.cbBoxDanhMuc.TabIndex = 2;
@@ -573,9 +551,9 @@
             this.groupBox1.Controls.Add(this.txtGiaBanDau);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(61, 87);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(226, 130);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
@@ -591,7 +569,7 @@
             this.txtGiaHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaHienTai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaHienTai.Location = new System.Drawing.Point(2, 94);
-            this.txtGiaHienTai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiaHienTai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaHienTai.Multiline = false;
             this.txtGiaHienTai.Name = "txtGiaHienTai";
             this.txtGiaHienTai.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -633,7 +611,7 @@
             this.txtGiaBanDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBanDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtGiaBanDau.Location = new System.Drawing.Point(2, 41);
-            this.txtGiaBanDau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiaBanDau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGiaBanDau.Multiline = false;
             this.txtGiaBanDau.Name = "txtGiaBanDau";
             this.txtGiaBanDau.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -656,7 +634,7 @@
             this.pToolBar.FillColor3 = System.Drawing.Color.MediumTurquoise;
             this.pToolBar.FillColor4 = System.Drawing.Color.LightSeaGreen;
             this.pToolBar.Location = new System.Drawing.Point(0, 0);
-            this.pToolBar.Margin = new System.Windows.Forms.Padding(2);
+            this.pToolBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pToolBar.Name = "pToolBar";
             this.pToolBar.Size = new System.Drawing.Size(1085, 32);
             this.pToolBar.TabIndex = 22;
@@ -677,7 +655,7 @@
             this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMaximize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMaximize.Location = new System.Drawing.Point(33, 8);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnMaximize.Size = new System.Drawing.Size(15, 16);
@@ -698,7 +676,7 @@
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMinimize.Location = new System.Drawing.Point(52, 8);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnMinimize.Size = new System.Drawing.Size(15, 16);
@@ -719,7 +697,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Location = new System.Drawing.Point(14, 8);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnClose.Size = new System.Drawing.Size(15, 16);
@@ -750,7 +728,7 @@
             this.btnUpdateProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnUpdateProduct.ForeColor = System.Drawing.Color.White;
             this.btnUpdateProduct.Location = new System.Drawing.Point(738, 594);
-            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(135, 47);
             this.btnUpdateProduct.TabIndex = 25;
@@ -771,7 +749,7 @@
             this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Location = new System.Drawing.Point(738, 544);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(135, 47);
             this.btnAddProduct.TabIndex = 26;
@@ -789,7 +767,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1085, 670);
             this.guna2Panel1.TabIndex = 27;
@@ -802,7 +780,7 @@
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.groupBox6);
             this.guna2Panel2.Location = new System.Drawing.Point(14, 470);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(447, 187);
             this.guna2Panel2.TabIndex = 30;
@@ -814,9 +792,9 @@
             this.groupBox6.Controls.Add(this.txtTinhTrang);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox6.Location = new System.Drawing.Point(7, 11);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Size = new System.Drawing.Size(429, 163);
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
@@ -828,9 +806,9 @@
             this.groupBox12.Controls.Add(this.rtbMoTaTinhTrang);
             this.groupBox12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox12.Location = new System.Drawing.Point(8, 64);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox12.Size = new System.Drawing.Size(414, 94);
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
@@ -841,7 +819,7 @@
             this.rtbMoTaTinhTrang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMoTaTinhTrang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbMoTaTinhTrang.Location = new System.Drawing.Point(2, 19);
-            this.rtbMoTaTinhTrang.Margin = new System.Windows.Forms.Padding(2);
+            this.rtbMoTaTinhTrang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtbMoTaTinhTrang.Name = "rtbMoTaTinhTrang";
             this.rtbMoTaTinhTrang.Size = new System.Drawing.Size(410, 73);
             this.rtbMoTaTinhTrang.TabIndex = 0;
@@ -857,7 +835,7 @@
             this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTinhTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTinhTrang.Location = new System.Drawing.Point(8, 22);
-            this.txtTinhTrang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTinhTrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTinhTrang.Multiline = false;
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -886,7 +864,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FTuyChinhSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAddProduct";
@@ -948,7 +926,6 @@
         private CustomButton.VBButton btnNext;
         private Guna.UI2.WinForms.Guna2PictureBox pctProduct;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddPicture;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDeletePicture;
         public Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
         public Guna.UI2.WinForms.Guna2GradientButton btnUpdateProduct;
         private Funtion.RJTextBox txtGiaHienTai;

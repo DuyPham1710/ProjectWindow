@@ -13,7 +13,6 @@ namespace ProjectWin_Demo_
 {
     public partial class UCSPDaMua : UserControl
     {
-        //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
         SanPham sp;
         private int id;
         string[] AnhCu = { };
@@ -40,6 +39,7 @@ namespace ProjectWin_Demo_
 
         private void UCHisProduct_Load(object sender, EventArgs e)
         {
+            lblMaVanChuyen.Text = "Mã vận chuyển: " + sp.MaVanChuyen.ToString();
             lblTenSP.Text = sp.TenSP;
             lblGia.Text = sp.GiaHienTai + "đ";
             lblTongTien.Text = sp.GiaHienTai + "đ";
@@ -54,19 +54,6 @@ namespace ProjectWin_Demo_
             else
                 pctSanPham.Image = null;
             lblTenShop.Text = nguoiDao.LoadTenShop(sp.MaSP);
-            //try
-            //{
-            //    conn.Open();
-            //    string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-            //    SqlDataReader rdr = cmd.ExecuteReader();
-            //    if (rdr.Read())
-            //    {
-            //        lblTenShop.Text = (string)rdr["UserName"];
-            //    }
-            //}
-            //catch { }
-            //finally { conn.Close(); }
         }
     }
 }

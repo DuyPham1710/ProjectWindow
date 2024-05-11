@@ -13,8 +13,6 @@ namespace ProjectWin_Demo_
 {
     public partial class UCSPDaHuy : UserControl
     {
-        //SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        //SanPhamDao sanPhamDao;
         private int id;
         private SanPham sp;
         string[] AnhCu = { };
@@ -25,20 +23,19 @@ namespace ProjectWin_Demo_
             this.id = id;
             this.sp = sp;
             nguoiDAO = new NguoiDAO(id);
-            //sanPhamDao = new SanPhamDao(id);
 
         }
 
         private void UCSPDaHuy_Load(object sender, EventArgs e)
         {
-            lblMaSP.Text = sp.MaSP;
+            lblMaSP.Text = "Mã sản phẩm: " + sp.MaSP;
+            lblMaVanChuyen.Text = "Mã vận chuyển: " + sp.MaVanChuyen.ToString();
             lblTenSP.Text = sp.TenSP;
-            lblPhanLoai.Text = sp.DanhMuc;
+            lblPhanLoai.Text = "Phân loại hàng:" + sp.DanhMuc;
             lblGiaBanDau.Text = sp.GiaBanDau;
             lblGiaBanDau.Font = new Font(lblGiaBanDau.Font, FontStyle.Strikeout);
             lblDonGia.Text = sp.GiaHienTai + "đ";
             lblThanhTien.Text = sp.GiaHienTai + "đ";
-            //lblThanhTien.Text = (Int32.Parse(sp.GiaHienTai) * Int32.Parse(sp.SoLuong)).ToString() + "đ";
             lblSoLuong.Text = "x" + sp.SoLuong;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
@@ -51,23 +48,13 @@ namespace ProjectWin_Demo_
                 pctSanPham.Image = null;
             
             lblTenShop.Text = nguoiDAO.LoadTenShop(sp.MaSP);
-            //try
-            //{
-            //    conn.Open();
-            //    string query = string.Format("select UserName from Account, SanPham where Account.ID = SanPham.IDChuSP and MSP = '{0}'", sp.MaSP);
-            //    SqlCommand cmd = new SqlCommand(query, conn);
-            //    SqlDataReader rdr = cmd.ExecuteReader();
-            //    if (rdr.Read())
-            //    {
-            //        lblTenShop.Text = (string)rdr["UserName"];
-            //    }
-            //}
-            //catch { }
-            //finally { conn.Close(); }
         }
         private void btnMuaLai_Click(object sender, EventArgs e)
         {
-
+            DaMuaDAO daMuaDao = new DaMuaDAO(id);
+            SanPham sanPham = daMuaDao.MuaLai(sp.MaVanChuyen);
+            FChiTiet fChiTiet = new FChiTiet(sanPham, id);
+            fChiTiet.ShowDialog();
         }
         private void pcbDelete_MouseHover(object sender, EventArgs e)
         {

@@ -33,7 +33,7 @@ namespace ProjectWin_Demo_
             foreach (SanPham sp in sanPham)
             {
                 UCSPDaBan ucSP = new UCSPDaBan(sp, id);
-                ucSP.lblNguoiMua.Text = DSNguoiMua[i].FullName;
+                ucSP.lblNguoiMua.Text = DSNguoiMua[i].HoTen;
                 fPanel.Controls.Add(ucSP);
                 i++;
             }

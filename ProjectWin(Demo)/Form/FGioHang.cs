@@ -51,25 +51,6 @@ namespace ProjectWin_Demo_
                     if (gh.cbChonSP.Checked)
                     {
                         danhSachsanPham.Add(SPDao.LoadDanhSachSanPham(gh.lblMaSP.Text, gh.nudSoLuong.Value));
-                        //int giaHienTai = Int32.Parse(sp.GiaHienTai) * gh.nudSoLuong.Value;
-                        //SanPham sp = new SanPham(gh.lblMaSP.Text);
-                        //try
-                        //{
-                        //    conn.Open();
-                        //    string query = string.Format("Select * from SanPham WHERE MSP = '{0}'", gh.lblMaSP.Text);
-                        //    SqlCommand cmd = new SqlCommand(query, conn);
-                        //    SqlDataReader reader = cmd.ExecuteReader();
-                        //    if (reader.Read())
-                        //    {
-                        //        SanPham sp = new SanPham((string)reader["MSP"], (int)reader["IDChuSP"], (string)reader["TenSP"], (string)reader["DanhMuc"], (string)reader["GiaTienLucMoiMua"],
-                        //        (string)reader["GiaTienBayGio"], (DateTime)reader["NgayMuaSP"], (string)reader["SoLuong"], (string)reader["XuatXu"], (string)reader["BaoHanh"], (string)reader["TinhTrang"], (string)reader["MotaTinhTrang"], (string)reader["MotaSP"], (string)reader["AnhLucMoiMua"], (string)reader["AnhBayGio"]);
-                        //        sp.SoLuong = gh.nudSoLuong.Value.ToString();
-                        //        sp.GiaHienTai = (Int32.Parse(sp.GiaHienTai) * gh.nudSoLuong.Value).ToString();
-                        //        danhSachsanPham.Add(sp);
-                        //    }
-                        //}
-                        //catch { }
-                        //finally { conn.Close(); }     
                     }
                 }
                 FThanhToan fThanhToan = new FThanhToan(danhSachsanPham, id);
@@ -94,7 +75,7 @@ namespace ProjectWin_Demo_
                 SanPham sp = new SanPham(sanPham.lblMaSP.Text);
                 ghDAO.xoaGioHang(sp);
                 FGioHang_Load(sender, e);
-                //MessageBox.Show("Xóa thành công", "Thông báo");
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         

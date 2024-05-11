@@ -19,7 +19,6 @@ namespace ProjectWin_Demo_
         string[] AnhCu = { };
         public bool chon = false;
         public event EventHandler BtnClick_ChiTiet;
-        //public event EventHandler BtnClick_YeuThich;
         YeuThichDAO yeuThichDAO;
         public UCSanPham(SanPham sp, int id)
         {
@@ -35,20 +34,6 @@ namespace ProjectWin_Demo_
         private void UCProducts_Click(object sender, EventArgs e)
         {
             BtnClick_ChiTiet?.Invoke(this, e);
-            //FChiTiet fChiTiet = new FChiTiet(sp, id);
-            //fChiTiet.ShowDialog();
-        }
-
-        private void pctProduct_MouseHover(object sender, EventArgs e)
-        {
-            //pctSanPham.SizeMode = PictureBoxSizeMode.StretchImage;
-            //this.BackColor = Color.White;
-        }
-
-        private void pctProduct_MouseLeave(object sender, EventArgs e)
-        {
-            //pctSanPham.SizeMode = PictureBoxSizeMode.Zoom;
-            //this.BackColor = Color.White;
         }
 
         private void UCProducts_Load(object sender, EventArgs e)
@@ -84,20 +69,18 @@ namespace ProjectWin_Demo_
 
         private void btnQuanTam_Click(object sender, EventArgs e)
         {
-            //BtnClick_YeuThich?.Invoke(this, e);
+          
             if (chon == false)
             {
                 yeuThichDAO.ThemYeuThich(sp.MaSP);
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimDo.png");
                 chon = true;
-                //MessageBox.Show("Đã thêm vào sản phẩm yêu thích", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 yeuThichDAO.XoaYeuThich(sp.MaSP);
                 btnQuanTam.Image = new Bitmap(Application.StartupPath + "\\Resources\\TimTrang.png");
                 chon = false;
-                //MessageBox.Show("Đã xóa khỏi mục ưa thích", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

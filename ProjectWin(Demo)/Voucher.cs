@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
@@ -37,6 +38,23 @@ namespace ProjectWin_Demo_
             this.MaVoucher = duLieu["MaVoucher"].ToString();
             this.MoTa = duLieu["Mota"].ToString();
             this.HSD = DateTime.Parse(duLieu["HSD"].ToString());
+        }
+        public virtual bool KiemTra()
+        {
+
+            var properties = typeof(Voucher).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if ((value == null || string.IsNullOrWhiteSpace(value.ToString())))
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

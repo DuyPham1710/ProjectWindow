@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gvDanhSach = new System.Windows.Forms.DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnKHDaHuy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             this.btnDSKhachHang.FillColor2 = System.Drawing.Color.White;
             this.btnDSKhachHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnDSKhachHang.Location = new System.Drawing.Point(91, 13);
+            this.btnDSKhachHang.Location = new System.Drawing.Point(66, 13);
             this.btnDSKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnDSKhachHang.Name = "btnDSKhachHang";
             this.btnDSKhachHang.Size = new System.Drawing.Size(192, 51);
@@ -82,7 +83,7 @@
             this.btnKHHayMua.FillColor2 = System.Drawing.Color.White;
             this.btnKHHayMua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKHHayMua.ForeColor = System.Drawing.Color.Black;
-            this.btnKHHayMua.Location = new System.Drawing.Point(279, 13);
+            this.btnKHHayMua.Location = new System.Drawing.Point(254, 13);
             this.btnKHHayMua.Margin = new System.Windows.Forms.Padding(2);
             this.btnKHHayMua.Name = "btnKHHayMua";
             this.btnKHHayMua.Size = new System.Drawing.Size(192, 51);
@@ -94,9 +95,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.gvDanhSach);
-            this.panel1.Location = new System.Drawing.Point(54, 67);
+            this.panel1.Location = new System.Drawing.Point(36, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 626);
+            this.panel1.Size = new System.Drawing.Size(1107, 626);
             this.panel1.TabIndex = 26;
             // 
             // gvDanhSach
@@ -137,6 +138,7 @@
             this.gvDanhSach.Location = new System.Drawing.Point(0, 0);
             this.gvDanhSach.Margin = new System.Windows.Forms.Padding(2);
             this.gvDanhSach.Name = "gvDanhSach";
+            this.gvDanhSach.ReadOnly = true;
             this.gvDanhSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -149,7 +151,7 @@
             this.gvDanhSach.RowHeadersWidth = 51;
             this.gvDanhSach.RowTemplate.Height = 28;
             this.gvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvDanhSach.Size = new System.Drawing.Size(1078, 626);
+            this.gvDanhSach.Size = new System.Drawing.Size(1107, 626);
             this.gvDanhSach.TabIndex = 27;
             // 
             // guna2Elipse1
@@ -157,12 +159,37 @@
             this.guna2Elipse1.BorderRadius = 20;
             this.guna2Elipse1.TargetControl = this.panel1;
             // 
+            // btnKHDaHuy
+            // 
+            this.btnKHDaHuy.Animated = true;
+            this.btnKHDaHuy.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnKHDaHuy.BorderRadius = 7;
+            this.btnKHDaHuy.CustomBorderColor = System.Drawing.Color.White;
+            this.btnKHDaHuy.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.btnKHDaHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKHDaHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKHDaHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKHDaHuy.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKHDaHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKHDaHuy.FillColor = System.Drawing.Color.White;
+            this.btnKHDaHuy.FillColor2 = System.Drawing.Color.White;
+            this.btnKHDaHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKHDaHuy.ForeColor = System.Drawing.Color.Black;
+            this.btnKHDaHuy.Location = new System.Drawing.Point(446, 13);
+            this.btnKHDaHuy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKHDaHuy.Name = "btnKHDaHuy";
+            this.btnKHDaHuy.Size = new System.Drawing.Size(192, 51);
+            this.btnKHDaHuy.TabIndex = 27;
+            this.btnKHDaHuy.Text = "Khách hàng đã hủy";
+            this.btnKHDaHuy.Click += new System.EventHandler(this.btnKHDaHuy_Click);
+            // 
             // FKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1180, 725);
+            this.Controls.Add(this.btnKHDaHuy);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnKHHayMua);
             this.Controls.Add(this.btnDSKhachHang);
@@ -183,5 +210,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView gvDanhSach;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnKHDaHuy;
     }
 }

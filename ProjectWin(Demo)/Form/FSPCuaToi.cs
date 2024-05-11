@@ -31,22 +31,14 @@ namespace ProjectWin_Demo_
         }
         private void FSPCuaToi_Load(object sender, EventArgs e)
         {
-            lblTuyChon.Text = "Tùy chọn";
-            fPanelHienThi.Controls.Clear();
-            List<UCSPCuaToi> sanPham = SPDao.LoadSanPham<UCSPCuaToi>("=");
-            foreach (UCSPCuaToi sp in sanPham)
-            {
-                sp.BtnClick_delete += pcbDelete_Click;
-                sp.BtnClick_edit += pcbEdit_Click;
-                fPanelHienThi.Controls.Add(sp);
-            }
+            btnTongSanPham_Click(sender, e);
         }
 
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
             FTuyChinhSP addProduct = new FTuyChinhSP(id, "", "Them");
             addProduct.ShowDialog();
-            FSPCuaToi_Load(sender, e);
+            btnTongSanPham_Click(sender, e);
         }
         private void btnVoucher_Click(object sender, EventArgs e)
         {
@@ -56,6 +48,7 @@ namespace ProjectWin_Demo_
             btnVoucher.ForeColor = Color.MediumSlateBlue;
             btnSPDaBan.CustomBorderColor = Color.White;
             btnSPDaBan.ForeColor = Color.Black;
+            txtTimKiem.PlaceholderText = "Mã Voucher";
 
             pTieuDeVoucher.Show();
             pTieuDeSP.Hide();
@@ -74,6 +67,7 @@ namespace ProjectWin_Demo_
         {
             FTuyChinhVoucher fThemVoucher = new FTuyChinhVoucher(id, "", "Them");
             fThemVoucher.ShowDialog();
+            
             btnVoucher_Click(sender, e);
         }
         private void btnSuaVoucher_Click(object sender, EventArgs e)
@@ -103,16 +97,21 @@ namespace ProjectWin_Demo_
             btnVoucher.ForeColor = Color.Black;
             btnSPDaBan.CustomBorderColor = Color.MediumSlateBlue;
             btnSPDaBan.ForeColor = Color.MediumSlateBlue;
+            txtTimKiem.PlaceholderText = "Tìm kiếm sản phẩm";
 
             pTieuDeVoucher.Hide();
             pTieuDeSP.Show();
             lblTuyChon.Text = "Người mua";
             fPanelHienThi.Controls.Clear();
-            //List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan<UCSPDaBan>();
             List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan();
-            foreach (UCSPDaBan sp in sanPham)
+            NguoiDAO nguoiDAO = new NguoiDAO(id);
+            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua();
+            int i = 0;
+            foreach (UCSPDaBan ucSPDaBan in sanPham)
             {
-                fPanelHienThi.Controls.Add(sp);
+                ucSPDaBan.lblNguoiMua.Text = DSNguoiMua[i].HoTen;
+                fPanelHienThi.Controls.Add(ucSPDaBan);
+                i++;
             }
         }
         private void btnTongSanPham_Click(object sender, EventArgs e)
@@ -127,16 +126,18 @@ namespace ProjectWin_Demo_
             btnVoucher.ForeColor = Color.Black;
             btnSPDaBan.CustomBorderColor = Color.White;
             btnSPDaBan.ForeColor = Color.Black;
+            txtTimKiem.PlaceholderText = "Tìm kiếm sản phẩm";
 
-            FSPCuaToi_Load(sender, e);
+            fPanelHienThi.Controls.Clear();
+            List<UCSPCuaToi> sanPham = SPDao.LoadSanPham<UCSPCuaToi>("=");
+            foreach (UCSPCuaToi sp in sanPham)
+            {
+                sp.BtnClick_delete += pcbDelete_Click;
+                sp.BtnClick_edit += pcbEdit_Click;
+                fPanelHienThi.Controls.Add(sp);
+            }
         }
-        //private void addUserControl(UserControl userControl)
-        //{
-        //    fPanelHienThi.Controls.Clear();
-        //    fPanelHienThi.Controls.Add(userControl);
-        //    userControl.BringToFront();
-        //}
-
+    
         private void pcbDelete_Click(object sender, EventArgs e)
         {
             UCSPCuaToi sp = sender as UCSPCuaToi;

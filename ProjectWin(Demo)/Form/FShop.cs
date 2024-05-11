@@ -12,7 +12,6 @@ namespace ProjectWin_Demo_
 {
     public partial class FShop : Form
     {
-        List<Nguoi> nguoi = new List<Nguoi>();
         private int id;
         NguoiDAO nguoiDao;
         public FShop(int id)

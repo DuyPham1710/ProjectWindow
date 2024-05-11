@@ -49,36 +49,23 @@ namespace ProjectWin_Demo_
                 nudSoLuong.Value = voucher.SoLuong;
             }
         }
-        private void FThemVoucher_Load(object sender, EventArgs e)
-        {
-            if (thaoTac == "Them")
-            {
-                lblTieuDe.Text = "Thêm Voucher";
-            }
-            else
-            {
-                lblTieuDe.Text = "Sửa Voucher";
-                btnThem.Text = "Sửa";
-                Voucher voucher = voucherDAO.LayVoucher(maVoucher);
-                txtMaVoucher.Texts = voucher.MaVoucher;
-                maVoucherCu = voucher.MaVoucher;
-                txtMota.Texts = voucher.MoTa;
-                txtGiaTri.Texts = voucher.GiaTri.ToString();
-                DtpHSD.Value = voucher.HSD;
-                nudSoLuong.Value = voucher.SoLuong;    
-            }
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             Voucher voucher = new Voucher(id, Int32.Parse(txtGiaTri.Texts), Int32.Parse(nudSoLuong.Value.ToString()), txtMaVoucher.Texts, txtMota.Texts, DtpHSD.Value);
             if (thaoTac == "Them")
             {
-                voucherDAO.ThemVoucher(voucher);
+                if (voucher.KiemTra())
+                {
+                    voucherDAO.ThemVoucher(voucher);
+                }
+               
             }
             else 
             {
-
-                voucherDAO.suaVoucher(voucher, maVoucherCu);
+                if (voucher.KiemTra())
+                {
+                    voucherDAO.suaVoucher(voucher, maVoucherCu);
+                }
             }
             this.Close();
         }

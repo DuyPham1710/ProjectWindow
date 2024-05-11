@@ -31,10 +31,5 @@ namespace ProjectWin_Demo_
             }
             SPDao = new SanPhamDao(id);
         }
-
-        private void UCBinhLuan_Load(object sender, EventArgs e)
-        {
-            //SPDao.LoadDanhGia(sp.MaSP);
-        }
     }
 }

@@ -17,20 +17,12 @@ namespace ProjectWin_Demo_
         private Point lastCursor;
         private Point lastForm;
 
-        //SanPham sp;
         List<SanPham> sanPham = new List<SanPham>();
         List<string> MaVouchers = new List<string>();
         int id;
         string[] AnhCu = { };
         SanPhamDao SPDao;
-        //public FThanhToan(SanPham sp, Decimal soLuongSP, int id)
-        //{
-        //    InitializeComponent();
-        //    this.sp = sp;
-        //    nudSoLuong.Value = soLuongSP;
-        //    this.id = id;
-        //    SPDao = new SanPhamDao(id);
-        //}
+      
         public FThanhToan(List<SanPham> sanPham, int id)
         {
             InitializeComponent();
@@ -45,6 +37,7 @@ namespace ProjectWin_Demo_
             int tongTienSP = 0;
             foreach (SanPham sp in sanPham)
             {
+              
                 tongTienSP = tongTienSP + Int32.Parse(sp.GiaHienTai);
                 UCSPDatHang ucSPDatHang = new UCSPDatHang(sp, id);
                 ucSPDatHang.BtnClick_ChonVoucher += btnChonVoucher_Click;
@@ -52,20 +45,15 @@ namespace ProjectWin_Demo_
             }
             NguoiDAO nguoiDAO = new NguoiDAO(id);
             Nguoi nguoiMua = nguoiDAO.LoadThongTinCaNhan();
-            lblHoTen.Text = nguoiMua.FullName;
-            lblSdt.Text = nguoiMua.PhoneNumber;
-            lblDiaChi.Text = nguoiMua.Address;
+            lblHoTen.Text = nguoiMua.HoTen;
+            lblSdt.Text = nguoiMua.SoDT;
+            lblDiaChi.Text = nguoiMua.DiaChi;
             DateTime date = DateTime.Now;
             txtNgay.Text = date.Day.ToString();
             txtThang.Text = date.Month.ToString();
             txtNam.Text = date.Year.ToString();
             lblTienSP.Text = tongTienSP.ToString();
             lblTongTien.Text = tongTienSP.ToString();
-
-            //for (int i=0; i < sanPham.Count; i++)
-            //{
-            //    MaVouchers.Add("");
-            //}
         }
 
         private void pictureBoxPayMethod_MouseHover(object sender, EventArgs e)
@@ -104,40 +92,21 @@ namespace ProjectWin_Demo_
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
-            UCSPDatHang uCSPDatHang = sender as UCSPDatHang;
             int i = 0;
             foreach (SanPham sp in sanPham)
             {
                 if (MaVouchers.Count == 0 || MaVouchers.Count < i + 1 )
                 {
-                    SPDao.DatHang(sp, "", Int32.Parse(lblTongTien.Text));
+                    SPDao.DatHang(sp, "");
                 }
                 else
                 {
-                    SPDao.DatHang(sp, MaVouchers[i], Int32.Parse(lblTongTien.Text));
-                    // i++;
+                    SPDao.DatHang(sp, MaVouchers[i]);
                 }
                 i++;
-                // chưa làm khi add voucher vô thanh toán thì giá lúc đặt cũng trừ theo
             }
             MessageBox.Show("Đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-            //try
-            //{
-            //    conn.Open();
-            //    string sqlStr = string.Format("INSERT INTO DaMua(ID, MSP, TrangThai) VALUES ('{0}', '{1}', N'{2}')",
-            //            id, sp.MaSP, "Chờ xác nhận");
-            //    string query = string.Format("UPDATE SanPham SET SoLuong = '{0}' WHERE MSP = '{1}'", (Decimal.Parse(sp.SoLuong) - nudSoLuong.Value).ToString(), sp.MaSP);
-            //    SqlCommand cmd = new SqlCommand(sqlStr, conn);
-
-            //    if (cmd.ExecuteNonQuery() > 0)
-            //    {
-            //        MessageBox.Show("Đặt hàng thành công", "Thông báo");
-            //        this.Close();
-            //    }
-            //}
-            //catch (Exception ex){ }
-            //finally { conn.Close(); }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -188,37 +157,25 @@ namespace ProjectWin_Demo_
             lblDiaChi.Text = thongTinNhanHang[2];
         }
 
-        //private void nudSoLuong_ValueChanged(object sender, EventArgs e)
-        //{        
-        //    //if (nudSoLuong.Value > Decimal.Parse(sp.SoLuong))
-        //    //{
-        //    //    nudSoLuong.Value = Decimal.Parse(sp.SoLuong);
-        //    //}
-        //    //else if (nudSoLuong.Value == 0)
-        //    //{
-        //    //    nudSoLuong.Value = 1;
-        //    //}
-        //    //else
-        //    //{
-        //    //    lblTongTien.Text = (nudSoLuong.Value * Decimal.Parse(sp.GiaHienTai)).ToString() + "đ";
-        //    //}
-        //}
-
         private void btnChonVoucher_Click(object sender, EventArgs e)
         {
             UCSPDatHang ucSPDatHang = sender as UCSPDatHang;
             FVoucher fVoucher = new FVoucher(id, ucSPDatHang.lblMaSP.Text);
             fVoucher.ShowDialog();
-            //if (fVoucher.MaVoucher != "") 
-            //{
             MaVouchers.Add(fVoucher.MaVoucher);
-            
-            //}
-            
+         
             VoucherDAO voucherDAO = new VoucherDAO(id);
             Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoucher);  
             if (voucher != null)
             {
+                ucSPDatHang.lblGia.Text = (Int32.Parse(ucSPDatHang.lblGia.Text) - voucher.GiaTri).ToString();
+                foreach (SanPham sp in sanPham)
+                {
+                    if (sp.MaSP == ucSPDatHang.lblMaSP.Text)
+                    {
+                        sp.GiaHienTai = (Int32.Parse(sp.GiaHienTai) - voucher.GiaTri).ToString();
+                    }
+                }
                 lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
                 int tongTien = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text));
                 if (tongTien < 0)
@@ -230,8 +187,6 @@ namespace ProjectWin_Demo_
                     lblTongTien.Text = tongTien.ToString();
                 }
             }
-          
-            //lblTongTien.Text = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text)).ToString();
         }
     }
 }

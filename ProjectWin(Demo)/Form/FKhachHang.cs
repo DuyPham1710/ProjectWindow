@@ -28,6 +28,8 @@ namespace ProjectWin_Demo_
         {
             btnDSKhachHang.CustomBorderColor = Color.DarkTurquoise;
             btnKHHayMua.CustomBorderColor = Color.White;
+            btnKHDaHuy.CustomBorderColor = Color.White;
+
             gvDanhSach.DataSource =  nguoiDAO.ThongTinKhachHang();
             gvDanhSach.Columns[0].HeaderText = "Mã sản phẩm";
             gvDanhSach.Columns[1].HeaderText = "Tên sản phẩm";
@@ -44,6 +46,8 @@ namespace ProjectWin_Demo_
         {
             btnDSKhachHang.CustomBorderColor = Color.White;
             btnKHHayMua.CustomBorderColor = Color.DarkTurquoise;
+            btnKHDaHuy.CustomBorderColor = Color.White;
+
             gvDanhSach.DataSource = nguoiDAO.LoadKhachhang();
             gvDanhSach.Columns[0].HeaderText = "ID";
             gvDanhSach.Columns[1].HeaderText = "Tên khách hàng";
@@ -52,9 +56,21 @@ namespace ProjectWin_Demo_
             gvDanhSach.Columns[4].HeaderText = "Email";
             gvDanhSach.Columns[5].HeaderText = "Địa chỉ";
             gvDanhSach.Columns[6].HeaderText = "Số lần mua hàng";
-            //gvDanhSach.Columns[7].HeaderText = "Tổng tiền";
         }
 
-       
+        private void btnKHDaHuy_Click(object sender, EventArgs e)
+        {
+            btnDSKhachHang.CustomBorderColor = Color.White;
+            btnKHHayMua.CustomBorderColor = Color.White;
+            btnKHDaHuy.CustomBorderColor = Color.DarkTurquoise;
+
+            gvDanhSach.DataSource = nguoiDAO.LoadKhachhangDahuy();
+            gvDanhSach.Columns[0].HeaderText = "Mã sản phẩm";
+            gvDanhSach.Columns[1].HeaderText = "Tên khách hàng";
+            gvDanhSach.Columns[2].HeaderText = "Tên sản phẩm";
+            gvDanhSach.Columns[3].HeaderText = "Lý do hủy đơn";
+            gvDanhSach.Columns[4].HeaderText = "Thời gian hủy";
+
+        }
     }
 }

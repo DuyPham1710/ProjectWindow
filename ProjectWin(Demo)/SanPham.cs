@@ -4,7 +4,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectWin_Demo_
 {
@@ -76,6 +78,40 @@ namespace ProjectWin_Demo_
             this.AnhBanDau = duLieu["AnhLucMoiMua"].ToString(); 
             this.AnhHienTai = duLieu["AnhBayGio"].ToString(); 
             this.NgayMuaSP = DateTime.Parse(duLieu["NgayMuaSP"].ToString()); 
+        }
+        public virtual bool KiemTra()
+        {
+
+            var properties = typeof(SanPham).GetProperties();
+
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if ((value == null || string.IsNullOrWhiteSpace(value.ToString())))
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            if (soLuong == "0")
+            {
+                MessageBox.Show("Số lượng sản phẩm không hợp lệ");
+                return false;
+            }
+            int tmp = 0;
+            if (!int.TryParse(giaBanDau, out tmp))
+            {
+                MessageBox.Show("Giá ban đầu không hợp lệ", "Thông báo");
+                return false;
+            }
+            if (!int.TryParse(giaHienTai, out tmp))
+            {
+                MessageBox.Show("Giá hiện tại không hợp lệ", "Thông báo");
+                return false;
+            }
+            return true;
+
         }
     }
 }

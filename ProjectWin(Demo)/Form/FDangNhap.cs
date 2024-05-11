@@ -24,35 +24,15 @@ namespace ProjectWin_Demo_
             nguoiDAO = new NguoiDAO();
 
         }
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Dictionary<int, string> thongTin = nguoiDAO.DangNhap(txtUserName.Text, txtPassword.Text);
-            if (thongTin != null)
-            {
-                string viTri = "";
-                foreach (int key in thongTin.Keys)
-                {
-                    id = key;
-                    viTri = thongTin[key];
-                }
-                if (rdoUser.Checked && viTri == rdoUser.Text)
-                {
-                    this.Hide();
-                    Form form = new FNguoiDung(id);
-                    form.ShowDialog();
-                    this.Show();
-                }
-                else if (rdoAdmin.Checked && viTri == rdoAdmin.Text)
-                {
-                    this.Hide();
-                    Form form = new FAdmin();
-                    form.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Thông báo");
-                }
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {  
+            id = nguoiDAO.DangNhap(txtTenDangNhap.Text, txtMatKhau.Text);
+            if (id != 0)
+            {         
+                this.Hide();
+                Form form = new FNguoiDung(id);
+                form.ShowDialog();
+                this.Show();
             }
         }
 

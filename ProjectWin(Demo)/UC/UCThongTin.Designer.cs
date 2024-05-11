@@ -488,8 +488,9 @@
             // 
             // pictureBoxUser
             // 
+            this.pictureBoxUser.Image = global::ProjectWin_Demo_.Properties.Resources.icons8_user_64__1_;
             this.pictureBoxUser.ImageRotate = 0F;
-            this.pictureBoxUser.Location = new System.Drawing.Point(18, 18);
+            this.pictureBoxUser.Location = new System.Drawing.Point(23, 18);
             this.pictureBoxUser.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxUser.Name = "pictureBoxUser";
             this.pictureBoxUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;

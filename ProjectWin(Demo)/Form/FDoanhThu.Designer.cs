@@ -254,6 +254,7 @@
             this.gvChiTiet.Location = new System.Drawing.Point(46, 121);
             this.gvChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.gvChiTiet.Name = "gvChiTiet";
+            this.gvChiTiet.ReadOnly = true;
             this.gvChiTiet.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -323,6 +324,7 @@
             this.gvDoanhThu.Location = new System.Drawing.Point(46, 156);
             this.gvDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.gvDoanhThu.Name = "gvDoanhThu";
+            this.gvDoanhThu.ReadOnly = true;
             this.gvDoanhThu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;

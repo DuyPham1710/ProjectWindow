@@ -57,16 +57,7 @@ namespace ProjectWin_Demo_
         {
             UCVoucher ucVoucher = sender as UCVoucher;
             MaVoucher = ucVoucher.lblMaVoucher.Text;
-            MessageBox.Show("Đã chọn voucher " + MaVoucher);
-            //foreach (UCVoucher voucher in Vouchers)
-            //{
-            //    if (voucher.rdoChon.Checked)
-            //    {
-            //        MaVoucher = voucher.lblMaVoucher.Text;
-            //        MessageBox.Show("Đã chọn voucher " + MaVoucher);
-            //        break;
-            //    }
-            //}
+            MessageBox.Show("Đã chọn voucher " + MaVoucher);        
             this.Close();
         }
 
@@ -83,21 +74,5 @@ namespace ProjectWin_Demo_
                 MessageBox.Show("Voucher không tồn tại");
             }
         }
-        //private void btnApDung_Click(object sender, EventArgs e)
-        //{
-        //    UCVoucher ucVoucher = sender as UCVoucher;
-
-        //    foreach (UCVoucher voucher in Vouchers)
-        //    {
-        //        if (voucher.rdoChon.Checked)
-        //        {
-        //            MaVoucher = voucher.lblMaVoucher.Text;
-        //            MessageBox.Show("Đã chọn voucher " + MaVoucher);
-        //            break;
-        //        }
-        //    }
-        //    this.Close();
-        //}
-
     }
 }

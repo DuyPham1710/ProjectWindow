@@ -65,8 +65,8 @@ namespace ProjectWin_Demo_
             }
 
             Nguoi nguoiBan = nguoiDAO.LoadThongTinCaNhan();
-            lblTen.Text = nguoiBan.UserName;
-            lblDiaChi.Text = nguoiBan.Address;
+            lblTen.Text = nguoiBan.TenDangNhap;
+            lblDiaChi.Text = nguoiBan.DiaChi;
             MemoryStream ms = new MemoryStream(nguoiBan.Avt);
             pcbAvt.Image = Image.FromStream(ms);
         }
@@ -87,7 +87,6 @@ namespace ProjectWin_Demo_
                 nguoiMua.TheoDoiShop(IDShop);
                 btnTheoDoi.Text = "Đang theo dõi";
                 theodoi = true;
-                //MessageBox.Show("Đã theo dõi shop", "Thông báo");
             }
             else
             {
@@ -95,7 +94,6 @@ namespace ProjectWin_Demo_
                 nguoiMua.BoTheoDoiShop(IDShop);
                 btnTheoDoi.Text = "Theo dõi +";
                 theodoi = false;
-                //MessageBox.Show("Đã bỏ theo dõi shop", "Thông báo");
             }
 
         }

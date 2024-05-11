@@ -31,12 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pctSanPham = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblGiaSP = new System.Windows.Forms.Label();
             this.lblDiaChiShop = new System.Windows.Forms.Label();
             this.btnQuanTam = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.lblLuotXem = new System.Windows.Forms.Label();
             this.lblGiaBanDau = new System.Windows.Forms.Label();
             this.PanelSanPham = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -65,22 +63,6 @@
             this.pctSanPham.Click += new System.EventHandler(this.UCProducts_Click);
             this.pctSanPham.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
             this.pctSanPham.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
-            this.pctSanPham.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(120, 239);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Đã bán 100";
-            this.label3.Click += new System.EventHandler(this.UCProducts_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
-            this.label3.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // lblTenSP
             // 
@@ -95,7 +77,6 @@
             this.lblTenSP.Click += new System.EventHandler(this.UCProducts_Click);
             this.lblTenSP.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
             this.lblTenSP.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
-            this.lblTenSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // lblGiaSP
             // 
@@ -112,7 +93,6 @@
             this.lblGiaSP.Click += new System.EventHandler(this.UCProducts_Click);
             this.lblGiaSP.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
             this.lblGiaSP.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
-            this.lblGiaSP.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // lblDiaChiShop
             // 
@@ -128,7 +108,6 @@
             this.lblDiaChiShop.Click += new System.EventHandler(this.UCProducts_Click);
             this.lblDiaChiShop.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
             this.lblDiaChiShop.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
-            this.lblDiaChiShop.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             // 
             // btnQuanTam
             // 
@@ -152,20 +131,6 @@
             this.btnQuanTam.TabIndex = 12;
             this.btnQuanTam.UseTransparentBackground = true;
             this.btnQuanTam.Click += new System.EventHandler(this.btnQuanTam_Click);
-            // 
-            // lblLuotXem
-            // 
-            this.lblLuotXem.AutoSize = true;
-            this.lblLuotXem.BackColor = System.Drawing.Color.Transparent;
-            this.lblLuotXem.Location = new System.Drawing.Point(10, 294);
-            this.lblLuotXem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLuotXem.Name = "lblLuotXem";
-            this.lblLuotXem.Size = new System.Drawing.Size(65, 13);
-            this.lblLuotXem.TabIndex = 13;
-            this.lblLuotXem.Text = "10 Lượt xem";
-            this.lblLuotXem.Click += new System.EventHandler(this.UCProducts_Click);
-            this.lblLuotXem.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
-            this.lblLuotXem.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
             // 
             // lblGiaBanDau
             // 
@@ -205,9 +170,7 @@
             this.guna2ShadowPanel1.Controls.Add(this.pctSanPham);
             this.guna2ShadowPanel1.Controls.Add(this.lblMaSP);
             this.guna2ShadowPanel1.Controls.Add(this.lblGiaSP);
-            this.guna2ShadowPanel1.Controls.Add(this.label3);
             this.guna2ShadowPanel1.Controls.Add(this.lblTenSP);
-            this.guna2ShadowPanel1.Controls.Add(this.lblLuotXem);
             this.guna2ShadowPanel1.Controls.Add(this.lblDiaChiShop);
             this.guna2ShadowPanel1.Controls.Add(this.lblGiaBanDau);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,6 +181,9 @@
             this.guna2ShadowPanel1.ShadowShift = 4;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(196, 321);
             this.guna2ShadowPanel1.TabIndex = 15;
+            this.guna2ShadowPanel1.Click += new System.EventHandler(this.UCProducts_Click);
+            this.guna2ShadowPanel1.MouseEnter += new System.EventHandler(this.GunaPanel1_MouseEnter);
+            this.guna2ShadowPanel1.MouseLeave += new System.EventHandler(this.GunaPanel1_MouseLeave);
             // 
             // lblMaSP
             // 
@@ -239,8 +205,6 @@
             this.Size = new System.Drawing.Size(196, 321);
             this.Load += new System.EventHandler(this.UCProducts_Load);
             this.Click += new System.EventHandler(this.UCProducts_Click);
-            this.MouseLeave += new System.EventHandler(this.pctProduct_MouseLeave);
-            this.MouseHover += new System.EventHandler(this.pctProduct_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.PanelSanPham.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
@@ -252,10 +216,8 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lblGiaBanDau;
-        private System.Windows.Forms.Label lblLuotXem;
         private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.Label lblDiaChiShop;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblGiaSP;
         private System.Windows.Forms.PictureBox pctSanPham;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelSanPham;

@@ -51,16 +51,12 @@ namespace ProjectWin_Demo_
         {
             NguoiDAO nguoiDAO = new NguoiDAO(id);
             Nguoi nguoiDung = nguoiDAO.LoadThongTinCaNhan();
-            lbTenNguoiDung.Text = nguoiDung.FullName;
-            //byte[] img = nguoiDung.Avt;
-            
-            //MemoryStream ms = nguoiDAO.LoadAvt();
+            lbTenNguoiDung.Text = nguoiDung.HoTen;
             if (nguoiDung.Avt != null)
             {
                 MemoryStream ms = new MemoryStream(nguoiDung.Avt);
                 pcbAvt.Image = Image.FromStream(ms);
             }
-            //lbTenNguoiDung.Text = nguoiDAO.LoadThongTinCaNhan().FullName;
         }
 
         private void Panel_MouseDown(object sender, MouseEventArgs e)
@@ -97,9 +93,9 @@ namespace ProjectWin_Demo_
             }
             else
             {
-                btnHome.Text = "Trang chủ";
-                btnMyProduct.Text = "Sản phẩm\ncủa tôi  ";
-                btnInfo.Text = "Thông tin\ncá nhân ";
+                btnTrangChu.Text = "Trang chủ";
+                btnSPCuaToi.Text = "Sản phẩm\ncủa tôi  ";
+                btnThongTin.Text = "Thông tin\ncá nhân ";
                 btnDonHang.Text = "Đơn hàng";
                 btnLogOut.Text = "Đăng xuất";
                 btnShop.Text = "Danh sách\nshop   ";
@@ -117,9 +113,9 @@ namespace ProjectWin_Demo_
             {
                 shrinkTimer.Stop();
             }
-            btnHome.Text = "";
-            btnMyProduct.Text = "";
-            btnInfo.Text = "";
+            btnTrangChu.Text = "";
+            btnSPCuaToi.Text = "";
+            btnThongTin.Text = "";
             btnDonHang.Text = "";
             btnLogOut.Text = "";
             btnShop.Text = "";
@@ -141,16 +137,16 @@ namespace ProjectWin_Demo_
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.LightCyan;
-            btnMyProduct.FillColor = Color.White;
-            btnInfo.FillColor = Color.White;
+            btnTrangChu.FillColor = Color.LightCyan;
+            btnSPCuaToi.FillColor = Color.White;
+            btnThongTin.FillColor = Color.White;
             btnShop.FillColor = Color.White;
             btnDonHang.FillColor = Color.White;
             btnKhachhang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.SkyBlue;
-            btnMyProduct.CustomBorderColor = Color.White;
-            btnInfo.CustomBorderColor = Color.White;
+            btnTrangChu.CustomBorderColor = Color.SkyBlue;
+            btnSPCuaToi.CustomBorderColor = Color.White;
+            btnThongTin.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.White;
@@ -165,16 +161,16 @@ namespace ProjectWin_Demo_
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.White;
-            btnMyProduct.FillColor = Color.White;
-            btnInfo.FillColor = Color.LightCyan;
+            btnTrangChu.FillColor = Color.White;
+            btnSPCuaToi.FillColor = Color.White;
+            btnThongTin.FillColor = Color.LightCyan;
             btnDonHang.FillColor = Color.White;
             btnShop.FillColor = Color.White;
             btnKhachhang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.White;
-            btnMyProduct.CustomBorderColor = Color.White;
-            btnInfo.CustomBorderColor = Color.SkyBlue;
+            btnTrangChu.CustomBorderColor = Color.White;
+            btnSPCuaToi.CustomBorderColor = Color.White;
+            btnThongTin.CustomBorderColor = Color.SkyBlue;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.White;
@@ -183,16 +179,16 @@ namespace ProjectWin_Demo_
 
         private void btnMyProduct_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.White;
-            btnMyProduct.FillColor = Color.LightCyan;
-            btnInfo.FillColor = Color.White;
+            btnTrangChu.FillColor = Color.White;
+            btnSPCuaToi.FillColor = Color.LightCyan;
+            btnThongTin.FillColor = Color.White;
             btnDonHang.FillColor = Color.White;
             btnShop.FillColor = Color.White;
             btnKhachhang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.White;
-            btnMyProduct.CustomBorderColor = Color.SkyBlue;
-            btnInfo.CustomBorderColor = Color.White;
+            btnTrangChu.CustomBorderColor = Color.White;
+            btnSPCuaToi.CustomBorderColor = Color.SkyBlue;
+            btnThongTin.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.White;
@@ -200,7 +196,7 @@ namespace ProjectWin_Demo_
 
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
+        public void btnLogOut_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -231,16 +227,16 @@ namespace ProjectWin_Demo_
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.White;
-            btnMyProduct.FillColor = Color.White;
-            btnInfo.FillColor = Color.White;
+            btnTrangChu.FillColor = Color.White;
+            btnSPCuaToi.FillColor = Color.White;
+            btnThongTin.FillColor = Color.White;
             btnDonHang.FillColor = Color.LightCyan;
             btnShop.FillColor = Color.White;
             btnKhachhang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.White;
-            btnMyProduct.CustomBorderColor = Color.White;
-            btnInfo.CustomBorderColor = Color.White;
+            btnTrangChu.CustomBorderColor = Color.White;
+            btnSPCuaToi.CustomBorderColor = Color.White;
+            btnThongTin.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.SkyBlue;
             btnShop.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.White;
@@ -271,16 +267,16 @@ namespace ProjectWin_Demo_
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.White;
-            btnMyProduct.FillColor = Color.White;
+            btnTrangChu.FillColor = Color.White;
+            btnSPCuaToi.FillColor = Color.White;
             btnShop.FillColor = Color.LightCyan;
             btnDonHang.FillColor = Color.White;
-            btnInfo.FillColor = Color.White;
+            btnThongTin.FillColor = Color.White;
             btnKhachhang.FillColor = Color.White;
 
-            btnHome.CustomBorderColor = Color.White;
-            btnMyProduct.CustomBorderColor = Color.White;
-            btnInfo.CustomBorderColor = Color.White;
+            btnTrangChu.CustomBorderColor = Color.White;
+            btnSPCuaToi.CustomBorderColor = Color.White;
+            btnThongTin.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.SkyBlue;
             btnDonHang.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.White;
@@ -289,16 +285,16 @@ namespace ProjectWin_Demo_
 
         private void btnKhachhang_Click(object sender, EventArgs e)
         {
-            btnHome.FillColor = Color.White;
-            btnMyProduct.FillColor = Color.White;
+            btnTrangChu.FillColor = Color.White;
+            btnSPCuaToi.FillColor = Color.White;
             btnShop.FillColor = Color.White;
             btnDonHang.FillColor = Color.White;
-            btnInfo.FillColor = Color.White;
+            btnThongTin.FillColor = Color.White;
             btnKhachhang.FillColor = Color.LightCyan;
 
-            btnHome.CustomBorderColor = Color.White;
-            btnMyProduct.CustomBorderColor = Color.White;
-            btnInfo.CustomBorderColor = Color.White;
+            btnTrangChu.CustomBorderColor = Color.White;
+            btnSPCuaToi.CustomBorderColor = Color.White;
+            btnThongTin.CustomBorderColor = Color.White;
             btnShop.CustomBorderColor = Color.White;
             btnDonHang.CustomBorderColor = Color.White;
             btnKhachhang.CustomBorderColor = Color.SkyBlue;

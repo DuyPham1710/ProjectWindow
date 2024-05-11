@@ -36,6 +36,8 @@
             this.btnHuyDon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.lblMaVanChuyen = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,12 +96,12 @@
             // 
             this.lblMaSP.AutoSize = true;
             this.lblMaSP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaSP.Location = new System.Drawing.Point(126, 70);
+            this.lblMaSP.Location = new System.Drawing.Point(199, 73);
             this.lblMaSP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(58, 13);
+            this.lblMaSP.Size = new System.Drawing.Size(37, 13);
             this.lblMaSP.TabIndex = 20;
-            this.lblMaSP.Text = "Mã: 00198";
+            this.lblMaSP.Text = "00198";
             this.lblMaSP.MouseLeave += new System.EventHandler(this.pcbDelete_MouseLeave);
             this.lblMaSP.MouseHover += new System.EventHandler(this.pcbDelete_MouseHover);
             // 
@@ -142,18 +144,42 @@
             // 
             this.lblMaVanChuyen.AutoSize = true;
             this.lblMaVanChuyen.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaVanChuyen.Location = new System.Drawing.Point(234, 70);
+            this.lblMaVanChuyen.Location = new System.Drawing.Point(341, 73);
             this.lblMaVanChuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaVanChuyen.Name = "lblMaVanChuyen";
-            this.lblMaVanChuyen.Size = new System.Drawing.Size(58, 13);
+            this.lblMaVanChuyen.Size = new System.Drawing.Size(37, 13);
             this.lblMaVanChuyen.TabIndex = 26;
-            this.lblMaVanChuyen.Text = "Mã: 00198";
+            this.lblMaVanChuyen.Text = "00198";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(253, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Mã vận chuyển:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Location = new System.Drawing.Point(126, 73);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Mã sản phẩm:";
             // 
             // UCSanPhamMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblMaVanChuyen);
             this.Controls.Add(this.btnHuyDon);
             this.Controls.Add(this.lblDanhMuc);
@@ -183,5 +209,7 @@
         public System.Windows.Forms.PictureBox pctSanPham;
         public Guna.UI2.WinForms.Guna2GradientButton btnHuyDon;
         public System.Windows.Forms.Label lblMaVanChuyen;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
     }
 }

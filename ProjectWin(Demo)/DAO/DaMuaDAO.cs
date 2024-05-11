@@ -66,5 +66,12 @@ namespace ProjectWin_Demo_
             string sql = string.Format("select SanPham.MSP, TenSP, SoLuongDaMua, FullName, ThoiGianDat, ThoiGianHienTai, Addr, Gia from SanPham, DaMua, Person Where SanPham.MSP = DaMua.MSP and DaMua.ID = Person.ID and SanPham.IDChuSP = {0} and DaMua.TrangThai = N'Đã giao' {1}", id, loc);
             return dBConnection.LoadDuLieu(sql);
         }
+        public SanPham MuaLai(int maVanChuyen)
+        {
+            string query = string.Format("select SanPham.* from SanPham, DaMua where SanPham.MSP = DaMua.MSP and MaVanChuyen = {0} and TrangThai = N'Đã hủy'", maVanChuyen);
+            DataTable dt = dBConnection.LoadDuLieu(query);
+            SanPham sp = new SanPham(dt.Rows[0]);
+            return sp;
+        }
     }
 }

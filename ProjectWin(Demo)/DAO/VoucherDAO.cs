@@ -17,15 +17,8 @@ namespace ProjectWin_Demo_
             this.id = id;
             dBConnection = new DBConnection(id);
         }
-        //public List<UCVoucher> LoadVoucher(string maSP)
-        //{
-        //    string sqlStr = string.Format("select distinct Voucher.* from Voucher, (select * from Voucher, SanPham where MSP = '{0}') Q where Voucher.ID = Q.IDChuSP", maSP);
-        //    return dBConnection.LoadVoucher(sqlStr);
-        //}
         public List<T> LoadVoucher<T>(string maSP)
         {
-            //string sqlStr = string.Format("select IDChuSP from SanPham where MSP = '{0}'", maSP);
-            //int IDChuSP = dBConnection.demDB(sqlStr);
             string sqlStr = string.Format("select distinct Q.* from (select Voucher.* from Voucher, Account where Voucher.ID = Account.ID) Q where Q.ID = (select IDChuSP from SanPham where MSP = '{0}')", maSP);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<T> Vouchers = new List<T>();
@@ -52,13 +45,7 @@ namespace ProjectWin_Demo_
             }
             return Vouchers;
         }
-        //public List<T> LoadVoucher<T>(string maSP)
-        //{
-        //    //string sqlStr = string.Format("select IDChuSP from SanPham where MSP = '{0}'", maSP);
-        //    //int IDChuSP = dBConnection.demDB(sqlStr);
-        //    string sqlStr = string.Format("select distinct Q.* from (select Voucher.* from Voucher, Account where Voucher.ID = Account.ID) Q where Q.ID = (select IDChuSP from SanPham where MSP = '{0}')", maSP);
-        //    return dBConnection.LoadVoucher<T>(sqlStr);
-        //}
+      
         public bool KiemTraVoucher(string maVoucher)
         {
             string sqlStr = string.Format("SELECT * FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
@@ -69,8 +56,6 @@ namespace ProjectWin_Demo_
         }
         public void capNhatVoucher(string MaVoucher)
         {
-            //string sqlStr = string.Format("UPDATE DaMua SET MaVoucher = '{0}' WHERE ID = {1}", MaVoucher, id);
-            //dBConnection.thucThi(sqlStr);
             if (MaVoucher != "")
             {
                 string sqlStr = string.Format("UPDATE Voucher SET SoLuongVoucher = (SoLuongVoucher - 1) WHERE MaVoucher = '{0}'", MaVoucher);
@@ -87,8 +72,6 @@ namespace ProjectWin_Demo_
         }
         public void suaVoucher(Voucher voucher, string maVoucherCu)
         {
-            //string sqlStr = string.Format("select distinct IDChuSP from SanPham where IDChuSP = {0}", id);
-            //int IDChuSP = dBConnection.demDB(sqlStr);
             string sqlStr = string.Format("UPDATE Voucher SET MaVoucher = '{0}', Mota = N'{1}', GiaTri = {2}, HSD = '{3}', SoLuongVoucher = {4} WHERE ID = {5} and MaVoucher = '{6}'", voucher.MaVoucher, voucher.MoTa, voucher.GiaTri, voucher.HSD.ToString(), voucher.SoLuong, id, maVoucherCu);
             dBConnection.thucThi(sqlStr);
         }
@@ -97,15 +80,7 @@ namespace ProjectWin_Demo_
             string sqlStr = string.Format("DELETE FROM Voucher WHERE MaVoucher = '{0}'", MaVoucher);
             dBConnection.thucThi(sqlStr);
         }
-        //public int GiaVoucher(string maVoucher)
-        //{
-        //    string sqlStr = string.Format("SELECT GiaTri FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
-        //    DataTable dt = dBConnection.LoadDuLieu(sqlStr);
-        //    if (dt.Rows.Count == 0)
-        //        return 0;
-        //    return Int32.Parse(dt.Rows[0]["GiaTri"].ToString());
-        //    //return dBConnection.giaVoucher(sqlStr);
-        //}
+      
         public Voucher LayVoucher(string maVoucher)
         {
             string sqlStr = string.Format("SELECT * FROM Voucher WHERE MaVoucher = '{0}'", maVoucher);
@@ -114,7 +89,6 @@ namespace ProjectWin_Demo_
                 return null;
             Voucher voucher = new Voucher(dt.Rows[0]);
             return voucher;
-            //return dBConnection.LayVoucher(sqlStr);
         }
     }
 }

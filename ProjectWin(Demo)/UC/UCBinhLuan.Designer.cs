@@ -53,7 +53,7 @@
             this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoTen.Location = new System.Drawing.Point(74, 4);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(103, 19);
+            this.lblHoTen.Size = new System.Drawing.Size(87, 16);
             this.lblHoTen.TabIndex = 2;
             this.lblHoTen.Text = "Nguyen Van A";
             // 
@@ -79,7 +79,7 @@
             // 
             // UCBinhLuan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -91,7 +91,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UCBinhLuan";
             this.Size = new System.Drawing.Size(988, 155);
-            this.Load += new System.EventHandler(this.UCBinhLuan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbAvt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

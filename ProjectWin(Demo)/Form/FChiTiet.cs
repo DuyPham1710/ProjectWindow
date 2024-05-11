@@ -42,7 +42,7 @@ namespace ProjectWin_Demo_
             lblTenSP.Text = sp.TenSP;
             lblGiaBanDau.Text = "<s>" + sp.GiaBanDau + "đ</s>";
             lblGiaHienTai.Text = sp.GiaHienTai + "đ";
-            lblSPConLai.Text = "Còn lại: " + sp.SoLuong;
+            lblSPConLai.Text = sp.SoLuong;
             lblXuatXu.Text = "Xuất xứ: " + sp.XuatXu;
             lblDanhMuc.Text = "Phân loại: " + sp.DanhMuc;
             lblTinhTrang.Text = "Tình trạng: " + sp.TinhTrang;
@@ -92,8 +92,8 @@ namespace ProjectWin_Demo_
                     MemoryStream ms = new MemoryStream(imageBytes);
                     pcbAvt.Image = Image.FromStream(ms);
                 }
-                lblTenShop.Text = nguoiDung.UserName;
-                lblDiaChiShop.Text = nguoiDung.Address;
+                lblTenShop.Text = nguoiDung.TenDangNhap;
+                lblDiaChiShop.Text = nguoiDung.DiaChi;
             }
         }
         private void btnNext_Click(object sender, EventArgs e)
@@ -125,21 +125,33 @@ namespace ProjectWin_Demo_
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            List<SanPham> sanPham = new List<SanPham>();
-            sp.SoLuong = nudSoLuong.Value.ToString();
-            sanPham.Add(sp);
-            FThanhToan fPayment = new FThanhToan(sanPham, id);
-            fPayment.ShowDialog();
-            this.Close();
-           // FDetail_Load(sender, e);
-            //SPDao.Update(sp, nudSoLuong.Value);
+            if (Int32.Parse(lblSPConLai.Text) > 0)
+            {
+                List<SanPham> sanPham = new List<SanPham>();
+                sp.SoLuong = nudSoLuong.Value.ToString();
+                sanPham.Add(sp);
+                FThanhToan fPayment = new FThanhToan(sanPham, id);
+                fPayment.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Sản phẩm đã hết hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
-            GioHangDAO ghDAO = new GioHangDAO(id);
-            ghDAO.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
-            MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
+            if (Int32.Parse(lblSPConLai.Text) > 0)
+            {
+                GioHangDAO ghDAO = new GioHangDAO(id);
+                ghDAO.ThemGioHang(sp, int.Parse(nudSoLuong.Value.ToString()));
+                MessageBox.Show("Thêm và giỏ hàng thành công", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Sản phẩm đã hết hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

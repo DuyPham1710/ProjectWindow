@@ -24,10 +24,13 @@ namespace ProjectWin_Demo_
         }
         public List<string> LoadDiaChiMoi()
         {
-            string sqlStr = string.Format("select * from DiaChiGiaoHang where IDNguoiMua = {0}", id);
+            string sqlStr = string.Format("select max(MaDiaChi) as max from DiaChiGiaoHang where IDNguoiMua = {0}", id);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
+            int max = Int32.Parse(dt.Rows[0]["max"].ToString());
            
+            sqlStr = string.Format("select * from DiaChiGiaoHang where MaDiaChi = {0}", max);
             List<string> DiaChiMoi = new List<string>();
+            dt = dBConnection.LoadDuLieu(sqlStr);
             DiaChiMoi.Add(dt.Rows[0]["HoTen"].ToString());
             DiaChiMoi.Add(dt.Rows[0]["soDT"].ToString());
             DiaChiMoi.Add(dt.Rows[0]["DiaChiNhanHang"].ToString());
