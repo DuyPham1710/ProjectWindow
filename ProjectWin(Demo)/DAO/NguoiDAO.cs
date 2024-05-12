@@ -67,7 +67,7 @@ namespace ProjectWin_Demo_
         public List<Nguoi> LoadThongTinNguoiMua()
         {
 
-            string query = string.Format("select Person.* from DaMua inner join Person on DaMua.ID = Person.ID");
+            string query = string.Format("select Distinct Person.* from DaMua inner join Person on DaMua.ID = Person.ID");
             DataTable dt = dBConnection.LoadDuLieu(query);
             List<Nguoi> DanhSachNguoiMua = new List<Nguoi>();
             if (dt.Rows.Count > 0)

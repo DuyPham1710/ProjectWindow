@@ -111,6 +111,7 @@ namespace ProjectWin_Demo_
             foreach (DataRow row in dt.Rows)
             {
                 SanPham sp = new SanPham(row);
+                sp.SoLuong = row["SoLuongDaMua"].ToString();
                 UCSPDaBan ucSP = new UCSPDaBan(sp, id);
                 DSSanPham.Add(ucSP);
             }

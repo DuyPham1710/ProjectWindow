@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMaVanChuyen = new System.Windows.Forms.Label();
             this.lblTenShop = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblGia = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.btnMuaLai = new CustomButton.VBButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lblMaVanChuyen = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
@@ -64,6 +64,17 @@
             this.panel1.Size = new System.Drawing.Size(357, 50);
             this.panel1.TabIndex = 0;
             // 
+            // lblMaVanChuyen
+            // 
+            this.lblMaVanChuyen.AutoSize = true;
+            this.lblMaVanChuyen.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaVanChuyen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblMaVanChuyen.Location = new System.Drawing.Point(216, 18);
+            this.lblMaVanChuyen.Name = "lblMaVanChuyen";
+            this.lblMaVanChuyen.Size = new System.Drawing.Size(90, 15);
+            this.lblMaVanChuyen.TabIndex = 5;
+            this.lblMaVanChuyen.Text = "Mã vận chuyển:";
+            // 
             // lblTenShop
             // 
             this.lblTenShop.AutoSize = true;
@@ -71,7 +82,7 @@
             this.lblTenShop.ForeColor = System.Drawing.Color.Tomato;
             this.lblTenShop.Location = new System.Drawing.Point(8, 14);
             this.lblTenShop.Name = "lblTenShop";
-            this.lblTenShop.Size = new System.Drawing.Size(131, 23);
+            this.lblTenShop.Size = new System.Drawing.Size(106, 19);
             this.lblTenShop.TabIndex = 1;
             this.lblTenShop.Text = "Shop điện máy";
             // 
@@ -94,7 +105,7 @@
             this.lblGia.ForeColor = System.Drawing.Color.Red;
             this.lblGia.Location = new System.Drawing.Point(260, 69);
             this.lblGia.Name = "lblGia";
-            this.lblGia.Size = new System.Drawing.Size(80, 17);
+            this.lblGia.Size = new System.Drawing.Size(67, 15);
             this.lblGia.TabIndex = 2;
             this.lblGia.Text = "32 460 000đ";
             this.lblGia.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -136,7 +147,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(25, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 18);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "sản phẩm";
             // 
@@ -147,7 +158,7 @@
             this.lblTongTien.ForeColor = System.Drawing.Color.Red;
             this.lblTongTien.Location = new System.Drawing.Point(261, 16);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(80, 17);
+            this.lblTongTien.Size = new System.Drawing.Size(67, 15);
             this.lblTongTien.TabIndex = 3;
             this.lblTongTien.Text = "32 460 000đ";
             this.lblTongTien.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -158,7 +169,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label5.Location = new System.Drawing.Point(160, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 18);
+            this.label5.Size = new System.Drawing.Size(68, 15);
             this.label5.TabIndex = 1;
             this.label5.Text = "Thành tiền:";
             // 
@@ -168,7 +179,7 @@
             this.lblSoLuongSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuongSP.Location = new System.Drawing.Point(5, 13);
             this.lblSoLuongSP.Name = "lblSoLuongSP";
-            this.lblSoLuongSP.Size = new System.Drawing.Size(16, 18);
+            this.lblSoLuongSP.Size = new System.Drawing.Size(14, 15);
             this.lblSoLuongSP.TabIndex = 0;
             this.lblSoLuongSP.Text = "1";
             // 
@@ -242,17 +253,6 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(373, 287);
             this.guna2ShadowPanel1.TabIndex = 3;
-            // 
-            // lblMaVanChuyen
-            // 
-            this.lblMaVanChuyen.AutoSize = true;
-            this.lblMaVanChuyen.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaVanChuyen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblMaVanChuyen.Location = new System.Drawing.Point(216, 18);
-            this.lblMaVanChuyen.Name = "lblMaVanChuyen";
-            this.lblMaVanChuyen.Size = new System.Drawing.Size(112, 17);
-            this.lblMaVanChuyen.TabIndex = 5;
-            this.lblMaVanChuyen.Text = "Mã vận chuyển:";
             // 
             // UCSPDaMua
             // 

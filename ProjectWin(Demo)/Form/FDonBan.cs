@@ -35,6 +35,7 @@ namespace ProjectWin_Demo_
         {
             UCQuyTrinhDonHang sp = sender as UCQuyTrinhDonHang;
             SanPham sanPham = new SanPham(Int32.Parse(sp.lblMaVanChuyen.Text));
+            sanPham.MaSP = sp.lblMaSP.Text;
             sanPhamDao.XacNhanDonhang(sanPham, trangThai, Int32.Parse(sp.lblSoLuong.Text));
             FDonBan_Load(sender, e);
         }

@@ -54,7 +54,7 @@ namespace ProjectWin_Demo_
 
         private void btnDangGiao_Click(object sender, EventArgs e)
         {
-            pTieuDe.Hide();
+            pTieuDe.Show();
             btnChoXacNhan.CustomBorderColor = Color.White;
             btnDangGiao.CustomBorderColor = Color.Gold;
             btnDaGiao.CustomBorderColor = Color.White;
