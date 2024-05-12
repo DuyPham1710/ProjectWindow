@@ -18,7 +18,8 @@ namespace ProjectWin_Demo_
         private Point lastForm;
 
         List<SanPham> sanPham = new List<SanPham>();
-        List<string> MaVouchers = new List<string>();
+        List<Dictionary<string, string>> MaVouchers = new List<Dictionary<string, string>>();
+        List<string> giaBanDau = new List<string>();    
         int id;
         string[] AnhCu = { };
         SanPhamDao SPDao;
@@ -37,7 +38,7 @@ namespace ProjectWin_Demo_
             int tongTienSP = 0;
             foreach (SanPham sp in sanPham)
             {
-              
+                giaBanDau.Add(sp.GiaHienTai);
                 tongTienSP = tongTienSP + Int32.Parse(sp.GiaHienTai);
                 UCSPDatHang ucSPDatHang = new UCSPDatHang(sp, id);
                 ucSPDatHang.BtnClick_ChonVoucher += btnChonVoucher_Click;
@@ -95,15 +96,24 @@ namespace ProjectWin_Demo_
             int i = 0;
             foreach (SanPham sp in sanPham)
             {
-                if (MaVouchers.Count == 0 || MaVouchers.Count < i + 1 )
+                if (MaVouchers.Count == 0 || MaVouchers.Count < i + 1)
                 {
                     SPDao.DatHang(sp, "");
+                    i++;
                 }
                 else
                 {
-                    SPDao.DatHang(sp, MaVouchers[i]);
+                    if (MaVouchers[i].ContainsKey(sp.MaSP))
+                    {
+                        SPDao.DatHang(sp, MaVouchers[i][sp.MaSP]);
+                        i++;
+                    }
+                    else
+                    {
+                        SPDao.DatHang(sp, "");
+                    }
                 }
-                i++;
+                
             }
             MessageBox.Show("Đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -162,31 +172,43 @@ namespace ProjectWin_Demo_
             UCSPDatHang ucSPDatHang = sender as UCSPDatHang;
             FVoucher fVoucher = new FVoucher(id, ucSPDatHang.lblMaSP.Text);
             fVoucher.ShowDialog();
-            MaVouchers.Add(fVoucher.MaVoucher);
-         
-            VoucherDAO voucherDAO = new VoucherDAO(id);
-            Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoucher);  
-            if (voucher != null)
+           
+            if (fVoucher.MaVoycher.Count != 0)
             {
-                ucSPDatHang.lblGia.Text = (Int32.Parse(ucSPDatHang.lblGia.Text) - voucher.GiaTri).ToString();
-                foreach (SanPham sp in sanPham)
+                MaVouchers.Add(fVoucher.MaVoycher);
+
+                VoucherDAO voucherDAO = new VoucherDAO(id);
+                Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoycher[ucSPDatHang.lblMaSP.Text]);
+                if (voucher != null)
                 {
-                    if (sp.MaSP == ucSPDatHang.lblMaSP.Text)
+                    int i = 0;
+                    foreach (SanPham sp in sanPham)
                     {
-                        sp.GiaHienTai = (Int32.Parse(sp.GiaHienTai) - voucher.GiaTri).ToString();
+                        if (sp.MaSP == ucSPDatHang.lblMaSP.Text)
+                        {
+                            sp.GiaHienTai = (Int32.Parse(giaBanDau[i]) - voucher.GiaTri).ToString();
+                            ucSPDatHang.lblGia.Text = sp.GiaHienTai;
+                            break;
+                        }
+                        else
+                        {
+                            i++;
+                        }
+
+                    }
+                    lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
+                    int tongTien = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text));
+                    if (tongTien < 0)
+                    {
+                        lblTongTien.Text = "0";
+                    }
+                    else
+                    {
+                        lblTongTien.Text = tongTien.ToString();
                     }
                 }
-                lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
-                int tongTien = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text));
-                if (tongTien < 0)
-                {
-                    lblTongTien.Text = "0";
-                }
-                else
-                {
-                    lblTongTien.Text = tongTien.ToString();
-                }
             }
+           
         }
     }
 }

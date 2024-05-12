@@ -16,9 +16,8 @@ namespace ProjectWin_Demo_
         VoucherDAO voucherDAO;
         List<UCVoucher> Vouchers;
         private string maSP;
-        private string maVoucher;
-
-        public string MaVoucher { get => maVoucher; set => maVoucher = value; }
+        Dictionary<string, string> maVoycher = new Dictionary<string, string>();
+        public Dictionary<string, string> MaVoycher { get => maVoycher; set => maVoycher = value; }
 
         public FVoucher(int id, string maSP)
         {
@@ -56,8 +55,8 @@ namespace ProjectWin_Demo_
         private void btnApDung_Click(object sender, EventArgs e)
         {
             UCVoucher ucVoucher = sender as UCVoucher;
-            MaVoucher = ucVoucher.lblMaVoucher.Text;
-            MessageBox.Show("Đã chọn voucher " + MaVoucher);        
+            MaVoycher[maSP] = ucVoucher.lblMaVoucher.Text;
+            MessageBox.Show("Đã chọn voucher " + MaVoycher[maSP]);        
             this.Close();
         }
 
@@ -65,8 +64,8 @@ namespace ProjectWin_Demo_
         {
             if (voucherDAO.KiemTraVoucher(txtTimKiem.Text))
             {
-                MaVoucher = txtTimKiem.Text;
-                MessageBox.Show("Đã chọn voucher " + MaVoucher);
+                MaVoycher[maSP] = txtTimKiem.Text;
+                MessageBox.Show("Đã chọn voucher " + MaVoycher[maSP]);
                 this.Close();
             }
             else
