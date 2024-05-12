@@ -67,7 +67,6 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSave = new CustomButton.VBButton();
-            this.btnXoaTaiKhan = new CustomButton.VBButton();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -769,32 +768,11 @@
             this.btnSave.TextColor = System.Drawing.Color.White;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // btnXoaTaiKhan
-            // 
-            this.btnXoaTaiKhan.BackColor = System.Drawing.Color.Red;
-            this.btnXoaTaiKhan.BackgroundColor = System.Drawing.Color.Red;
-            this.btnXoaTaiKhan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaTaiKhan.BorderRadius = 14;
-            this.btnXoaTaiKhan.BorderSize = 0;
-            this.btnXoaTaiKhan.FlatAppearance.BorderSize = 0;
-            this.btnXoaTaiKhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTaiKhan.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnXoaTaiKhan.ForeColor = System.Drawing.Color.White;
-            this.btnXoaTaiKhan.Location = new System.Drawing.Point(150, 440);
-            this.btnXoaTaiKhan.Margin = new System.Windows.Forms.Padding(2);
-            this.btnXoaTaiKhan.Name = "btnXoaTaiKhan";
-            this.btnXoaTaiKhan.Size = new System.Drawing.Size(137, 48);
-            this.btnXoaTaiKhan.TabIndex = 23;
-            this.btnXoaTaiKhan.Text = "Xóa tài khoản";
-            this.btnXoaTaiKhan.TextColor = System.Drawing.Color.White;
-            this.btnXoaTaiKhan.UseVisualStyleBackColor = false;
-            // 
             // UCThongTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnXoaTaiKhan);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -869,6 +847,5 @@
         public System.Windows.Forms.GroupBox groupBox9;
         public Guna.UI2.WinForms.Guna2TextBox txtPass;
         public Guna.UI2.WinForms.Guna2ComboBox cbAddress;
-        public CustomButton.VBButton btnXoaTaiKhan;
     }
 }

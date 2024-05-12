@@ -33,7 +33,6 @@ namespace ProjectWin_Demo_
             guna2ContextMenuStrip1.LostFocus += btnHistory_LostFocus;
             ucThongTin = new UCThongTin(id);
             ucThongTin.btnSave.Click += btnSave_Click;
-            ucThongTin.btnXoaTaiKhan.Click += btnXoaTaiKhan_Click;
             panelTieuDe.Hide();
             this.id = id;
             nguoiDAO = new NguoiDAO(id);
@@ -93,17 +92,7 @@ namespace ProjectWin_Demo_
                 }
             }
         }
-        private void btnXoaTaiKhan_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn chắc chắn là muốn xóa tài khoản này", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                nguoiDAO.xoaTaiKhoan();
-                MessageBox.Show("Đã xóa tài khoản khỏi hệ thống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FNguoiDung fNguoiDung = new FNguoiDung(id);
-                fNguoiDung.btnLogOut_Click(sender, e);
-            }
-        }
+       
         private void btnHistory_MouseDown(object sender, MouseEventArgs e)
         {
             Point location = btnHistory.PointToScreen(new Point(0, btnHistory.Height));
