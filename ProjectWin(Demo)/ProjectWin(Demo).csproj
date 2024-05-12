@@ -655,5 +655,11 @@
   <ItemGroup>
     <None Include="Resources\people-carry-box-solid.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket-solid.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

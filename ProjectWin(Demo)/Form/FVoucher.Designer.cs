@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FVoucher));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMaVoucher = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -152,7 +151,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.empty_voucher;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(146, 211);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

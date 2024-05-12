@@ -28,21 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSPDatHang));
             this.btnChonVoucher = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblDanhMuc = new System.Windows.Forms.Label();
             this.lblGia = new System.Windows.Forms.Label();
             this.lblSoLuong = new System.Windows.Forms.Label();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblMaSP = new System.Windows.Forms.Label();
-            this.pctSanPham = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pctSanPham = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChonVoucher
@@ -119,17 +118,6 @@
             this.lblMaSP.TabIndex = 27;
             this.lblMaSP.Text = "Mã: 00198";
             // 
-            // pctSanPham
-            // 
-            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
-            this.pctSanPham.Location = new System.Drawing.Point(34, 12);
-            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
-            this.pctSanPham.Name = "pctSanPham";
-            this.pctSanPham.Size = new System.Drawing.Size(73, 74);
-            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctSanPham.TabIndex = 26;
-            this.pctSanPham.TabStop = false;
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.DarkGray;
@@ -138,17 +126,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(990, 1);
             this.panel10.TabIndex = 42;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(604, 113);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 43;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -183,6 +160,28 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1084, 167);
             this.guna2ShadowPanel1.TabIndex = 46;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::ProjectWin_Demo_.Properties.Resources.ticket_solid;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(604, 113);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 43;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pctSanPham
+            // 
+            this.pctSanPham.Image = global::ProjectWin_Demo_.Properties.Resources._1;
+            this.pctSanPham.Location = new System.Drawing.Point(34, 12);
+            this.pctSanPham.Margin = new System.Windows.Forms.Padding(2);
+            this.pctSanPham.Name = "pctSanPham";
+            this.pctSanPham.Size = new System.Drawing.Size(73, 74);
+            this.pctSanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctSanPham.TabIndex = 26;
+            this.pctSanPham.TabStop = false;
+            // 
             // UCSPDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,8 +202,8 @@
             this.Name = "UCSPDatHang";
             this.Size = new System.Drawing.Size(1084, 167);
             this.Load += new System.EventHandler(this.UCSPDatHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

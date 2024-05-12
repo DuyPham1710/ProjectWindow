@@ -80,7 +80,7 @@
             this.btnSua.ImageRotate = 0F;
             this.btnSua.ImageSize = new System.Drawing.Size(32, 32);
             this.btnSua.Location = new System.Drawing.Point(985, 48);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.btnSua.Size = new System.Drawing.Size(35, 34);
@@ -96,7 +96,7 @@
             this.btnXoa.ImageRotate = 0F;
             this.btnXoa.ImageSize = new System.Drawing.Size(32, 32);
             this.btnXoa.Location = new System.Drawing.Point(1034, 53);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.PressedState.ImageSize = new System.Drawing.Size(32, 32);
             this.btnXoa.Size = new System.Drawing.Size(24, 26);
@@ -108,7 +108,7 @@
             this.lblHSD.AutoSize = true;
             this.lblHSD.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHSD.ForeColor = System.Drawing.Color.Silver;
-            this.lblHSD.Location = new System.Drawing.Point(830, 53);
+            this.lblHSD.Location = new System.Drawing.Point(810, 53);
             this.lblHSD.Name = "lblHSD";
             this.lblHSD.Size = new System.Drawing.Size(56, 21);
             this.lblHSD.TabIndex = 43;

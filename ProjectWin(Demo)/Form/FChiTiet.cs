@@ -129,6 +129,7 @@ namespace ProjectWin_Demo_
             {
                 List<SanPham> sanPham = new List<SanPham>();
                 sp.SoLuong = nudSoLuong.Value.ToString();
+                sp.GiaHienTai = (Int32.Parse(sp.GiaHienTai) * nudSoLuong.Value).ToString();
                 sanPham.Add(sp);
                 FThanhToan fPayment = new FThanhToan(sanPham, id);
                 fPayment.ShowDialog();

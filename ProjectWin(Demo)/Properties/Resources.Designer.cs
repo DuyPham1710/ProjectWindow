@@ -283,6 +283,16 @@ namespace ProjectWin_Demo_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap empty_voucher {
+            get {
+                object obj = ResourceManager.GetObject("empty voucher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap envelope_solid {
             get {
                 object obj = ResourceManager.GetObject("envelope-solid", resourceCulture);
@@ -637,6 +647,16 @@ namespace ProjectWin_Demo_.Properties {
         internal static System.Drawing.Bitmap thongTin {
             get {
                 object obj = ResourceManager.GetObject("thongTin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ticket_solid {
+            get {
+                object obj = ResourceManager.GetObject("ticket-solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
