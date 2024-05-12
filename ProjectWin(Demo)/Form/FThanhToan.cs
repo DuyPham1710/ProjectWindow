@@ -22,6 +22,7 @@ namespace ProjectWin_Demo_
         List<string> giaBanDau = new List<string>();    
         int id;
         string[] AnhCu = { };
+        int tongGia = 0;
         SanPhamDao SPDao;
       
         public FThanhToan(List<SanPham> sanPham, int id)
@@ -38,6 +39,7 @@ namespace ProjectWin_Demo_
             int tongTienSP = 0;
             foreach (SanPham sp in sanPham)
             {
+                tongGia += Int32.Parse(sp.GiaHienTai);
                 giaBanDau.Add(sp.GiaHienTai);
                 tongTienSP = tongTienSP + Int32.Parse(sp.GiaHienTai);
                 UCSPDatHang ucSPDatHang = new UCSPDatHang(sp, id);
@@ -181,22 +183,22 @@ namespace ProjectWin_Demo_
                 Voucher voucher = voucherDAO.LayVoucher(fVoucher.MaVoycher[ucSPDatHang.lblMaSP.Text]);
                 if (voucher != null)
                 {
-                    int i = 0;
+                    int i = 0, tongGiaHienTai = 0;
                     foreach (SanPham sp in sanPham)
                     {
                         if (sp.MaSP == ucSPDatHang.lblMaSP.Text)
                         {
                             sp.GiaHienTai = (Int32.Parse(giaBanDau[i]) - voucher.GiaTri).ToString();
                             ucSPDatHang.lblGia.Text = sp.GiaHienTai;
-                            break;
                         }
                         else
                         {
                             i++;
                         }
+                        tongGiaHienTai += Int32.Parse(sp.GiaHienTai);
 
                     }
-                    lblTienVoucher.Text = (Int32.Parse(lblTienVoucher.Text) + voucher.GiaTri).ToString();
+                    lblTienVoucher.Text = (tongGia - tongGiaHienTai).ToString();
                     int tongTien = (Int32.Parse(lblTienSP.Text) - Int32.Parse(lblTienVoucher.Text));
                     if (tongTien < 0)
                     {
