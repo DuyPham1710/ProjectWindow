@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="62f2cd5ec2e349c59b368ead93366d22" Name="Diagram1">
+        <EntityTypeShape EntityType="TraoDoiHangModel.Account" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.DaMua" Width="1.5" PointX="5.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.DanhGia" Width="1.5" PointX="8.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.DiaChiGiaoHang" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.GioHang" Width="1.5" PointX="8.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.Person" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.SanPham" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.SanPhamHuy" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.Voucher" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TraoDoiHangModel.YeuThich" Width="1.5" PointX="8.25" PointY="22.75" IsExpanded="true" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__Account__ID__6AEFE058" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__DiaChiGia__IDNgu__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__SanPhamHuy__ID__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__Voucher__ID__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__DaMua__ID__6DCC4D03" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__DaMua__MSP__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__DanhGia__IDNguoi__70A8B9AE" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__DanhGia__MSP__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__GioHang__IDNguoi__6EC0713C" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__GioHang__MaSP__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__SanPham__IDChuSP__6BE40491" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__YeuThich__IDNguo__0D44F85C" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__SanPhamHuy__MSP__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.FK__YeuThich__MSP__0E391C95" ManuallyRouted="false" />
+        <AssociationConnector Association="TraoDoiHangModel.QuanTam" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

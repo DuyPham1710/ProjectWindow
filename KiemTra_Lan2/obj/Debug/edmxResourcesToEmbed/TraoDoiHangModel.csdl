@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TraoDoiHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK__Account__ID__6AEFE058" FromRole="Account" ToRole="Person" />
+    <NavigationProperty Name="Vouchers" Relationship="Self.FK__Voucher__ID__4F47C5E3" FromRole="Account" ToRole="Voucher" />
+  </EntityType>
+  <EntityType Name="DaMua">
+    <Key>
+      <PropertyRef Name="MaVanChuyen" />
+    </Key>
+    <Property Name="ID" Type="Int32" />
+    <Property Name="MSP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SoLuongDaMua" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Gia" Type="Int32" />
+    <Property Name="ThoiGianHienTai" Type="DateTime" Precision="0" />
+    <Property Name="MaVanChuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThoiGianDat" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Person" Relationship="Self.FK__DaMua__ID__6DCC4D03" FromRole="DaMua" ToRole="Person" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK__DaMua__MSP__47DBAE45" FromRole="DaMua" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="DanhGia">
+    <Key>
+      <PropertyRef Name="IDNguoiMua" />
+      <PropertyRef Name="MSP" />
+    </Key>
+    <Property Name="IDNguoiMua" Type="Int32" Nullable="false" />
+    <Property Name="MSP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BinhLuan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoSao" Type="Int32" />
+    <NavigationProperty Name="Person" Relationship="Self.FK__DanhGia__IDNguoi__70A8B9AE" FromRole="DanhGia" ToRole="Person" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK__DanhGia__MSP__70DDC3D8" FromRole="DanhGia" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="GioHang">
+    <Key>
+      <PropertyRef Name="IDNguoiMua" />
+      <PropertyRef Name="MSP" />
+    </Key>
+    <Property Name="IDNguoiMua" Type="Int32" Nullable="false" />
+    <Property Name="MSP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="Person" Relationship="Self.FK__GioHang__IDNguoi__6EC0713C" FromRole="GioHang" ToRole="Person" />
+    <NavigationProperty Name="SanPham" Relationship="Self.FK__GioHang__MaSP__5FB337D6" FromRole="GioHang" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="CCCD" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Bith" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Avarta" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Addr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChiNhanHang" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Account__ID__6AEFE058" FromRole="Person" ToRole="Account" />
+    <NavigationProperty Name="DaMuas" Relationship="Self.FK__DaMua__ID__6DCC4D03" FromRole="Person" ToRole="DaMua" />
+    <NavigationProperty Name="DanhGias" Relationship="Self.FK__DanhGia__IDNguoi__70A8B9AE" FromRole="Person" ToRole="DanhGia" />
+    <NavigationProperty Name="GioHangs" Relationship="Self.FK__GioHang__IDNguoi__6EC0713C" FromRole="Person" ToRole="GioHang" />
+    <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__IDChuSP__6BE40491" FromRole="Person" ToRole="SanPham" />
+    <NavigationProperty Name="Person1" Relationship="Self.QuanTam" FromRole="Person" ToRole="Person1" />
+    <NavigationProperty Name="People" Relationship="Self.QuanTam" FromRole="Person1" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MSP" />
+    </Key>
+    <Property Name="MSP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDChuSP" Type="Int32" />
+    <Property Name="TenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTienLucMoiMua" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GiaTienBayGio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NgayMuaSP" Type="DateTime" Precision="0" />
+    <Property Name="SoLuong" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="XuatXu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BaoHanh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MotaTinhTrang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MotaSP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnhLucMoiMua" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnhBayGio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BanDuoc" Type="Int32" />
+    <NavigationProperty Name="DaMuas" Relationship="Self.FK__DaMua__MSP__47DBAE45" FromRole="SanPham" ToRole="DaMua" />
+    <NavigationProperty Name="DanhGias" Relationship="Self.FK__DanhGia__MSP__70DDC3D8" FromRole="SanPham" ToRole="DanhGia" />
+    <NavigationProperty Name="GioHangs" Relationship="Self.FK__GioHang__MaSP__5FB337D6" FromRole="SanPham" ToRole="GioHang" />
+    <NavigationProperty Name="Person" Relationship="Self.FK__SanPham__IDChuSP__6BE40491" FromRole="SanPham" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Voucher">
+    <Key>
+      <PropertyRef Name="MaVoucher" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="MaVoucher" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mota" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GiaTri" Type="Int32" />
+    <Property Name="HSD" Type="DateTime" Precision="0" />
+    <Property Name="SoLuongVoucher" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Voucher__ID__4F47C5E3" FromRole="Voucher" ToRole="Account" />
+  </EntityType>
+  <Association Name="FK__Account__ID__6AEFE058">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Voucher__ID__4F47C5E3">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Voucher" Type="Self.Voucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Voucher">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaMua__ID__6DCC4D03">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="DaMua" Type="Self.DaMua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DaMua">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DaMua__MSP__47DBAE45">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="DaMua" Type="Self.DaMua" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MSP" />
+      </Principal>
+      <Dependent Role="DaMua">
+        <PropertyRef Name="MSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DanhGia__IDNguoi__70A8B9AE">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DanhGia">
+        <PropertyRef Name="IDNguoiMua" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DanhGia__MSP__70DDC3D8">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="DanhGia" Type="Self.DanhGia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MSP" />
+      </Principal>
+      <Dependent Role="DanhGia">
+        <PropertyRef Name="MSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GioHang__IDNguoi__6EC0713C">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="GioHang" Type="Self.GioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GioHang">
+        <PropertyRef Name="IDNguoiMua" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GioHang__MaSP__5FB337D6">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="GioHang" Type="Self.GioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MSP" />
+      </Principal>
+      <Dependent Role="GioHang">
+        <PropertyRef Name="MSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SanPham__IDChuSP__6BE40491">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDChuSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuanTam">
+    <End Role="Person" Type="Self.Person" Multiplicity="*" />
+    <End Role="Person1" Type="Self.Person" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="TraoDoiHangDFContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="DaMuas" EntityType="Self.DaMua" />
+    <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
+    <EntitySet Name="GioHangs" EntityType="Self.GioHang" />
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
+    <AssociationSet Name="FK__Account__ID__6AEFE058" Association="Self.FK__Account__ID__6AEFE058">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Voucher__ID__4F47C5E3" Association="Self.FK__Voucher__ID__4F47C5E3">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Voucher" EntitySet="Vouchers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaMua__ID__6DCC4D03" Association="Self.FK__DaMua__ID__6DCC4D03">
+      <End Role="Person" EntitySet="People" />
+      <End Role="DaMua" EntitySet="DaMuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DaMua__MSP__47DBAE45" Association="Self.FK__DaMua__MSP__47DBAE45">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="DaMua" EntitySet="DaMuas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DanhGia__IDNguoi__70A8B9AE" Association="Self.FK__DanhGia__IDNguoi__70A8B9AE">
+      <End Role="Person" EntitySet="People" />
+      <End Role="DanhGia" EntitySet="DanhGias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DanhGia__MSP__70DDC3D8" Association="Self.FK__DanhGia__MSP__70DDC3D8">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="DanhGia" EntitySet="DanhGias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GioHang__IDNguoi__6EC0713C" Association="Self.FK__GioHang__IDNguoi__6EC0713C">
+      <End Role="Person" EntitySet="People" />
+      <End Role="GioHang" EntitySet="GioHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GioHang__MaSP__5FB337D6" Association="Self.FK__GioHang__MaSP__5FB337D6">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="GioHang" EntitySet="GioHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__IDChuSP__6BE40491" Association="Self.FK__SanPham__IDChuSP__6BE40491">
+      <End Role="Person" EntitySet="People" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="QuanTam" Association="Self.QuanTam">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Person1" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

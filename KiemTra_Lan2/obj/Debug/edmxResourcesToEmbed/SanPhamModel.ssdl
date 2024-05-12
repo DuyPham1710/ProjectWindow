@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TraoDoiHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Pass" Type="varchar" MaxLength="50" />
+    <Property Name="Position" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Phone" Type="varchar" MaxLength="13" />
+    <Property Name="CCCD" Type="varchar" MaxLength="13" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+    <Property Name="Bith" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Avarta" Type="varbinary(max)" />
+    <Property Name="Addr" Type="nvarchar" MaxLength="200" />
+    <Property Name="DiaChiNhanHang" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="MSP" />
+    </Key>
+    <Property Name="MSP" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDChuSP" Type="int" />
+    <Property Name="TenSP" Type="nvarchar" MaxLength="100" />
+    <Property Name="DanhMuc" Type="nvarchar" MaxLength="50" />
+    <Property Name="GiaTienLucMoiMua" Type="varchar" MaxLength="20" />
+    <Property Name="GiaTienBayGio" Type="varchar" MaxLength="20" />
+    <Property Name="NgayMuaSP" Type="date" />
+    <Property Name="SoLuong" Type="varchar" MaxLength="10" />
+    <Property Name="XuatXu" Type="nvarchar" MaxLength="20" />
+    <Property Name="BaoHanh" Type="nvarchar" MaxLength="50" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotaTinhTrang" Type="nvarchar(max)" />
+    <Property Name="MotaSP" Type="nvarchar(max)" />
+    <Property Name="AnhLucMoiMua" Type="nvarchar(max)" />
+    <Property Name="AnhBayGio" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__Account__ID__2A4B4B5E">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SanPham__IDChuSP__2B3F6F97">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDChuSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TraoDoiHangModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Account__ID__2A4B4B5E" Association="Self.FK__Account__ID__2A4B4B5E">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__IDChuSP__2B3F6F97" Association="Self.FK__SanPham__IDChuSP__2B3F6F97">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
