@@ -57,6 +57,7 @@
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pToolBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.lblLienHe = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -119,6 +120,7 @@
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.guna2CustomGradientPanel1.BorderRadius = 10;
+            this.guna2CustomGradientPanel1.Controls.Add(this.lblLienHe);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblDiaChi);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblTen);
             this.guna2CustomGradientPanel1.Controls.Add(this.pcbAvt);
@@ -232,9 +234,9 @@
             this.label1.Location = new System.Drawing.Point(45, 203);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 16);
+            this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Phản hồi chat:   Chưa có thông tin";
+            this.label1.Text = "Liên hệ: ";
             // 
             // guna2PictureBox9
             // 
@@ -468,6 +470,19 @@
             this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.DimGray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
+            // lblLienHe
+            // 
+            this.lblLienHe.AutoSize = true;
+            this.lblLienHe.BackColor = System.Drawing.Color.Transparent;
+            this.lblLienHe.Font = new System.Drawing.Font("Times New Roman", 10.2F);
+            this.lblLienHe.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblLienHe.Location = new System.Drawing.Point(102, 203);
+            this.lblLienHe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLienHe.Name = "lblLienHe";
+            this.lblLienHe.Size = new System.Drawing.Size(55, 16);
+            this.lblLienHe.TabIndex = 41;
+            this.lblLienHe.Text = "Liên hệ: ";
+            // 
             // FChiTietShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,5 +546,6 @@
         private System.Windows.Forms.FlowLayoutPanel fPanelSanPham;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         public System.Windows.Forms.Label lblDiaChi;
+        public System.Windows.Forms.Label lblLienHe;
     }
 }

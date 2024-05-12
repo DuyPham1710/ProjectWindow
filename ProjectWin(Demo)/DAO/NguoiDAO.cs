@@ -128,17 +128,22 @@ namespace ProjectWin_Demo_
             string sqlStr = string.Format("INSERT INTO Person(ID, FullName, Phone, CCCD, Gender, Bith, Email, Addr) VALUES ({0}, N'{1}', '{2}', '{3}', N'{4}', '{5}', '{6}', N'{7}')",
             nguoiDung.ID, nguoiDung.HoTen, nguoiDung.SoDT, nguoiDung.Cccd, nguoiDung.GioiTinh, nguoiDung.NgaySinh.ToString(), nguoiDung.Email, nguoiDung.DiaChi);
             dBConnection.thucThi(sqlStr);
+            sqlStr = string.Format("UPDATE Person SET Avatar = 0x{0} where ID={1}",
+                nguoiDung.Avt.Length, nguoiDung.ID);
+            dBConnection.thucThi(sqlStr);
 
             sqlStr = string.Format("INSERT INTO Account(ID, UserName, Pass, Position) VALUES ({0}, '{1}', '{2}', '{3}')",
                 nguoiDung.ID, nguoiDung.TenDangNhap, nguoiDung.MatKhau, nguoiDung.ViTri);
             dBConnection.thucThi(sqlStr);
         }
-       
+
         public void suaTaiKhoan(Nguoi nguoiDung)
         {
-            string sqlStr = string.Format("UPDATE Person SET FullName = N'{0}', Phone = '{1}', CCCD = '{2}', Gender = N'{3}', Bith = '{4}', Email = '{5}', Avarta = 0x{6}, Addr = N'{7}' WHERE ID = {8}", 
-                nguoiDung.HoTen, nguoiDung.SoDT, nguoiDung.Cccd, nguoiDung.GioiTinh, nguoiDung.NgaySinh, nguoiDung.Email, nguoiDung.Avt.Length, nguoiDung.DiaChi, nguoiDung.ID);
+            string sqlStr = "UPDATE Person SET FullName = @name, Phone = @phone, CCCD = @cccd, Gender = @gender, Bith = @birth, Email = @email, Avarta = @avatar, Addr = @address WHERE ID = @id";
+            dBConnection.suaTaiKhoan(sqlStr, nguoiDung);
+            sqlStr = string.Format("UPDATE Account SET Pass = '{0}' WHERE ID = {1}", nguoiDung.MatKhau, nguoiDung.ID);
             dBConnection.thucThi(sqlStr);
+
         }
         public void xoaTaiKhoan()
         {

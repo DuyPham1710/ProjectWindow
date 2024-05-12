@@ -67,6 +67,7 @@ namespace ProjectWin_Demo_
             Nguoi nguoiBan = nguoiDAO.LoadThongTinCaNhan();
             lblTen.Text = nguoiBan.TenDangNhap;
             lblDiaChi.Text = nguoiBan.DiaChi;
+            lblLienHe.Text = nguoiBan.SoDT;
             MemoryStream ms = new MemoryStream(nguoiBan.Avt);
             pcbAvt.Image = Image.FromStream(ms);
         }

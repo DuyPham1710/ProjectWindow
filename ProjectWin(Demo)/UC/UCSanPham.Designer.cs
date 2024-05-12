@@ -39,6 +39,7 @@
             this.PanelSanPham = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblMaSP = new System.Windows.Forms.Label();
+            this.lblThongBao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctSanPham)).BeginInit();
             this.PanelSanPham.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
@@ -167,6 +168,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Controls.Add(this.lblThongBao);
             this.guna2ShadowPanel1.Controls.Add(this.pctSanPham);
             this.guna2ShadowPanel1.Controls.Add(this.lblMaSP);
             this.guna2ShadowPanel1.Controls.Add(this.lblGiaSP);
@@ -193,6 +195,18 @@
             this.lblMaSP.Size = new System.Drawing.Size(13, 13);
             this.lblMaSP.TabIndex = 15;
             this.lblMaSP.Text = "a";
+            // 
+            // lblThongBao
+            // 
+            this.lblThongBao.AutoSize = true;
+            this.lblThongBao.BackColor = System.Drawing.Color.Transparent;
+            this.lblThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongBao.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblThongBao.Location = new System.Drawing.Point(64, 79);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(84, 24);
+            this.lblThongBao.TabIndex = 17;
+            this.lblThongBao.Text = "Bán Hết";
             // 
             // UCSanPham
             // 
@@ -224,5 +238,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         public System.Windows.Forms.Label lblMaSP;
         public Guna.UI2.WinForms.Guna2CircleButton btnQuanTam;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }

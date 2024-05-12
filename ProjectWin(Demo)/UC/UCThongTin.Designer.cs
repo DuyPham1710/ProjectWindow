@@ -682,13 +682,12 @@
             this.btnThemAvt.FillColor2 = System.Drawing.Color.White;
             this.btnThemAvt.Font = new System.Drawing.Font("Times New Roman", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnThemAvt.ForeColor = System.Drawing.Color.Black;
-            this.btnThemAvt.Image = global::ProjectWin_Demo_.Properties.Resources.user_plus_solid;
             this.btnThemAvt.Location = new System.Drawing.Point(18, 140);
             this.btnThemAvt.Margin = new System.Windows.Forms.Padding(2);
             this.btnThemAvt.Name = "btnThemAvt";
             this.btnThemAvt.Size = new System.Drawing.Size(154, 42);
             this.btnThemAvt.TabIndex = 18;
-            this.btnThemAvt.Text = "Thêm ảnh đại diện";
+            this.btnThemAvt.Text = "Đổi ảnh đại diện";
             this.btnThemAvt.Click += new System.EventHandler(this.btnThemAvt_Click);
             // 
             // guna2CustomGradientPanel2

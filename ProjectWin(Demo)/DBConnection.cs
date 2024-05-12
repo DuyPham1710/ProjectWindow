@@ -113,6 +113,36 @@ namespace ProjectWin_Demo_
                 conn.Close();
             }
         }
-      
+        public void suaTaiKhoan(string sql, Nguoi nguoi)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@name", nguoi.HoTen);
+                cmd.Parameters.AddWithValue("@phone", nguoi.SoDT);
+                cmd.Parameters.AddWithValue("@cccd", nguoi.Cccd);
+                cmd.Parameters.AddWithValue("@gender", nguoi.GioiTinh);
+                cmd.Parameters.AddWithValue("@birth", nguoi.NgaySinh);
+                cmd.Parameters.AddWithValue("@email", nguoi.Email);
+                cmd.Parameters.AddWithValue("@avatar", nguoi.Avt);
+                cmd.Parameters.AddWithValue("@address", nguoi.DiaChi);
+                cmd.Parameters.AddWithValue("@id", nguoi.ID);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Lưu thông tin thành công", "Thông báo");
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lưu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }

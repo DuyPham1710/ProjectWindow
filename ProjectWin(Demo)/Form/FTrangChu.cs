@@ -29,6 +29,17 @@ namespace ProjectWin_Demo_
         }
         private void FTrangChu_Load(object sender, EventArgs e)
         {
+            btnAllProduct.ForeColor = Color.MediumTurquoise;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.Black;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.MediumTurquoise;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.Silver;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.LoadSanPham<UCSanPham>("<>");
             foreach (UCSanPham sp in sanPham)
@@ -79,6 +90,17 @@ namespace ProjectWin_Demo_
         }
         private void timKiemVaHienThi(string searchText)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.Black;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.Silver;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.timKiem<UCSanPham>(searchText, "<>");
             foreach (UCSanPham sp in sanPham)
@@ -90,24 +112,39 @@ namespace ProjectWin_Demo_
 
         private void điệnTửToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             LocTheoDanhMucSP("Điện tử");
         }
 
         private void giaDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             LocTheoDanhMucSP("Gia dụng");
         }
 
         private void họcTậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             LocTheoDanhMucSP("Học tập");
         }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+
             LocTheoDanhMucSP("Thời trang");
         }
         private void LocTheoDanhMucSP(string danhMuc)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.MediumTurquoise;
+            btnSort.ForeColor = Color.Black;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.MediumTurquoise;
+            btnSort.CustomBorderColor = Color.Silver;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.LocTheoDanhMuc(danhMuc);
             foreach (UCSanPham sp in sanPham)
@@ -119,41 +156,58 @@ namespace ProjectWin_Demo_
 
         private void btnTatCaSP_Click(object sender, EventArgs e)
         {
+            
             FTrangChu_Load(sender, e);
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             LocTheoDanhMucSP("Thể thao & Du lịch");
+
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             LocTheoDanhMucSP("Giày dép");
+
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             LocTheoDanhMucSP("Sắc đẹp");
+
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             LocTheoDanhMucSP("Sức khỏe");
+
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             LocTheoDanhMucSP("Sách");
+
         }
 
         private void tăngDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.MediumTurquoise;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.MediumTurquoise;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Tang dan");
             foreach (UCSanPham uCSanPham in cacSanPham)
             {
-                
+
                 uCSanPham.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(uCSanPham);
             }
@@ -161,6 +215,17 @@ namespace ProjectWin_Demo_
 
         private void giảmDầnGiáToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.MediumTurquoise;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.MediumTurquoise;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> cacSanPham = SPDao.SapXepTheoGia("Giam dan");
             foreach (UCSanPham uCSanPham in cacSanPham)
@@ -172,6 +237,17 @@ namespace ProjectWin_Demo_
 
         private void btnUuChuong_Click(object sender, EventArgs e)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.Black;
+            btnYeuThich.ForeColor = Color.Black;
+            btnUuChuong.ForeColor = Color.MediumTurquoise;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.Silver;
+            btnYeuThich.CustomBorderColor = Color.Silver;
+            btnUuChuong.CustomBorderColor = Color.MediumTurquoise;
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = SPDao.SanPhamUaChuong();
             foreach (UCSanPham uCSanPham in sanPham)
@@ -184,6 +260,17 @@ namespace ProjectWin_Demo_
 
         private void btnYeuThich_Click(object sender, EventArgs e)
         {
+            btnAllProduct.ForeColor = Color.Black;
+            btnCatalog.ForeColor = Color.Black;
+            btnSort.ForeColor = Color.Black;
+            btnYeuThich.ForeColor = Color.MediumTurquoise;
+            btnUuChuong.ForeColor = Color.Black;
+
+            btnAllProduct.CustomBorderColor = Color.Silver;
+            btnCatalog.CustomBorderColor = Color.Silver;
+            btnSort.CustomBorderColor = Color.Silver;
+            btnYeuThich.CustomBorderColor = Color.MediumTurquoise;
+            btnUuChuong.CustomBorderColor = Color.Silver;
             YeuThichDAO yeuThichDAO = new YeuThichDAO(id);
             fPanelSanPham.Controls.Clear();
             List<UCSanPham> sanPham = yeuThichDAO.LoadSanPhamYeuThich();
@@ -194,6 +281,11 @@ namespace ProjectWin_Demo_
                 sp.BtnClick_ChiTiet += UCChiTiet_Click;
                 fPanelSanPham.Controls.Add(sp);
             }
+        }
+
+        private void btnCatalog_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

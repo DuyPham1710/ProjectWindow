@@ -82,22 +82,22 @@ namespace ProjectWin_Demo_
         public virtual bool KiemTra(string thaoTac)
         {
             var properties = typeof(Nguoi).GetProperties();
-
-            foreach (var property in properties)
-            {
-                object value = property.GetValue(this);
-
-                if ((value == null || string.IsNullOrWhiteSpace(value.ToString())) && ($"{property.Name}" != "Avt"))
-                {
-                    MessageBox.Show($"{property.Name} trống");
-                    return false;
-                }
-            }
             if (Avt == null)
             {
                 string path = Path.Combine(Application.StartupPath, "Resources", "icons8-user-64 (1).png");
                 Avt = File.ReadAllBytes(path);
             }
+            foreach (var property in properties)
+            {
+                object value = property.GetValue(this);
+
+                if ((value == null || string.IsNullOrWhiteSpace(value.ToString())))
+                {
+                    MessageBox.Show($"{property.Name} trống");
+                    return false;
+                }
+            }
+            
             // Biểu thức  kiểm tra email
             string pattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
             Regex regex = new Regex(pattern);

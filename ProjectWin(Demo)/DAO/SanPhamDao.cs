@@ -352,9 +352,9 @@ namespace ProjectWin_Demo_
         }
         public List<UCSanPham> SanPhamUaChuong()
         {
-            string sqlStr = string.Format("SELECT AVG(BanDuoc) FROM SanPham");
+            string sqlStr = string.Format("SELECT Sum(BanDuoc)/(count(MSP)) FROM SanPham");
             int tb = dBConnection.demDB(sqlStr);
-            sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and BanDuoc > {1} ", id, tb);
+            sqlStr = string.Format("SELECT * FROM SanPham WHERE IDchuSP <> {0} and ( BanDuoc > {1} or SoLuong = '0') ", id, tb);
             DataTable dt = dBConnection.LoadDuLieu(sqlStr);
             List<UCSanPham> DSSanPham = new List<UCSanPham>();
             foreach (DataRow row in dt.Rows)

@@ -26,6 +26,7 @@ namespace ProjectWin_Demo_
             this.sp = sp;
             this.id = id;
             yeuThichDAO = new YeuThichDAO(id);
+            lblThongBao.Hide();
         }
         public UCSanPham()
         {
@@ -43,6 +44,8 @@ namespace ProjectWin_Demo_
             lblGiaSP.Text = sp.GiaHienTai + "đ";
             lblGiaBanDau.Text = sp.GiaBanDau + "đ";
             lblGiaBanDau.Font = new Font(lblGiaBanDau.Font, FontStyle.Strikeout);
+            if (sp.SoLuong == "0")
+                lblThongBao.Show();
             lblDiaChiShop.Text = sp.XuatXu;
             if (sp.AnhHienTai != "")
                 AnhCu = sp.AnhHienTai.Split(',');
