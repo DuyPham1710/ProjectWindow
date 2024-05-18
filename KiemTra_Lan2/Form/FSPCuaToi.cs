@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -114,18 +115,22 @@ namespace KiemTra_Lan2
                                  DaMua = daMua,
                                  SanPham = sanPham
                              };
-            List<Person> DSNguoiMua = (from person in db.People
-                                       join daMua in db.DaMuas on person.ID equals daMua.ID
-                                       select person).Distinct().ToList();
-            int i = 0;
+
+
             foreach (var sanPham in DSSanPham)
             {
                 SanPham sp = sanPham.SanPham;
+                int maVanChuyen = sanPham.DaMua.MaVanChuyen;
+
+                var nguoiMua = from daMua in db.DaMuas
+                           join person in db.People on daMua.ID equals person.ID
+                           where daMua.MaVanChuyen == maVanChuyen
+                           select person;
+
                 sp.SoLuong = sanPham.DaMua.SoLuongDaMua;
                 UCSPDaBan ucSPDaBan = new UCSPDaBan(sp, id);
-                ucSPDaBan.lblNguoiMua.Text = DSNguoiMua[i].FullName;
+                ucSPDaBan.lblNguoiMua.Text = nguoiMua.First().FullName;
                 fPanelHienThi.Controls.Add(ucSPDaBan);
-                i++;
             }
         }
         private void btnTongSanPham_Click(object sender, EventArgs e)

@@ -153,19 +153,20 @@ namespace KiemTra_Lan2
 
             trangThai = "Đã giao";
 
-            // load thông tin người mua
-            List<Person> DSNguoiMua = (from daMua in db.DaMuas
-                                        join person in db.People on daMua.ID equals person.ID
-                                        select person).Distinct().ToList();
-            int i = 0;
             foreach (var sp in cacSanPham)
             {
                 SanPham sanPham = sp.SanPham;
+                int maVanChuyen = sp.DaMua.MaVanChuyen;
+
+                var nguoiMua = from daMua in db.DaMuas
+                               join person in db.People on daMua.ID equals person.ID
+                               where daMua.MaVanChuyen == maVanChuyen
+                               select person;
+
                 sanPham.SoLuong = sp.DaMua.SoLuongDaMua;
                 UCSPDaBan ucSP = new UCSPDaBan(sanPham, id);
-                ucSP.lblNguoiMua.Text = DSNguoiMua[i].FullName;
+                ucSP.lblNguoiMua.Text = nguoiMua.First().FullName;
                 fPanelDonhang.Controls.Add(ucSP);
-                i++;
             }
         }
     }
