@@ -103,21 +103,6 @@ namespace ProjectWin_Demo_
             return DSSanPham;
 
         }
-        public List<UCSPDaBan> LoadSanPhamDaBan()
-        {
-            string sqlStr = string.Format("SELECT * FROM SanPham inner join DaMua on SanPham.MSP = DaMua.MSP WHERE IDchuSP = {0} and TrangThai = N'Đã giao'", id);
-            DataTable dt = dBConnection.LoadDuLieu(sqlStr);
-            List<UCSPDaBan> DSSanPham = new List<UCSPDaBan>();
-            foreach (DataRow row in dt.Rows)
-            {
-                SanPham sp = new SanPham(row);
-                sp.SoLuong = row["SoLuongDaMua"].ToString();
-                UCSPDaBan ucSP = new UCSPDaBan(sp, id);
-                DSSanPham.Add(ucSP);
-            }
-            return DSSanPham;
-        }
-      
         public List<T> timKiem<T>(string searchText, string toanTu)
         {
             string sqlQuery = string.Format("SELECT * FROM SanPham WHERE IDchuSP {0} {1} and TenSP LIKE N'%{2}%'", toanTu, id, searchText);
@@ -311,6 +296,7 @@ namespace ProjectWin_Demo_
             {
                 SanPham sp = new SanPham(row);
                 sp.SoLuong = row["SoLuongDaMua"].ToString();
+                sp.MaVanChuyen = Int32.Parse(row["MaVanChuyen"].ToString());
                 DSSanPham.Add(sp);
             }
             return DSSanPham;

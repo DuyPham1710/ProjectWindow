@@ -103,12 +103,13 @@ namespace ProjectWin_Demo_
             pTieuDeSP.Show();
             lblTuyChon.Text = "Người mua";
             fPanelHienThi.Controls.Clear();
-            List<UCSPDaBan> sanPham = SPDao.LoadSanPhamDaBan();
+            List<SanPham> sanPham = SPDao.DSDaBan("Đã giao");
             NguoiDAO nguoiDAO = new NguoiDAO(id);
-            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua();
+            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua(sanPham);
             int i = 0;
-            foreach (UCSPDaBan ucSPDaBan in sanPham)
+            foreach (SanPham sp in sanPham)
             {
+                UCSPDaBan ucSPDaBan = new UCSPDaBan(sp, id);
                 ucSPDaBan.lblNguoiMua.Text = DSNguoiMua[i].HoTen;
                 fPanelHienThi.Controls.Add(ucSPDaBan);
                 i++;

@@ -114,7 +114,7 @@ namespace ProjectWin_Demo_
             sanPham = sanPhamDao.DSDaBan("Đã giao");
             trangThai = "Đã giao";
             NguoiDAO nguoiDAO = new NguoiDAO(id);
-            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua();
+            List<Nguoi> DSNguoiMua = nguoiDAO.LoadThongTinNguoiMua(sanPham);
             int i = 0;
             foreach (SanPham sp in sanPham)
             {

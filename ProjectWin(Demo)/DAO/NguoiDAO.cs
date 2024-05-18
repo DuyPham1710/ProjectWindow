@@ -64,21 +64,20 @@ namespace ProjectWin_Demo_
             }
             return null;
         }
-        public List<Nguoi> LoadThongTinNguoiMua()
+        public List<Nguoi> LoadThongTinNguoiMua(List<SanPham> sanPham)
         {
-
-            string query = string.Format("select Distinct Person.* from DaMua inner join Person on DaMua.ID = Person.ID");
-            DataTable dt = dBConnection.LoadDuLieu(query);
             List<Nguoi> DanhSachNguoiMua = new List<Nguoi>();
-            if (dt.Rows.Count > 0)
+            int soSP = sanPham.Count;
+            for (int i=0; i < soSP; i++)
             {
-                foreach (DataRow row in dt.Rows)
+                string query = string.Format("select Person.* from DaMua inner join Person on DaMua.ID = Person.ID where DaMua.MaVanChuyen = '{0}'", sanPham[i].MaVanChuyen);
+                DataTable dt = dBConnection.LoadDuLieu(query);
+                if (dt.Rows.Count > 0)
                 {
-                    Nguoi nguoiMua = new Nguoi(row);
+                    Nguoi nguoiMua = new Nguoi(dt.Rows[0]);
                     DanhSachNguoiMua.Add(nguoiMua);
-
                 }
-            }
+            }         
             return DanhSachNguoiMua;
         }
         public List<UCShop> TheoDoi()
